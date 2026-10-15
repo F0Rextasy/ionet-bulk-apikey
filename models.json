@@ -1,0 +1,1858 @@
+{
+  "at": "2026-10-14T19:27:35.362Z",
+  "base": "https://api.io.net/v1",
+  "endpoint": "/models",
+  "source": "captured by reverify.js",
+  "count": 39,
+  "data": [
+    {
+      "id": "XiaomiMiMo/MiMo-V2.6-Flash",
+      "name": "Xiaomi: MiMo-V2.6-Flash",
+      "object": "model",
+      "created": 1790947487,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-ac102100f88a467d83d26a94919a0e20",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 131072,
+      "context_window": 1048320,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 1.45e-7,
+      "output_token_price": 2.94e-7,
+      "cache_read_token_price": 7.25e-8,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 1104.552234321823,
+      "avg_throughput_per_day": 90260.74892628806,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4.1-Flash",
+      "name": "DeepSeek: DeepSeek V4.1 Flash",
+      "object": "model",
+      "created": 1789049414,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-424a11f13e8c4fd18fd5862ba8bd98e3",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 131072,
+      "context_window": 1048320,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 3.4e-7,
+      "output_token_price": 0.00000133,
+      "cache_read_token_price": 1.7e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 509.8413926499033,
+      "avg_throughput_per_day": 0.5179033278837225,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "name": "Z.ai: GLM 5.3 Flash",
+      "object": "model",
+      "created": 1787763381,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-fe2c6651b6904372a935da9e58d035ed",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 131072,
+      "context_window": 262144,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 1.45e-7,
+      "output_token_price": 7.64e-7,
+      "cache_read_token_price": 7.25e-8,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 445.64889705882354,
+      "avg_throughput_per_day": 0.42879679922234104,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "zai-org/GLM-5.3",
+      "name": "Z.ai: GLM 5.3",
+      "object": "model",
+      "created": 1787160247,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-2b13a799bacd4f4abc4a8096f8fe1b18",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 131072,
+      "context_window": 262144,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 0.00000166,
+      "output_token_price": 0.00000528,
+      "cache_read_token_price": 8.3e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 1195.4282511978097,
+      "avg_throughput_per_day": 56155.85705435302,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "Qwen/Qwen3.8-27B",
+      "name": "Qwen: Qwen3.8 27B",
+      "object": "model",
+      "created": 1786883740,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-665925f9e436494f8e803271c05947e3",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 65536,
+      "context_window": 65536,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 4.58e-7,
+      "output_token_price": 0.000002813,
+      "cache_read_token_price": 2.29e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 247.5427135678392,
+      "avg_throughput_per_day": 1.4530963053789563,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "name": "DeepSeek: DeepSeek V4 Flash 0731",
+      "object": "model",
+      "created": 1785565279,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-9d56def4a22c4ce09f56be2c4adf2f5a",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 65536,
+      "context_window": 262100,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 2.252e-7,
+      "output_token_price": 5.956e-7,
+      "cache_read_token_price": 1.126e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 488.79630919220057,
+      "avg_throughput_per_day": 166.8243816762893,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "moonshotai/Kimi-K3",
+      "name": "MoonshotAI: Kimi K3",
+      "object": "model",
+      "created": 1785226826,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-41d071f84c754f13b075fd5b2dc0da71",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 1048576,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 0.000003598,
+      "output_token_price": 0.000018,
+      "cache_read_token_price": 0.000001799,
+      "precision": "mxfp4",
+      "avg_latency_ms_per_day": 595.1792763157895,
+      "avg_throughput_per_day": 1.194354994552541,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "XiaomiMiMo/MiMo-V2.5",
+      "name": "Xiaomi: MiMo-V2.5",
+      "object": "model",
+      "created": 1785177534,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-088b75d3a1a14fcd983c3d4860606328",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 1048576,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 1.99e-7,
+      "output_token_price": 6.38e-7,
+      "cache_read_token_price": 9.95e-8,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 4314.566358024691,
+      "avg_throughput_per_day": 0.40754248421408945,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "zai-org/GLM-5.2",
+      "name": "Z.ai: GLM 5.2",
+      "object": "model",
+      "created": 1781623441,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-3268a5f810b2490c9534153c2c974066",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 131072,
+      "context_window": 262144,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 0.000001772,
+      "output_token_price": 0.000005804,
+      "cache_read_token_price": 8.86e-7,
+      "precision": "fp4",
+      "avg_latency_ms_per_day": 237.15438596491228,
+      "avg_throughput_per_day": 0.4543290156650548,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "moonshotai/Kimi-K2.7-Code",
+      "name": "MoonshotAI: Kimi K2.7 Code",
+      "object": "model",
+      "created": 1781283886,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-f4dde7cb0f904678aab4665900ad52bb",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 262144,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 0.000001018072,
+      "output_token_price": 0.00000453,
+      "cache_read_token_price": 5.09036e-7,
+      "precision": "int4",
+      "avg_latency_ms_per_day": 734.820895522388,
+      "avg_throughput_per_day": 0.3937069180925054,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "Qwen/Qwen3.6-35B-A3B",
+      "name": "Qwen: Qwen3.6 35B A3B",
+      "object": "model",
+      "created": 1779451322,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-0efcba83f7f74225a2b2a3bab58873fd",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 262144,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 1.752e-7,
+      "output_token_price": 0.00000121275,
+      "cache_read_token_price": 8.76e-8,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 391.6822916666667,
+      "avg_throughput_per_day": 13.921921043998463,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "Qwen/Qwen3.6-27B",
+      "name": "Qwen: Qwen3.6 27B",
+      "object": "model",
+      "created": 1779208018,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-8ba9d21bc6c74a67a2c82e79bbb91159",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 32768,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 3.37e-7,
+      "output_token_price": 0.00000297,
+      "cache_read_token_price": 1.685e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 453.90248226950354,
+      "avg_throughput_per_day": 0.5029264300204257,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "MiniMaxAI/MiniMax-M2.7",
+      "name": "DeepSeek: DeepSeek V4 Flash 0731",
+      "object": "model",
+      "created": 1777885549,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-8b3b2b759eae40ec93ac15bdc70fcfe2",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 65536,
+      "context_window": 262100,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 3.96e-7,
+      "output_token_price": 0.000001464,
+      "cache_read_token_price": 1.98e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 990.121875,
+      "avg_throughput_per_day": 19.557617991798352,
+      "supports_attestation": false,
+      "min_access_tier": 3,
+      "higher_tier_required": true
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Flash",
+      "name": "DeepSeek: DeepSeek V4 Flash",
+      "object": "model",
+      "created": 1777012876,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-8b36f90c4a6d43adb72d38a98c1be087",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 32768,
+      "context_window": 32768,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 1.7246e-7,
+      "output_token_price": 6.724e-7,
+      "cache_read_token_price": 8.623e-8,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 686.19723183391,
+      "avg_throughput_per_day": 1.296831279720918,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "name": "DeepSeek: DeepSeek V4 Pro",
+      "object": "model",
+      "created": 1777012816,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-2a2b0ccb970d47ba93ca3d34cd41bf73",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 600000,
+      "context_window": 1048576,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 0.000001402,
+      "output_token_price": 0.000004536,
+      "cache_read_token_price": 7.01e-7,
+      "precision": null,
+      "avg_latency_ms_per_day": 954.5531135531136,
+      "avg_throughput_per_day": 0.6101244873068837,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "moonshotai/Kimi-K2.6",
+      "name": "MoonshotAI: Kimi K2.6",
+      "object": "model",
+      "created": 1776779041,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-66ae197b7fdd4efba0cbf09b5b468bb4",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 262142,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 7.382e-7,
+      "output_token_price": 0.000003472,
+      "cache_read_token_price": 3.691e-7,
+      "precision": "int4",
+      "avg_latency_ms_per_day": 383.7952029520295,
+      "avg_throughput_per_day": 0.4026450457826398,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "zai-org/GLM-5.1",
+      "name": "Z.ai: GLM 5.1",
+      "object": "model",
+      "created": 1775552690,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-b5e0cac602d64f1f934f155df29a7766",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 32768,
+      "context_window": 202750,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 0.00000140028,
+      "output_token_price": 0.00000440088,
+      "cache_read_token_price": 7.0014e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 224.27011494252875,
+      "avg_throughput_per_day": 0.36691908509814497,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "MiniMaxAI/MiniMax-M2.5",
+      "name": "MiniMaxAI/MiniMax-M2.5",
+      "object": "model",
+      "created": 1774899535,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-49b3e194e33c40adafb7c9f554bb69f1",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 196600,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 3.48e-7,
+      "output_token_price": 0.000001366,
+      "cache_read_token_price": 1.74e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 389.187610619469,
+      "avg_throughput_per_day": 0.7142155030816858,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "moonshotai/Kimi-K2.5",
+      "name": "MoonshotAI: Kimi K2.5",
+      "object": "model",
+      "created": 1773862459,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-269e0f2b8c9f4f53ba727515000fc757",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 262144,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 5.384e-7,
+      "output_token_price": 0.000002835,
+      "cache_read_token_price": 2.692e-7,
+      "precision": "int4",
+      "avg_latency_ms_per_day": 682.771812080537,
+      "avg_throughput_per_day": 0.586109805775562,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "zai-org/GLM-5",
+      "name": "Z.ai: GLM 5",
+      "object": "model",
+      "created": 1773130581,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-9b3c481a2808485dbe8ea975e11b920a",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 202752,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 8.6e-7,
+      "output_token_price": 0.000002752,
+      "cache_read_token_price": 4.3e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 402,
+      "avg_throughput_per_day": 0.6591563446810136,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V3.2",
+      "name": "DeepSeek: DeepSeek V3.2",
+      "object": "model",
+      "created": 1764613751,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-8c95d3c70a33434790312e6ff7775ded",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 163840,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 0.00000139776,
+      "output_token_price": 0.00000224592,
+      "cache_read_token_price": 6.9888e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 910.2036423841059,
+      "avg_throughput_per_day": 0.5578208290929063,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "moonshotai/Kimi-K2-Thinking",
+      "name": "MoonshotAI: Kimi K2 Thinking",
+      "object": "model",
+      "created": 1763054555,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-7241cc4c12164df1a951ba0f9a3d21cb",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 262144,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 6e-7,
+      "output_token_price": 0.0000025,
+      "cache_read_token_price": 3e-7,
+      "precision": "int4",
+      "avg_latency_ms_per_day": 923.874039938556,
+      "avg_throughput_per_day": 19.05770863681491,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "zai-org/GLM-4.5-Air",
+      "name": "Z.ai: GLM-4.5-Air",
+      "object": "model",
+      "created": 1779713364,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-76ef2d27e9d64b40b86cdceba0131efd",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 131070,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 1.56667e-7,
+      "output_token_price": 9.36667e-7,
+      "cache_read_token_price": 7.8334e-8,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 903.5555555555555,
+      "avg_throughput_per_day": 1.634022504759037,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "google/gemma-4-26b-a4b-it",
+      "name": "Google: Gemma 4 26B A4B",
+      "object": "model",
+      "created": 1775769573,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-24f5ea290b18437d8b3b924404b11008",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 262142,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 9.8e-8,
+      "output_token_price": 3.22e-7,
+      "cache_read_token_price": 4.9e-8,
+      "precision": "bf16",
+      "avg_latency_ms_per_day": 679.4456030231217,
+      "avg_throughput_per_day": 23716.27132148145,
+      "supports_attestation": false,
+      "min_access_tier": 1,
+      "higher_tier_required": false
+    },
+    {
+      "id": "zai-org/GLM-4.7-Flash",
+      "name": "Z.ai: GLM 4.7 Flash",
+      "object": "model",
+      "created": 1769105042,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-f2d0547a52df4a50923796dc29af7139",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 200000,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 6.35e-8,
+      "output_token_price": 4e-7,
+      "cache_read_token_price": 3.175e-8,
+      "precision": "fp16",
+      "avg_latency_ms_per_day": 389.2721088435374,
+      "avg_throughput_per_day": 0.6465424233965115,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "zai-org/GLM-4.7",
+      "name": "Z.ai: GLM 4.7",
+      "object": "model",
+      "created": 1767902091,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-085605f5c2374099893f0fdcdf391efb",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 202752,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 5.68e-7,
+      "output_token_price": 0.000002126,
+      "cache_read_token_price": 2.84e-7,
+      "precision": "bf16",
+      "avg_latency_ms_per_day": 800.3019230769231,
+      "avg_throughput_per_day": 0.4787869051518836,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "moonshotai/Kimi-K2-Instruct-0905",
+      "name": "MoonshotAI: Kimi K2 Instruct 0905",
+      "object": "model",
+      "created": 1761910119,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-9826dcdc55f846b8981787a45cae3b66",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 262144,
+      "supports_reasoning": false,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 5.7e-7,
+      "output_token_price": 0.0000023,
+      "cache_read_token_price": 2.85e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 1384.3929203539824,
+      "avg_throughput_per_day": 0.3355431411101495,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "openai/gpt-oss-120b",
+      "name": "OpenAI: gpt-oss-120b",
+      "object": "model",
+      "created": 1754421604,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-40dfe32b314b4a498de30f00b19820f4",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 131072,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 1.78e-7,
+      "output_token_price": 6.8e-7,
+      "cache_read_token_price": 8.9e-8,
+      "precision": "fp16",
+      "avg_latency_ms_per_day": 1180.667810177244,
+      "avg_throughput_per_day": 5.297111728890414,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-R1-0528",
+      "name": "DeepSeek: R1 0528",
+      "object": "model",
+      "created": 1748532237,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-df1ab0e48aaa418da3df23436c1fa1e2",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 128000,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": false,
+      "input_token_price": 5.6775e-7,
+      "output_token_price": 0.000002279,
+      "cache_read_token_price": 2.83875e-7,
+      "precision": null,
+      "avg_latency_ms_per_day": 405.7226148409894,
+      "avg_throughput_per_day": 0.9155439853035028,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "zai-org/GLM-4.6",
+      "name": "Z.ai: GLM 4.6",
+      "object": "model",
+      "created": 1761910868,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-4ea46289e8944f209a6ea841750f8439",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 131072,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 5.2e-7,
+      "output_token_price": 0.0000020375,
+      "cache_read_token_price": 2.6e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 292.167530224525,
+      "avg_throughput_per_day": 0.561893867581184,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "Qwen/Qwen3-Next-80B-A3B-Instruct",
+      "name": "Qwen: Qwen3 Next 80B A3B Instruct",
+      "object": "model",
+      "created": 1757920390,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-15fbae1d84354f79acc2188ee488c7ce",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 262144,
+      "supports_reasoning": false,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": false,
+      "input_token_price": 1.13333e-7,
+      "output_token_price": 0.000001133333,
+      "cache_read_token_price": 5.6667e-8,
+      "precision": "fp16",
+      "avg_latency_ms_per_day": 435.1312384473198,
+      "avg_throughput_per_day": 0.3748487587253485,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "Intel/Qwen3-Coder-480B-A35B-Instruct-int4-mixed-ar",
+      "name": "Intel: Qwen3 Coder 480B A35B Instruct INT4 Mixed AR",
+      "object": "model",
+      "created": 1753974833,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-72fefb9d95804bb68faeecb6415fc51c",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 106000,
+      "supports_reasoning": false,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": false,
+      "input_token_price": 4.6125e-7,
+      "output_token_price": 0.00000229375,
+      "cache_read_token_price": 2.30625e-7,
+      "precision": "int4",
+      "avg_latency_ms_per_day": 1243.54844606947,
+      "avg_throughput_per_day": 0.3321677892745208,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8",
+      "name": "Meta-Llama: Llama 4 Maverick 17B 128E Instruct FP8",
+      "object": "model",
+      "created": 1744194232,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-bb554a6b6e4d4df78751c4435bd2c869",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 430000,
+      "supports_reasoning": false,
+      "supports_tools": false,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": false,
+      "input_token_price": 2.69167e-7,
+      "output_token_price": 8.34167e-7,
+      "cache_read_token_price": 1.34584e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": 516.7772194304857,
+      "avg_throughput_per_day": 13.877133776509474,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "mistralai/Mistral-Nemo-Instruct-2407",
+      "name": "Mistral: Mistral Nemo Instruct 2407",
+      "object": "model",
+      "created": 1755108289,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-f63620f870a24878911b7280cf602e24",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 128000,
+      "supports_reasoning": false,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 5.14e-8,
+      "output_token_price": 8.2e-8,
+      "cache_read_token_price": 2.57e-8,
+      "precision": "fp16",
+      "avg_latency_ms_per_day": 307.38115771437793,
+      "avg_throughput_per_day": 16852.998978165797,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "openai/gpt-oss-20b",
+      "name": "OpenAI: gpt-oss-20b",
+      "object": "model",
+      "created": 1754588895,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-aa3754de226f4d60b78aba7f97bfc8a8",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 64000,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": false,
+      "input_token_price": 5.5e-8,
+      "output_token_price": 1.94e-7,
+      "cache_read_token_price": 2.75e-8,
+      "precision": "fp16",
+      "avg_latency_ms_per_day": 199.21612903225807,
+      "avg_throughput_per_day": 0.8722339550750439,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "meta-llama/Llama-3.3-70B-Instruct",
+      "name": "Meta: Llama 3.3 70B Instruct",
+      "object": "model",
+      "created": 1733762183,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-af03cbcea956468f846ec13e2c8ebd57",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": null,
+      "context_window": 128000,
+      "supports_reasoning": false,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": false,
+      "input_token_price": 5.466e-7,
+      "output_token_price": 0.0000010226,
+      "cache_read_token_price": 2.733e-7,
+      "precision": "fp16",
+      "avg_latency_ms_per_day": 139.78739922364886,
+      "avg_throughput_per_day": 48.6087415478761,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "name": "DeepSeek: DeepSeek V4 Pro 0813",
+      "object": "model",
+      "created": 1790592170,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-0e1cfe5979b1457c934b6d574969c823",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 393216,
+      "context_window": 1048576,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 0.000001104,
+      "output_token_price": 0.000004168,
+      "cache_read_token_price": 5.52e-7,
+      "precision": "fp8",
+      "avg_latency_ms_per_day": null,
+      "avg_throughput_per_day": 0.2898560045783635,
+      "supports_attestation": false,
+      "min_access_tier": 2,
+      "higher_tier_required": true
+    },
+    {
+      "id": "google/gemma-4-31b-it",
+      "name": "Google: Gemma 4 31B Instruct",
+      "object": "model",
+      "created": 1790271346,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-b4468fbb95004fd0a052c04cf0a101d6",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 16384,
+      "context_window": 262144,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 3.8e-7,
+      "output_token_price": 0.00000115,
+      "cache_read_token_price": 1.9e-7,
+      "precision": null,
+      "avg_latency_ms_per_day": 15989.426076894757,
+      "avg_throughput_per_day": 898.6421832363957,
+      "supports_attestation": false,
+      "min_access_tier": 1,
+      "higher_tier_required": false
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning",
+      "name": "NVIDIA: Nemotron 3.5 Lightning",
+      "object": "model",
+      "created": 1790271315,
+      "owned_by": "io-intelligence",
+      "root": null,
+      "parent": null,
+      "max_model_len": null,
+      "permission": [
+        {
+          "id": "modelperm-edbfddbc92774b069ed9e793ec7a0e16",
+          "object": "model_permission",
+          "created": 1792006053,
+          "allow_create_engine": false,
+          "allow_sampling": true,
+          "allow_logprobs": true,
+          "allow_search_indices": false,
+          "allow_view": true,
+          "allow_fine_tuning": false,
+          "organization": "*",
+          "group": null,
+          "is_blocking": false
+        }
+      ],
+      "max_tokens": 131072,
+      "context_window": 262144,
+      "supports_reasoning": true,
+      "supports_tools": true,
+      "supports_responses": false,
+      "input_modalities": [
+        "text"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supports_prompt_cache": true,
+      "input_token_price": 6.375e-8,
+      "output_token_price": 1.525e-7,
+      "cache_read_token_price": 3.1875e-8,
+      "precision": null,
+      "avg_latency_ms_per_day": 571.402191294048,
+      "avg_throughput_per_day": 1730.4993402485145,
+      "supports_attestation": false,
+      "min_access_tier": 1,
+      "higher_tier_required": false
+    }
+  ]
+}
