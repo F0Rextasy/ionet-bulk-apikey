@@ -6,10 +6,13 @@ keys.json
 *.txt
 accounts.json
 outputs/
+logs/
+out/
 launcher.config.json
 .env
 .env.*
 
 *.log
+*.jsonl
 .DS_Store
 Thumbs.db

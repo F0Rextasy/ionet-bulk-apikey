@@ -1,17 +1,17 @@
 <div align="center">
 
 ```
-███████╗ ██████╗ ██████╗ ███████╗██╗  ██╗████████╗ █████╗ ███████╗██╗   ██╗
-██╔════╝██╔═████╗██╔══██╗██╔════╝╚██╗██╔╝╚══██╔══╝██╔══██╗██╔════╝╚██╗ ██╔╝
-█████╗  ██║██╔██║██████╔╝█████╗   ╚███╔╝    ██║   ███████║███████╗ ╚████╔╝
-██╔══╝  ██║████╔╝██╔══██╗██╔══╝   ██╔██╗    ██║   ██╔══██║╚════██║  ╚██╔╝
-██║     ╚██████╔╝██║  ██║███████╗██╔╝ ██╗   ██║   ██║  ██║███████║   ██║
-╚═╝      ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚══════╝   ╚═╝
+██╗ ██████╗     ███╗   ██╗███████╗████████╗
+██║██╔═══██╗    ████╗  ██║██╔════╝╚══██╔══╝
+██║██║   ██║    ██╔██╗ ██║█████╗     ██║
+██║██║   ██║    ██║╚██╗██║██╔══╝     ██║
+██║╚██████╔╝    ██║ ╚████║███████╗   ██║
+╚═╝ ╚═════╝     ╚═╝  ╚═══╝╚══════╝   ╚═╝
 ```
 
 # ionet-bulk-apikey
 
-**Bulk-create [io.net](https://io.net) (IO Intelligence) accounts with auto-generated API keys — OpenAI-compatible inference + 9Router connector.**
+**Bulk-create [io.net](https://io.net) (IO Intelligence) accounts with auto-generated API keys — OpenAI-compatible inference + [9Router](https://9router.com) connector.**
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A518-3DA639?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-blue?style=for-the-badge)](#)
@@ -84,15 +84,15 @@ cd ionet-bulk-apikey
 printf 'socks5://127.0.0.1:1080\n' > proxies.txt
 
 # 2) go — one run == one account attempt, end to end
-node cli.js mint --count 5            # driver: exit → browser → HTTP finish, per account
-node cli.js verify                    # re-check the keys already on disk
-node cli.js screen --limit 400        # keep only exits that reach the provider right now
-node launcher.js                      # or the interactive menu
+node src/cli.js mint --count 5            # driver: exit → browser → HTTP finish, per account
+node src/cli.js verify                    # re-check the keys already on disk
+node src/cli.js screen --limit 400        # keep only exits that reach the provider right now
+node src/launcher.js                      # or the interactive menu
 
 # pieces, if you want them separately:
-node lane.js --tag L1 --port 9421 --target 8 --pick
-node run-account.js --tag L1-1 --port 9421 --proxy socks5://127.0.0.1:1080 --until start
-node http-finish.js --tag L1-1 --email <box@…> --box-token <id> --proxy socks5://127.0.0.1:1080
+node src/lane.js --tag L1 --port 9421 --target 8 --pick
+node src/run-account.js --tag L1-1 --port 9421 --proxy socks5://127.0.0.1:1080 --until start
+node src/http-finish.js --tag L1-1 --email <box@…> --box-token <id> --proxy socks5://127.0.0.1:1080
 ```
 
 **The challenge is answered from your side:** each round is dumped as
@@ -115,7 +115,7 @@ A key is written to `keys.txt` only after the live API answers with it:
 | auth + model list | `GET https://api.intelligence.io.solutions/api/v1/models` | `200` + the account's model ids (39) |
 | real completion | `POST …/chat/completions` (`google/gemma-4-26b-a4b-it`) | `200` + a non-empty assistant message |
 
-`node cli.js verify` re-runs both checks over every key on disk and reports a per-key verdict, and
+`node src/cli.js verify` re-runs both checks over every key on disk and reports a per-key verdict, and
 the driver does the same check on every key it appends.
 
 ## 🧭 How it works
@@ -142,12 +142,11 @@ the browser phase hands off to HTTP instead of finishing in-page.
 
 | tool | flags |
 |---|---|
-| `cli.js` | `mint` · `finish` · `verify` · `screen` — each task prints its own flags (`node lane.js --help`) |
+| `cli.js` | `mint` · `finish` · `verify` · `screen` — each task prints its own flags (`node src/lane.js --help`) |
 | `lane.js` | `--tag` (RP) · `--port` (9411) · `--target N` · `--pick` (fresh pool exit per attempt) or `--proxy <line>` (fixed exit) · `--max-attempts N` |
 | `run-account.js` | `--until start\|otp\|key` · `--solve-budget-ms` · `--round-wait-ms` · `--proxy <line>` · `--broker <url>` · `--email` / `--email-token` (resume an inbox) |
 | `http-finish.js` | `--email` + `--box-token`, or `--token <accessToken>`, or `--from-log <net.jsonl>` · `--key-name` |
-| ops | `watch-round.ps1` (round watcher), `wait-handoff.ps1`, `kill-chrome.ps1 -Port` |
-| 9Router | `--connect-9router` on any task — after it finishes, registers every key in `keys.txt` into a running 9Router (`node connect-9router.js --help`) |
+| 9Router | `--connect-9router` on any task — after it finishes, registers every key in `keys.txt` into a running 9Router (`node src/connect-9router.js --help`) |
 
 ## 🛰️ Behind a proxy
 
@@ -168,7 +167,7 @@ every key you minted becomes a connection under one provider-node — 9Router lo
 them:
 
 ```bash
-node connect-9router.js \
+node src/connect-9router.js \
   --base http://localhost:20128 --password 123456 \
   --api-key io-v2-xxxxxxxx
 ```
@@ -191,8 +190,8 @@ ionet/deepseek-ai/DeepSeek-V4.1-Flash
 ionet/zai-org/GLM-5.3-Flash
 ```
 
-`node cli.js mint --count 5 --connect-9router` mints and registers in one pass, and
-`node launcher.js` drives the same flow from its menu.
+`node src/cli.js mint --count 5 --connect-9router` mints and registers in one pass, and
+`node src/launcher.js` drives the same flow from its menu.
 
 ## 🐞 Issues
 
