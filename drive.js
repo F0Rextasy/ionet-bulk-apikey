@@ -1,1 +1,105 @@
-const a0_0x360bfe=a0_0x136b;(function(_0x4b1363,_0x7648ad){const _0x215dc7=a0_0x136b,_0x152080=_0x4b1363();while(!![]){try{const _0x281b78=parseInt(_0x215dc7(0x177))/0x1*(parseInt(_0x215dc7(0x14d))/0x2)+-parseInt(_0x215dc7(0x168))/0x3*(-parseInt(_0x215dc7(0x189))/0x4)+-parseInt(_0x215dc7(0x181))/0x5*(parseInt(_0x215dc7(0x14c))/0x6)+-parseInt(_0x215dc7(0x188))/0x7+-parseInt(_0x215dc7(0x158))/0x8*(-parseInt(_0x215dc7(0x15d))/0x9)+-parseInt(_0x215dc7(0x164))/0xa+parseInt(_0x215dc7(0x169))/0xb;if(_0x281b78===_0x7648ad)break;else _0x152080['push'](_0x152080['shift']());}catch(_0x6350cb){_0x152080['push'](_0x152080['shift']());}}}(a0_0x6b9f,0x684dc));function a0_0x136b(_0x46abb5,_0x2885b6){_0x46abb5=_0x46abb5-0x14b;const _0x7011fe=a0_0x6b9f();let _0x1ebddd=_0x7011fe[_0x46abb5];if(a0_0x136b['VHwNSk']===undefined){var _0x236d3e=function(_0x330fc4){const _0x589d46='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x36b571='',_0x34511a='',_0x30239c=_0x36b571+_0x236d3e,_0xb3bb5f=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x18775b=0x0,_0x5512e7,_0x12ac4c,_0x9d5361=0x0;_0x12ac4c=_0x330fc4['charAt'](_0x9d5361++);~_0x12ac4c&&(_0x5512e7=_0x18775b%0x4?_0x5512e7*0x40+_0x12ac4c:_0x12ac4c,_0x18775b++%0x4)?_0x36b571+=_0xb3bb5f||_0x30239c['charCodeAt'](_0x9d5361+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x5512e7>>(-0x2*_0x18775b&0x6)):_0x18775b:0x0){_0x12ac4c=_0x589d46['indexOf'](_0x12ac4c);}for(let _0x35eae0=0x0,_0x51b734=_0x36b571['length'];_0x35eae0<_0x51b734;_0x35eae0++){_0x34511a+='%'+('00'+_0x36b571['charCodeAt'](_0x35eae0)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x34511a);};a0_0x136b['LxZJSG']=_0x236d3e,a0_0x136b['GaUroI']={},a0_0x136b['VHwNSk']=!![];}const _0x6b9f9d=_0x7011fe[0x0];a0_0x136b['IbBQCT']!==_0x6b9f9d&&(a0_0x136b['GaUroI']={},a0_0x136b['IbBQCT']=_0x6b9f9d);const _0x136be3=a0_0x136b['GaUroI'][_0x46abb5];if(_0x136be3===undefined){const _0x1ac25f=function(_0x33075d){this['VGmCGr']=_0x33075d,this['lJPVrl']=[0x1,0x0,0x0],this['LPcdHL']=function(){return'newState';},this['xyvcIW']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['LpHUaM']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x1ac25f['prototype']['hdxKbb']=function(){const _0x50a89a=new RegExp(this['xyvcIW']+this['LpHUaM']),_0x5ecf32=_0x50a89a['test'](this['LPcdHL']['toString']())?--this['lJPVrl'][0x1]:--this['lJPVrl'][0x0];return this['mZvbec'](_0x5ecf32);},_0x1ac25f['prototype']['mZvbec']=function(_0x3cf1f2){if(!Boolean(~_0x3cf1f2))return _0x3cf1f2;return this['gsLDzh'](this['VGmCGr']);},_0x1ac25f['prototype']['gsLDzh']=function(_0x426290){for(let _0x1caaac=0x0,_0x5acf28=this['lJPVrl']['length'];_0x1caaac<_0x5acf28;_0x1caaac++){this['lJPVrl']['push'](Math['round'](Math['random']())),_0x5acf28=this['lJPVrl']['length'];}return _0x426290(this['lJPVrl'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x1ac25f(a0_0x136b)['hdxKbb'](),_0x1ebddd=a0_0x136b['LxZJSG'](_0x1ebddd),a0_0x136b['GaUroI'][_0x46abb5]=_0x1ebddd;}else _0x1ebddd=_0x136be3;return _0x1ebddd;}const a0_0x236d3e=(function(){let _0x18775b=!![];return function(_0x5512e7,_0x12ac4c){const _0x9d5361=_0x18775b?function(){if(_0x12ac4c){const _0x35eae0=_0x12ac4c['apply'](_0x5512e7,arguments);return _0x12ac4c=null,_0x35eae0;}}:function(){};return _0x18775b=![],_0x9d5361;};}()),a0_0x1ebddd=a0_0x236d3e(this,function(){const _0x427d7e=a0_0x136b;if(a0_0x1ebddd[_0x427d7e(0x153)]()[_0x427d7e(0x16f)]()[_0x427d7e(0x176)]('\x0a')!==-0x1)return;return a0_0x1ebddd[_0x427d7e(0x16f)]()[_0x427d7e(0x154)](_0x427d7e(0x175))['toString']()[_0x427d7e(0x170)](a0_0x1ebddd)[_0x427d7e(0x154)]('(((.+)+)+)+$');});a0_0x1ebddd();'use strict';const fs=require('fs'),B=require(a0_0x360bfe(0x167)),argv=process[a0_0x360bfe(0x17d)]['slice'](0x2),arg=(_0x51b734,_0x1ac25f)=>{const _0x33075d=argv['indexOf']('--'+_0x51b734);return _0x33075d===-0x1?_0x1ac25f:argv[_0x33075d+0x1];},PORT=parseInt(arg(a0_0x360bfe(0x16a),'9343'),0xa),TARGET=arg(a0_0x360bfe(0x17a),''),[action,a1,a2]=argv[a0_0x360bfe(0x157)]((_0x50a89a,_0x5ecf32)=>{const _0x280b3a=a0_0x360bfe;if(_0x50a89a===_0x280b3a(0x152)||_0x50a89a===_0x280b3a(0x15f))return![];if(_0x5ecf32>0x0&&(argv[_0x5ecf32-0x1]==='--port'||argv[_0x5ecf32-0x1]===_0x280b3a(0x15f)))return![];return!![];});(async()=>{const _0x1edb0c=a0_0x360bfe,_0x3cf1f2=await B[_0x1edb0c(0x16e)](PORT),{targetInfos:_0x426290}=await _0x3cf1f2[_0x1edb0c(0x165)](_0x1edb0c(0x17f)),_0x1caaac=_0x426290['filter'](_0x19c30e=>_0x19c30e[_0x1edb0c(0x14f)]===_0x1edb0c(0x161));action==='find'&&(_0x1caaac[_0x1edb0c(0x151)](_0x2e2b6b=>console[_0x1edb0c(0x174)](_0x2e2b6b[_0x1edb0c(0x187)][_0x1edb0c(0x16b)](0x0,0x8),_0x2e2b6b[_0x1edb0c(0x155)][_0x1edb0c(0x16b)](0x0,0x78))),process[_0x1edb0c(0x173)](0x0));const _0x5acf28=TARGET?_0x1caaac[_0x1edb0c(0x17e)](_0x11a851=>_0x11a851[_0x1edb0c(0x187)][_0x1edb0c(0x171)](TARGET)):_0x1caaac[_0x1edb0c(0x157)](_0x9604ef=>/io\.net/[_0x1edb0c(0x16d)](_0x9604ef[_0x1edb0c(0x155)]))['sort']((_0x62e0c2,_0x3a7adb)=>(_0x3a7adb[_0x1edb0c(0x186)]||0x0)-(_0x62e0c2[_0x1edb0c(0x186)]||0x0))[0x0]||_0x1caaac[0x0];if(!_0x5acf28)throw new Error(_0x1edb0c(0x172));const {sessionId:_0x1afa61}=await _0x3cf1f2['send'](_0x1edb0c(0x179),{'targetId':_0x5acf28['targetId'],'flatten':!![]});await _0x3cf1f2[_0x1edb0c(0x165)]('Page.enable',{},_0x1afa61),await _0x3cf1f2[_0x1edb0c(0x165)](_0x1edb0c(0x160),{},_0x1afa61);if(action===_0x1edb0c(0x16c)){const _0xda8614=await B[_0x1edb0c(0x15b)](_0x3cf1f2,_0x1afa61,_0x1edb0c(0x185));console[_0x1edb0c(0x174)](JSON[_0x1edb0c(0x17c)](_0xda8614,null,0x1)),process['exit'](0x0);}if(action==='shot'){const _0xd3cce4=a1||_0x1edb0c(0x156);await B[_0x1edb0c(0x14b)](_0x3cf1f2,_0x1afa61,_0xd3cce4),console['log'](_0x1edb0c(0x180),_0xd3cce4),process[_0x1edb0c(0x173)](0x0);}if(action===_0x1edb0c(0x166)){const _0x442532=parseFloat(a1),_0x15c17c=parseFloat(a2);await B['clickAt'](_0x3cf1f2,_0x1afa61,_0x442532,_0x15c17c),console['log'](_0x1edb0c(0x150),_0x442532,_0x15c17c),process[_0x1edb0c(0x173)](0x0);}if(action==='type'){const _0x3919bb=a1,_0x456214=await B[_0x1edb0c(0x15b)](_0x3cf1f2,_0x1afa61,_0x1edb0c(0x15e));if(!_0x456214)throw new Error(_0x1edb0c(0x182));await B[_0x1edb0c(0x15c)](_0x3cf1f2,_0x1afa61,_0x456214['x'],_0x456214['y']),await _0x3cf1f2['send'](_0x1edb0c(0x159),{'text':_0x3919bb},_0x1afa61);const _0x5ab726=await B['evalJs'](_0x3cf1f2,_0x1afa61,_0x1edb0c(0x163));console[_0x1edb0c(0x174)](_0x1edb0c(0x183)+(_0x456214['name']||'?')+_0x1edb0c(0x15a)+_0x5ab726+'\x22'),process[_0x1edb0c(0x173)](0x0);}if(action===_0x1edb0c(0x184)){const _0x2beed1=await B[_0x1edb0c(0x15b)](_0x3cf1f2,_0x1afa61,a1);console[_0x1edb0c(0x174)](JSON[_0x1edb0c(0x17c)](_0x2beed1,null,0x1)),process['exit'](0x0);}console[_0x1edb0c(0x174)](_0x1edb0c(0x162)),process[_0x1edb0c(0x173)](0x1);})()[a0_0x360bfe(0x178)](_0x3c2c4f=>{const _0x24ce7a=a0_0x360bfe;console['error'](_0x24ce7a(0x14e),_0x3c2c4f[_0x24ce7a(0x17b)]),process[_0x24ce7a(0x173)](0x1);});function a0_0x6b9f(){const _0x452cd8=['C2vHCMnO','DxjS','zhjPDMuTC2HVDc5WBMC','zMLSDgvY','ofjiDfPdtW','sw5WDxqUAw5Zzxj0vgv4Da','ic0+igzPzwXKpsi','zxzHBePZ','y2XPy2TbDa','mtq1nZG1nLb2zvj6EG','kcGPid0+ihSkicaGicaGicbJB25ZDcbPpvSUlI5KB2n1BwvUDc5XDwvYEvnLBgvJDg9YqwXSkcDPBNb1DcCPxs5MAwX0zxiOEd0+E2nVBNn0ihi9Ec5NzxrcB3vUzgLUz0nSAwvUDfjLy3qOktTYzxr1CM4GCI53Awr0Ad4YicyMigDLDenVBxb1DgvKu3r5BguOEcKUzgLZCgXHEse9psDUB25LjZT9kvSWxtSkicaGicaGicbPzIaOiwKPihjLDhvYBIbUDwXSoWOGicaGicaGigKUzM9JDxmOktSGAs5ZzwXLy3qGjIyGAs5ZzwXLy3qOktSkicaGicaGicbJB25ZDcbYpwKUz2v0qM91BMrPBMDdBgLLBNrszwn0kcK7cIaGicaGicaGCMv0DxjUihT4oNiUEcTYlNDPzhrOlZiSihK6CI55k3iUAgvPz2H0lZiSig5HBwu6As5Uyw1LFtSkicaGicaGFsKOkq','ls10yxjNzxq','uNvUDgLTzs5LBMfIBgu','CgfNzq','DxnHz2u6ihn0yxrLFhnOB3r8y2XPy2SGwcbzFgv2ywWGzxHWCNXMAw5K','kcGPpt57y29UC3qGAt1BlI4Uzg9JDw1LBNqUCxvLCNLtzwXLy3rVCKfSBcGNAw5WDxqNkv0UzMLSDgvYkhG9pNGUz2v0qM91BMrPBMDdBgLLBNrszwn0kcKUD2LKDgG+mILBmf07CMv0DxjUigK/u3rYAw5NkgKUDMfSDwv8FcCNktPUDwXSo30PkcK','mtGYnZG4mfDuvLHLAq','C2vUza','y2XPy2S','lI9ICM93C2vY','mtq0nZa4z25Xrgzk','mtG1mtqYmxj5vhfnsq','Cg9YDa','C2XPy2u','C3rHDgu','DgvZDa','y29UBMvJDa','Dg9tDhjPBMC','y29UC3rYDwn0B3i','C3rHCNrZv2L0Aa','BM8GCgfNzsb0yxjNzxq','zxHPDa','Bg9N','kcGOlISPkYKRksSK','Aw5KzxHpzG','mtGWm0TnBwHXua','y2f0y2G','vgfYz2v0lMf0DgfJAfrVvgfYz2v0','DgfYz2v0','BwvZC2fNzq','C3rYAw5NAwz5','yxjNDG','zMLUza','vgfYz2v0lMDLDfrHCMDLDhm','C2f2zwq','mta5ntK0nxnkD0fAqq','BM8GDMLZAwjSzsbPBNb1Da','DhLWzwqGAw50BYa','zxzHBa','kcGPid0+ihSkicaGicaGicbJB25ZDcbXid0GkhmPid0+ifSUlI5KB2n1BwvUDc5XDwvYEvnLBgvJDg9YqwXSkhmPxtSkicaGicaGicbJB25ZDcb2AxmGpsaOzsKGpt4GEYbJB25ZDcbYpwuUz2v0qM91BMrPBMDdBgLLBNrszwn0kcK7ignVBNn0ihn0pwDLDenVBxb1DgvKu3r5BguOzsK7ihjLDhvYBIbZDc5KAxnWBgf5it09j25VBMuNicyMihn0lNzPC2LIAwXPDhKHpt0NAgLKzgvUjYaMjIbYlNDPzhrOpJiGjIyGCI5OzwLNAhq+mJSGFtSkicaGicaGicbJB25ZDcbIzIa9iheOj2LMCMfTzvTZCMmQpsjYzwnHChrJAgeIxsCPlMzPBhrLCIH2AxmPlM1HCcHMpt4OE3nYyZOOzI5ZCMn8FcCNks5ZBgLJzsGWldeXmcKSihjLy3q6khi9pIH7EdPnyxrOlNjVDw5KkhiUEcKSEtPnyxrOlNjVDw5KkhiUEsKSDZPnyxrOlNjVDw5KkhiUD2LKDgGPlgG6twf0Ac5YB3vUzcHYlMHLAwDODcL9ksKOzI5NzxrcB3vUzgLUz0nSAwvUDfjLy3qOksL9ksK7cIaGicaGicaGy29UC3qGDgeGpsbXkcD0zxH0yxjLyvTUyw1LpsjNlxjLy2fWDgnOys1YzxnWB25ZzsjDlcaJzY1YzwnHChrJAgeTCMvZCg9UC2uNkvSWxtSkicaGicaGicbJB25ZDcbJB250pvSUlI5KB2n1BwvUDc5XDwvYEvnLBgvJDg9YqwXSkcDIDxr0B24Nkv0UzMLUzcH4pt4VxMnVBNrPBNvLjc9PlNrLC3qOkhGUAw5UzxjuzxH0FhWNjYKUDhjPBsGPksK7cIaGicaGicaGCMv0DxjUihSGDxjSoIbSB2nHDgLVBI5OCMvMlcb0AxrSztOGzg9JDw1LBNqUDgL0BguSigzYyw1LCZOGyMySihrVA2vUoIb0yt8GkhrHlNzHBhvLFhWNjYKUBgvUz3rOidOGBNvSBcWGy29UDgLUDwveAxnHyMXLzdOGy29UDd8Gy29UDc5KAxnHyMXLzca6ig51BgWSihnJCM9SBfK6ihDPBMrVDY5Zy3jVBgXzlcb3oIbPBM5LCLDPzhrOlcbOoIbPBM5LCKHLAwDODcb9oWOGicaGicb9ksGP','BgfZDefJDgL2zvrPBwu','DgfYz2v0swq','mJuWodm2nKfnBfz4Ca','mZjzseHfre4','C2nYzwvUC2HVDa','mtjOz2v0twG','nZy2yMrnEvri','rvjs','DhLWzq','y2XPy2TLza','zM9YrwfJAa','ls1WB3j0','yMLUza'];a0_0x6b9f=function(){return _0x452cd8;};return a0_0x6b9f();}
+'use strict';
+/*
+ * Tiny CDP driver for the live pilot page — for the agent-in-the-loop part of
+ * the reCAPTCHA image challenge (screenshot → read → click tiles).
+ *
+ *   node src/drive.js state            # bframe rect, token length, url, title
+ *   node src/drive.js shot out.png     # full-page screenshot
+ *   node src/drive.js click X Y        # mouse click at viewport coords
+ *   node src/drive.js eval "expr"      # evaluate JS, print JSON
+ *   node src/drive.js find             # list io.net page targets
+ *
+ * Port via --port (default 9343); target via --target <prefix> (optional).
+ */
+const fs = require('fs');
+const B = require('./browser');
+
+const argv = process.argv.slice(2);
+const arg = (n, d) => {
+  const i = argv.indexOf('--' + n);
+  return i === -1 ? d : argv[i + 1];
+};
+const PORT = parseInt(arg('port', '9343'), 10);
+const TARGET = arg('target', '');
+const [action, a1, a2] = argv.filter((a, i) => {
+  if (a === '--port' || a === '--target') return false;
+  if (i > 0 && (argv[i - 1] === '--port' || argv[i - 1] === '--target')) return false;
+  return true;
+});
+
+(async () => {
+  const cdp = await B.connect(PORT);
+  const { targetInfos } = await cdp.send('Target.getTargets');
+  const pages = targetInfos.filter((t) => t.type === 'page');
+  if (action === 'find') {
+    pages.forEach((t) => console.log(t.targetId.slice(0, 8), t.url.slice(0, 120)));
+    process.exit(0);
+  }
+  const page = TARGET
+    ? pages.find((t) => t.targetId.startsWith(TARGET))
+    : pages.filter((t) => /io\.net/.test(t.url)).sort((a, b) => (b.lastActiveTime || 0) - (a.lastActiveTime || 0))[0] || pages[0];
+  if (!page) throw new Error('no page target');
+  const { sessionId } = await cdp.send('Target.attachToTarget', { targetId: page.targetId, flatten: true });
+  await cdp.send('Page.enable', {}, sessionId);
+  await cdp.send('Runtime.enable', {}, sessionId);
+
+  if (action === 'state') {
+    const st = await B.evalJs(
+      cdp,
+      sessionId,
+      `(() => {
+        const q = (s) => [...document.querySelectorAll(s)];
+        const vis = (e) => { const r=e.getBoundingClientRect(); const st=getComputedStyle(e); return st.display!=='none' && st.visibility!=='hidden' && r.width>2 && r.height>2; };
+        const bf = q('iframe[src*="recaptcha"]').filter(vis).map(f=>({src:(f.src||'').slice(0,110), rect:(r=>({x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height)}))(f.getBoundingClientRect())}));
+        const ta = q('textarea[name="g-recaptcha-response"], #g-recaptcha-response')[0];
+        const cont=[...document.querySelectorAll('button')].find(x=>/^continue$/i.test((x.innerText||'').trim()));
+        return { url: location.href, title: document.title, frames: bf, token: ta? (ta.value||'').length : null, continueDisabled: cont? cont.disabled : null, scrollY: window.scrollY, w: innerWidth, h: innerHeight };
+      })()`
+    );
+    console.log(JSON.stringify(st, null, 1));
+    process.exit(0);
+  }
+  if (action === 'shot') {
+    const file = a1 || 'drive-shot.png';
+    await B.screenshot(cdp, sessionId, file);
+    console.log('saved', file);
+    process.exit(0);
+  }
+  if (action === 'click') {
+    const x = parseFloat(a1);
+    const y = parseFloat(a2);
+    await B.clickAt(cdp, sessionId, x, y);
+    console.log('clicked', x, y);
+    process.exit(0);
+  }
+  if (action === 'type') {
+    const text = a1;
+    const info = await B.evalJs(
+      cdp,
+      sessionId,
+      `(() => {
+        const i=[...document.querySelectorAll('input')].filter(x=>{const r=x.getBoundingClientRect();return r.width>2 && getComputedStyle(x).display!=='none';})[0];
+        if (!i) return null;
+        i.focus(); i.select && i.select();
+        const r=i.getBoundingClientRect();
+        return {x:r.x+r.width/2, y:r.y+r.height/2, name:i.name};
+      })()`
+    );
+    if (!info) throw new Error('no visible input');
+    await B.clickAt(cdp, sessionId, info.x, info.y);
+    await cdp.send('Input.insertText', { text }, sessionId);
+    const got = await B.evalJs(cdp, sessionId, `(()=>{const i=[...document.querySelectorAll('input')].filter(x=>x.getBoundingClientRect().width>2)[0];return i?String(i.value||''):null;})()`);
+    console.log(`typed into ${info.name||'?'} -> field="${got}"`);
+    process.exit(0);
+  }
+  if (action === 'eval') {
+    const r = await B.evalJs(cdp, sessionId, a1);
+    console.log(JSON.stringify(r, null, 1));
+    process.exit(0);
+  }
+  console.log('usage: state|shot|click X Y|eval expr|find');
+  process.exit(1);
+})().catch((e) => {
+  console.error('ERR', e.message);
+  process.exit(1);
+});

@@ -1,1 +1,93 @@
-const a0_0x5c8b60=a0_0x9b96;(function(_0x5b8662,_0x59fb00){const _0x29bc4a=a0_0x9b96,_0x15126c=_0x5b8662();while(!![]){try{const _0x4375ae=-parseInt(_0x29bc4a(0x21f))/0x1*(-parseInt(_0x29bc4a(0x1f7))/0x2)+-parseInt(_0x29bc4a(0x226))/0x3+-parseInt(_0x29bc4a(0x1de))/0x4*(-parseInt(_0x29bc4a(0x211))/0x5)+parseInt(_0x29bc4a(0x20a))/0x6+parseInt(_0x29bc4a(0x1e4))/0x7*(parseInt(_0x29bc4a(0x1e9))/0x8)+-parseInt(_0x29bc4a(0x1f5))/0x9*(-parseInt(_0x29bc4a(0x207))/0xa)+-parseInt(_0x29bc4a(0x206))/0xb;if(_0x4375ae===_0x59fb00)break;else _0x15126c['push'](_0x15126c['shift']());}catch(_0x15fd3f){_0x15126c['push'](_0x15126c['shift']());}}}(a0_0x6699,0x34b16));const a0_0x574c62=(function(){let _0x3c3a8b=!![];return function(_0x33c9cc,_0x25f74b){const _0x2bb695=_0x3c3a8b?function(){const _0x41963a=a0_0x9b96;if(_0x25f74b){const _0x8c166f=_0x25f74b[_0x41963a(0x1e7)](_0x33c9cc,arguments);return _0x25f74b=null,_0x8c166f;}}:function(){};return _0x3c3a8b=![],_0x2bb695;};}()),a0_0x2afcab=a0_0x574c62(this,function(){const _0x48c9e6=a0_0x9b96;if(a0_0x2afcab[_0x48c9e6(0x20f)]()['toString']()['indexOf']('\x0a')!==-0x1)return;return a0_0x2afcab[_0x48c9e6(0x20e)]()[_0x48c9e6(0x1ca)](_0x48c9e6(0x1df))['toString']()['constructor'](a0_0x2afcab)[_0x48c9e6(0x1ca)]('(((.+)+)+)+$');});function a0_0x9b96(_0x23f5a5,_0x25dab0){_0x23f5a5=_0x23f5a5-0x1ca;const _0xb168fe=a0_0x6699();let _0x2afcab=_0xb168fe[_0x23f5a5];if(a0_0x9b96['byqcrD']===undefined){var _0x574c62=function(_0x1e0f81){const _0x42973c='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0xf3e12f='',_0x10f089='',_0x5e9010=_0xf3e12f+_0x574c62,_0x237f72=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x3c3a8b=0x0,_0x33c9cc,_0x25f74b,_0x2bb695=0x0;_0x25f74b=_0x1e0f81['charAt'](_0x2bb695++);~_0x25f74b&&(_0x33c9cc=_0x3c3a8b%0x4?_0x33c9cc*0x40+_0x25f74b:_0x25f74b,_0x3c3a8b++%0x4)?_0xf3e12f+=_0x237f72||_0x5e9010['charCodeAt'](_0x2bb695+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x33c9cc>>(-0x2*_0x3c3a8b&0x6)):_0x3c3a8b:0x0){_0x25f74b=_0x42973c['indexOf'](_0x25f74b);}for(let _0x8c166f=0x0,_0x3a9c7d=_0xf3e12f['length'];_0x8c166f<_0x3a9c7d;_0x8c166f++){_0x10f089+='%'+('00'+_0xf3e12f['charCodeAt'](_0x8c166f)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x10f089);};a0_0x9b96['jSriGU']=_0x574c62,a0_0x9b96['hPnASA']={},a0_0x9b96['byqcrD']=!![];}const _0x6699b4=_0xb168fe[0x0];a0_0x9b96['ZFsVsm']!==_0x6699b4&&(a0_0x9b96['hPnASA']={},a0_0x9b96['ZFsVsm']=_0x6699b4);const _0x9b96b5=a0_0x9b96['hPnASA'][_0x23f5a5];if(_0x9b96b5===undefined){const _0x2d88ea=function(_0x46b2f8){this['heAKbm']=_0x46b2f8,this['RJslOZ']=[0x1,0x0,0x0],this['khdwLU']=function(){return'newState';},this['OgFHwI']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['eoogFW']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x2d88ea['prototype']['voQvOG']=function(){const _0x2e63b7=new RegExp(this['OgFHwI']+this['eoogFW']),_0x5d6f0e=_0x2e63b7['test'](this['khdwLU']['toString']())?--this['RJslOZ'][0x1]:--this['RJslOZ'][0x0];return this['BqynOb'](_0x5d6f0e);},_0x2d88ea['prototype']['BqynOb']=function(_0x191891){if(!Boolean(~_0x191891))return _0x191891;return this['LOfOqC'](this['heAKbm']);},_0x2d88ea['prototype']['LOfOqC']=function(_0x258c80){for(let _0x471c09=0x0,_0xe746b5=this['RJslOZ']['length'];_0x471c09<_0xe746b5;_0x471c09++){this['RJslOZ']['push'](Math['round'](Math['random']())),_0xe746b5=this['RJslOZ']['length'];}return _0x258c80(this['RJslOZ'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x2d88ea(a0_0x9b96)['voQvOG'](),_0x2afcab=a0_0x9b96['jSriGU'](_0x2afcab),a0_0x9b96['hPnASA'][_0x23f5a5]=_0x2afcab;}else _0x2afcab=_0x9b96b5;return _0x2afcab;}a0_0x2afcab();'use strict';const fs=require('fs'),path=require(a0_0x5c8b60(0x1f8)),http=require(a0_0x5c8b60(0x21c)),https=require(a0_0x5c8b60(0x215)),{parseProxy,createAgent}=require('./proxy.js'),argv=process[a0_0x5c8b60(0x205)]['slice'](0x2),arg=(_0x3a9c7d,_0x2d88ea)=>{const _0x38672d=a0_0x5c8b60,_0x46b2f8=argv[_0x38672d(0x1f4)]('--'+_0x3a9c7d);return _0x46b2f8===-0x1?_0x2d88ea:argv[_0x46b2f8+0x1];};let TOKEN=arg(a0_0x5c8b60(0x212),'');const FROM_LOG=arg(a0_0x5c8b60(0x1d4),''),TAG=arg(a0_0x5c8b60(0x1e0),'p1'),PROXY_LINE=arg(a0_0x5c8b60(0x1ea),''),ROOT=path[a0_0x5c8b60(0x214)](__dirname),UA='Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/155.0.8059.41\x20Safari/537.36';if(!TOKEN&&FROM_LOG)for(const l of fs[a0_0x5c8b60(0x20c)](FROM_LOG,'utf8')[a0_0x5c8b60(0x1cb)](/\r?\n/)){if(!l[a0_0x5c8b60(0x1f3)]())continue;let rec=null;try{rec=JSON[a0_0x5c8b60(0x1d8)](l);}catch{continue;}if(typeof rec[a0_0x5c8b60(0x225)]===a0_0x5c8b60(0x1e1)){const m=rec['body'][a0_0x5c8b60(0x1d5)](/"accessToken"\s*:\s*"([^"]+)"/);if(m)TOKEN=m[0x1];}}const proxy=PROXY_LINE?parseProxy(PROXY_LINE):null;proxy&&(proxy[a0_0x5c8b60(0x1e2)]=0x1f40,proxy[a0_0x5c8b60(0x219)]=0x7530);function a0_0x6699(){const _0x5efe0d=['Bg9N','DgLTzw91De1Z','D3jPDgvgAwXLu3LUyW','Dgv4Dc9ODg1S','Ahr0Ca','ue9tva','Dg9ju09tDhjPBMC','m1DSs2XKvq','Ahr0Chm6','C3rHDhvZ','Ahr0Chm6lY9HAs5PBY5UzxqVywKVyxbPlwTLExm','CMvWBgfJzq','zgvZDhjVEq','yM9KEq','ndq3nZe0wgT6vMnZ','AhjLzG','ls0Tig1PBMLUzYbHAs5PBY5UzxqGyNvUzgXLic0Tlq','C2vHCMnO','C3bSAxq','Ag9ZDg5HBwu','lNr4Da','r0vu','ywXS','C3rHDhvZq29Kzq','zxHPDa','mJaYnI0Xmc0YmvqWmdOWmdOWmfO','C3rHCNrZv2L0Aa','zNjVBs1SB2C','Bwf0y2G','DgLTzw91Da','q1jfqvrfrdOG','CgfYC2u','Bwf4','A2v5C2HHCguTyNvUzgXLlq','yxbPlwTLExm','ChjVDg9JB2W','C2nVCgvZ','ndmXmdHAAeHvyxe','kcGOlISPkYKRksSK','DgfN','C3rYAw5N','y29UBMvJDfrPBwvVDxrnCW','CgfNzsaTpIa','n09QyxDLBa','C3rYAw5NAwz5','qIKGAgL0CZ0','yxbWBhK','C2v0rw5JB2rPBMC','mtCWnZm0ngfozeL6Bq','ChjVEhK','Cg9YDa','y2f0y2G','icdIGky','zNjVBq','B3v0Chv0CW','ChvZAa','zgf0yq','Bwf0y2HbBgW','DhjPBq','Aw5KzxHpzG','mZKZnZvLzeDQBvK','Ahr0Chm6lY9HCgKUAw8UC29SDxrPB25Zl3yXl2fWAs1RzxLZlW','mte2odu2qKDVqxHn','Cgf0Aa','BM93','mJaYnI0Xms0Xm1qWmdOWmdOWmfO','zw5K','BwvZC2fNzq','C2v0vgLTzw91Da','BgvUz3rO','mJaYnY0Xmc0XnfqWmdOWmdOWmfO','vvjmia','q29UDgvUDc1uExbL','mJaYnY0Wnc0XnfqWmdOWmdOWmfO','lMXVzW','ChjVAMvJDa','yxjNDG','ntq0mti3mxbKAfHusW','mZbtv3v0wxC','igXLBJ0','yxbWzw5KrMLSzvn5BMm','mJm1otq0mhHnC09wuW','D3jPDgu','CMvHzezPBgvtEw5J','A2v5C2HHCguT','Dg9tDhjPBMC','yMLUza','zxjYB3i','mZbXue5rr3G','Dg9Rzw4','Cgf0Ag5HBwu','AM9PBG','Ahr0Chm','zgvMyxvSDa','C2XPy2u'];a0_0x6699=function(){return _0x5efe0d;};return a0_0x6699();}if(!TOKEN)throw new Error('no\x20token');function req(_0x2e63b7,{method:method=a0_0x5c8b60(0x1ce),headers:headers={},body:body=null,timeoutMs:timeoutMs=0xafc8}={}){return new Promise((_0x5d6f0e,_0x191891)=>{const _0x38f09b=a0_0x9b96,_0x258c80=new URL(_0x2e63b7),_0x471c09=_0x258c80[_0x38f09b(0x1dc)]===_0x38f09b(0x220)?https:http,_0xe746b5=body==null?null:Buffer[_0x38f09b(0x1ee)](typeof body===_0x38f09b(0x1e1)?body:JSON['stringify'](body)),_0x4e2d00={'User-Agent':UA,...TOKEN?{'Token':TOKEN}:{},...headers};if(_0xe746b5)_0x4e2d00[_0x38f09b(0x201)]='application/json';const _0x3f29d2=_0x471c09['request']({'method':method,'host':_0x258c80[_0x38f09b(0x1cc)],'port':_0x258c80[_0x38f09b(0x1eb)]||(_0x258c80['protocol']==='https:'?0x1bb:0x50),'path':_0x258c80[_0x38f09b(0x213)]+_0x258c80['search'],'headers':_0x4e2d00,'agent':proxy?createAgent(proxy):undefined},_0x48d5da=>{const _0x1626d3=_0x38f09b;let _0xbff17d='';_0x48d5da[_0x1626d3(0x1e8)]('utf8'),_0x48d5da['on'](_0x1626d3(0x1f1),_0x4aecac=>_0xbff17d+=_0x4aecac),_0x48d5da['on'](_0x1626d3(0x1fb),()=>_0x5d6f0e({'status':_0x48d5da[_0x1626d3(0x1d0)],'headers':_0x48d5da['headers'],'body':_0xbff17d}));});_0x3f29d2[_0x38f09b(0x1fd)](timeoutMs,()=>_0x3f29d2[_0x38f09b(0x224)](new Error(_0x38f09b(0x1d6)))),_0x3f29d2['on'](_0x38f09b(0x210),_0x191891);if(_0xe746b5)_0x3f29d2[_0x38f09b(0x20b)](_0xe746b5);_0x3f29d2['end']();});}const sleep=_0x5d3825=>new Promise(_0x492a7d=>setTimeout(_0x492a7d,_0x5d3825));(async()=>{const _0x410b01=a0_0x5c8b60,_0xc01cae=Date[_0x410b01(0x1f9)]()['toString'](0x24),_0x4881b8=(_0x39c18d,_0x3b1fa2=0x12c)=>String(_0x39c18d)[_0x410b01(0x223)](/\s+/g,'\x20')['slice'](0x0,_0x3b1fa2),_0x5ce7ae={'name':'k-'+TAG+'-'+_0xc01cae,'description':'k-'+TAG+'-'+_0xc01cae},_0x2cff08=[{..._0x5ce7ae,'expires_at':_0x410b01(0x1fa),'project':_0x410b01(0x216),'scopes':[]},{..._0x5ce7ae,'expires_at':_0x410b01(0x1ff),'project':'default','scopes':[]},{..._0x5ce7ae,'expires_at':_0x410b01(0x202),'project':_0x410b01(0x216),'scopes':[]},{..._0x5ce7ae,'expires_at':_0x410b01(0x1d2),'project':'default','scopes':[]},{..._0x5ce7ae,'expires_at':_0x410b01(0x1fa),'project':'io-intelligence','scopes':[_0x410b01(0x1cf)]},{..._0x5ce7ae,'expires_at':'2026-11-13T00:00:00Z','project':_0x410b01(0x216),'scopes':[_0x410b01(0x1cf)]}];for(const _0x3f5c1f of _0x2cff08){const _0x292daa=await req(_0x410b01(0x1f6),{'method':_0x410b01(0x21d),'body':_0x3f5c1f});console[_0x410b01(0x218)]('POST\x20project='+_0x3f5c1f[_0x410b01(0x204)]+'\x20scopes='+JSON[_0x410b01(0x1e5)](_0x3f5c1f[_0x410b01(0x1dd)])+'\x20->\x20'+_0x292daa[_0x410b01(0x221)]+'\x20'+_0x4881b8(_0x292daa[_0x410b01(0x225)],0x190)),fs[_0x410b01(0x209)](path[_0x410b01(0x214)](ROOT,_0x410b01(0x1ef),_0x410b01(0x20d)+TAG+_0x410b01(0x203)),JSON[_0x410b01(0x1e5)]({'at':new Date()[_0x410b01(0x21e)](),'t':_0x3f5c1f,'status':_0x292daa['status'],'body':_0x292daa[_0x410b01(0x225)]['slice'](0x0,0xbb8)})+'\x0a');if(_0x292daa[_0x410b01(0x221)]<0x12c){console[_0x410b01(0x218)](_0x410b01(0x1d7)+_0x4881b8(_0x292daa[_0x410b01(0x225)],0x320));return;}await sleep(0x190);}console[_0x410b01(0x218)](_0x410b01(0x228));const _0x2720ec=await req(_0x410b01(0x222),{'headers':{'Accept':_0x410b01(0x21b)}});console[_0x410b01(0x218)](_0x410b01(0x1e3)+_0x2720ec['status']+_0x410b01(0x208)+_0x2720ec[_0x410b01(0x225)][_0x410b01(0x1fe)]);const _0x4056dd=[..._0x2720ec['body'][_0x410b01(0x1f2)](/src="([^"]+\.js[^"]*)"/g)]['map'](_0x1394e8=>_0x1394e8[0x1]);console['log']('js\x20assets:\x20'+_0x4056dd['slice'](0x0,0xc)[_0x410b01(0x214)]('\x20'));for(const _0x3f51bd of _0x4056dd['slice'](0x0,0xc)){const _0x37df62=_0x3f51bd[_0x410b01(0x1d3)](_0x410b01(0x21c))?_0x3f51bd:new URL(_0x3f51bd,'https://ai.io.net')[_0x410b01(0x227)];let _0x5f4089;try{_0x5f4089=await req(_0x37df62,{'headers':{'Accept':'application/javascript'}});}catch(_0x4b0c74){continue;}if(_0x5f4089[_0x410b01(0x221)]!==0xc8)continue;const _0x289293=[];for(const _0x572a0c of['expires_at',_0x410b01(0x1dd),_0x410b01(0x1db)]){let _0x592361=0x0;while((_0x592361=_0x5f4089[_0x410b01(0x225)]['indexOf'](_0x572a0c,_0x592361))!==-0x1&&_0x289293[_0x410b01(0x1fe)]<0xc){_0x289293[_0x410b01(0x1f0)](_0x5f4089[_0x410b01(0x225)]['slice'](Math[_0x410b01(0x1d9)](0x0,_0x592361-0x12c),_0x592361+0x12c)),_0x592361+=_0x572a0c[_0x410b01(0x1fe)];}}if(_0x289293[_0x410b01(0x1fe)]){console[_0x410b01(0x218)]('\x0a==\x20'+_0x37df62[_0x410b01(0x217)](-0x3c)+'\x20('+_0x5f4089[_0x410b01(0x225)][_0x410b01(0x1fe)]+_0x410b01(0x1e6)+_0x289293[_0x410b01(0x1fe)]);for(const _0x4ed4ef of _0x289293[_0x410b01(0x217)](0x0,0x6))console[_0x410b01(0x218)](_0x410b01(0x1ed)+_0x4ed4ef['replace'](/\s+/g,'\x20')+'…');fs[_0x410b01(0x21a)](path[_0x410b01(0x214)](ROOT,'outputs',_0x410b01(0x1da)+_0xc01cae+_0x410b01(0x1cd)),_0x410b01(0x200)+_0x37df62+'\x0a\x0a'+_0x289293[_0x410b01(0x214)]('\x0a\x0a---\x0a\x0a'));}}})()[a0_0x5c8b60(0x1ec)](_0x2a77b0=>{const _0x410eb3=a0_0x5c8b60;console['error']('FAIL',_0x2a77b0[_0x410eb3(0x1fc)]),process[_0x410eb3(0x1d1)](0x1);});
+'use strict';
+// Hunt the exact POST /v1/api-keys/ body shape: value guesses first, then mine the
+// ai.io.net UI bundle for the real request if guesses fail.
+//   node src/key-shape.js --from-log <net.jsonl> --proxy <line> [--tag p1]
+const fs = require('fs');
+const path = require('path');
+const http = require('http');
+const https = require('https');
+const { parseProxy, createAgent } = require('./proxy.js');
+
+const argv = process.argv.slice(2);
+const arg = (n, d) => { const i = argv.indexOf('--' + n); return i === -1 ? d : argv[i + 1]; };
+let TOKEN = arg('token', '');
+const FROM_LOG = arg('from-log', '');
+const TAG = arg('tag', 'p1');
+const PROXY_LINE = arg('proxy', '');
+const ROOT = path.join(__dirname);
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.8059.41 Safari/537.36';
+if (!TOKEN && FROM_LOG) {
+  for (const l of fs.readFileSync(FROM_LOG, 'utf8').split(/\r?\n/)) {
+    if (!l.trim()) continue;
+    let rec = null; try { rec = JSON.parse(l); } catch { continue; }
+    if (typeof rec.body === 'string') { const m = rec.body.match(/"accessToken"\s*:\s*"([^"]+)"/); if (m) TOKEN = m[1]; }
+  }
+}
+const proxy = PROXY_LINE ? parseProxy(PROXY_LINE) : null;
+if (proxy) { proxy.connectTimeoutMs = 8000; proxy.timeoutMs = 30000; }
+if (!TOKEN) throw new Error('no token');
+
+function req(url, { method = 'GET', headers = {}, body = null, timeoutMs = 45000 } = {}) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url);
+    const lib = u.protocol === 'https:' ? https : http;
+    const payload = body == null ? null : Buffer.from(typeof body === 'string' ? body : JSON.stringify(body));
+    const hs = { 'User-Agent': UA, ...(TOKEN ? { Token: TOKEN } : {}), ...headers };
+    if (payload) hs['Content-Type'] = 'application/json';
+    const r = lib.request({ method, host: u.hostname, port: u.port || (u.protocol === 'https:' ? 443 : 80), path: u.pathname + u.search, headers: hs, agent: proxy ? createAgent(proxy) : undefined }, (res) => {
+      let t = ''; res.setEncoding('utf8'); res.on('data', (c) => (t += c));
+      res.on('end', () => resolve({ status: res.statusCode, headers: res.headers, body: t }));
+    });
+    r.setTimeout(timeoutMs, () => r.destroy(new Error('timeout')));
+    r.on('error', reject);
+    if (payload) r.write(payload);
+    r.end();
+  });
+}
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+(async () => {
+  const stamp = Date.now().toString(36);
+  const nice = (s, n = 300) => String(s).replace(/\s+/g, ' ').slice(0, n);
+  const base = { name: `k-${TAG}-${stamp}`, description: `k-${TAG}-${stamp}` };
+
+  const tries = [
+    { ...base, expires_at: '2026-11-13T00:00:00Z', project: 'default', scopes: [] },
+    { ...base, expires_at: '2027-10-14T00:00:00Z', project: 'default', scopes: [] },
+    { ...base, expires_at: '2027-04-14T00:00:00Z', project: 'default', scopes: [] },
+    { ...base, expires_at: '2026-10-21T00:00:00Z', project: 'default', scopes: [] },
+    { ...base, expires_at: '2026-11-13T00:00:00Z', project: 'io-intelligence', scopes: ['all'] },
+    { ...base, expires_at: '2026-11-13T00:00:00Z', project: 'default', scopes: ['all'] },
+  ];
+  for (const t of tries) {
+    const r = await req('https://api.io.solutions/v1/api-keys/', { method: 'POST', body: t });
+    console.log(`POST project=${t.project} scopes=${JSON.stringify(t.scopes)} -> ${r.status} ${nice(r.body, 400)}`);
+    fs.appendFileSync(path.join(ROOT, 'outputs', `keyshape-${TAG}.log`), JSON.stringify({ at: new Date().toISOString(), t, status: r.status, body: r.body.slice(0, 3000) }) + '\n');
+    if (r.status < 300) { console.log('CREATED: ' + nice(r.body, 800)); return; }
+    await sleep(400);
+  }
+
+  // Value guesses failed — mine the UI bundle for the real request shape.
+  console.log('--- mining ai.io.net bundle ---');
+  const page = await req('https://ai.io.net/ai/api-keys', { headers: { Accept: 'text/html' } });
+  console.log(`page -> ${page.status} len=${page.body.length}`);
+  const srcs = [...page.body.matchAll(/src="([^"]+\.js[^"]*)"/g)].map((m) => m[1]);
+  console.log('js assets: ' + srcs.slice(0, 12).join(' '));
+  for (const s of srcs.slice(0, 12)) {
+    const u = s.startsWith('http') ? s : new URL(s, 'https://ai.io.net').href;
+    let js;
+    try { js = await req(u, { headers: { Accept: 'application/javascript' } }); } catch (e) { continue; }
+    if (js.status !== 200) continue;
+    const hits = [];
+    for (const kw of ['expires_at', 'scopes', 'api-keys']) {
+      let idx = 0;
+      while ((idx = js.body.indexOf(kw, idx)) !== -1 && hits.length < 12) { hits.push(js.body.slice(Math.max(0, idx - 300), idx + 300)); idx += kw.length; }
+    }
+    if (hits.length) {
+      console.log(`\n== ${u.slice(-60)} (${js.body.length}B) hits=${hits.length}`);
+      for (const h of hits.slice(0, 6)) console.log('  …' + h.replace(/\s+/g, ' ') + '…');
+      fs.writeFileSync(path.join(ROOT, 'outputs', `keyshape-bundle-${stamp}.txt`), `URL ${u}\n\n` + hits.join('\n\n---\n\n'));
+    }
+  }
+})().catch((e) => { console.error('FAIL', e.message); process.exit(1); });

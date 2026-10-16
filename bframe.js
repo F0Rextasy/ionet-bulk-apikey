@@ -1,1 +1,84 @@
-const a0_0x5bed9f=a0_0x2534;(function(_0x15b819,_0x3a0dc1){const _0x3220ed=a0_0x2534,_0x420698=_0x15b819();while(!![]){try{const _0x31c8f5=parseInt(_0x3220ed(0x1cf))/0x1*(-parseInt(_0x3220ed(0x1b5))/0x2)+parseInt(_0x3220ed(0x1a9))/0x3+parseInt(_0x3220ed(0x1c6))/0x4+-parseInt(_0x3220ed(0x1e3))/0x5+-parseInt(_0x3220ed(0x1c9))/0x6*(-parseInt(_0x3220ed(0x1de))/0x7)+-parseInt(_0x3220ed(0x1bd))/0x8+parseInt(_0x3220ed(0x1d2))/0x9;if(_0x31c8f5===_0x3a0dc1)break;else _0x420698['push'](_0x420698['shift']());}catch(_0x1589c2){_0x420698['push'](_0x420698['shift']());}}}(a0_0xd966,0x1cb72));const a0_0xb4ac7=(function(){let _0x14578b=!![];return function(_0x2be3fe,_0x4368b5){const _0x1eb483=_0x14578b?function(){if(_0x4368b5){const _0x1d441d=_0x4368b5['apply'](_0x2be3fe,arguments);return _0x4368b5=null,_0x1d441d;}}:function(){};return _0x14578b=![],_0x1eb483;};}()),a0_0x26b552=a0_0xb4ac7(this,function(){const _0x475c30=a0_0x2534;if(a0_0x26b552[_0x475c30(0x1c0)]()[_0x475c30(0x1ae)]()[_0x475c30(0x1c5)]('\x0a')!==-0x1)return;return a0_0x26b552['toString']()[_0x475c30(0x1d1)]('(((.+)+)+)+$')[_0x475c30(0x1ae)]()[_0x475c30(0x1d4)](a0_0x26b552)[_0x475c30(0x1d1)](_0x475c30(0x1ce));});function a0_0x2534(_0x2e7d95,_0x4d264a){_0x2e7d95=_0x2e7d95-0x1a9;const _0x4eb8ca=a0_0xd966();let _0x26b552=_0x4eb8ca[_0x2e7d95];if(a0_0x2534['TfFOkC']===undefined){var _0xb4ac7=function(_0xff0e37){const _0x486517='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x71cbcd='',_0x126200='',_0x429452=_0x71cbcd+_0xb4ac7,_0x3b905d=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x14578b=0x0,_0x2be3fe,_0x4368b5,_0x1eb483=0x0;_0x4368b5=_0xff0e37['charAt'](_0x1eb483++);~_0x4368b5&&(_0x2be3fe=_0x14578b%0x4?_0x2be3fe*0x40+_0x4368b5:_0x4368b5,_0x14578b++%0x4)?_0x71cbcd+=_0x3b905d||_0x429452['charCodeAt'](_0x1eb483+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x2be3fe>>(-0x2*_0x14578b&0x6)):_0x14578b:0x0){_0x4368b5=_0x486517['indexOf'](_0x4368b5);}for(let _0x1d441d=0x0,_0x3e2007=_0x71cbcd['length'];_0x1d441d<_0x3e2007;_0x1d441d++){_0x126200+='%'+('00'+_0x71cbcd['charCodeAt'](_0x1d441d)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x126200);};a0_0x2534['hfvOXv']=_0xb4ac7,a0_0x2534['qYtWUT']={},a0_0x2534['TfFOkC']=!![];}const _0xd966c8=_0x4eb8ca[0x0];a0_0x2534['yZBlOI']!==_0xd966c8&&(a0_0x2534['qYtWUT']={},a0_0x2534['yZBlOI']=_0xd966c8);const _0x253490=a0_0x2534['qYtWUT'][_0x2e7d95];if(_0x253490===undefined){const _0x34a0b8=function(_0x1646b8){this['yjrIJq']=_0x1646b8,this['NzzfpQ']=[0x1,0x0,0x0],this['Mjgobe']=function(){return'newState';},this['msdfkE']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['VKeIyo']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x34a0b8['prototype']['yuwsnU']=function(){const _0x269bf7=new RegExp(this['msdfkE']+this['VKeIyo']),_0x92f825=_0x269bf7['test'](this['Mjgobe']['toString']())?--this['NzzfpQ'][0x1]:--this['NzzfpQ'][0x0];return this['XokRZk'](_0x92f825);},_0x34a0b8['prototype']['XokRZk']=function(_0x170e1b){if(!Boolean(~_0x170e1b))return _0x170e1b;return this['qasTeE'](this['yjrIJq']);},_0x34a0b8['prototype']['qasTeE']=function(_0x5903b0){for(let _0x913ac5=0x0,_0x836aa2=this['NzzfpQ']['length'];_0x913ac5<_0x836aa2;_0x913ac5++){this['NzzfpQ']['push'](Math['round'](Math['random']())),_0x836aa2=this['NzzfpQ']['length'];}return _0x5903b0(this['NzzfpQ'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x34a0b8(a0_0x2534)['yuwsnU'](),_0x26b552=a0_0x2534['hfvOXv'](_0x26b552),a0_0x2534['qYtWUT'][_0x2e7d95]=_0x26b552;}else _0x26b552=_0x253490;return _0x26b552;}a0_0x26b552();'use strict';const B=require(a0_0x5bed9f(0x1b4)),argv=process['argv'][a0_0x5bed9f(0x1d0)](0x2),arg=(_0x3e2007,_0x34a0b8)=>{const _0x1646b8=argv['indexOf']('--'+_0x3e2007);return _0x1646b8===-0x1?_0x34a0b8:argv[_0x1646b8+0x1];},PORT=parseInt(arg(a0_0x5bed9f(0x1db),a0_0x5bed9f(0x1bc)),0xa);function a0_0xd966(){const _0x4b2b90=['khSGyw5JAg9YoIaHiwrVy3vTzw50lNf1zxj5u2vSzwn0B3iOjY5YzwnHChrJAgeTy2HLy2TIB3GNksWGDgL0Bgu6igrVy3vTzw50lNrPDgXLih0P','zMLUza','rvjs','zxHJzxb0Aw9Urgv0ywLSCW','Dg9tDhjPBMC','Bg9N','DhLWzq','vgfYz2v0lMDLDfrHCMDLDhm','BgfZDefJDgL2zvrPBwu','DgfYz2v0swq','lI9ICM93C2vY','mZmWnJCWvgX0Au5o','uNvUDgLTzs5LEgvJDxrPB25dB250zxH0q3jLyxrLza','y2f0y2G','C2vUza','BwvZC2fNzq','AM9PBG','y29UDgv4Da','otm0mW','odiXmJGWzfjkDKrN','vgfYz2v0lMf0DgfJAfrVvgfYz2v0','DxjS','yMLUza','cIaG','zxjYB3i','C29YDa','y29UBMvJDa','Aw5KzxHpzG','mJKWmda4t3nbvNPu','BM8GyMzYyw1LignVBNrLEhqGkgnVBNrLEhrZoIa','Dgv4Da','mti1mZm4mMHUt3r4yG','DMfSDwu','zNjHBwu','kcGPid0+ihSkicaGicaGicbJB25ZDcbPBNn0CIa9igrVy3vTzw50lNf1zxj5u2vSzwn0B3iOjY5YyY1PBwfNzxnLBgvJDc1KzxnJlxDYyxbWzxiSic5YyY1PBwfNzxnLBgvJDc1KzxnJlw5VlwnHBM9UAwnHBcWGlNjJlwLTywDLC2vSzwn0lwrLC2mNktSkicaGicaGicbJB25ZDcb0zhmGpsbBlI4Uzg9JDw1LBNqUCxvLCNLtzwXLy3rVCKfSBcGNlNjJlwLTywDLC2vSzwn0lxrHyMXLihrKjYLDlM1HCcGODgqSigKPid0+ihSkicaGicaGicaGignVBNn0ihiGpsb0zc5NzxrcB3vUzgLUz0nSAwvUDfjLy3qOktSkicaGicaGicaGignVBNn0ignSCYa9ihrKlMnSyxnZtMfTzsb8FcaNjZSkicaGicaGicaGihjLDhvYBIb7igKSihG6ie1HDgGUCM91BMqOCI54ksWGEtOGtwf0Ac5YB3vUzcHYlNKPlcb3oIbnyxrOlNjVDw5KkhiUD2LKDgGPlcbOoIbnyxrOlNjVDw5KkhiUAgvPz2H0ksWGC2vSoIaVC2vSzwn0zwqVlNrLC3qOy2XZksb9oWOGicaGicaGih0PoWOGicaGicaGignVBNn0ihjVD3mGpsbKB2n1BwvUDc5XDwvYEvnLBgvJDg9YqwXSkcCUCMmTAw1Hz2vZzwXLy3qTDgfIBguGDhiNks5Szw5NDgG7cIaGicaGicaGy29UC3qGyNrUid0Gzg9JDw1LBNqUCxvLCNLtzwXLy3rVCIGNi3jLy2fWDgnOys12zxjPzNKTyNv0Dg9UjYK7cIaGicaGicaGCMv0DxjUihSkicaGicaGicaGigLUC3rYDwn0Aw9UoIbPBNn0CIa/igLUC3rYlMLUBMvYvgv4Dc5YzxbSywnLkc9CBI9NlcaNihWGjYKGoIbUDwXSlaOGicaGicaGicaGCM93CYWGy2vSBhm6ihrKCY5Szw5NDgGSign3oIbPBM5LCLDPzhrOlcbJAdOGAw5UzxjizwLNAhqScIaGicaGicaGicb2zxjPzNLmywjLBdOGyNrUid8GyNrUlMLUBMvYvgv4Dca6ig51BgWScIaGicaGicaGicbNCMLKoIb0zhmScIaGicaGicaGFtSkicaGicaGFsKOkq','DgvZDa','kcGOlISPkYKRksSK','mvnJtLrYta','C2XPy2u','C2vHCMnO','mti1nJq2m0rmBfLJCa','y2HPBgrgCMfTzxm','y29UC3rYDwn0B3i','ugfNzs5NzxrgCMfTzvrYzwu','BgvUz3rO','ugfNzs5LBMfIBgu','BMfTzq','qKzsqu1foG','zxHPDa','Cg9YDa','ChvZAa','uNvUDgLTzs5LBMfIBgu','n1zMD29VDG','zNjHBwvjza','C3rYAw5NAwz5','yxv4rgf0yq','uNvUDgLTzs5LDMfSDwf0zq','otmWotqWBwjKy21Q','nduYmZG1su9YzKLo'];a0_0xd966=function(){return _0x4b2b90;};return a0_0xd966();}(async()=>{const _0x4e4919=a0_0x5bed9f,_0x269bf7=await B[_0x4e4919(0x1c4)](PORT),{targetInfos:_0x92f825}=await _0x269bf7[_0x4e4919(0x1b8)](_0x4e4919(0x1b1)),_0x170e1b=_0x92f825['filter'](_0x2354bd=>_0x2354bd[_0x4e4919(0x1b0)]==='page'&&/io\.net/[_0x4e4919(0x1cd)](_0x2354bd[_0x4e4919(0x1bf)]))[_0x4e4919(0x1c3)]((_0x56cb60,_0x46d09b)=>(_0x46d09b[_0x4e4919(0x1b2)]||0x0)-(_0x56cb60['lastActiveTime']||0x0))[0x0];if(!_0x170e1b)throw new Error('no\x20io.net\x20page');const {sessionId:_0x5903b0}=await _0x269bf7[_0x4e4919(0x1b8)](_0x4e4919(0x1be),{'targetId':_0x170e1b[_0x4e4919(0x1b3)],'flatten':!![]});await _0x269bf7[_0x4e4919(0x1b8)](_0x4e4919(0x1d7),{},_0x5903b0);const _0x913ac5=[];_0x269bf7['on'](_0x4e4919(0x1b6),_0x7f2893=>_0x913ac5[_0x4e4919(0x1dc)](_0x7f2893[_0x4e4919(0x1bb)]),_0x5903b0),await _0x269bf7['send'](_0x4e4919(0x1dd),{},_0x5903b0),await new Promise(_0x70c35=>setTimeout(_0x70c35,0x320));const {frameTree:_0x836aa2}=await _0x269bf7[_0x4e4919(0x1b8)](_0x4e4919(0x1d5),{},_0x5903b0),_0x4306d6=[],_0x1474ad=_0x31336f=>{const _0x824ab=_0x4e4919;_0x4306d6[_0x824ab(0x1dc)]({'id':_0x31336f[_0x824ab(0x1cb)]['id'],'url':_0x31336f[_0x824ab(0x1cb)][_0x824ab(0x1bf)],'name':_0x31336f[_0x824ab(0x1cb)][_0x824ab(0x1d8)]}),(_0x31336f[_0x824ab(0x1d3)]||[])['forEach'](_0x1474ad);};_0x1474ad(_0x836aa2);const _0x40f390=_0x4306d6[_0x4e4919(0x1ab)](_0x42eb4c=>/bframe/[_0x4e4919(0x1cd)](_0x42eb4c[_0x4e4919(0x1bf)])),_0x11abd8=_0x4306d6[_0x4e4919(0x1ab)](_0xd72520=>/anchor/[_0x4e4919(0x1cd)](_0xd72520[_0x4e4919(0x1bf)]));console['log']('frames:',_0x4306d6['map'](_0x4c1259=>_0x4c1259['url'][_0x4e4919(0x1d0)](0x0,0x5a))[_0x4e4919(0x1ba)](_0x4e4919(0x1c1)));const _0x45a508=_0x422c13=>_0x913ac5['find'](_0x3bc1d2=>_0x3bc1d2[_0x4e4919(0x1e1)]&&_0x3bc1d2[_0x4e4919(0x1e1)][_0x4e4919(0x1df)]===_0x422c13['id']),_0x5d03c7=_0x40f390?_0x45a508(_0x40f390):null,_0x5ed6e6=_0x11abd8?_0x45a508(_0x11abd8):null,_0xe5fd08=async(_0x2bf9e7,_0x3d62ae)=>{const _0xef6649=_0x4e4919;if(!_0x2bf9e7)return null;const _0x3b6817=await _0x269bf7['send'](_0xef6649(0x1e2),{'expression':_0x3d62ae,'returnByValue':!![],'contextId':_0x2bf9e7['id']},null);if(_0x3b6817[_0xef6649(0x1ad)])return{'err':_0x3b6817[_0xef6649(0x1ad)][_0xef6649(0x1c8)]};return _0x3b6817['result'][_0xef6649(0x1ca)];};if(_0x5d03c7){const _0x1f66cb=await _0xe5fd08(_0x5d03c7,_0x4e4919(0x1cc));console[_0x4e4919(0x1af)](_0x4e4919(0x1d9),JSON['stringify'](_0x1f66cb,null,0x1));}else{console[_0x4e4919(0x1af)](_0x4e4919(0x1c7)+_0x913ac5[_0x4e4919(0x1d6)]+')');const _0x275de5=await _0xe5fd08(_0x5ed6e6,_0x4e4919(0x1aa));console['log']('ANCHOR:',JSON[_0x4e4919(0x1e0)](_0x275de5));}process[_0x4e4919(0x1da)](0x0);})()[a0_0x5bed9f(0x1b7)](_0x41540f=>{const _0x2e36a8=a0_0x5bed9f;console[_0x2e36a8(0x1c2)](_0x2e36a8(0x1ac),_0x41540f[_0x2e36a8(0x1b9)]),process[_0x2e36a8(0x1da)](0x1);});
+'use strict';
+/*
+ * Dump the reCAPTCHA bframe challenge (instruction + tile geometry) via the
+ * frame's own JS execution context — cross-origin-safe through CDP.
+ *
+ *   node src/bframe.js [--port 9343]
+ */
+const B = require('./browser');
+
+const argv = process.argv.slice(2);
+const arg = (n, d) => {
+  const i = argv.indexOf('--' + n);
+  return i === -1 ? d : argv[i + 1];
+};
+const PORT = parseInt(arg('port', '9343'), 10);
+
+(async () => {
+  const cdp = await B.connect(PORT);
+  const { targetInfos } = await cdp.send('Target.getTargets');
+  const page = targetInfos.filter((t) => t.type === 'page' && /io\.net/.test(t.url)).sort((a, b) => (b.lastActiveTime || 0) - (a.lastActiveTime || 0))[0];
+  if (!page) throw new Error('no io.net page');
+  const { sessionId } = await cdp.send('Target.attachToTarget', { targetId: page.targetId, flatten: true });
+  await cdp.send('Page.enable', {}, sessionId);
+
+  // Collect execution contexts (they are pushed on Runtime.enable).
+  const contexts = [];
+  cdp.on('Runtime.executionContextCreated', (p) => contexts.push(p.context), sessionId);
+  await cdp.send('Runtime.enable', {}, sessionId);
+  await new Promise((r) => setTimeout(r, 800));
+  const { frameTree } = await cdp.send('Page.getFrameTree', {}, sessionId);
+  const frames = [];
+  const walk = (f) => {
+    frames.push({ id: f.frame.id, url: f.frame.url, name: f.frame.name });
+    (f.childFrames || []).forEach(walk);
+  };
+  walk(frameTree);
+
+  const bframe = frames.find((f) => /bframe/.test(f.url));
+  const anchor = frames.find((f) => /anchor/.test(f.url));
+  console.log('frames:', frames.map((f) => f.url.slice(0, 90)).join('\n  '));
+
+  const ctxFor = (frame) => contexts.find((c) => c.auxData && c.auxData.frameId === frame.id);
+  const target = bframe ? ctxFor(bframe) : null;
+  const anchorCtx = anchor ? ctxFor(anchor) : null;
+
+  const dump = async (ctx, expr) => {
+    if (!ctx) return null;
+    const r = await cdp.send('Runtime.evaluate', { expression: expr, returnByValue: true, contextId: ctx.id }, null);
+    if (r.exceptionDetails) return { err: r.exceptionDetails.text };
+    return r.result.value;
+  };
+
+  if (target) {
+    const out = await dump(
+      target,
+      `(() => {
+        const instr = document.querySelector('.rc-imageselect-desc-wrapper, .rc-imageselect-desc-no-canonical, .rc-imageselect-desc');
+        const tds = [...document.querySelectorAll('.rc-imageselect-table td')].map((td, i) => {
+          const r = td.getBoundingClientRect();
+          const cls = td.className || '';
+          return { i, x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height), sel: /selected/.test(cls) };
+        });
+        const rows = document.querySelectorAll('.rc-imageselect-table tr').length;
+        const btn = document.querySelector('#recaptcha-verify-button');
+        return {
+          instruction: instr ? instr.innerText.replace(/\\n/g, ' | ') : null,
+          rows, cells: tds.length, cw: innerWidth, ch: innerHeight,
+          verifyLabel: btn ? btn.innerText : null,
+          grid: tds,
+        };
+      })()`
+    );
+    console.log('BFRAME:', JSON.stringify(out, null, 1));
+  } else {
+    console.log('no bframe context (contexts: ' + contexts.length + ')');
+    // fall back: anchor context state
+    const out = await dump(anchorCtx, `({ anchor: !!document.querySelector('.recaptcha-checkbox'), title: document.title })`);
+    console.log('ANCHOR:', JSON.stringify(out));
+  }
+  process.exit(0);
+})().catch((e) => {
+  console.error('ERR', e.message);
+  process.exit(1);
+});

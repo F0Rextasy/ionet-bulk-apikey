@@ -1,1 +1,186 @@
-function a0_0x283a(_0x37470d,_0x2b81bc){_0x37470d=_0x37470d-0xe9;const _0x94c60e=a0_0x170b();let _0xb44db3=_0x94c60e[_0x37470d];if(a0_0x283a['fIDUcf']===undefined){var _0x1b92ed=function(_0x1460a4){const _0x321e57='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x3c1790='',_0xcdaba9='',_0x2f72c8=_0x3c1790+_0x1b92ed,_0x4e7ed1=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x1ea8c6=0x0,_0x496f2b,_0x4b1882,_0x13ae59=0x0;_0x4b1882=_0x1460a4['charAt'](_0x13ae59++);~_0x4b1882&&(_0x496f2b=_0x1ea8c6%0x4?_0x496f2b*0x40+_0x4b1882:_0x4b1882,_0x1ea8c6++%0x4)?_0x3c1790+=_0x4e7ed1||_0x2f72c8['charCodeAt'](_0x13ae59+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x496f2b>>(-0x2*_0x1ea8c6&0x6)):_0x1ea8c6:0x0){_0x4b1882=_0x321e57['indexOf'](_0x4b1882);}for(let _0x29fb51=0x0,_0x49355c=_0x3c1790['length'];_0x29fb51<_0x49355c;_0x29fb51++){_0xcdaba9+='%'+('00'+_0x3c1790['charCodeAt'](_0x29fb51)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0xcdaba9);};a0_0x283a['wtcvkC']=_0x1b92ed,a0_0x283a['WvgjsI']={},a0_0x283a['fIDUcf']=!![];}const _0x170bb4=_0x94c60e[0x0];a0_0x283a['Kjzher']!==_0x170bb4&&(a0_0x283a['WvgjsI']={},a0_0x283a['Kjzher']=_0x170bb4);const _0x283a02=a0_0x283a['WvgjsI'][_0x37470d];if(_0x283a02===undefined){const _0x3caff9=function(_0x1c753b){this['FxoMPe']=_0x1c753b,this['fwIYcw']=[0x1,0x0,0x0],this['ilsAwa']=function(){return'newState';},this['btnSTr']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['kvFnyx']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x3caff9['prototype']['DqfYpe']=function(){const _0x930657=new RegExp(this['btnSTr']+this['kvFnyx']),_0x3d7a9d=_0x930657['test'](this['ilsAwa']['toString']())?--this['fwIYcw'][0x1]:--this['fwIYcw'][0x0];return this['DGszGB'](_0x3d7a9d);},_0x3caff9['prototype']['DGszGB']=function(_0x52a5f3){if(!Boolean(~_0x52a5f3))return _0x52a5f3;return this['GJJuqA'](this['FxoMPe']);},_0x3caff9['prototype']['GJJuqA']=function(_0x43da31){for(let _0x53baa7=0x0,_0x1bf7c1=this['fwIYcw']['length'];_0x53baa7<_0x1bf7c1;_0x53baa7++){this['fwIYcw']['push'](Math['round'](Math['random']())),_0x1bf7c1=this['fwIYcw']['length'];}return _0x43da31(this['fwIYcw'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x3caff9(a0_0x283a)['DqfYpe'](),_0xb44db3=a0_0x283a['wtcvkC'](_0xb44db3),a0_0x283a['WvgjsI'][_0x37470d]=_0xb44db3;}else _0xb44db3=_0x283a02;return _0xb44db3;}const a0_0x5e8518=a0_0x283a;(function(_0x3e528e,_0x1ab921){const _0x2aa206=a0_0x283a,_0x4a13d7=_0x3e528e();while(!![]){try{const _0x373054=parseInt(_0x2aa206(0xee))/0x1+parseInt(_0x2aa206(0x114))/0x2*(-parseInt(_0x2aa206(0x129))/0x3)+-parseInt(_0x2aa206(0x12a))/0x4+parseInt(_0x2aa206(0x118))/0x5+-parseInt(_0x2aa206(0x139))/0x6*(-parseInt(_0x2aa206(0xec))/0x7)+parseInt(_0x2aa206(0xf0))/0x8+parseInt(_0x2aa206(0x13a))/0x9*(-parseInt(_0x2aa206(0x115))/0xa);if(_0x373054===_0x1ab921)break;else _0x4a13d7['push'](_0x4a13d7['shift']());}catch(_0x4cd9e7){_0x4a13d7['push'](_0x4a13d7['shift']());}}}(a0_0x170b,0xc52eb));const a0_0x1b92ed=(function(){let _0x1ea8c6=!![];return function(_0x496f2b,_0x4b1882){const _0x13ae59=_0x1ea8c6?function(){const _0x3134f5=a0_0x283a;if(_0x4b1882){const _0x29fb51=_0x4b1882[_0x3134f5(0x144)](_0x496f2b,arguments);return _0x4b1882=null,_0x29fb51;}}:function(){};return _0x1ea8c6=![],_0x13ae59;};}()),a0_0xb44db3=a0_0x1b92ed(this,function(){const _0x5b376d=a0_0x283a;if(a0_0xb44db3[_0x5b376d(0x10c)]()[_0x5b376d(0x13c)]()['indexOf']('\x0a')!==-0x1)return;return a0_0xb44db3[_0x5b376d(0x13c)]()['search'](_0x5b376d(0xf9))[_0x5b376d(0x13c)]()[_0x5b376d(0x13f)](a0_0xb44db3)['search']('(((.+)+)+)+$');});function a0_0x170b(){const _0x23ee6e=['BwvZC2fNzq','nMj2Bvb1zW','ovbeDxrHtG','kcGPid0+ihSkicaGicaGy29UC3qGAw5ZDhi9kgrVy3vTzw50lNf1zxj5u2vSzwn0B3iOjY5YyY1PBwfNzxnLBgvJDc1KzxnJlxDYyxbWzxiSic5YyY1PBwfNzxnLBgvJDc1KzxnJlw5VlwnHBM9UAwnHBcWGlNjJlwLTywDLC2vSzwn0lwrLC2mNkxX8E30PlMLUBMvYvgv4DhX8BNvSBdSkicaGicaGy29UC3qGzxjYrwW9zg9JDw1LBNqUCxvLCNLtzwXLy3rVCIGNlNjJlwLTywDLC2vSzwn0lwvYCM9YlxnLBgvJDc1TB3jLlcaUCMmTAw1Hz2vZzwXLy3qTzxjYB3iNktSkicaGicaGy29UC3qGzxjYpwvYCKvSpYbLCNjfBc5PBM5LCLrLEhqGoIbUDwXSoWOGicaGicbJB25ZDcb0AwXLCZ1BlI4Uzg9JDw1LBNqUCxvLCNLtzwXLy3rVCKfSBcGNlNjJlwLTywDLC2vSzwn0lxrPBguNkv0UBwfWkhq9pNTJB25ZDcbYpxqUz2v0qM91BMrPBMDdBgLLBNrszwn0kcK7CMv0DxjUihT4oK1HDgGUCM91BMqOCI54ksX5oK1HDgGUCM91BMqOCI55ksX3oK1HDgGUCM91BMqOCI53Awr0AcKSAdPnyxrOlNjVDw5KkhiUAgvPz2H0ksXZzwW6l3nLBgvJDgvKlY50zxn0khqUy2XHC3noyw1LFhWNjYL9o30PoWOGicaGicbJB25ZDcb2yJ1KB2n1BwvUDc5XDwvYEvnLBgvJDg9YkcCJCMvJyxb0y2HHlxzLCMLMEs1IDxr0B24NktSkicaGicaGy29UC3qGDMjYpxzIpYb2yI5NzxrcB3vUzgLUz0nSAwvUDfjLy3qOktPUDwXSoWOGicaGicbJB25ZDcbIAwC9wY4UlMrVy3vTzw50lNf1zxj5u2vSzwn0B3jbBgWOj2LTzYCPxs5ZB3j0kcHHlgiPpt5IlM5HDhvYywXxAwr0Ac1HlM5HDhvYywXxAwr0AcLBmf07cIaGicaGigXLDcbKyxrHpw51BgW7cIaGicaGihrYExSGAwyOyMLNkxTJB25ZDcbJpwrVy3vTzw50lMnYzwf0zuvSzw1LBNqOj2nHBNzHCYCPo2mUD2LKDgG9yMLNlM5HDhvYywXxAwr0AdTJlMHLAwDODd1IAwCUBMf0DxjHBeHLAwDODdTJlMDLDenVBNrLEhqOjZjKjYKUzhjHD0LTywDLkgjPzYWWldaPo2rHDge9yY50B0rHDgfvuKWOj2LTywDLl3bUzYCPo30GFwnHDgnOkguPE2rHDge9BNvSBh0kicaGicaGCMv0DxjUihTPBNn0CIWGzxjYlcb0AwXLCYWGDMvYAwz5oIb2yNi/ihT4oK1HDgGUCM91BMqODMjYlNGRDMjYlNDPzhrOlZiPlcb5oK1HDgGUCM91BMqODMjYlNKRDMjYlMHLAwDODc8Ykx06BNvSBcWGAw1NoIbKyxrHlcbPBwDxoIbIAwC/yMLNlM5HDhvYywXxAwr0AdOWlcbPBwDioIbIAwC/yMLNlM5HDhvYywXizwLNAhq6mcWGAw1Ns2v5oIbIAwC/igjPzY5ZCMmUC2XPy2uOnJaSmtiWktPUDwXSFtSkicaGih0PkcK','Dg9tDhjPBMC','y29UBMvJDa','re9orq','y29UC3rYDwn0B3i','vgfYz2v0lMDLDfrHCMDLDhm','kcGPid0+ihSGy29UC3qGDd1KB2n1BwvUDc5XDwvYEvnLBgvJDg9YkcD0zxH0yxjLyvTUyw1LpsjNlxjLy2fWDgnOys1YzxnWB25ZzsjDlcaJzY1YzwnHChrJAgeTCMvZCg9UC2uNktSGCMv0DxjUihq/icH0lNzHBhvLFhWNjYKUBgvUz3rOidOGmdSGFsKOkq','zgf0ytO','CMvZDwX0','yxbWBhK','BwfW','DxjS','uNvUDgLTzs5LBMfIBgu','CM91BMqG','BM8GyMzYyw1LihrHCMDLDhmG4OcuignSAwnRAw5NigfUy2HVCG','Aw1N','icHZDgf0zsa','kcGPid0+ihSGy29UC3qGy2i9zg9JDw1LBNqUCxvLCNLtzwXLy3rVCIGNlNjLy2fWDgnOys1JAgvJA2jVEcCPoYbPzIGHy2iPihjLDhvYBIbUDwXSoYbJB25ZDcbYpwnIlMDLDejVDw5KAw5Nq2XPzw50uMvJDcGPoYbYzxr1CM4GE3G6CI54k3iUD2LKDgGVmIX5oNiUEsTYlMHLAwDODc8YlgnSCZPJyI5JBgfZC05HBwv9oYb9ksGP','CM91BMqGzxjYB3i6','nJKZmte4m3PtEfDIrG','icbJBgLJAYb0AwXLia','mtu1ntaWmgfbEMDbwG','C3bSAxq','mtiXnJy5mJHQv2fsBKK','BM8GDJiGyw5JAg9YihrHCMDLDa','uNvUDgLTzs5LDMfSDwf0zq','D3jPDgvgAwXLu3LUyW','CMvMCMvZAa','Bg9VCcbLBMrLzcb3AxrOB3v0ihrVA2vU','zxHPDa','zxHPC3rZu3LUyW','vgfYz2v0lMf0DgfJAfrVvgfYz2v0','kcGOlISPkYKRksSK','Aw5KzxHpzG','yMzYyw1LigHHCYbUBYb0AwXLCYdIGjqGy2XPy2TPBMCGyw5JAg9YigzVCIbHigzYzxnOignOywXSzw5Nzq','zxHJzxb0Aw9Urgv0ywLSCW','DxrMoa','yMfZzw5HBwu','DhLWzq','zMLUza','C3rHCNrZv2L0Aa','rKfjteve','CMvHzezPBgvtEw5J','zxjY','BgvMDa','ve9lru4GywnXDwLYzwqGBgvUpq','AM9PBG','Bw91C2vnB3zLza','C3rHDguUANnVBG','C2vUza','iIbJB2XZpq','yMLUza','Aw5ZDhi','igvYCJ0','Dgv4Da','Bg9N','DMvYAwz5','DgfYz2v0swq','Bw91C2vqCMvZC2vK','mZiWthDUvgDb','mZiXnZmYndbpCNHdt2m','CM91BMq','C2vS','nZCWndGYnw1VqxDLAq','lI9ICM93C2vY','AwzYyw1L','CM91BMqT','BwTKAxjtEw5J','C3rYAw5NAwz5','Dg9ju09tDhjPBMC','C2XPy2u','Bw91C2vszwXLyxnLza','DgLSzxm','BgvUz3rO','sw5WDxqUzgLZCgf0y2HnB3vZzuv2zw50','Aw1Nsa','DgvZDa','DMfSDwu','y2XZ','igf0ia','ndKYmenLy2jzuG','nti3odq2oe5WCfjYzW','CgfYC2u','Cgf0Aa','yMfZzty0','zMLSDgvY','zNjVBq','ywDLBNqGyxnRzwqGzM9YihjLzNjLC2G','B3v0Chv0CW','zxzHBdOG','Aw1Ns2v5','BM8GAw8UBMv0ihbHz2u','ic0+ia','Aw1NvW','BM8Gy2HLy2TIB3GGAw4Gyw5JAg9Y'];a0_0x170b=function(){return _0x23ee6e;};return a0_0x170b();}a0_0xb44db3();'use strict';const fs=require('fs'),path=require(a0_0x5e8518(0x12c)),B=require(a0_0x5e8518(0x119)),argv=process['argv'][a0_0x5e8518(0x11f)](0x2),arg=(_0x49355c,_0x3caff9)=>{const _0x2c556e=a0_0x5e8518,_0x1c753b=argv[_0x2c556e(0xfa)]('--'+_0x49355c);return _0x1c753b===-0x1?_0x3caff9:argv[_0x1c753b+0x1];},PORT=parseInt(arg('port','9343'),0xa),ROOT=path[a0_0x5e8518(0x107)](__dirname),OUT=path[a0_0x5e8518(0x107)](ROOT,a0_0x5e8518(0x131),'solve'),CLICKS=path[a0_0x5e8518(0x107)](OUT,'clicks.json'),STATE=path['join'](OUT,a0_0x5e8518(0x109)),DONE=path[a0_0x5e8518(0x107)](OUT,a0_0x5e8518(0x13e)),FAILED=path[a0_0x5e8518(0x107)](OUT,a0_0x5e8518(0x102)),sleep=_0x930657=>new Promise(_0x3d7a9d=>setTimeout(_0x3d7a9d,_0x930657));fs[a0_0x5e8518(0x11c)](OUT,{'recursive':!![]}),((async()=>{const _0x20521d=a0_0x5e8518,_0x52a5f3=await B[_0x20521d(0x13d)](PORT),_0x43da31=async()=>(await _0x52a5f3[_0x20521d(0x10a)](_0x20521d(0x140)))['targetInfos'],_0x53baa7=async _0xf36819=>{const _0x136a81=_0x20521d,{sessionId:_0x5ca364}=await _0x52a5f3[_0x136a81(0x10a)](_0x136a81(0xf8),{'targetId':_0xf36819,'flatten':!![]});return await _0x52a5f3[_0x136a81(0x10a)](_0x136a81(0x147),{},_0x5ca364),_0x5ca364;},_0x1bf7c1=async(_0x5b4c06,_0x1d5537)=>{const _0x57c279=_0x20521d,_0x2fca81=await _0x52a5f3[_0x57c279(0x10a)](_0x57c279(0xf2),{'expression':_0x1d5537,'returnByValue':!![]},_0x5b4c06);if(_0x2fca81[_0x57c279(0xfc)])throw new Error(_0x57c279(0x132)+_0x2fca81[_0x57c279(0xfc)][_0x57c279(0x10f)]);return _0x2fca81[_0x57c279(0x143)]&&_0x2fca81['result'][_0x57c279(0x126)];},_0x3a9168=async(_0x445cd0,_0x2b5e27,_0x18a122)=>{const _0x35b483=_0x20521d;await _0x52a5f3[_0x35b483(0x10a)](_0x35b483(0x123),{'type':_0x35b483(0x108),'x':_0x2b5e27,'y':_0x18a122},_0x445cd0),await sleep(0x46),await _0x52a5f3[_0x35b483(0x10a)](_0x35b483(0x123),{'type':_0x35b483(0x113),'x':_0x2b5e27,'y':_0x18a122,'button':_0x35b483(0x105),'clickCount':0x1},_0x445cd0),await sleep(0x32),await _0x52a5f3[_0x35b483(0x10a)](_0x35b483(0x123),{'type':_0x35b483(0x120),'x':_0x2b5e27,'y':_0x18a122,'button':_0x35b483(0x105),'clickCount':0x1},_0x445cd0);},_0x350ce1=(await _0x43da31())['filter'](_0x5d354c=>_0x5d354c['type']==='page'&&/io\.net/[_0x20521d(0x125)](_0x5d354c[_0x20521d(0x146)]))[0x0];if(!_0x350ce1)throw new Error(_0x20521d(0x134));const _0x47286a=await _0x53baa7(_0x350ce1[_0x20521d(0x112)]),_0xe5f7d1=()=>_0x1bf7c1(_0x47286a,_0x20521d(0x141)),_0x2d66a4=_0x42639f=>_0x42639f[_0x20521d(0xff)]===_0x20521d(0x11a)&&/6Ld3OMEs/['test'](_0x42639f['url']||''),_0x49fb3d=async()=>{const _0x3d73c2=_0x20521d,_0x68c330=(await _0x43da31())[_0x3d73c2(0x100)](_0x10f6ce=>_0x2d66a4(_0x10f6ce)&&/anchor/[_0x3d73c2(0x125)](_0x10f6ce[_0x3d73c2(0x146)]));if(!_0x68c330)throw new Error(_0x3d73c2(0xf1));const _0x36aa7f=await _0x53baa7(_0x68c330['targetId']),_0x105425=await _0x1bf7c1(_0x36aa7f,_0x3d73c2(0xea));if(!_0x105425)throw new Error(_0x3d73c2(0x137));console[_0x3d73c2(0x110)]('anchor\x20click\x20at\x20'+Math[_0x3d73c2(0x116)](_0x105425['x'])+','+Math[_0x3d73c2(0x116)](_0x105425['y'])+_0x3d73c2(0xe9)+String(_0x105425[_0x3d73c2(0x127)])['slice'](0x0,0x50)+')'),await _0x3a9168(_0x36aa7f,_0x105425['x'],_0x105425['y']);},_0x352c67=async _0xe8b426=>{const _0x119c08=_0x20521d,_0x37ce18=await _0x53baa7(_0xe8b426[_0x119c08(0x112)]),_0xeae30b=await _0x1bf7c1(_0x37ce18,_0x119c08(0x13b));return{'sid':_0x37ce18,'d':_0xeae30b};};let _0x4a8487=0x0,_0x5b5037=null,_0x443016=0x0;for(let _0x209e06=0x0;_0x209e06<0x1e;_0x209e06++){try{if(fs['existsSync'](DONE))break;const _0x5c9d96=await _0xe5f7d1();if(_0x5c9d96>0x14){fs[_0x20521d(0xf3)](DONE,JSON['stringify']({'tokenLen':_0x5c9d96,'at':new Date()[_0x20521d(0x11e)]()})),console[_0x20521d(0x110)](_0x20521d(0x106)+_0x5c9d96);break;}let _0x2f2630=(await _0x43da31())[_0x20521d(0x12e)](_0x229c96=>_0x2d66a4(_0x229c96)&&/bframe/[_0x20521d(0x125)](_0x229c96[_0x20521d(0x146)]));if(!_0x2f2630['length']){console[_0x20521d(0x110)](_0x20521d(0x149)),await _0x49fb3d(),await sleep(0xfa0);continue;}const _0x21ff38=_0x2f2630[_0x2f2630[_0x20521d(0x122)]-0x1],{sid:_0x4c9cd6,d:_0x2d26ff}=await _0x352c67(_0x21ff38);if(!_0x2d26ff||!_0x2d26ff[_0x20521d(0x121)]||!_0x2d26ff[_0x20521d(0x121)]['length']){console[_0x20521d(0x110)](_0x20521d(0xfb)),await _0x49fb3d(),await sleep(0xfa0);continue;}const _0x598c68=_0x2d26ff['instr']+'|'+_0x2d26ff[_0x20521d(0x133)]+'|'+_0x2d26ff['tiles'][_0x20521d(0x122)];if(_0x598c68===_0x5b5037){_0x443016++;if(_0x443016>=0x2){console['log']('challenge\x20unchanged\x20twice\x20—\x20refreshing\x20via\x20anchor'),_0x5b5037=null,_0x443016=0x0,await _0x49fb3d(),await sleep(0xfa0);continue;}}else _0x443016=0x0,_0x5b5037=_0x598c68;_0x4a8487++;const _0x2c4e41=path[_0x20521d(0x107)](OUT,_0x20521d(0x11b)+_0x4a8487+'.png');if(_0x2d26ff[_0x20521d(0x14a)]&&_0x2d26ff[_0x20521d(0x14a)][_0x20521d(0x101)](_0x20521d(0x142)))fs[_0x20521d(0xf3)](_0x2c4e41,Buffer[_0x20521d(0x12f)](_0x2d26ff[_0x20521d(0x14a)][_0x20521d(0xef)](',')[0x1],_0x20521d(0x12d)));const _0x482bd8=[...new Set(_0x2d26ff[_0x20521d(0x121)][_0x20521d(0x145)](_0x5aa19e=>_0x5aa19e['x']))][_0x20521d(0x122)]||0x3;fs[_0x20521d(0xf3)](STATE,JSON[_0x20521d(0x11d)]({'round':_0x4a8487,'at':new Date()[_0x20521d(0x11e)](),'instruction':_0x2d26ff[_0x20521d(0x10d)],'error':_0x2d26ff['err'],'imgW':_0x2d26ff[_0x20521d(0x136)],'imgH':_0x2d26ff[_0x20521d(0x124)],'shot':path[_0x20521d(0xfe)](_0x2c4e41),'cols':_0x482bd8,'tiles':_0x2d26ff['tiles'][_0x20521d(0x145)]((_0x5116fa,_0x49cbcf)=>({'i':_0x49cbcf,'r':Math['floor'](_0x49cbcf/_0x482bd8),'c':_0x49cbcf%_0x482bd8,'x':_0x5116fa['x'],'y':_0x5116fa['y'],'w':_0x5116fa['w'],'h':_0x5116fa['h'],'sel':_0x5116fa[_0x20521d(0x117)]})),'verify':_0x2d26ff[_0x20521d(0x111)]},null,0x1)),console[_0x20521d(0x110)](_0x20521d(0x148)+_0x4a8487+':\x20\x22'+String(_0x2d26ff[_0x20521d(0x10d)]||'')[_0x20521d(0xef)]('\x0a')[0x0]+_0x20521d(0x10b)+_0x482bd8+'\x20tiles='+_0x2d26ff['tiles'][_0x20521d(0x122)]+_0x20521d(0x10e)+JSON[_0x20521d(0x11d)](_0x2d26ff[_0x20521d(0x104)])+_0x20521d(0x135)+path[_0x20521d(0xfe)](_0x2c4e41)+';\x20waiting\x20for\x20clicks.json');if(fs[_0x20521d(0xf7)](CLICKS))fs['unlinkSync'](CLICKS);let _0x321c09=null;for(let _0x57a808=0x0;_0x57a808<0x3c;_0x57a808++){await sleep(0x7d0);if(fs['existsSync'](CLICKS)){try{_0x321c09=JSON[_0x20521d(0x12b)](fs[_0x20521d(0x103)](CLICKS,_0x20521d(0xfd)));}catch{_0x321c09=null;}if(_0x321c09)break;}}if(!_0x321c09){console[_0x20521d(0x110)]('no\x20answer\x20in\x20120s;\x20refreshing\x20challenge'),await _0x49fb3d(),await sleep(0xfa0);continue;}if(_0x321c09[_0x20521d(0xf4)]){console['log'](_0x20521d(0x130)),await _0x49fb3d(),await sleep(0xfa0);continue;}for(const _0x119afd of _0x321c09[_0x20521d(0x121)]||[]){const _0x16a3af=_0x2d26ff[_0x20521d(0x121)][_0x119afd];if(!_0x16a3af)continue;console[_0x20521d(0x110)](_0x20521d(0xed)+_0x119afd+_0x20521d(0x128)+(_0x16a3af['x']+Math[_0x20521d(0x116)](_0x16a3af['w']/0x2))+','+(_0x16a3af['y']+Math[_0x20521d(0x116)](_0x16a3af['h']/0x2))),await _0x3a9168(_0x4c9cd6,_0x16a3af['x']+_0x16a3af['w']/0x2,_0x16a3af['y']+_0x16a3af['h']/0x2),await sleep(0x15e);}_0x321c09['verify']!==![]&&_0x2d26ff[_0x20521d(0x111)]&&(await sleep(0x190),console['log']('\x20\x20verify\x20at\x20'+_0x2d26ff['verify']['x']+','+_0x2d26ff[_0x20521d(0x111)]['y']),await _0x3a9168(_0x4c9cd6,_0x2d26ff[_0x20521d(0x111)]['x'],_0x2d26ff[_0x20521d(0x111)]['y']));await sleep(0xdac);const _0x19d7aa=await _0xe5f7d1();console['log']('\x20\x20after\x20solve:\x20token='+_0x19d7aa);if(_0x19d7aa>0x14){fs[_0x20521d(0xf3)](DONE,JSON['stringify']({'tokenLen':_0x19d7aa,'at':new Date()[_0x20521d(0x11e)]()})),console[_0x20521d(0x110)](_0x20521d(0x106)+_0x19d7aa);break;}}catch(_0x413aeb){console[_0x20521d(0x110)](_0x20521d(0xeb),_0x413aeb[_0x20521d(0x138)]),await sleep(0x7d0);}}if(!fs[_0x20521d(0xf7)](DONE)&&!fs[_0x20521d(0xf7)](FAILED))fs[_0x20521d(0xf3)](FAILED,_0x20521d(0xf5));process[_0x20521d(0xf6)](0x0);})());
+'use strict';
+/*
+ * Interactive reCAPTCHA v2 solver loop (agent-in-the-loop), OOPIF-native.
+ *
+ * The challenge panel lives in its own iframe target, and Chrome still routes
+ * Input events to an OOPIF even when the host has it parked off-screen — so the
+ * whole solve runs through the iframe's own CDP session and never depends on
+ * host-side visibility (measured: host keeps the bframe at y=-9999, clicks via
+ * its session register fine).
+ *
+ *   node src/solve.js --port 9343
+ *
+ * Protocol with the agent:
+ *   round:  outputs/solve/round-<n>.png   (payload image)
+ *           outputs/solve/state.json      (instruction/grid/verify rect)
+ *   answer: outputs/solve/clicks.json     ({"tiles":[...row-major...] ,"verify":true})
+ *           or {"refresh":true}           (ask for a fresh challenge)
+ *   done:   outputs/solve/DONE
+ */
+const fs = require('fs');
+const path = require('path');
+const B = require('./browser');
+
+const argv = process.argv.slice(2);
+const arg = (n, d) => {
+  const i = argv.indexOf('--' + n);
+  return i === -1 ? d : argv[i + 1];
+};
+const PORT = parseInt(arg('port', '9343'), 10);
+const ROOT = path.join(__dirname);
+const OUT = path.join(ROOT, 'outputs', 'solve');
+const CLICKS = path.join(OUT, 'clicks.json');
+const STATE = path.join(OUT, 'state.json');
+const DONE = path.join(OUT, 'DONE');
+const FAILED = path.join(OUT, 'FAILED');
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+fs.mkdirSync(OUT, { recursive: true });
+
+(async () => {
+  const cdp = await B.connect(PORT);
+  const listTargets = async () => (await cdp.send('Target.getTargets')).targetInfos;
+  const attach = async (targetId) => {
+    const { sessionId } = await cdp.send('Target.attachToTarget', { targetId, flatten: true });
+    await cdp.send('Runtime.enable', {}, sessionId);
+    return sessionId;
+  };
+  const evalIn = async (sessionId, expr) => {
+    const r = await cdp.send('Runtime.evaluate', { expression: expr, returnByValue: true }, sessionId);
+    if (r.exceptionDetails) throw new Error('eval: ' + r.exceptionDetails.text);
+    return r.result && r.result.value;
+  };
+  const clickIn = async (sessionId, x, y) => {
+    await cdp.send('Input.dispatchMouseEvent', { type: 'mouseMoved', x, y }, sessionId);
+    await sleep(70);
+    await cdp.send('Input.dispatchMouseEvent', { type: 'mousePressed', x, y, button: 'left', clickCount: 1 }, sessionId);
+    await sleep(50);
+    await cdp.send('Input.dispatchMouseEvent', { type: 'mouseReleased', x, y, button: 'left', clickCount: 1 }, sessionId);
+  };
+
+  const hostTarget = (await listTargets()).filter((t) => t.type === 'page' && /io\.net/.test(t.url))[0];
+  if (!hostTarget) throw new Error('no io.net page');
+  const hostSession = await attach(hostTarget.targetId);
+  const hostToken = () => evalIn(hostSession, `(() => { const t=document.querySelector('textarea[name="g-recaptcha-response"], #g-recaptcha-response'); return t? (t.value||'').length : 0; })()`);
+
+  const v2Frame = (t) => t.type === 'iframe' && /6Ld3OMEs/.test(t.url || '');
+  const clickAnchor = async () => {
+    const an = (await listTargets()).find((t) => v2Frame(t) && /anchor/.test(t.url));
+    if (!an) throw new Error('no v2 anchor target');
+    const sid = await attach(an.targetId);
+    const rect = await evalIn(sid, `(() => { const cb=document.querySelector('.recaptcha-checkbox'); if(!cb) return null; const r=cb.getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2,cls:cb.className}; })()`);
+    if (!rect) throw new Error('no checkbox in anchor');
+    console.log(`anchor click at ${Math.round(rect.x)},${Math.round(rect.y)} (state ${String(rect.cls).slice(0, 80)})`);
+    await clickIn(sid, rect.x, rect.y);
+  };
+
+  const dumpChallenge = async (bfTarget) => {
+    const sid = await attach(bfTarget.targetId);
+    const d = await evalIn(sid, `(() => {
+      const instr=(document.querySelector('.rc-imageselect-desc-wrapper, .rc-imageselect-desc-no-canonical, .rc-imageselect-desc')||{}).innerText||null;
+      const errEl=document.querySelector('.rc-imageselect-error-select-more, .rc-imageselect-error');
+      const err=errEl? errEl.innerText : null;
+      const tiles=[...document.querySelectorAll('.rc-imageselect-tile')].map(t=>{const r=t.getBoundingClientRect();return {x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height),sel:/selected/.test(t.className||'')};});
+      const vb=document.querySelector('#recaptcha-verify-button');
+      const vbr=vb? vb.getBoundingClientRect():null;
+      const big=[...document.querySelectorAll('img')].sort((a,b)=>b.naturalWidth-a.naturalWidth)[0];
+      let data=null;
+      try{ if(big){const c=document.createElement('canvas');c.width=big.naturalWidth;c.height=big.naturalHeight;c.getContext('2d').drawImage(big,0,0);data=c.toDataURL('image/png');} }catch(e){data=null}
+      return {instr, err, tiles, verify: vbr? {x:Math.round(vbr.x+vbr.width/2), y:Math.round(vbr.y+vbr.height/2)}:null, img: data, imgW: big?big.naturalWidth:0, imgH: big?big.naturalHeight:0, imgKey: big? big.src.slice(60,120):null};
+    })()`);
+    return { sid, d };
+  };
+
+  let round = 0;
+  let lastKey = null;
+  let stale = 0;
+  for (let attempt = 0; attempt < 30; attempt++) {
+    try {
+      if (fs.existsSync(DONE)) break;
+      const tok = await hostToken();
+      if (tok > 20) { fs.writeFileSync(DONE, JSON.stringify({ tokenLen: tok, at: new Date().toISOString() })); console.log('TOKEN acquired len=' + tok); break; }
+
+      let bfs = (await listTargets()).filter((t) => v2Frame(t) && /bframe/.test(t.url));
+      if (!bfs.length) {
+        console.log('no bframe targets — clicking anchor');
+        await clickAnchor();
+        await sleep(4000);
+        continue;
+      }
+      const bf = bfs[bfs.length - 1];
+      const { sid, d } = await dumpChallenge(bf);
+      if (!d || !d.tiles || !d.tiles.length) {
+        console.log('bframe has no tiles — clicking anchor for a fresh challenge');
+        await clickAnchor();
+        await sleep(4000);
+        continue;
+      }
+      const key = `${d.instr}|${d.imgKey}|${d.tiles.length}`;
+      if (key === lastKey) {
+        stale++;
+        if (stale >= 2) {
+          console.log('challenge unchanged twice — refreshing via anchor');
+          lastKey = null; stale = 0;
+          await clickAnchor();
+          await sleep(4000);
+          continue;
+        }
+      } else {
+        stale = 0;
+        lastKey = key;
+      }
+
+      round++;
+      const shot = path.join(OUT, `round-${round}.png`);
+      if (d.img && d.img.startsWith('data:')) fs.writeFileSync(shot, Buffer.from(d.img.split(',')[1], 'base64'));
+      const cols = [...new Set(d.tiles.map((t) => t.x))].length || 3;
+      fs.writeFileSync(
+        STATE,
+        JSON.stringify(
+          {
+            round, at: new Date().toISOString(), instruction: d.instr, error: d.err,
+            imgW: d.imgW, imgH: d.imgH, shot: path.basename(shot), cols,
+            tiles: d.tiles.map((t, i) => ({ i, r: Math.floor(i / cols), c: i % cols, x: t.x, y: t.y, w: t.w, h: t.h, sel: t.sel })),
+            verify: d.verify,
+          },
+          null,
+          1
+        )
+      );
+      console.log(`round ${round}: "${String(d.instr || '').split('\n')[0]}" cols=${cols} tiles=${d.tiles.length} err=${JSON.stringify(d.err)} -> ${path.basename(shot)}; waiting for clicks.json`);
+
+      if (fs.existsSync(CLICKS)) fs.unlinkSync(CLICKS);
+      let clicks = null;
+      for (let i = 0; i < 60; i++) {
+        await sleep(2000);
+        if (fs.existsSync(CLICKS)) {
+          try { clicks = JSON.parse(fs.readFileSync(CLICKS, 'utf8')); } catch { clicks = null; }
+          if (clicks) break;
+        }
+      }
+      if (!clicks) { console.log('no answer in 120s; refreshing challenge'); await clickAnchor(); await sleep(4000); continue; }
+      if (clicks.refresh) { console.log('agent asked for refresh'); await clickAnchor(); await sleep(4000); continue; }
+
+      for (const idx of clicks.tiles || []) {
+        const t = d.tiles[idx];
+        if (!t) continue;
+        console.log(`  click tile ${idx} at ${t.x + Math.round(t.w / 2)},${t.y + Math.round(t.h / 2)}`);
+        await clickIn(sid, t.x + t.w / 2, t.y + t.h / 2);
+        await sleep(350);
+      }
+      if (clicks.verify !== false && d.verify) {
+        await sleep(400);
+        console.log(`  verify at ${d.verify.x},${d.verify.y}`);
+        await clickIn(sid, d.verify.x, d.verify.y);
+      }
+      await sleep(3500);
+      const tok2 = await hostToken();
+      console.log('  after solve: token=' + tok2);
+      if (tok2 > 20) { fs.writeFileSync(DONE, JSON.stringify({ tokenLen: tok2, at: new Date().toISOString() })); console.log('TOKEN acquired len=' + tok2); break; }
+    } catch (e) {
+      console.log('round error:', e.message);
+      await sleep(2000);
+    }
+  }
+  if (!fs.existsSync(DONE) && !fs.existsSync(FAILED)) fs.writeFileSync(FAILED, 'loop ended without token');
+  process.exit(0);
+})();

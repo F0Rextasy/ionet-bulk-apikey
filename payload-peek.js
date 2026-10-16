@@ -1,1 +1,116 @@
-const a0_0x57ba32=a0_0xe97d;(function(_0x85e423,_0x1ee7b6){const _0x211413=a0_0xe97d,_0x3c2acd=_0x85e423();while(!![]){try{const _0x5776f3=-parseInt(_0x211413(0xbf))/0x1+parseInt(_0x211413(0xcf))/0x2*(-parseInt(_0x211413(0x8a))/0x3)+parseInt(_0x211413(0xc5))/0x4*(parseInt(_0x211413(0xc9))/0x5)+-parseInt(_0x211413(0xc6))/0x6*(parseInt(_0x211413(0xa5))/0x7)+-parseInt(_0x211413(0xcb))/0x8+-parseInt(_0x211413(0xb3))/0x9*(-parseInt(_0x211413(0xcd))/0xa)+parseInt(_0x211413(0x9d))/0xb;if(_0x5776f3===_0x1ee7b6)break;else _0x3c2acd['push'](_0x3c2acd['shift']());}catch(_0x2fe78d){_0x3c2acd['push'](_0x3c2acd['shift']());}}}(a0_0x3701,0xd4263));const a0_0x1cf76f=(function(){let _0x32712e=!![];return function(_0x46fe9f,_0x351fcb){const _0x37391b=_0x32712e?function(){const _0xb074aa=a0_0xe97d;if(_0x351fcb){const _0x4fcca8=_0x351fcb[_0xb074aa(0x87)](_0x46fe9f,arguments);return _0x351fcb=null,_0x4fcca8;}}:function(){};return _0x32712e=![],_0x37391b;};}()),a0_0x280465=a0_0x1cf76f(this,function(){const _0x54b726=a0_0xe97d;if(a0_0x280465[_0x54b726(0x7e)]()[_0x54b726(0xc4)]()[_0x54b726(0xa7)]('\x0a')!==-0x1)return;return a0_0x280465[_0x54b726(0xc4)]()[_0x54b726(0xa9)](_0x54b726(0xba))[_0x54b726(0xc4)]()[_0x54b726(0x8c)](a0_0x280465)[_0x54b726(0xa9)](_0x54b726(0xba));});a0_0x280465();'use strict';const http=require(a0_0x57ba32(0x90)),https=require(a0_0x57ba32(0xb9)),{parseProxy,createAgent}=require(a0_0x57ba32(0x8f)),argv=process[a0_0x57ba32(0xcc)][a0_0x57ba32(0xa2)](0x2),arg=(_0x1c52b9,_0x25d225)=>{const _0x34dee0=a0_0x57ba32,_0x4fbe01=argv[_0x34dee0(0xa7)]('--'+_0x1c52b9);return _0x4fbe01===-0x1?_0x25d225:argv[_0x4fbe01+0x1];},PORT=arg('port','9421'),PROXY_LINE=arg(a0_0x57ba32(0x83),''),proxy=PROXY_LINE?parseProxy(PROXY_LINE):null;proxy&&(proxy[a0_0x57ba32(0xb4)]=0x1f40,proxy[a0_0x57ba32(0xa6)]=0x4e20);function get(_0x11a8c8,_0x2906dd){return new Promise((_0x45fdf7,_0x3e787d)=>{const _0xe1648f=a0_0xe97d;http[_0xe1648f(0xb5)]({'host':_0xe1648f(0xbe),'port':_0x11a8c8,'path':_0x2906dd,'timeout':0x1f40},_0x40a90c=>{const _0x2f988a=_0xe1648f;let _0x14ef7f='';_0x40a90c[_0x2f988a(0xc7)](_0x2f988a(0x84)),_0x40a90c['on'](_0x2f988a(0xaf),_0xa6dc99=>_0x14ef7f+=_0xa6dc99),_0x40a90c['on'](_0x2f988a(0x8d),()=>{const _0x395f53=_0x2f988a;try{_0x45fdf7(JSON[_0x395f53(0xa8)](_0x14ef7f));}catch(_0x85a9d4){_0x3e787d(_0x85a9d4);}});})['on'](_0xe1648f(0xb7),_0x3e787d);});}function fetchBuf(_0x30c565){return new Promise((_0xae05bf,_0x266e59)=>{const _0x57c909=a0_0xe97d,_0x45f029=new URL(_0x30c565),_0x1b52ca=_0x45f029[_0x57c909(0x8e)]==='https:'?https:http,_0x2231b3=_0x1b52ca[_0x57c909(0xb5)]({'host':_0x45f029[_0x57c909(0x88)],'port':0x1bb,'path':_0x45f029['pathname']+_0x45f029[_0x57c909(0xa9)],'agent':proxy?createAgent(proxy):undefined,'headers':{'User-Agent':_0x57c909(0xac)},'timeout':0x7530},_0x419702=>{const _0x42410d=_0x57c909,_0x2c30ad=[];_0x419702['on']('data',_0x5878a1=>_0x2c30ad[_0x42410d(0x9a)](_0x5878a1)),_0x419702['on']('end',()=>_0xae05bf({'status':_0x419702[_0x42410d(0xa4)],'buf':Buffer['concat'](_0x2c30ad)}));});_0x2231b3[_0x57c909(0xb8)](0x7530,()=>_0x2231b3['destroy'](new Error(_0x57c909(0xae)))),_0x2231b3['on'](_0x57c909(0xb7),_0x266e59);});}function pngSize(_0x5b5d3f){const _0x141640=a0_0x57ba32;if(_0x5b5d3f[_0x141640(0x89)]>0x18&&_0x5b5d3f[0x0]===0x89&&_0x5b5d3f[0x1]===0x50)return _0x5b5d3f['readUInt32BE'](0x10)+'x'+_0x5b5d3f[_0x141640(0x9e)](0x14);if(_0x5b5d3f[_0x141640(0x89)]>0x4&&_0x5b5d3f[0x0]===0xff&&_0x5b5d3f[0x1]===0xd8){let _0x48dc48=0x2;while(_0x48dc48<_0x5b5d3f[_0x141640(0x89)]-0x8){if(_0x5b5d3f[_0x48dc48]!==0xff){_0x48dc48++;continue;}const _0x56e1ff=_0x5b5d3f[_0x48dc48+0x1],_0x1dc9dc=_0x5b5d3f[_0x141640(0xbb)](_0x48dc48+0x2);if(_0x56e1ff>=0xc0&&_0x56e1ff<=0xcf&&_0x56e1ff!==0xc4&&_0x56e1ff!==0xc8&&_0x56e1ff!==0xcc)return _0x5b5d3f[_0x141640(0xbb)](_0x48dc48+0x7)+'x'+_0x5b5d3f[_0x141640(0xbb)](_0x48dc48+0x5);_0x48dc48+=0x2+_0x1dc9dc;}}return'?';}const crypto=require(a0_0x57ba32(0x9b)),net=require(a0_0x57ba32(0x80));function wsConnect(_0x15334f){return new Promise((_0x5e3374,_0x31746c)=>{const _0x2a259=a0_0xe97d,_0x1d8161=new URL(_0x15334f),_0x5a2034=crypto['randomBytes'](0x10)['toString'](_0x2a259(0xd1)),_0x18b468=http[_0x2a259(0xc3)]({'host':_0x1d8161['hostname'],'port':_0x1d8161['port'],'path':_0x1d8161[_0x2a259(0x9c)]+_0x1d8161[_0x2a259(0xa9)],'headers':{'Connection':_0x2a259(0xc8),'Upgrade':_0x2a259(0xce),'Sec-WebSocket-Key':_0x5a2034,'Sec-WebSocket-Version':'13'},'timeout':0x2710});_0x18b468['on'](_0x2a259(0x8b),(_0x548aaa,_0x5ba00f)=>_0x5e3374(_0x5ba00f)),_0x18b468['on'](_0x2a259(0xb7),_0x31746c),_0x18b468[_0x2a259(0x8d)]();});}function a0_0x3701(){const _0xcc2c91=['y29UC3rYDwn0B3i','zw5K','ChjVDg9JB2W','lI9WCM94Es5QCW','Ahr0Ca','zNjVBq','C3rHDhvZ','yNvM','CMfUzg9TqNL0zxm','yMzYyw1LoG','rKfjta','D3jPDgvvsw50mZjcrq','jNnPEMu9mG','AgfZ','ChvZAa','y3j5ChrV','Cgf0Ag5HBwu','mJKYmtmWnZrsr1jUzLK','CMvHzfvjBNqZmKjf','y2f0y2G','DxjS','DhLWzq','C2XPy2u','DMfSDwu','C3rHDhvZq29Kzq','mJy2n1HyrwrmBa','DgLTzw91De1Z','Aw5KzxHpzG','CgfYC2u','C2vHCMnO','zMv0y2GG','l2PZB24','tw96AwXSys81lJaGkfDPBMrVD3mGtLqGmtaUmdSGv2LUnJq7ihG2ncKGqxbWBgvxzwjlAxqVntm3lJm2icHlsfrntcWGBgLRzsbhzwnRBYKGq2HYB21LlZe1ns4WlJGWntKUndeGu2fMyxjPlZuZnY4ZnG','zxHPDa','DgLTzw91Da','zgf0yq','zMv0y2GGzxjYia','BwvZC2fNzq','B3jPzW','mtHZweXNz1i','y29UBMvJDfrPBwvVDxrnCW','z2v0','ic0+ia','zxjYB3i','C2v0vgLTzw91Da','Ahr0Chm','kcGOlISPkYKRksSK','CMvHzfvjBNqXnKjf','D3jPDgvvsw50mtzcrq','Cgf5Bg9Hza','mti3lJaUmc4X','ntm1mtG3vhzWvNHV','D2vIu29JA2v0rgvIDwDNzxjvCMW','C3O9','C2v0','CMvXDwvZDa','Dg9tDhjPBMC','mtCYrNb1q3fk','mJy5odHUrxLADxm','C2v0rw5JB2rPBMC','vxbNCMfKzq','mJm2ndvnAM11CKW','D3jPDgu','mty3ndm4neHnqNjYwG','yxjNDG','ndGYodyZmgX1DhjAuq','D2vIC29JA2v0','mLjktK1kra','ywXSB2m','yMfZzty0','AwzYyw1L','C3jJ','Aw1NoG','Bg9N','y29Uy2f0','yMLUza','CMvHzejPz1vjBNq2nejf','BMv0','Aw5JBhvKzxm','zMLUza','ChjVEhK','DxrMoa','CMvWBgfJzq','CMvZDwX0','yxbWBhK','Ag9ZDg5HBwu','BgvUz3rO','mtq5mJG2m2Dmq2Xtta','DxbNCMfKzq'];a0_0x3701=function(){return _0xcc2c91;};return a0_0x3701();}function wsSend(_0x189c6a,_0x3d37a2){const _0x240cec=a0_0x57ba32,_0x5a5f4a=Buffer[_0x240cec(0x91)](JSON['stringify'](_0x3d37a2)),_0x50c5a8=crypto[_0x240cec(0x94)](0x4),_0x1d7924=_0x5a5f4a['length'];let _0x3900ba;if(_0x1d7924<0x7e)_0x3900ba=Buffer[_0x240cec(0x91)]([0x81,0x80|_0x1d7924]);else _0x1d7924<0x10000?(_0x3900ba=Buffer['alloc'](0x4),_0x3900ba[0x0]=0x81,_0x3900ba[0x1]=0x80|0x7e,_0x3900ba[_0x240cec(0xbc)](_0x1d7924,0x2)):(_0x3900ba=Buffer[_0x240cec(0xd0)](0xa),_0x3900ba[0x0]=0x81,_0x3900ba[0x1]=0x80|0x7f,_0x3900ba[_0x240cec(0x97)](0x0,0x2),_0x3900ba[_0x240cec(0x97)](_0x1d7924,0x6));const _0x26d4d8=Buffer[_0x240cec(0xd0)](_0x1d7924);for(let _0x3be259=0x0;_0x3be259<_0x1d7924;_0x3be259++)_0x26d4d8[_0x3be259]=_0x5a5f4a[_0x3be259]^_0x50c5a8[_0x3be259%0x4];_0x189c6a[_0x240cec(0xca)](Buffer['concat']([_0x3900ba,_0x50c5a8,_0x26d4d8]));}function a0_0xe97d(_0x1a343e,_0x3bd55b){_0x1a343e=_0x1a343e-0x7b;const _0x5a1acf=a0_0x3701();let _0x280465=_0x5a1acf[_0x1a343e];if(a0_0xe97d['IBCVSS']===undefined){var _0x1cf76f=function(_0x469002){const _0x54f2b4='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x10429f='',_0x2efed3='',_0x1e5fed=_0x10429f+_0x1cf76f,_0x3c75ec=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x32712e=0x0,_0x46fe9f,_0x351fcb,_0x37391b=0x0;_0x351fcb=_0x469002['charAt'](_0x37391b++);~_0x351fcb&&(_0x46fe9f=_0x32712e%0x4?_0x46fe9f*0x40+_0x351fcb:_0x351fcb,_0x32712e++%0x4)?_0x10429f+=_0x3c75ec||_0x1e5fed['charCodeAt'](_0x37391b+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x46fe9f>>(-0x2*_0x32712e&0x6)):_0x32712e:0x0){_0x351fcb=_0x54f2b4['indexOf'](_0x351fcb);}for(let _0x4fcca8=0x0,_0x1c52b9=_0x10429f['length'];_0x4fcca8<_0x1c52b9;_0x4fcca8++){_0x2efed3+='%'+('00'+_0x10429f['charCodeAt'](_0x4fcca8)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x2efed3);};a0_0xe97d['WKNurn']=_0x1cf76f,a0_0xe97d['RPwRxG']={},a0_0xe97d['IBCVSS']=!![];}const _0x370186=_0x5a1acf[0x0];a0_0xe97d['pRMLws']!==_0x370186&&(a0_0xe97d['RPwRxG']={},a0_0xe97d['pRMLws']=_0x370186);const _0xe97def=a0_0xe97d['RPwRxG'][_0x1a343e];if(_0xe97def===undefined){const _0x25d225=function(_0x4fbe01){this['YUMNkq']=_0x4fbe01,this['lJPKNB']=[0x1,0x0,0x0],this['rqWqrD']=function(){return'newState';},this['GLRcOU']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['mcLctV']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x25d225['prototype']['ejKpDz']=function(){const _0x11a8c8=new RegExp(this['GLRcOU']+this['mcLctV']),_0x2906dd=_0x11a8c8['test'](this['rqWqrD']['toString']())?--this['lJPKNB'][0x1]:--this['lJPKNB'][0x0];return this['RrwtIH'](_0x2906dd);},_0x25d225['prototype']['RrwtIH']=function(_0x45fdf7){if(!Boolean(~_0x45fdf7))return _0x45fdf7;return this['sGFDuT'](this['YUMNkq']);},_0x25d225['prototype']['sGFDuT']=function(_0x3e787d){for(let _0x40a90c=0x0,_0x14ef7f=this['lJPKNB']['length'];_0x40a90c<_0x14ef7f;_0x40a90c++){this['lJPKNB']['push'](Math['round'](Math['random']())),_0x14ef7f=this['lJPKNB']['length'];}return _0x3e787d(this['lJPKNB'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x25d225(a0_0xe97d)['ejKpDz'](),_0x280465=a0_0xe97d['WKNurn'](_0x280465),a0_0xe97d['RPwRxG'][_0x1a343e]=_0x280465;}else _0x280465=_0xe97def;return _0x280465;}function wsOnMessage(_0x345704,_0x53b42f){const _0x1e74c5=a0_0x57ba32;let _0x186591=Buffer[_0x1e74c5(0xd0)](0x0);_0x345704['on'](_0x1e74c5(0xaf),_0x14fda8=>{const _0x1d2ddb=_0x1e74c5;_0x186591=Buffer[_0x1d2ddb(0x7d)]([_0x186591,_0x14fda8]);while(_0x186591['length']>=0x2){const _0xaf713=_0x186591[0x1]&0x7f;let _0x473f43=0x2,_0x5b1f18=_0xaf713;if(_0xaf713===0x7e){if(_0x186591['length']<0x4)return;_0x5b1f18=_0x186591[_0x1d2ddb(0xbb)](0x2),_0x473f43=0x4;}else{if(_0xaf713===0x7f){if(_0x186591[_0x1d2ddb(0x89)]<0xa)return;_0x5b1f18=Number(_0x186591[_0x1d2ddb(0x7f)](0x2)),_0x473f43=0xa;}}if(_0x186591[_0x1d2ddb(0x89)]<_0x473f43+_0x5b1f18)return;const _0x4367e4=_0x186591[_0x1d2ddb(0xa2)](_0x473f43,_0x473f43+_0x5b1f18);_0x186591=_0x186591[_0x1d2ddb(0xa2)](_0x473f43+_0x5b1f18);try{_0x53b42f(JSON['parse'](_0x4367e4[_0x1d2ddb(0xc4)](_0x1d2ddb(0x84))));}catch{}}});}(async()=>{const _0xaeca3=a0_0x57ba32,_0x247da7=await get(PORT,_0xaeca3(0xab)),_0x14331e=(_0x247da7||[])[_0xaeca3(0x82)](_0x363a9b=>_0x363a9b[_0xaeca3(0xa1)]===_0xaeca3(0xd2)&&/recaptcha\/api2\/bframe/['test'](_0x363a9b['url']||'')&&_0x363a9b['webSocketDebuggerUrl']);!_0x14331e&&(console[_0xaeca3(0x7c)]('no\x20live\x20bframe\x20target'),process[_0xaeca3(0xad)](0x1));console[_0xaeca3(0x7c)](_0xaeca3(0x95),_0x14331e[_0xaeca3(0xa0)]['slice'](0x0,0x5a));const _0x1ff34e=await wsConnect(_0x14331e[_0xaeca3(0xc0)]);let _0x34f03f=0x0;const _0x2f975b=new Map();wsOnMessage(_0x1ff34e,_0x41af59=>{const _0x5f5682=_0xaeca3;_0x41af59['id']&&_0x2f975b[_0x5f5682(0x99)](_0x41af59['id'])&&(_0x2f975b[_0x5f5682(0xb5)](_0x41af59['id'])(_0x41af59),_0x2f975b['delete'](_0x41af59['id']));});const _0x55cab7=(_0x19bd71,_0x5ed2ce)=>new Promise(_0x27b1b0=>{const _0x384be5=_0xaeca3,_0x1a33a8=++_0x34f03f;_0x2f975b[_0x384be5(0xc2)](_0x1a33a8,_0x27b1b0),wsSend(_0x1ff34e,{'id':_0x1a33a8,'method':_0x19bd71,'params':_0x5ed2ce});}),_0x446073=await _0x55cab7('Runtime.evaluate',{'expression':'(()\x20=>\x20{\x20const\x20im=[...document.querySelectorAll(\x27img\x27)].sort((a,b)=>b.naturalWidth-a.naturalWidth)[0];\x20return\x20im\x20?\x20{\x20src:\x20im.src,\x20nw:\x20im.naturalWidth,\x20nh:\x20im.naturalHeight\x20}\x20:\x20null;\x20})()','returnByValue':!![]}),_0xbd2477=_0x446073&&_0x446073['result']&&_0x446073[_0xaeca3(0x86)]['result']&&_0x446073[_0xaeca3(0x86)]['result'][_0xaeca3(0xa3)];console[_0xaeca3(0x7c)](_0xaeca3(0x7b),_0xbd2477);if(_0xbd2477&&_0xbd2477['src']){const _0x5eaf42=[_0xbd2477[_0xaeca3(0xd3)],_0xbd2477[_0xaeca3(0xd3)]+'&sz=s2',_0xbd2477[_0xaeca3(0xd3)]+_0xaeca3(0x98),_0xbd2477[_0xaeca3(0xd3)][_0xaeca3(0x85)](_0xaeca3(0xbd),'payload')+'&scale=2'];for(const _0x130031 of[...new Set(_0x5eaf42)]){try{const _0x392613=await fetchBuf(_0x130031);console[_0xaeca3(0x7c)](_0xaeca3(0xaa)+(_0x130031['includes'](_0xaeca3(0xc1))||_0x130031[_0xaeca3(0x81)]('scale=')?_0x130031[_0xaeca3(0xa2)](-0x12):_0xaeca3(0xb2))+_0xaeca3(0xb6)+_0x392613[_0xaeca3(0x92)]+'\x20'+_0x392613[_0xaeca3(0x93)][_0xaeca3(0x89)]+'B\x20'+pngSize(_0x392613['buf']));}catch(_0x7802c4){console['log'](_0xaeca3(0xb0)+_0x7802c4['message']);}}}_0x1ff34e[_0xaeca3(0x8d)](),process['exit'](0x0);})()[a0_0x57ba32(0x9f)](_0x5d5764=>{const _0x522fca=a0_0x57ba32;console[_0x522fca(0xb7)](_0x522fca(0x96),_0x5d5764[_0x522fca(0xb1)]),process[_0x522fca(0xad)](0x1);});
+'use strict';
+// READ-ONLY peek at a live reCAPTCHA bframe payload image; tests whether the
+// payload URL offers higher-resolution variants.
+//   node src/payload-peek.js --port 9421 --proxy <line>
+const http = require('http');
+const https = require('https');
+const { parseProxy, createAgent } = require('./proxy.js');
+const argv = process.argv.slice(2);
+const arg = (n, d) => { const i = argv.indexOf('--' + n); return i === -1 ? d : argv[i + 1]; };
+const PORT = arg('port', '9421');
+const PROXY_LINE = arg('proxy', '');
+const proxy = PROXY_LINE ? parseProxy(PROXY_LINE) : null;
+if (proxy) { proxy.connectTimeoutMs = 8000; proxy.timeoutMs = 20000; }
+
+function get(port, path) {
+  return new Promise((resolve, reject) => {
+    http.get({ host: '127.0.0.1', port, path, timeout: 8000 }, (res) => {
+      let b = ''; res.setEncoding('utf8'); res.on('data', (c) => (b += c)); res.on('end', () => { try { resolve(JSON.parse(b)); } catch (e) { reject(e); } });
+    }).on('error', reject);
+  });
+}
+function fetchBuf(url) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url);
+    const lib = u.protocol === 'https:' ? https : http;
+    const r = lib.get({ host: u.hostname, port: 443, path: u.pathname + u.search, agent: proxy ? createAgent(proxy) : undefined, headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.8059.41 Safari/537.36' }, timeout: 30000 }, (res) => {
+      const chunks = [];
+      res.on('data', (c) => chunks.push(c));
+      res.on('end', () => resolve({ status: res.statusCode, buf: Buffer.concat(chunks) }));
+    });
+    r.setTimeout(30000, () => r.destroy(new Error('timeout')));
+    r.on('error', reject);
+  });
+}
+function pngSize(buf) {
+  if (buf.length > 24 && buf[0] === 0x89 && buf[1] === 0x50) return `${buf.readUInt32BE(16)}x${buf.readUInt32BE(20)}`;
+  if (buf.length > 4 && buf[0] === 0xff && buf[1] === 0xd8) {
+    let i = 2;
+    while (i < buf.length - 8) {
+      if (buf[i] !== 0xff) { i++; continue; }
+      const m = buf[i + 1];
+      const len = buf.readUInt16BE(i + 2);
+      if (m >= 0xc0 && m <= 0xcf && m !== 0xc4 && m !== 0xc8 && m !== 0xcc) return `${buf.readUInt16BE(i + 7)}x${buf.readUInt16BE(i + 5)}`;
+      i += 2 + len;
+    }
+  }
+  return '?';
+}
+
+// minimal CDP over ws
+const crypto = require('crypto');
+const net = require('net');
+function wsConnect(url) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url);
+    const key = crypto.randomBytes(16).toString('base64');
+    const req = http.request({ host: u.hostname, port: u.port, path: u.pathname + u.search, headers: { Connection: 'Upgrade', Upgrade: 'websocket', 'Sec-WebSocket-Key': key, 'Sec-WebSocket-Version': '13' }, timeout: 10000 });
+    req.on('upgrade', (res, socket) => resolve(socket));
+    req.on('error', reject);
+    req.end();
+  });
+}
+function wsSend(socket, obj) {
+  const data = Buffer.from(JSON.stringify(obj));
+  const mask = crypto.randomBytes(4);
+  const len = data.length;
+  let header;
+  if (len < 126) header = Buffer.from([0x81, 0x80 | len]);
+  else if (len < 65536) { header = Buffer.alloc(4); header[0] = 0x81; header[1] = 0x80 | 126; header.writeUInt16BE(len, 2); }
+  else { header = Buffer.alloc(10); header[0] = 0x81; header[1] = 0x80 | 127; header.writeUInt32BE(0, 2); header.writeUInt32BE(len, 6); }
+  const masked = Buffer.alloc(len);
+  for (let i = 0; i < len; i++) masked[i] = data[i] ^ mask[i % 4];
+  socket.write(Buffer.concat([header, mask, masked]));
+}
+function wsOnMessage(socket, cb) {
+  let buf = Buffer.alloc(0);
+  socket.on('data', (d) => {
+    buf = Buffer.concat([buf, d]);
+    while (buf.length >= 2) {
+      const len0 = buf[1] & 0x7f;
+      let off = 2, len = len0;
+      if (len0 === 126) { if (buf.length < 4) return; len = buf.readUInt16BE(2); off = 4; }
+      else if (len0 === 127) { if (buf.length < 10) return; len = Number(buf.readBigUInt64BE(2)); off = 10; }
+      if (buf.length < off + len) return;
+      const payload = buf.slice(off, off + len);
+      buf = buf.slice(off + len);
+      try { cb(JSON.parse(payload.toString('utf8'))); } catch {}
+    }
+  });
+}
+
+(async () => {
+  const targets = await get(PORT, '/json');
+  const bf = (targets || []).find((t) => t.type === 'iframe' && /recaptcha\/api2\/bframe/.test(t.url || '') && t.webSocketDebuggerUrl);
+  if (!bf) { console.log('no live bframe target'); process.exit(1); }
+  console.log('bframe:', bf.url.slice(0, 90));
+  const sock = await wsConnect(bf.webSocketDebuggerUrl);
+  let id = 0;
+  const pending = new Map();
+  wsOnMessage(sock, (m) => { if (m.id && pending.has(m.id)) { pending.get(m.id)(m); pending.delete(m.id); } });
+  const call = (method, params) => new Promise((res) => { const i = ++id; pending.set(i, res); wsSend(sock, { id: i, method, params }); });
+  const ev = await call('Runtime.evaluate', { expression: `(() => { const im=[...document.querySelectorAll('img')].sort((a,b)=>b.naturalWidth-a.naturalWidth)[0]; return im ? { src: im.src, nw: im.naturalWidth, nh: im.naturalHeight } : null; })()`, returnByValue: true });
+  const info = ev && ev.result && ev.result.result && ev.result.result.value;
+  console.log('img:', info);
+  if (info && info.src) {
+    const variants = [info.src, info.src + '&sz=s2', info.src + '&size=2', info.src.replace('payload', 'payload') + '&scale=2'];
+    for (const u of [...new Set(variants)]) {
+      try {
+        const r = await fetchBuf(u);
+        console.log(`fetch ${u.includes('sz=') || u.includes('scale=') ? u.slice(-18) : 'orig'} -> ${r.status} ${r.buf.length}B ${pngSize(r.buf)}`);
+      } catch (e) { console.log('fetch err ' + e.message); }
+    }
+  }
+  sock.end();
+  process.exit(0);
+})().catch((e) => { console.error('FAIL', e.message); process.exit(1); });

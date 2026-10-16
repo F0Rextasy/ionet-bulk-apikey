@@ -1,1 +1,39 @@
-function a0_0x12ac(_0x4eb9f6,_0x10c5a6){_0x4eb9f6=_0x4eb9f6-0x162;const _0x517f07=a0_0xf01f();let _0x2c11e4=_0x517f07[_0x4eb9f6];if(a0_0x12ac['MhzHTU']===undefined){var _0x70ef7a=function(_0x56694d){const _0x3f8573='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x1317d2='',_0xadfa6e='',_0x1bccab=_0x1317d2+_0x70ef7a,_0x132da7=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x48d752=0x0,_0x53f3ed,_0xa5fc15,_0x395122=0x0;_0xa5fc15=_0x56694d['charAt'](_0x395122++);~_0xa5fc15&&(_0x53f3ed=_0x48d752%0x4?_0x53f3ed*0x40+_0xa5fc15:_0xa5fc15,_0x48d752++%0x4)?_0x1317d2+=_0x132da7||_0x1bccab['charCodeAt'](_0x395122+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x53f3ed>>(-0x2*_0x48d752&0x6)):_0x48d752:0x0){_0xa5fc15=_0x3f8573['indexOf'](_0xa5fc15);}for(let _0x544a4f=0x0,_0x552a75=_0x1317d2['length'];_0x544a4f<_0x552a75;_0x544a4f++){_0xadfa6e+='%'+('00'+_0x1317d2['charCodeAt'](_0x544a4f)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0xadfa6e);};a0_0x12ac['drUgzd']=_0x70ef7a,a0_0x12ac['WNRSWq']={},a0_0x12ac['MhzHTU']=!![];}const _0xf01f10=_0x517f07[0x0];a0_0x12ac['vupOUT']!==_0xf01f10&&(a0_0x12ac['WNRSWq']={},a0_0x12ac['vupOUT']=_0xf01f10);const _0x12acea=a0_0x12ac['WNRSWq'][_0x4eb9f6];if(_0x12acea===undefined){const _0x47fd71=function(_0xf68c5e){this['wFxjFC']=_0xf68c5e,this['paEKiI']=[0x1,0x0,0x0],this['jARHds']=function(){return'newState';},this['wxMLUW']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['AZPLxW']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x47fd71['prototype']['aROvea']=function(){const _0x17ebd3=new RegExp(this['wxMLUW']+this['AZPLxW']),_0xfdd9b4=_0x17ebd3['test'](this['jARHds']['toString']())?--this['paEKiI'][0x1]:--this['paEKiI'][0x0];return this['aRQsom'](_0xfdd9b4);},_0x47fd71['prototype']['aRQsom']=function(_0x1bbc44){if(!Boolean(~_0x1bbc44))return _0x1bbc44;return this['jvIVPY'](this['wFxjFC']);},_0x47fd71['prototype']['jvIVPY']=function(_0x14d35e){for(let _0x41cd91=0x0,_0x75f9c2=this['paEKiI']['length'];_0x41cd91<_0x75f9c2;_0x41cd91++){this['paEKiI']['push'](Math['round'](Math['random']())),_0x75f9c2=this['paEKiI']['length'];}return _0x14d35e(this['paEKiI'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x47fd71(a0_0x12ac)['aROvea'](),_0x2c11e4=a0_0x12ac['drUgzd'](_0x2c11e4),a0_0x12ac['WNRSWq'][_0x4eb9f6]=_0x2c11e4;}else _0x2c11e4=_0x12acea;return _0x2c11e4;}const a0_0x35a076=a0_0x12ac;function a0_0xf01f(){const _0x5271bd=['CMvJB3zLCMvKia','CMvHzezPBgvtEw5J','C2vHCMnO','Cgf0Aa','odiXmZG4C2n6EurT','Bwf0y2G','ywrK','D3jPDhrLBIaTpIa','n1zqz1j4EG','mti2AhboueXR','BwvZC2fNzq','Ahr0CdOVlW','ls1HChbSEq','yxjNDG','kcGOlISPkYKRksSK','AM9PBG','mtm4mJi5nvHyu1DIqW','B3v0Chv0CW','mtuYnZCZmJbKtfDTu1y','Dg9tDhjPBMC','Aw5KzxHpzG','yMLUza','C3bSAxq','C2nYzwvUlwLVBMv0lwzLzwqUBg9N','Aw5JBhvKzxm','otC2mJr5yuDQwwS','otGYnte1CxDcrfHR','nJK4odzICvbjtfe','yxbWBhK','nJiXndjhtMnntuS','DgvZDa','mZa2yLnZCLPX','Bg9N','y29UC3rYDwn0B3i','DxrMoa','D3jPDgvgAwXLu3LUyW'];a0_0xf01f=function(){return _0x5271bd;};return a0_0xf01f();}(function(_0x14bf61,_0x286b76){const _0xcb00f5=a0_0x12ac,_0x2ec379=_0x14bf61();while(!![]){try{const _0x210097=-parseInt(_0xcb00f5(0x17a))/0x1*(parseInt(_0xcb00f5(0x169))/0x2)+-parseInt(_0xcb00f5(0x168))/0x3+-parseInt(_0xcb00f5(0x176))/0x4+-parseInt(_0xcb00f5(0x182))/0x5+-parseInt(_0xcb00f5(0x16b))/0x6*(-parseInt(_0xcb00f5(0x17b))/0x7)+-parseInt(_0xcb00f5(0x167))/0x8*(parseInt(_0xcb00f5(0x16d))/0x9)+parseInt(_0xcb00f5(0x184))/0xa;if(_0x210097===_0x286b76)break;else _0x2ec379['push'](_0x2ec379['shift']());}catch(_0x54e2aa){_0x2ec379['push'](_0x2ec379['shift']());}}}(a0_0xf01f,0x3be60));const a0_0x70ef7a=(function(){let _0x48d752=!![];return function(_0x53f3ed,_0xa5fc15){const _0x395122=_0x48d752?function(){const _0x5c514e=a0_0x12ac;if(_0xa5fc15){const _0x544a4f=_0xa5fc15[_0x5c514e(0x16a)](_0x53f3ed,arguments);return _0xa5fc15=null,_0x544a4f;}}:function(){};return _0x48d752=![],_0x395122;};}()),a0_0x2c11e4=a0_0x70ef7a(this,function(){const _0x3d2dad=a0_0x12ac;if(a0_0x2c11e4[_0x3d2dad(0x163)]()[_0x3d2dad(0x185)]()[_0x3d2dad(0x162)]('\x0a')!==-0x1)return;return a0_0x2c11e4[_0x3d2dad(0x185)]()[_0x3d2dad(0x174)](_0x3d2dad(0x180))[_0x3d2dad(0x185)]()[_0x3d2dad(0x16f)](a0_0x2c11e4)['search'](_0x3d2dad(0x180));});a0_0x2c11e4();'use strict';const fs=require('fs'),path=require(a0_0x35a076(0x175)),ROOT=path[a0_0x35a076(0x181)](__dirname),LOGF=path[a0_0x35a076(0x181)](__dirname,a0_0x35a076(0x165)),SAFE=path[a0_0x35a076(0x181)](__dirname,'ionet-winners-safe.txt'),INJECT=path[a0_0x35a076(0x181)](ROOT,a0_0x35a076(0x183),'residential-inject.txt'),APPLY=process[a0_0x35a076(0x17f)][a0_0x35a076(0x166)](a0_0x35a076(0x17e)),isProxy=_0x552a75=>/^(https?|socks[45]):\/\/[A-Za-z0-9.\-_]+:\d+$/[a0_0x35a076(0x16c)](_0x552a75)||/^([0-9]{1,3}\.){3}[0-9]{1,3}:\d+$/[a0_0x35a076(0x16c)](_0x552a75),out=new Set();try{for(const l of fs[a0_0x35a076(0x173)](LOGF,a0_0x35a076(0x170))[a0_0x35a076(0x164)](/\r?\n/)){const m=l[a0_0x35a076(0x177)](/([0-9]{1,3}(?:\.[0-9]{1,3}){3}:\d{2,5}) via id\.io\.net\/login/);if(m&&isProxy(m[0x1]))out['add'](a0_0x35a076(0x17d)+m[0x1]);}}catch(a0_0x47fd71){console['error']('log\x20read:',a0_0x47fd71[a0_0x35a076(0x17c)]);}try{for(const l of fs['readFileSync'](SAFE,a0_0x35a076(0x170))[a0_0x35a076(0x164)](/\r?\n/)){const t=l['trim']();if(t&&isProxy(t))out[a0_0x35a076(0x178)](t);}}catch{}const list=[...out];console[a0_0x35a076(0x16e)](a0_0x35a076(0x172)+list['length']+'\x20valid\x20lines\x20(log-anchored\x20+\x20safe)');for(const t of list['slice'](0x0,0xc))console[a0_0x35a076(0x16e)]('\x20\x20'+t);APPLY&&(fs[a0_0x35a076(0x171)](INJECT,list['join']('\x0a')+'\x0a'),console[a0_0x35a076(0x16e)](a0_0x35a076(0x179)+INJECT));
+'use strict';
+/* One-time strict-regex recovery of io.net winners from the feed log into our
+ * OWN inject source (never writes any shared/Main file).
+ *
+ *   node src/recover-winners.js            (dry: list)
+ *   node src/recover-winners.js --apply    (writes outputs/residential-inject.txt)
+ *
+ * Only the anchored pattern `<ip:port> via id.io.net/login` is accepted, and
+ * every token must pass the same strict validator the syncer uses.
+ */
+const fs = require('fs');
+const path = require('path');
+const ROOT = path.join(__dirname);
+const LOGF = path.join(__dirname, 'screen-ionet-feed.log');
+const SAFE = path.join(__dirname, 'ionet-winners-safe.txt');
+const INJECT = path.join(ROOT, 'outputs', 'residential-inject.txt');
+const APPLY = process.argv.includes('--apply');
+const isProxy = (t) => /^(https?|socks[45]):\/\/[A-Za-z0-9.\-_]+:\d+$/.test(t) || /^([0-9]{1,3}\.){3}[0-9]{1,3}:\d+$/.test(t);
+
+const out = new Set();
+try {
+  for (const l of fs.readFileSync(LOGF, 'utf8').split(/\r?\n/)) {
+    const m = l.match(/([0-9]{1,3}(?:\.[0-9]{1,3}){3}:\d{2,5}) via id\.io\.net\/login/);
+    if (m && isProxy(m[1])) out.add('http://' + m[1]);
+  }
+} catch (e) { console.error('log read:', e.message); }
+try {
+  for (const l of fs.readFileSync(SAFE, 'utf8').split(/\r?\n/)) {
+    const t = l.trim();
+    if (t && isProxy(t)) out.add(t);
+  }
+} catch {}
+const list = [...out];
+console.log(`recovered ${list.length} valid lines (log-anchored + safe)`);
+for (const t of list.slice(0, 12)) console.log('  ' + t);
+if (APPLY) {
+  fs.writeFileSync(INJECT, list.join('\n') + '\n');
+  console.log('written -> ' + INJECT);
+}

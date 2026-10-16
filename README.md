@@ -11,15 +11,15 @@
 
 # ionet-bulk-apikey
 
-**One [io.net](https://io.net) account per API key — real-browser sign-up with the e-mail code, live-verified, minted over a proxy pool, any number.**
+**Bulk-create [io.net](https://io.net) (IO Intelligence) accounts with auto-generated API keys — OpenAI-compatible inference + 9Router connector.**
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A518-3DA639?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-blue?style=for-the-badge)](#)
 [![License](https://img.shields.io/badge/license-MIT-6ea8fe?style=for-the-badge)](LICENSE)
 [![Models](https://img.shields.io/badge/models-39%20listed-412991?style=for-the-badge)](https://io.net)
-[![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
+[![9Router](https://img.shields.io/badge/9Router-connector-8B5CF6?style=for-the-badge)](#-connect-to-9router)
 
-[🛠 Quick start](#-quick-start) · [✅ Verified](#-verified-working--every-key-is-tested) · [🧭 How it works](#-how-it-works) · [🤖 Models & free tier](#-models--free-tier) · [⚙️ Options](#️-options) · [🛰️ Proxies](#️-behind-a-proxy) · [🐞 Issues](#-issues)
+[🛠 Quick start](#-quick-start) · [✅ Verified](#-verified-working--every-key-is-tested) · [🧭 How it works](#-how-it-works) · [🤖 Models & free tier](#-models--free-tier) · [⚙️ Options](#️-options) · [🛰️ Proxies](#️-behind-a-proxy) · [🔌 9Router](#-connect-to-9router) · [🐞 Issues](#-issues)
 
 </div>
 
@@ -77,7 +77,7 @@ curl https://api.intelligence.io.solutions/api/v1/chat/completions \
 ## 🛠 Quick start
 
 ```bash
-git clone https://github.com/F0Rextasy/ionet-bulk-apikey.git
+# clone or fork this repository, then:
 cd ionet-bulk-apikey
 
 # 1) your proxy list, one exit per line (http://, socks5://, socks4:// or bare host:port)
@@ -147,6 +147,7 @@ the browser phase hands off to HTTP instead of finishing in-page.
 | `run-account.js` | `--until start\|otp\|key` · `--solve-budget-ms` · `--round-wait-ms` · `--proxy <line>` · `--broker <url>` · `--email` / `--email-token` (resume an inbox) |
 | `http-finish.js` | `--email` + `--box-token`, or `--token <accessToken>`, or `--from-log <net.jsonl>` · `--key-name` |
 | ops | `watch-round.ps1` (round watcher), `wait-handoff.ps1`, `kill-chrome.ps1 -Port` |
+| 9Router | `--connect-9router` on any task — after it finishes, registers every key in `keys.txt` into a running 9Router (`node connect-9router.js --help`) |
 
 ## 🛰️ Behind a proxy
 
@@ -158,6 +159,40 @@ the browser phase hands off to HTTP instead of finishing in-page.
   to reach `id.io.net` and `www.google.com` for the browser phase.
 * The mailbox broker runs on loopback (`127.0.0.1`) — it is yours, not the provider's, and it holds
   your mail credentials, never the repo.
+
+## 🔌 Connect to 9Router
+
+[9Router](https://9router.com) is a self-hosted, OpenAI-compatible router. io.net serves an
+OpenAI-compatible endpoint (`https://api.intelligence.io.solutions/api/v1`), so register it once and
+every key you minted becomes a connection under one provider-node — 9Router load-balances across
+them:
+
+```bash
+node connect-9router.js \
+  --base http://localhost:20128 --password 123456 \
+  --api-key io-v2-xxxxxxxx
+```
+
+Run it without `--api-key` to register **every** key in `keys.txt`. Re-running is idempotent: the
+node is matched by `--prefix ionet`, each connection is matched by name (`ionet-001`, `ionet-002`, …),
+and an already-registered key is left alone. Defaults: `--base http://localhost:20128`,
+`--password 123456`, `--name "IO Intelligence"`, `--prefix ionet`,
+`--base-url https://api.intelligence.io.solutions/api/v1`, `--model google/gemma-4-26b-a4b-it`.
+
+The default model is the one a **free-tier** key can actually call. The catalogue a key *lists* is
+much larger — it includes `deepseek-ai/DeepSeek-V4.1-Flash`, `deepseek-ai/DeepSeek-V4-Pro`,
+`zai-org/GLM-5.3`, `moonshotai/Kimi-K3` and 35 more — but every id above tier 1 answers
+`402 … requires a higher IO Intelligence tier` until the account is upgraded. In 9Router the
+catalogue is served as:
+
+```
+ionet/google/gemma-4-26b-a4b-it
+ionet/deepseek-ai/DeepSeek-V4.1-Flash
+ionet/zai-org/GLM-5.3-Flash
+```
+
+`node cli.js mint --count 5 --connect-9router` mints and registers in one pass, and
+`node launcher.js` drives the same flow from its menu.
 
 ## 🐞 Issues
 
@@ -173,6 +208,6 @@ MIT — see [LICENSE](LICENSE). Use it on accounts you are allowed to create.
 
 <div align="center">
 
-**Built by F0REXTASY** · [github.com/F0Rextasy](https://github.com/F0Rextasy) · [x.com/bigbullapp](https://x.com/bigbullapp)
+**[MIT](LICENSE) © 2026 ionet-bulk-apikey contributors**
 
 </div>

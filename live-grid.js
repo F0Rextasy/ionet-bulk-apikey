@@ -1,1 +1,133 @@
-const a0_0x1d6595=a0_0x2939;(function(_0x51c184,_0x473601){const _0x2dead4=a0_0x2939,_0x5dea54=_0x51c184();while(!![]){try{const _0x511d1d=parseInt(_0x2dead4(0xca))/0x1+parseInt(_0x2dead4(0xa0))/0x2+parseInt(_0x2dead4(0xb4))/0x3*(-parseInt(_0x2dead4(0x9e))/0x4)+-parseInt(_0x2dead4(0xcb))/0x5*(parseInt(_0x2dead4(0xbe))/0x6)+-parseInt(_0x2dead4(0xd6))/0x7+parseInt(_0x2dead4(0xbb))/0x8+parseInt(_0x2dead4(0xd3))/0x9;if(_0x511d1d===_0x473601)break;else _0x5dea54['push'](_0x5dea54['shift']());}catch(_0x34d1c6){_0x5dea54['push'](_0x5dea54['shift']());}}}(a0_0x54fa,0x44e1c));const a0_0x1a56ad=(function(){let _0x26a8dd=!![];return function(_0xf7b75d,_0x3d1747){const _0xd8b5d3=_0x26a8dd?function(){const _0x11cdcd=a0_0x2939;if(_0x3d1747){const _0x365bfd=_0x3d1747[_0x11cdcd(0xa6)](_0xf7b75d,arguments);return _0x3d1747=null,_0x365bfd;}}:function(){};return _0x26a8dd=![],_0xd8b5d3;};}()),a0_0x4184cf=a0_0x1a56ad(this,function(){const _0x7882ec=a0_0x2939;if(a0_0x4184cf[_0x7882ec(0xc5)]()[_0x7882ec(0xbd)]()[_0x7882ec(0x97)]('\x0a')!==-0x1)return;return a0_0x4184cf[_0x7882ec(0xbd)]()['search']('(((.+)+)+)+$')[_0x7882ec(0xbd)]()[_0x7882ec(0xcf)](a0_0x4184cf)[_0x7882ec(0xab)](_0x7882ec(0xb1));});function a0_0x54fa(){const _0x4d7b07=['BM8GyMzYyw1LihrHCMDLDa','BgL2zs1IAwCT','y29UC3rYDwn0B3i','DMfSDwu','CMvZDwX0','C2HHmq','mZCYndGXmLbky25euW','lI9ICM93C2vY','yMLNrgf0yq','ndeYodm5zezkuvzT','y3jLyxrLsgfZAa','yxjNDG','AM9PBG','Agv4','zgf0ytO','Aw5KzxHpzG','tfCTnq','DgfN','yMLNsa','CM93CW','zMLSDgvY','y29UBMvJDa','ngjoDxLwDW','DgfYz2v0sw5MB3m','mZK3nZu4svj4BKvY','BwfW','vgfYz2v0lMDLDfrHCMDLDhm','Cgf0Aa','C2nVCMu','BwTKAxjtEw5J','yxbWBhK','DgLSzxm','y3j5ChrV','zxHPDa','BgvUz3rO','C2vHCMnO','y2XVC2u','Bg9N','DxjS','z3jPza','AwzYyw1L','kcGOlISPkYKRksSK','Aw5ZDhi','zhjHD24','odCXmtyXsKPIBMnn','C2HH','otqXmq','yMLNvW','zxjY','D3jPDgvgAwXLu3LUyW','C3rYAw5NAwz5','mtG3otm5mMLnv01rtG','BM8GzhvTCa','Dg9tDhjPBMC','mtGZmeD2Ag5stq','lNbUzW','C3bSAxq','zxHJzxb0Aw9Urgv0ywLSCW','BgL2zq','Cg9YDa','C3rHCNrZv2L0Aa','yMLUza','uNvUDgLTzs5LBMfIBgu','DxbKyxrL','DgvZDa','DgfYz2v0swq','mJi4odi4vLnwveLg','nZi5nxrQEujbEa','C2vUza'];a0_0x54fa=function(){return _0x4d7b07;};return a0_0x54fa();}a0_0x4184cf();'use strict';const fs=require('fs'),path=require(a0_0x1d6595(0xa3)),crypto=require(a0_0x1d6595(0xa8)),B=require(a0_0x1d6595(0xd4)),argv=process[a0_0x1d6595(0xd8)]['slice'](0x2),arg=(_0x1cbfa8,_0x216bf7)=>{const _0x5dd772=a0_0x1d6595,_0x187cb1=argv[_0x5dd772(0x97)]('--'+_0x1cbfa8);return _0x187cb1===-0x1?_0x216bf7:argv[_0x187cb1+0x1];},PORT=parseInt(arg(a0_0x1d6595(0xc3),a0_0x1d6595(0xb6)),0xa),TAG=arg(a0_0x1d6595(0x99),a0_0x1d6595(0x98)),LABEL=arg('label',a0_0x1d6595(0xc2)),OUTDIR=path[a0_0x1d6595(0xd9)](__dirname,'outputs','solve-'+TAG),DUMP='(async\x20()\x20=>\x20{\x0a\x20\x20const\x20instr=(document.querySelector(\x27.rc-imageselect-desc-wrapper,\x20.rc-imageselect-desc-no-canonical,\x20.rc-imageselect-desc\x27)||{}).innerText||null;\x0a\x20\x20const\x20errEl=document.querySelector(\x27.rc-imageselect-error-select-more,\x20.rc-imageselect-error\x27);\x0a\x20\x20const\x20ts=[...document.querySelectorAll(\x27.rc-imageselect-tile\x27)];\x0a\x20\x20const\x20tiles=ts.map(t=>{const\x20r=t.getBoundingClientRect();const\x20im=t.querySelector(\x27img\x27);return\x20{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height),sel:/selected/.test(t.className||\x27\x27),src:im?String(im.src):null,sw:im?im.naturalWidth:0,sh:im?im.naturalHeight:0,img:im};});\x0a\x20\x20const\x20imgs=tiles.map(t=>t.img).filter(Boolean);\x0a\x20\x20try\x20{\x20await\x20Promise.all(imgs.map(i=>i.decode().catch(()=>null)));\x20}\x20catch(e)\x20{}\x0a\x20\x20const\x20W=Math.max(...imgs.filter(Boolean).map(i=>i.naturalWidth||0),\x201);\x0a\x20\x20const\x20H=Math.max(...imgs.filter(Boolean).map(i=>i.naturalHeight||0),\x201);\x0a\x20\x20const\x20xs=[...new\x20Set(tiles.map(t=>t.x))].sort((a,b)=>a-b);\x0a\x20\x20const\x20ys=[...new\x20Set(tiles.map(t=>t.y))].sort((a,b)=>a-b);\x0a\x20\x20const\x20cols=xs.length||3,\x20rows=ys.length||3;\x0a\x20\x20const\x20c=document.createElement(\x27canvas\x27);\x20c.width=cols*120;\x20c.height=rows*120;\x0a\x20\x20const\x20g=c.getContext(\x272d\x27);\x20g.fillStyle=\x27#333\x27;\x20g.fillRect(0,0,c.width,c.height);\x0a\x20\x20let\x20drawn=0;\x0a\x20\x20tiles.forEach(t=>{\x20if(!t.img)\x20return;\x0a\x20\x20\x20\x20const\x20ci=xs.indexOf(t.x),\x20ri=ys.indexOf(t.y);\x20if(ci<0||ri<0)\x20return;\x0a\x20\x20\x20\x20const\x20ir=t.img.getBoundingClientRect();\x0a\x20\x20\x20\x20const\x20host=(t.img.closest(\x27.rc-image-tile-wrapper\x27)||t.img.parentElement||t.img).getBoundingClientRect();\x0a\x20\x20\x20\x20const\x20l=Math.max(ir.left,host.left),\x20tp=Math.max(ir.top,host.top),\x20r=Math.min(ir.right,host.right),\x20b=Math.min(ir.bottom,host.bottom);\x0a\x20\x20\x20\x20if\x20(r<=l||b<=tp)\x20return;\x0a\x20\x20\x20\x20const\x20sx=(t.img.naturalWidth||1)/(ir.width||1),\x20sy=(t.img.naturalHeight||1)/(ir.height||1);\x0a\x20\x20\x20\x20g.drawImage(t.img,\x20(l-ir.left)*sx,\x20(tp-ir.top)*sy,\x20(r-l)*sx,\x20(b-tp)*sy,\x20ci*120,\x20ri*120,\x20120,\x20120);\x0a\x20\x20\x20\x20drawn++;\x0a\x20\x20});\x0a\x20\x20const\x20vb=document.querySelector(\x27#recaptcha-verify-button\x27);\x0a\x20\x20const\x20vbr=vb?\x20vb.getBoundingClientRect():null;\x0a\x20\x20const\x20big=[...document.querySelectorAll(\x27img\x27)].sort((a,b)=>(b.naturalWidth*b.naturalHeight)-(a.naturalWidth*a.naturalHeight))[0];\x0a\x20\x20let\x20bigData=null;\x0a\x20\x20try{\x20if(big&&big.naturalWidth){const\x20c2=document.createElement(\x27canvas\x27);c2.width=big.naturalWidth;c2.height=big.naturalHeight;c2.getContext(\x272d\x27).drawImage(big,0,0);bigData=c2.toDataURL(\x27image/png\x27);}\x20}catch(e){}\x0a\x20\x20const\x20out={instr,\x20err:\x20errEl?\x20errEl.innerText\x20:\x20null,\x20cols,\x20rows,\x20drawn,\x20W,\x20H,\x0a\x20\x20\x20\x20tiles:\x20tiles.map(t=>({x:t.x,y:t.y,w:t.w,h:t.h,sel:t.sel,src:t.src?t.src.slice(0,80):null,sw:t.sw,sh:t.sh})),\x0a\x20\x20\x20\x20verify:\x20vbr?\x20{x:Math.round(vbr.x+vbr.width/2),\x20y:Math.round(vbr.y+vbr.height/2)}:null,\x0a\x20\x20\x20\x20bigW:\x20big?big.naturalWidth:0,\x20bigH:\x20big?big.naturalHeight:0,\x20bigData,\x0a\x20\x20\x20\x20grid:\x20c.toDataURL(\x27image/png\x27)};\x0a\x20\x20return\x20out;\x0a})()';function a0_0x2939(_0x1909e,_0x9adcc){_0x1909e=_0x1909e-0x97;const _0x5dd682=a0_0x54fa();let _0x4184cf=_0x5dd682[_0x1909e];if(a0_0x2939['hBUnol']===undefined){var _0x1a56ad=function(_0x22ed27){const _0x468c6a='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x1adc75='',_0x3cde56='',_0x5457a5=_0x1adc75+_0x1a56ad,_0x3a3192=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x26a8dd=0x0,_0xf7b75d,_0x3d1747,_0xd8b5d3=0x0;_0x3d1747=_0x22ed27['charAt'](_0xd8b5d3++);~_0x3d1747&&(_0xf7b75d=_0x26a8dd%0x4?_0xf7b75d*0x40+_0x3d1747:_0x3d1747,_0x26a8dd++%0x4)?_0x1adc75+=_0x3a3192||_0x5457a5['charCodeAt'](_0xd8b5d3+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0xf7b75d>>(-0x2*_0x26a8dd&0x6)):_0x26a8dd:0x0){_0x3d1747=_0x468c6a['indexOf'](_0x3d1747);}for(let _0x365bfd=0x0,_0x1cbfa8=_0x1adc75['length'];_0x365bfd<_0x1cbfa8;_0x365bfd++){_0x3cde56+='%'+('00'+_0x1adc75['charCodeAt'](_0x365bfd)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x3cde56);};a0_0x2939['bNJNUN']=_0x1a56ad,a0_0x2939['CBQbED']={},a0_0x2939['hBUnol']=!![];}const _0x54faca=_0x5dd682[0x0];a0_0x2939['PyyelN']!==_0x54faca&&(a0_0x2939['CBQbED']={},a0_0x2939['PyyelN']=_0x54faca);const _0x2939ca=a0_0x2939['CBQbED'][_0x1909e];if(_0x2939ca===undefined){const _0x216bf7=function(_0x187cb1){this['TUOqYb']=_0x187cb1,this['OMAyzR']=[0x1,0x0,0x0],this['CYfgQU']=function(){return'newState';},this['pXEIEu']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['cHmUbZ']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x216bf7['prototype']['KJqziN']=function(){const _0x44f909=new RegExp(this['pXEIEu']+this['cHmUbZ']),_0x56f5e9=_0x44f909['test'](this['CYfgQU']['toString']())?--this['OMAyzR'][0x1]:--this['OMAyzR'][0x0];return this['ysuqvZ'](_0x56f5e9);},_0x216bf7['prototype']['ysuqvZ']=function(_0x23689d){if(!Boolean(~_0x23689d))return _0x23689d;return this['NZiOQP'](this['TUOqYb']);},_0x216bf7['prototype']['NZiOQP']=function(_0x3f6f46){for(let _0xc0fa40=0x0,_0x207b2d=this['OMAyzR']['length'];_0xc0fa40<_0x207b2d;_0xc0fa40++){this['OMAyzR']['push'](Math['round'](Math['random']())),_0x207b2d=this['OMAyzR']['length'];}return _0x3f6f46(this['OMAyzR'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x216bf7(a0_0x2939)['KJqziN'](),_0x4184cf=a0_0x2939['bNJNUN'](_0x4184cf),a0_0x2939['CBQbED'][_0x1909e]=_0x4184cf;}else _0x4184cf=_0x2939ca;return _0x4184cf;}(async()=>{const _0x29f3e2=a0_0x1d6595,_0x44f909=await B[_0x29f3e2(0x9d)](PORT),_0x56f5e9=(await _0x44f909[_0x29f3e2(0xcc)](_0x29f3e2(0xa2)))[_0x29f3e2(0x9f)],_0x23689d=async _0x4b60ea=>{const _0x3f0d9f=_0x29f3e2,{sessionId:_0x54dca3}=await _0x44f909[_0x3f0d9f(0xcc)]('Target.attachToTarget',{'targetId':_0x4b60ea,'flatten':!![]});return await _0x44f909['send'](_0x3f0d9f(0xc6),{},_0x54dca3),_0x54dca3;},_0x3f6f46=_0x56f5e9[_0x29f3e2(0x9c)](_0x27f86e=>_0x27f86e['type']===_0x29f3e2(0xb0)&&/6Ld3OMEs/[_0x29f3e2(0xc8)](_0x27f86e['url']||'')&&/bframe/[_0x29f3e2(0xc8)](_0x27f86e[_0x29f3e2(0xae)]));!_0x3f6f46[_0x29f3e2(0xaa)]&&(console[_0x29f3e2(0xad)](JSON['stringify']({'error':_0x29f3e2(0xcd)})),process[_0x29f3e2(0xa9)](0x2));fs[_0x29f3e2(0xa5)](OUTDIR,{'recursive':!![]});let _0xc0fa40=null;for(const _0x4ed61e of _0x3f6f46){const _0x86baa4=await _0x23689d(_0x4ed61e[_0x29f3e2(0xc9)]),_0x2b501a=await _0x44f909[_0x29f3e2(0xcc)]('Runtime.evaluate',{'expression':DUMP,'returnByValue':!![],'awaitPromise':!![]},_0x86baa4);if(_0x2b501a[_0x29f3e2(0xc1)]){console['log']('exc\x20in\x20'+_0x4ed61e[_0x29f3e2(0xc9)]['slice'](0x0,0x14)+':\x20'+_0x2b501a[_0x29f3e2(0xc1)]['text']);continue;}const _0x4289ec=_0x2b501a[_0x29f3e2(0xd1)]&&_0x2b501a[_0x29f3e2(0xd1)][_0x29f3e2(0xd0)];if(!_0x4289ec)continue;const _0x11e194=(_0x4289ec[_0x29f3e2(0xa7)]||[])[_0x29f3e2(0xaa)]+(_0x4289ec[_0x29f3e2(0xb3)]||0x0);if(!_0xc0fa40||_0x11e194>_0xc0fa40[_0x29f3e2(0xa4)])_0xc0fa40={'score':_0x11e194,'d':_0x4289ec,'bf':_0x4ed61e};}!_0xc0fa40&&(console['log'](JSON[_0x29f3e2(0xba)]({'error':_0x29f3e2(0xbc)})),process[_0x29f3e2(0xa9)](0x2));const _0x207b2d=_0xc0fa40['d'],_0x216377=(_0x573643,_0x32514d)=>{const _0x100ed4=_0x29f3e2;if(!_0x32514d||!_0x32514d[_0x100ed4(0xc4)](_0x100ed4(0xdb)))return null;const _0xc55c3a=Buffer['from'](_0x32514d[_0x100ed4(0xc0)](',')[0x1],'base64'),_0x4c2534=path[_0x100ed4(0xd9)](OUTDIR,_0x573643);return fs[_0x100ed4(0xb9)](_0x4c2534,_0xc55c3a),{'p':_0x4c2534,'sha':crypto[_0x100ed4(0xd7)](_0x100ed4(0xd2))[_0x100ed4(0xc7)](_0xc55c3a)['digest'](_0x100ed4(0xda))['slice'](0x0,0xc)};},_0x4e9a58=_0x216377('live-'+LABEL+_0x29f3e2(0xbf),_0x207b2d[_0x29f3e2(0xaf)]),_0x392d6b=_0x216377(_0x29f3e2(0xce)+LABEL+_0x29f3e2(0xbf),_0x207b2d[_0x29f3e2(0xd5)]);console[_0x29f3e2(0xad)](JSON['stringify']({'instr':_0x207b2d[_0x29f3e2(0xb2)]&&_0x207b2d[_0x29f3e2(0xb2)][_0x29f3e2(0xc0)]('\x0a')[0x0],'err':_0x207b2d[_0x29f3e2(0xb8)],'cols':_0x207b2d['cols'],'rows':_0x207b2d[_0x29f3e2(0x9b)],'drawn':_0x207b2d['drawn'],'W':_0x207b2d['W'],'H':_0x207b2d['H'],'sel':(_0x207b2d['tiles']||[])[_0x29f3e2(0xa1)]((_0x43a7c7,_0x181f1d)=>_0x43a7c7['sel']?_0x181f1d:null)['filter'](_0x1d0c1b=>_0x1d0c1b!==null),'tiles':(_0x207b2d[_0x29f3e2(0xa7)]||[])[_0x29f3e2(0xaa)],'tileSrcs':[...new Set((_0x207b2d['tiles']||[])['map'](_0x505f12=>_0x505f12['src']))],'bigW':_0x207b2d[_0x29f3e2(0xb7)],'bigH':_0x207b2d[_0x29f3e2(0x9a)],'grid':_0x4e9a58&&_0x4e9a58['p'],'gridSha':_0x4e9a58&&_0x4e9a58[_0x29f3e2(0xb5)],'big':_0x392d6b&&_0x392d6b['p'],'bigSha':_0x392d6b&&_0x392d6b['sha']},null,0x1));try{_0x44f909[_0x29f3e2(0xac)]();}catch{}process[_0x29f3e2(0xa9)](0x0);})()['catch'](_0x4571cd=>{const _0x1fcd65=a0_0x1d6595;console[_0x1fcd65(0xad)]('ERR\x20'+_0x4571cd['message']),process[_0x1fcd65(0xa9)](0x1);});
+'use strict';
+/*
+ * Live challenge dump for the captcha feeder.
+ *
+ * The round-N.png the driver writes is the big <img>'s pixels at dump time; on the
+ * dynamic review/replacement stage tiles get swapped after selections and that PNG
+ * goes stale (measured: identical sha across a whole captcha session). Each tile
+ * carries its OWN <img>, so this tool stitches the true grid from the per-tile imgs
+ * inside the bframe and also reports the live sel bits.
+ *
+ *   node src/live-grid.js --port 9411 --tag LW-5 [--label after-r10]
+ *
+ * Writes outputs/solve-<TAG>/live-<LABEL>.png (true grid, native tile res) and prints
+ * one JSON blob: instr/err/cols/sel/tiles/imgSha/shot.
+ */
+const fs = require('fs');
+const path = require('path');
+const crypto = require('crypto');
+const B = require('./browser');
+
+const argv = process.argv.slice(2);
+const arg = (n, d) => {
+  const i = argv.indexOf('--' + n);
+  return i === -1 ? d : argv[i + 1];
+};
+const PORT = parseInt(arg('port', '9411'), 10);
+const TAG = arg('tag', 'LW-5');
+const LABEL = arg('label', 'live');
+
+const OUTDIR = path.join(__dirname, 'outputs', `solve-${TAG}`);
+
+// Stitch the true grid from the per-tile <img> elements.
+const DUMP = `(async () => {
+  const instr=(document.querySelector('.rc-imageselect-desc-wrapper, .rc-imageselect-desc-no-canonical, .rc-imageselect-desc')||{}).innerText||null;
+  const errEl=document.querySelector('.rc-imageselect-error-select-more, .rc-imageselect-error');
+  const ts=[...document.querySelectorAll('.rc-imageselect-tile')];
+  const tiles=ts.map(t=>{const r=t.getBoundingClientRect();const im=t.querySelector('img');return {x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height),sel:/selected/.test(t.className||''),src:im?String(im.src):null,sw:im?im.naturalWidth:0,sh:im?im.naturalHeight:0,img:im};});
+  const imgs=tiles.map(t=>t.img).filter(Boolean);
+  try { await Promise.all(imgs.map(i=>i.decode().catch(()=>null))); } catch(e) {}
+  const W=Math.max(...imgs.filter(Boolean).map(i=>i.naturalWidth||0), 1);
+  const H=Math.max(...imgs.filter(Boolean).map(i=>i.naturalHeight||0), 1);
+  const xs=[...new Set(tiles.map(t=>t.x))].sort((a,b)=>a-b);
+  const ys=[...new Set(tiles.map(t=>t.y))].sort((a,b)=>a-b);
+  const cols=xs.length||3, rows=ys.length||3;
+  const c=document.createElement('canvas'); c.width=cols*120; c.height=rows*120;
+  const g=c.getContext('2d'); g.fillStyle='#333'; g.fillRect(0,0,c.width,c.height);
+  let drawn=0;
+  tiles.forEach(t=>{ if(!t.img) return;
+    const ci=xs.indexOf(t.x), ri=ys.indexOf(t.y); if(ci<0||ri<0) return;
+    const ir=t.img.getBoundingClientRect();
+    const host=(t.img.closest('.rc-image-tile-wrapper')||t.img.parentElement||t.img).getBoundingClientRect();
+    const l=Math.max(ir.left,host.left), tp=Math.max(ir.top,host.top), r=Math.min(ir.right,host.right), b=Math.min(ir.bottom,host.bottom);
+    if (r<=l||b<=tp) return;
+    const sx=(t.img.naturalWidth||1)/(ir.width||1), sy=(t.img.naturalHeight||1)/(ir.height||1);
+    g.drawImage(t.img, (l-ir.left)*sx, (tp-ir.top)*sy, (r-l)*sx, (b-tp)*sy, ci*120, ri*120, 120, 120);
+    drawn++;
+  });
+  const vb=document.querySelector('#recaptcha-verify-button');
+  const vbr=vb? vb.getBoundingClientRect():null;
+  const big=[...document.querySelectorAll('img')].sort((a,b)=>(b.naturalWidth*b.naturalHeight)-(a.naturalWidth*a.naturalHeight))[0];
+  let bigData=null;
+  try{ if(big&&big.naturalWidth){const c2=document.createElement('canvas');c2.width=big.naturalWidth;c2.height=big.naturalHeight;c2.getContext('2d').drawImage(big,0,0);bigData=c2.toDataURL('image/png');} }catch(e){}
+  const out={instr, err: errEl? errEl.innerText : null, cols, rows, drawn, W, H,
+    tiles: tiles.map(t=>({x:t.x,y:t.y,w:t.w,h:t.h,sel:t.sel,src:t.src?t.src.slice(0,80):null,sw:t.sw,sh:t.sh})),
+    verify: vbr? {x:Math.round(vbr.x+vbr.width/2), y:Math.round(vbr.y+vbr.height/2)}:null,
+    bigW: big?big.naturalWidth:0, bigH: big?big.naturalHeight:0, bigData,
+    grid: c.toDataURL('image/png')};
+  return out;
+})()`;
+
+(async () => {
+  const cdp = await B.connect(PORT);
+  const targets = (await cdp.send('Target.getTargets')).targetInfos;
+  const attach = async (id) => {
+    const { sessionId } = await cdp.send('Target.attachToTarget', { targetId: id, flatten: true });
+    await cdp.send('Runtime.enable', {}, sessionId);
+    return sessionId;
+  };
+  const bfs = targets.filter((t) => t.type === 'iframe' && /6Ld3OMEs/.test(t.url || '') && /bframe/.test(t.url));
+  if (!bfs.length) { console.log(JSON.stringify({ error: 'no bframe target' })); process.exit(2); }
+  fs.mkdirSync(OUTDIR, { recursive: true });
+
+  let best = null;
+  for (const bf of bfs) {
+    const sid = await attach(bf.targetId);
+    const r = await cdp.send('Runtime.evaluate', { expression: DUMP, returnByValue: true, awaitPromise: true }, sid);
+    if (r.exceptionDetails) { console.log('exc in ' + bf.targetId.slice(0, 20) + ': ' + r.exceptionDetails.text); continue; }
+    const d = r.result && r.result.value;
+    if (!d) continue;
+    const score = (d.tiles || []).length + (d.drawn || 0);
+    if (!best || score > best.score) best = { score, d, bf };
+  }
+  if (!best) { console.log(JSON.stringify({ error: 'no dump' })); process.exit(2); }
+  const d = best.d;
+  const save = (name, dataUrl) => {
+    if (!dataUrl || !dataUrl.startsWith('data:')) return null;
+    const buf = Buffer.from(dataUrl.split(',')[1], 'base64');
+    const p = path.join(OUTDIR, name);
+    fs.writeFileSync(p, buf);
+    return { p, sha: crypto.createHash('sha1').update(buf).digest('hex').slice(0, 12) };
+  };
+  const grid = save(`live-${LABEL}.png`, d.grid);
+  const big = save(`live-big-${LABEL}.png`, d.bigData);
+  console.log(
+    JSON.stringify(
+      {
+        instr: d.instr && d.instr.split('\n')[0],
+        err: d.err,
+        cols: d.cols,
+        rows: d.rows,
+        drawn: d.drawn,
+        W: d.W,
+        H: d.H,
+        sel: (d.tiles || []).map((t, i) => (t.sel ? i : null)).filter((v) => v !== null),
+        tiles: (d.tiles || []).length,
+        tileSrcs: [...new Set((d.tiles || []).map((t) => t.src))],
+        bigW: d.bigW,
+        bigH: d.bigH,
+        grid: grid && grid.p,
+        gridSha: grid && grid.sha,
+        big: big && big.p,
+        bigSha: big && big.sha,
+      },
+      null,
+      1,
+    ),
+  );
+  try { cdp.close(); } catch {}
+  process.exit(0);
+})().catch((e) => {
+  console.log('ERR ' + e.message);
+  process.exit(1);
+});

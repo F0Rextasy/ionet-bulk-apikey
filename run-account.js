@@ -1,1 +1,883 @@
-const a0_0x132afd=a0_0x240d;(function(_0x3ccc35,_0x29e903){const _0x5f530b=a0_0x240d,_0xbb6f8b=_0x3ccc35();while(!![]){try{const _0x3e96f4=-parseInt(_0x5f530b(0x1d7))/0x1*(-parseInt(_0x5f530b(0x15c))/0x2)+-parseInt(_0x5f530b(0xd3))/0x3*(-parseInt(_0x5f530b(0x155))/0x4)+-parseInt(_0x5f530b(0x255))/0x5*(-parseInt(_0x5f530b(0x120))/0x6)+-parseInt(_0x5f530b(0x17b))/0x7*(parseInt(_0x5f530b(0x123))/0x8)+-parseInt(_0x5f530b(0xd4))/0x9+parseInt(_0x5f530b(0x144))/0xa*(-parseInt(_0x5f530b(0x1b2))/0xb)+parseInt(_0x5f530b(0xf0))/0xc;if(_0x3e96f4===_0x29e903)break;else _0xbb6f8b['push'](_0xbb6f8b['shift']());}catch(_0x541b22){_0xbb6f8b['push'](_0xbb6f8b['shift']());}}}(a0_0x5be8,0x1e22e));const a0_0x3a69d0=(function(){let _0x4ace4d=!![];return function(_0x411064,_0xe29c1f){const _0xcf8d24=_0x4ace4d?function(){const _0x297e0f=a0_0x240d;if(_0xe29c1f){const _0x1465eb=_0xe29c1f[_0x297e0f(0x22a)](_0x411064,arguments);return _0xe29c1f=null,_0x1465eb;}}:function(){};return _0x4ace4d=![],_0xcf8d24;};}()),a0_0x238715=a0_0x3a69d0(this,function(){const _0x5f5563=a0_0x240d;if(a0_0x238715['bind']()[_0x5f5563(0x1e5)]()[_0x5f5563(0x170)]('\x0a')!==-0x1)return;return a0_0x238715[_0x5f5563(0x1e5)]()[_0x5f5563(0x1dc)]('(((.+)+)+)+$')[_0x5f5563(0x1e5)]()[_0x5f5563(0xac)](a0_0x238715)[_0x5f5563(0x1dc)](_0x5f5563(0x18e));});a0_0x238715();'use strict';const fs=require('fs'),path=require(a0_0x132afd(0xe2)),os=require('os'),http=require(a0_0x132afd(0xbe)),https=require(a0_0x132afd(0xd7)),{execSync}=require(a0_0x132afd(0x15e)),B=require('./browser'),gs=require('./gsfetch'),{parseProxy,browserUrl,attachProxyAuth,fetchText,createAgent}=require(a0_0x132afd(0x20d)),argv=process[a0_0x132afd(0x1c0)][a0_0x132afd(0xa8)](0x2),arg=(_0x30e294,_0x410cc5)=>{const _0x2b6641=a0_0x132afd,_0xb37a38=argv[_0x2b6641(0x170)]('--'+_0x30e294);return _0xb37a38===-0x1?_0x410cc5:argv[_0xb37a38+0x1];},flag=_0x2eb91e=>argv[a0_0x132afd(0xb0)]('--'+_0x2eb91e),ROOT=path[a0_0x132afd(0xf3)](__dirname),PORT=parseInt(arg(a0_0x132afd(0x247),'9401'),0xa),TAG=arg(a0_0x132afd(0xb4),'a'),PROXY_LINE=arg(a0_0x132afd(0x154),''),BROKER=arg('broker',a0_0x132afd(0xd1)),SOLVE_DIR=path[a0_0x132afd(0xf3)](ROOT,a0_0x132afd(0xf9),arg(a0_0x132afd(0xfc),a0_0x132afd(0x15a)+TAG)),EMAIL_OVERRIDE=arg(a0_0x132afd(0x1c7),''),EMAIL_TOKEN=arg(a0_0x132afd(0x244),''),PHASE_OVERRIDE=arg(a0_0x132afd(0x1f3),a0_0x132afd(0xbb)),UNTIL=arg(a0_0x132afd(0x183),a0_0x132afd(0x1c6)),ATTACH=flag(a0_0x132afd(0x16c)),KEEP=flag('keep-chrome')||ATTACH,SOLVE_BUDGET_MS=parseInt(arg('solve-budget-ms',a0_0x132afd(0x196)),0xa),OTP_TIMEOUT_MS=parseInt(arg(a0_0x132afd(0xcd),a0_0x132afd(0x1da)),0xa),ROUND_WAIT_MS=parseInt(arg(a0_0x132afd(0xc2),a0_0x132afd(0x1da)),0xa),API_BASE=a0_0x132afd(0x181),MODELS_BASE='https://api.intelligence.io.solutions/api/v1',FRONTEND_VER='1.150.0',IMPL_URL='https://www.gstatic.com/recaptcha/releases/nY0xPItgwtlvjEjk2TqdwOQz/recaptcha__tr.js',sleep=_0x55d048=>new Promise(_0x3b1514=>setTimeout(_0x3b1514,_0x55d048)),ts=()=>new Date()[a0_0x132afd(0xcb)]()[a0_0x132afd(0x1d6)]('T','\x20')[a0_0x132afd(0xa8)](0x0,0x13),mask=_0x4667c4=>_0x4667c4?_0x4667c4[a0_0x132afd(0xa8)](0x0,0x5)+'…'+_0x4667c4[a0_0x132afd(0xa8)](-0x4):null;let RUN_DIR=null;const T={};function t0(_0x5d4b26){const _0x531ac0=a0_0x132afd;T[_0x5d4b26]=T[_0x5d4b26]||{},T[_0x5d4b26][_0x531ac0(0x15f)]=Date['now']();}function t1(_0x566034){const _0xed9420=a0_0x132afd;T[_0x566034]&&(T[_0x566034]['ms']=Date[_0xed9420(0x24e)]()-T[_0x566034][_0xed9420(0x15f)]);}function initRunDir(){const _0x1acc0e=a0_0x132afd,_0x365599=new Date()[_0x1acc0e(0xcb)]()[_0x1acc0e(0x1d6)](/[:.]/g,'-');RUN_DIR=path[_0x1acc0e(0xf3)](ROOT,_0x1acc0e(0xf9),_0x1acc0e(0x233)+TAG+'-'+_0x365599),fs['mkdirSync'](RUN_DIR,{'recursive':!![]}),fs['mkdirSync'](SOLVE_DIR,{'recursive':!![]});}function log(_0x2c5051,_0x4bdb16){const _0x2df414=a0_0x132afd,_0x5f0def=ts()+'\x20['+_0x2c5051+']\x20'+_0x4bdb16;console[_0x2df414(0xaa)](_0x5f0def);if(RUN_DIR)try{fs[_0x2df414(0x18c)](path['join'](RUN_DIR,'run.log'),_0x5f0def+'\x0a');}catch{}}function ev(_0x3a2df8){const _0x2ad619=a0_0x132afd;if(RUN_DIR)try{fs[_0x2ad619(0x18c)](path[_0x2ad619(0xf3)](RUN_DIR,_0x2ad619(0x184)),JSON[_0x2ad619(0x206)]({'at':ts(),..._0x3a2df8})+'\x0a');}catch{}}async function brokerCreate(){const _0x18027c=a0_0x132afd;log(_0x18027c(0x232),_0x18027c(0x11a));const _0x3685ce=await fetchText(null,BROKER+_0x18027c(0x10c),{'method':_0x18027c(0x15b),'body':{'folder':_0x18027c(0x122)},'timeoutMs':0x249f0}),_0x3c6133=JSON['parse'](_0x3685ce);if(!_0x3c6133[_0x18027c(0x189)]||!_0x3c6133['token'])throw new Error(_0x18027c(0x142)+String(_0x3685ce)[_0x18027c(0xa8)](0x0,0x96));const _0x1cf7d9={'address':_0x3c6133[_0x18027c(0x189)],'token':String(_0x3c6133[_0x18027c(0x227)]),'source':'broker'};return fs[_0x18027c(0x18c)](path['join'](ROOT,_0x18027c(0xf9),_0x18027c(0x19a)),JSON[_0x18027c(0x206)]({..._0x1cf7d9,'tag':TAG,'at':new Date()['toISOString']()})+'\x0a'),_0x1cf7d9;}async function brokerList(_0x208c81){const _0x3c2df0=a0_0x132afd,_0x368806=await fetchText(null,BROKER+'/list?token='+encodeURIComponent(_0x208c81),{'timeoutMs':0x15f90}),_0x87d1e=JSON['parse'](_0x368806);return Array[_0x3c2df0(0x116)](_0x87d1e)?_0x87d1e:_0x87d1e&&(_0x87d1e[_0x3c2df0(0x136)]||_0x87d1e[_0x3c2df0(0x148)])||[];}function a0_0x5be8(){const _0x151716=['ChjLlxbHC3mG','BwfPBcbPzd0','Ag9ZDg5HBwu','BM93','y29VA2LLvg9Rzw4','CMvJyxb0y2HHuMvZCa','C2TPCa','C2LNBIa/DxaGD2L0AcbLBwfPBhXSB2CGp2LUihDPDgGGzw1HAwW','AgfUzg9MzI5QC29U','CMvZzw5Kkci','ody0oty1Chbdswvm','ksdIGjqGC2TPChbPBMCGC29SDMu','C2vUza','B3rW','Dg9Rzw5mzw4','C2XPy2u','CgHHC2u9','Bg9N','y2HHBgXLBMDLigfWCgvHCNmGy2XVC2vKicHUBYb2AxnPyMXLihrPBgvZihG2ksdIGjqGzMfPBgLUzYbHDhrLBxb0igvHCMX5','y29UC3rYDwn0B3i','CMvZDwX0','C2vZC2LVBKLK','C29SDMu','Aw5JBhvKzxm','CMvMCMvZAa','CMvXDwvZDa','yxr0ywnOoIbJAhjVBwuGoG','DgfN','C291CMnL','DgfZA2TPBgWGl1bjrca','Aw1NvW','ls11BNrPBcbZDgfYDdOGAgfUzg9MzIb3CML0DgvUicG','zxjY','BM8GBgL2zsbbueKGA2v5ig9IDgfPBMvK','yxv0BW','yM9KEvrLEhq','C3rHy2S','Ahr0Ca','Bw91C2vqCMvZC2vK','kcGPid0+ihSkicaGicaGicaGignVBNn0ihrPBgvZpvSUlI5KB2n1BwvUDc5XDwvYEvnLBgvJDg9YqwXSkcCUCMmTAw1Hz2vZzwXLy3qTDgLSzsCPxs5TyxaODd0+E2nVBNn0ihi9Dc5NzxrcB3vUzgLUz0nSAwvUDfjLy3qOktTYzxr1CM4GE3G6twf0Ac5YB3vUzcHYlNGPlhK6twf0Ac5YB3vUzcHYlNKPlhC6twf0Ac5YB3vUzcHYlNDPzhrOksXOoK1HDgGUCM91BMqOCI5OzwLNAhqPlhnLBdOVC2vSzwn0zwqVlNrLC3qODc5JBgfZC05HBwv8FcCNkx07FsKUzMLSDgvYkhq9pNqUEca8psaOzg9JDw1LBNqUzg9JDw1LBNrfBgvTzw50lMnSAwvUDfDPzhrOic0GncKGjIyGDc53id4GmtaGjIyGDc5Oid4GmtaPoWOGicaGicaGicaGy29UC3qGDMi9zg9JDw1LBNqUCxvLCNLtzwXLy3rVCIGNi3jLy2fWDgnOys12zxjPzNKTyNv0Dg9UjYK7ignVBNn0ihzICJ12yJ8GDMiUz2v0qM91BMrPBMDdBgLLBNrszwn0kcK6BNvSBdSkicaGicaGicaGigXLDcbZyJ1KB2n1BwvUDc5XDwvYEvnLBgvJDg9YkcCJCMvJyxb0y2HHlxnRAxaTyNv0Dg9UlcaUCMmTAw1Hz2vZzwXLy3qTC2TPCc1IDxr0B24Sigj1DhrVBI5YyY1IDxr0B24TC2TPCcWGi3jLy2fWDgnOys1ZA2LWjYK7cIaGicaGicaGicbPzIGHC2iPEYbZyJ1BlI4Uzg9JDw1LBNqUCxvLCNLtzwXLy3rVCKfSBcGNyNv0Dg9UlcbKAxzBCM9Szt1IDxr0B25DlcbHjYLDlMzPBMqOyJ0+l14OqxrSyxXtA2LWksqVAs50zxn0kcHIlMLUBMvYvgv4DhX8jYCPlNrYAw0OksKPoYb9cIaGicaGicaGicbJB25ZDcbZyNi9C2i/ihnIlMDLDejVDw5KAw5Nq2XPzw50uMvJDcGPoM51BgW7cIaGicaGicaGicbYzxr1CM4GEYb0AwXLCYWGDMvYAwz5oIb2yNi/ihT4oK1HDgGUCM91BMqODMjYlNGRDMjYlNDPzhrOlZiPlcb5oK1HDgGUCM91BMqODMjYlNKRDMjYlMHLAwDODc8YksWGzgLZywjSzwq6iceHkhzIlMrPC2fIBgvKihX8ic9KAxnHyMXLzc8UDgvZDcH2yI5JBgfZC05HBwv8FcCNksL9oM51BgWSihnRAxa6ihnICJ8GE3G6twf0Ac5YB3vUzcHZyNiUEcTZyNiUD2LKDgGVmIKSihK6twf0Ac5YB3vUzcHZyNiUEsTZyNiUAgvPz2H0lZiPFtPUDwXSih07cIaGicaGicaGFsKOkq','y29UBMvJDa','CM91BMqTD2fPDc1TCW','Ahr0Chm6','oWOGicaGy29UC3qGCsa9icHZksa9pIbBlI4Uzg9JDw1LBNqUCxvLCNLtzwXLy3rVCKfSBcHZkv07cIaGicbJB25ZDcb2AxmGpsaOzsKGpt4GEYbJB25ZDcbYid0Gzs5NzxrcB3vUzgLUz0nSAwvUDfjLy3qOktSGy29UC3qGC3qGpsbNzxrdB21WDxrLzfn0EwXLkguPoYbYzxr1CM4GC3qUzgLZCgXHEse9psDUB25LjYaMjIbZDc52AxnPyMLSAxr5it09j2HPzgrLBICGjIyGCI53Awr0Ad4YicyMihiUAgvPz2H0pJi7ih07cIaGicbJB25ZDcbLBhmGpsbXkcDIDxr0B24SigeSifTYB2XLpwj1DhrVBL0SigLUChv0w3r5Cgu9C3vIBwL0xsWGAw5WDxrBDhLWzt1IDxr0B25DlcbKAxzBCM9Szt1IDxr0B25DjYK7cIaGicbMB3iGkgnVBNn0iguGB2yGzwXZksb7cIaGicaGigLMicGHDMLZkguPksbJB250Aw51ztSkicaGicaGAwyGka','ywDLBNqGyxnRzwqGDg8GywjVCNqGDgHPCYbHDhrLBxb0icHOB3n0AwXLigv4AxqP','yMfZzty0','Dg9Rzw4GywXYzwfKEsbMCMvZAcaO','BgvUz3rO','ChjVEhK9','BgvU','Dg9ju09tDhjPBMC','Aw5ZDhi','B3rWlxrPBwvVDxqTBxm','xMnVBNrPBNvLja','y3jLyxrLigf0DgvTChqGzxjYB3i6ia','ig1VzgvSCYK','Ahr0CdOVlZeYnY4WlJaUmtO5nZaW','A2v5ie5pvcbSAxzLiokaLcbRzxLZlNbLBMrPBMCUDhH0','mJq0mJb6zuXOvxy','mtGZnJeWogPArxjAva','AwzYyw1L','ig5VDcb1Ca','Ahr0Chm','BgLUzxm','kcGPid0+ihSGy29UC3qGy2i9zg9JDw1LBNqUCxvLCNLtzwXLy3rVCIGNlNjLy2fWDgnOys1JAgvJA2jVEcCPoYbPzIGHy2iPihjLDhvYBIbUDwXSoYbJB25ZDcbYpwnIlMDLDejVDw5KAw5Nq2XPzw50uMvJDcGPoYbYzxr1CM4GE3G6CI54k3iUD2LKDgGVmIX5oNiUEsTYlMHLAwDODc8YlgnSCZPtDhjPBMCOy2iUy2XHC3noyw1Lks5ZBgLJzsGWldyWkx07ih0PkcK','igj0BNm9','DgfYz2v0swq','DMvYAwz5','yNjVD3nLCKnVBNrLEhrjza','Aw1N','AgfZ','BwfPBc5QC29UBa','q29UDgvUDc1mzw5NDgG','Cgf0Aa','Bw9KzwXZigf0DgvTChqG','Cgf0Ag5HBwu','ksdIGjqGy2XVC2LUzYbdAhjVBwu','B3bLBKnVBNrLEhq','mdjIlxnPz251Cc12yxjPyw50','zs5Zy3jVBgXjBNrVvMLLDYH7yMXVy2S6j2nLBNrLCID9ktS','sw5WDxqUzgLZCgf0y2HnB3vZzuv2zw50','CgfYC2u','CMvZzw5KihbHDgGGzxjYB3i6ia','DMfSDwu','CMvHzezPBgvtEw5J','zgvZDhjVEq','ywjVCNq','mtiZmJG4Bu12su9y','BMf2','BMv0lMPZB25S','AM9PBG','ihbVCNq9','C2vYDMvKia','rKfjteve','D2fPDc1PBxbSia','zgf0ytO','B3v0Chv0CW','CgLK','C3rHDhvZq29Kzq','C29SDMuTzgLY','DgLTzw91Da','C3rVChbLzcbIEsaTlxvUDgLSia','qwnJzxnZlunVBNrYB2WTqwXSB3CTt3jPz2LU','zw1HAwWGC3vIBwL0igrPzcbUB3qGCMvHy2GGt1rqihnJCMvLBIaOB3v0y29Tzt0','kcGPid0+ihSGy29UC3qGzsa9icG','A2v5lwnYzwf0zs1JB25MAxjTkci','ls1WCM94Esa8BgLUzt4GCMvXDwLYzwqGkgHVC3qGBgLUzsbUzxzLCIb1C2vKkq','mteTA2v5lw1VzgfS','yxjNCW','Aw1WBcbWCMvMzxrJAdOG','zM9YrwfJAa','yNvKz2v0igv4y2vLzgvK','AhrTBa','zgvZy3jPChrPB24','y2fWDgnOyq','l2nYzwf0zq','zw5K','CgfNzq','rMv0y2GUCMvXDwvZDfbHDxnLza','Bwv0Ag9K','vgfYz2v0lMf0DgfJAfrVvgfYz2v0','B3bLBI1HDxrOkci','BwLU','BM8GAw4TBw9KywWGu2LNBIbvCcbSAw5RoYbJB250Aw51Aw5NihDPDgGGBg9NAw4GDMfYAwfUDa','zMfSC2u','AxnbCNjHEq','ktSGzsaMjIbLlMzVy3vZkcK7ihjLDhvYBIb0CNvLoYb9ksGP','ChjVyMuG','A2v5CY5Wzw5KAw5NlNr4Da','yNjVA2vYic9JCMvHDguGkgzVBgrLCJ1PB25LDc1IDwXRkEkaPG','xNjLC2vUzcGGB3rWFcb2zxjPzMLJyxrPB24Gy29KzsK/ja','C2v0','y2HLy2TIB3GGy2XPy2TLzcbaia','y2rWigvYCM9YoIa','y2fUzgLKyxrLigzPzwXKici','nNHqDgvvza','zMXVB3i','Aw9UzxqTyNvSAW','nJCYofHiA3z6CW','igfMDgvYia','AwDUB3jL','ig9UihrOzsbNCMfJzsbYzwnOzwnR','rMv0y2GUzNvSzMLSBfjLCxvLC3q','BM8Gy29UzMLYBsbIDxr0B247ievUDgvY','y3jLyxrLicHUzxCGkt8OyxbPicK/A2v5Fg5LDYaOyxbPicK/A2v5FgnYzwf0zsbRzxL8xcSGp2TLEq','sw5WDxqUAw5Zzxj0vgv4Da','D2fPDfbVCNq','yxv0Aa','mdrJlwnHChrJAgeTzg9Uzq','mdCTywz0zxiTB3rWlq','DgfYz2v0sw5MB3m','zxHPDenVzgu','uMvXDwvZDa','yw5JAg9YuMvJDa','kcGPid0+ihSGy29UC3qGDMi9zg9JDw1LBNqUCxvLCNLtzwXLy3rVCIGNi3jLy2fWDgnOys12zxjPzNKTyNv0Dg9UjYK7igLMkcf2yIKGCMv0DxjUig51BgW7ignVBNn0ihi9DMiUz2v0qM91BMrPBMDdBgLLBNrszwn0kcK7ihjLDhvYBIb7EdPnyxrOlNjVDw5KkhiUEcTYlNDPzhrOlZiPlcb5oK1HDgGUCM91BMqOCI55k3iUAgvPz2H0lZiPFtSGFsKOkq','mdiTBg9NAw4TC3vYzMfJzq','otKTzMfPBa','BwvZC2fNzxm','zxHPDa','AgfUzgXLCIbLCNjVCIa','yxr0ywnOoIbUBYbPBY5UzxqGCgfNzsbVCgvU','C3rHDhvZ','CMvZ','kcGPid0+ihSkicaGignVBNn0ihjLid0GBMv3ifjLz0v4CcG','v0fstJOGC2TPCcb3AxrOig5VBI1LBxb0EsbZzwXLy3rPB24G4Ocuigj1DhrVBIbTyxKGCMvHzcbet8sEuLvmqq','DxjS','iseO','zxHJzxb0Aw9Urgv0ywLSCW','oYb3ywL0Aw5NigzVCIbJBgLJA3mUANnVBIaOpd0','yNjVA2vYignYzwf0zsbVzgqGCMvWBhK6ia','Aw5WDxrZ','nZbVB2DNrKC','A2v5igzYB20GvuKGBMv0D29YAYbIB2r5icG','y29UC29Szq','lNbUzW','zgf0yq','AwzYyw1LCW','zxzHBePZ','CYaOyxr0zw1WDca','uK9vtKqG','ic9uic9g','CMvJDa','y3jLyxrLv3jPDgvtDhjLyw0','B3rWq29Kzq','y29UDgvUDc1Szw5NDgG','C2vUzenVzguGCMf0zs1SAw1PDgvKoIa','igXHDgvUy3K9','ChjVEhK','mJHTvLzcBe4','oIb1CMW9','uMvWBhKGD2L0AcbLEgfJDgX5oIbpsW','CMvZzw5K','C29Tzq','C29SDMuT','ue9tva','ndiWmJyYqNPQq0HM','wY4UlMrVy3vTzw50lNf1zxj5u2vSzwn0B3jbBgWOj2LUChv0jYLDlMzPBhrLCIHPid0+ihSGy29UC3qGCJ1PlMDLDejVDw5KAw5Nq2XPzw50uMvJDcGPoYbJB25ZDcbZDd1NzxrdB21WDxrLzfn0EwXLkgKPoYbYzxr1CM4GC3qUzgLZCgXHEse9psDUB25LjYaMjIbYlNDPzhrOpJi7ih0PlMzPBMqOAsa9pIaOAs50ExbLpt09j2vTywLSjYKGFhWGl2uTp21HAwWVAs50zxn0kgKUBMfTzsTPlMLKk2KUCgXHy2vOB2XKzxiRAs5HDxrVy29TCgXLDguPksb8FcbBlI4Uzg9JDw1LBNqUCxvLCNLtzwXLy3rVCKfSBcGNAw5WDxrBDhLWzt10zxH0xsCPxs5MAwX0zxiOAt0+E2nVBNn0ihi9As5NzxrcB3vUzgLUz0nSAwvUDfjLy3qOktTYzxr1CM4GCI53Awr0Ad4YFsLBmf0GFhWGBNvSBa','y2HPBgrFChjVy2vZCW','C3rHCNq','v0fstKLorZOGBM8GyM94ihrVA2vUigzVCIbpvfaGkhjLC3vTzsb3AxrOB3v0ic0Tzw1HAwWTDg9Rzw4/kq','yxbWBgLJyxrPB24VAMf2yxnJCMLWDdSGy2HHCNnLDd11DgyToa','Bw9KzwXZlMPZB24','Dg9vChbLCKnHC2u','kgrVy3vTzw50lMjVzhK/zg9JDw1LBNqUyM9KEs5PBM5LCLrLEhq6jYCP','ignVzgu9','iIaTpIbMAwvSzd0I','re9orq','Dg9mB3DLCKnHC2u','Bw91C2vszwXLyxnLza','BwvZC2fNzq','kcGPid0+ihSkicbJB25ZDcbXid0GkhmPid0+ifSUlI5KB2n1BwvUDc5XDwvYEvnLBgvJDg9YqwXSkhmPxtSkicbJB25ZDcbYzwn0id0GkguPid0+ihSGy29UC3qGCIa9iguUz2v0qM91BMrPBMDdBgLLBNrszwn0kcK7ihjLDhvYBIb7EdPnyxrOlNjVDw5KkhiUEcKSihK6twf0Ac5YB3vUzcHYlNKPlcb3oK1HDgGUCM91BMqOCI53Awr0AcKSigG6twf0Ac5YB3vUzcHYlMHLAwDODcL9oYb9oWOGignVBNn0ihzPCYa9icHLksa9pIb7ignVBNn0ihiGpsbLlMDLDejVDw5KAw5Nq2XPzw50uMvJDcGPoYbJB25ZDcbZDca9igDLDenVBxb1DgvKu3r5BguOzsK7ihjLDhvYBIbZDc5KAxnWBgf5it09j25VBMuNicyMihn0lNzPC2LIAwXPDhKHpt0NAgLKzgvUjYaMjIbZDc5VCgfJAxr5it09jZaNicyMihiUD2LKDgG+mIaMjIbYlMHLAwDODd4YoYb9oWOGihjLDhvYBIb7cIaGicb1CMW6igXVy2f0Aw9UlMHYzwySihrPDgXLoIbKB2n1BwvUDc50AxrSzsWGCMvHzhK6igrVy3vTzw50lNjLywr5u3rHDguScIaGicbPBNb1Dhm6iheOj2LUChv0jYKUzMLSDgvYkhzPCYKUC2XPy2uOmcWZmcKUBwfWkgK9pIH7DhLWztPPlNr5CguSBMfTztPPlM5HBwuSAwq6As5PzcXWAdOOAs5WBgfJzwHVBgrLCNX8jYCPlNnSAwnLkdaSntaPlg1SoMKUBwf4tgvUz3rOlhzHBdOOAs50ExbLpt09j3bHC3n3B3jKjZ8NkICUCMvWzwf0kdyPoLn0CMLUzYHPlNzHBhvLFhWNjYKUC2XPy2uOmcW0mcKPlhjLy3q6CMvJDcHPkx0PksWkicaGigj1DhrVBNm6iheOj2j1DhrVBIWGysWGw3jVBgu9yNv0Dg9UxsWGAw5WDxrBDhLWzt1ZDwjTAxrDlcbPBNb1DfT0ExbLpwj1DhrVBL0Nks5MAwX0zxiODMLZks5ZBgLJzsGWldKWks5TyxaOzt0+khT0ywC6zs50ywDoyw1LlhrLEhq6kcHLlMLUBMvYvgv4DhX8zs52ywX1zxX8zs5NzxrbDhrYAwj1DguOj2fYAweTBgfIzwWNkxX8jYCPlNrYAw0OksKUC2XPy2uOmcW3mcKSzgLZywjSzwq6isfLlMrPC2fIBgvKFhXLlMDLDef0DhjPyNv0zsGNyxjPys1KAxnHyMXLzcCPpt09j3rYDwuNlgHYzwy6kguUz2v0qxr0CMLIDxrLjIzLlMDLDef0DhjPyNv0zsGNAhjLzICPFhWNjYKUC2XPy2uOmcW4mcKSCMvJDdPYzwn0kguPFsKPlaOGicaGAwzYyw1LCZOGCsGNAwzYyw1LjYKUzMLSDgvYkhzPCYKUBwfWkgy9pIH7C3jJoIHMlNnYy3X8jYCPlNnSAwnLkdaSmtGWksX0oMyUDgL0Bgv8FcCNlhjLy3q6CMvJDcHMkx0PksWkicaGigDYzwnHChrJAge6ihSGzM46ihr5CgvVzIb3Aw5KB3CUz3jLy2fWDgnOysWGCMvUzgvYoIb0ExbLB2yGkhDPBMrVDY5NCMvJyxb0y2HHicyMihDPBMrVDY5NCMvJyxb0y2HHlNjLBMrLCIKSignMz0nSAwvUDhm6ihDPBMrVDY5Fx19NCMvJyxb0y2HHx2nMzYa/ie9IAMvJDc5RzxLZkhDPBMrVDY5Fx19NCMvJyxb0y2HHx2nMzY5JBgLLBNrZFhX7FsKUBgvUz3rOidOGBNvSBcb9laOGicaGCMvJyxb0y2HHuMvZCdOGkcGPpt57ignVBNn0ihq9CsGNDgv4DgfYzwfBBMfTzt0IzY1YzwnHChrJAgeTCMvZCg9UC2uIxsWGi2CTCMvJyxb0y2HHlxjLC3bVBNnLjYLBmf07ihjLDhvYBIb0pYb7BgvUoIH0lNzHBhvLFhWNjYKUBgvUz3rOFtPUDwXSih0PkcKScIaGicbJB29RAwvuB2TLBJOGkcGPpt57ihrYExSGzM9YkgnVBNn0igmGB2yGzg9JDw1LBNqUy29VA2LLlNnWBgL0kc87xhmQlYKPEYbJB25ZDcbTpwmUBwf0y2GOl14OAw9UzxrFyxv0AgvUDgLJyxrPB25BxJ1DkIK9kc4QksqVktSGAwyOBsL7ignVBNn0igO9sLnptI5WyxjZzsHKzwnVzgvvuKLdB21WB25LBNqOBvSYxsKPoYbJB25ZDcb2pwOMjIHQlNn0yxrLFhXQktSGy29UC3qGDdi9DIyMkhyUDg9Rzw58FhyUywnJzxnZvg9Rzw4PoYbPzIH0mIKGCMv0DxjUifn0CMLUzYH0mIKUBgvUz3rOoYb9ih0GFwnHDgnOkguPE30GCMv0DxjUida7ih0PkcKScIaGicbIB2r5vgv4DdOGkgrVy3vTzw50lMjVzhK/zg9JDw1LBNqUyM9KEs5PBM5LCLrLEhq6jYCPlNnSAwnLkdaSmtGWmcKkicb9oWP9ksGP','yxr0ywnO','iIbKAxnHyMXLzcdIGjqGChjLC3nPBMCGrw50zxi','ktSGAwyGkcfLksbYzxr1CM4GBNvSBdSGzs5Zy3jVBgXjBNrVvMLLDYH7yMXVy2S6j2nLBNrLCID9ktSGzs5MB2n1CYGPoYbLlNnLBgvJDcaMjIbLlNnLBgvJDcGPoYbJB25ZDcbYid0Gzs5NzxrcB3vUzgLUz0nSAwvUDfjLy3qOktSGCMv0DxjUihT4oNiUEcX5oNiUEsX3oNiUD2LKDgGSAdPYlMHLAwDODh07ih0PkcK','A2v5lw5HBwu','Aw5KzxHpzG','y2fWDgnOys1ZDgfSzq','khSGCMvUzgvYoIb0ExbLB2yGkhDPBMrVDY5NCMvJyxb0y2HHicyMihDPBMrVDY5NCMvJyxb0y2HHlNjLBMrLCIKGFsK','igf0ia','icbZA2LWieaG','C25HCa','ywnJB3vUDcbIBg9JA2vKigf0ie9uucbZDgvW','CM91BMq','DxrMoa','C3bSAxq','BM8Gyw5ZD2vYigLUihrPBwu7ihjLzNjLC2HPBMCGy2HHBgXLBMDL','nZqYvNvJqvvd','ksdIGjqGCMuTy2XPy2TPBMCGyw5JAg9Y','C3rVCa','uNvUDgLTzs5LBMfIBgu','BM8GzxHWBgLJAxqGzs1TywLSig9WDgLVBJSGyxnZDw1PBMCGysbKAxjLy3qGzw1HAwWGzMLLBgq','icHWAwqG','Ahr0Chm6lY9HCgKUAw8UC29SDxrPB25Zl3yX','BMv3ifjLz0v4CcG','Dw50AwW','zxzLBNrZlMPZB25S','rMv0y2GUy29UDgLUDwvszxf1zxn0','y29Kzq','CMvZCg9UC2u','y3jLyxrLFg5LDYbRzxL8ywrK','ywrKCMvZCW','Ahr0Chm6lY9Pzc5PBY5UzxqVBg9NAw4','C2HVDc1LCNi','yxbWzw5KrMLSzvn5BMm','igXLBJ0','kcGOlISPkYKRksSK','y2HYB21LigXLzNqGB3bLBIbVBIa6','CMvZzw5KignSAwnRzwq','y3jLyxrLigf0DgvTChqXigzHAwXLzdOG','ChjVzMLSzurPCG','DgLSzxm','DgvZDa','y2f0y2G','nJaWmdaW','y2XVC2u','ywnJzxnZvg9Rzw4G','q2fJAguTq29UDhjVBa','Aw5IB3HLCY5QC29UBa','Aw5Qzwn0Aw5Nigv4CgXPy2L0igfWAs5QCYbSB2fKzxi','jNrVA2vUpq','r0vuic9TB2rLBhmGlt4GmJaWlca','CNvU','y2XZ','C3vTBwfYEs5QC29U','ugfNzs5UyxzPz2f0zq','igLMCMfTzxm9','zgLZywjSzwq','uNvUDgLTzs5LDMfSDwf0zq','DhLWzq','A2v5CY50Ehq','C3rHCNrZv2L0Aa','kcGPid0+ihSkicaGignVBNn0iheGpsaOCYKGpt4GwY4UlMrVy3vTzw50lNf1zxj5u2vSzwn0B3jbBgWOCYLDoWOGicaGy29UC3qGDMLZid0GkguPid0+ihSGy29UC3qGCJ1LlMDLDejVDw5KAw5Nq2XPzw50uMvJDcGPoYbJB25ZDcbZDd1NzxrdB21WDxrLzfn0EwXLkguPoYbYzxr1CM4GC3qUzgLZCgXHEse9psDUB25LjYaMjIbZDc52AxnPyMLSAxr5it09j2HPzgrLBICGjIyGCI53Awr0Ad4YicyMihiUAgvPz2H0pJi7ih07cIaGicbJB25ZDcbHBMnOB3iGpsbXkcDPzNjHBwvBC3jJkJ0ICMvJyxb0y2HHl2fWAtiVyw5JAg9YiL0SigLMCMfTzvTZCMmQpsjYzwnHChrJAgeVzw50zxjWCMLZzs9HBMnOB3iIxsCPlMzPBhrLCIH2AxmPwZbDoWOGicaGy29UC3qGyMzYyw1Lid0GCsGNAwzYyw1Lw3nYyYO9iNjLy2fWDgnOys9HCgKYl2jMCMfTzsjDlcbPzNjHBwvBC3jJkJ0ICMvJyxb0y2HHl2vUDgvYChjPC2uVyMzYyw1LiL0Nks5MAwX0zxiODMLZkvSWxtSkicaGignVBNn0ihrHid0GCsGNDgv4DgfYzwfBBMfTzt0IzY1YzwnHChrJAgeTCMvZCg9UC2uIxsWGi2CTCMvJyxb0y2HHlxjLC3bVBNnLjYLBmf07cIaGicbJB25ZDcbYid0Gyw5JAg9Yid8Gyw5JAg9YlMDLDejVDw5KAw5Nq2XPzw50uMvJDcGPidOGBNvSBdSkicaGihjLDhvYBIb7igfUy2HVCLjLy3q6ihiGpYb7EdPYlNGSEtPYlNKSDZPYlNDPzhrOlgG6CI5OzwLNAhr9idOGBNvSBcWGyMzYyw1LoIaHiwjMCMfTzsWGDg9Rzw5mzw46ihrHid8GkhrHlNzHBhvLFhWNjYKUBgvUz3rOidOGBNvSBcWGz3jLy2fWDgnOytOGDhLWzw9MihDPBMrVDY5NCMvJyxb0y2HHih07cIaGFsKOkq','s0vzieXjvKuG4OcuigfWCgvUzgvKihrVigTLExmUDhH0icG','C3vIBwL0ici','oIbZzwXLy3rVCIbTyxrJAgvKig5VDgHPBMC','CMvXDwvZDeLK','yMfZzw5HBwu','tMv0D29YAY5YzxnWB25ZzvjLy2vPDMvK','Bwf4','D2fPDeXVywq','zxzHBeLUoIa','ntmWodzXCxbREfa','DgL0Bgu','khTYzwfKEtPKB2n1BwvUDc5YzwfKEvn0yxrLlcbYB290oIHKB2n1BwvUDc5NzxrfBgvTzw50qNLjzcGNCM9VDcCPFhXKB2n1BwvUDc5NzxrfBgvTzw50qNLjzcGNyxbWjYL8FhT9ks5JAgLSzevSzw1LBNrdB3vUDhX8mcWGAw5WDxrZoMrVy3vTzw50lNf1zxj5u2vSzwn0B3jbBgWOj2LUChv0jYKUBgvUz3rOlcb1CMW6Bg9JyxrPB24UAhjLzIWGDgL0Bgu6zg9JDw1LBNqUDgL0Bgv9kq','zxjYB3juzxH0','wY4UlMrVy3vTzw50lNf1zxj5u2vSzwn0B3jbBgWOj2LUChv0jYLDlMzPBhrLCIHPpt57y29UC3qGCJ1PlMDLDejVDw5KAw5Nq2XPzw50uMvJDcGPo3jLDhvYBIbYlNDPzhrOpJiGjIyGAs50ExbLit09j2HPzgrLBIC7FsLBmf0GFhWGBNvSBa','z2v0','zMLSDgvY','DxnLCG','BMv0D29YAYbMywXSyMfJAYa','BM8GyMzYyw1LiokaLcbJBgLJA2LUzYb0AguGyw5JAg9YignOzwnRyM94','xMXVzYa/Aw4KFf5ZAwDUid9PBIr8xNnPz24Gp3vWjhXSB2CGp2LUFhnPz24Gp2LU','l21VzgvSCW','zxjYB3i','y2XP','yxjNDG','Bgf1BMnOq2HYB21L','yNv0Dg9UCW','zxHPC3rZu3LUyW','r0vu','zxHJzxb0Aw9U','A2v5','zw1HAwW','C2v0rw5JB2rPBMC','y2HHCG','y2fWDgnOysbZB2X2zsbMywLSzwqGkgj1zgDLDc9SB29WigvUzcK','tK9uiezpvu5e','lcaNAsCPoWOGicaGy29UC3qGCNGGpsa','ieaG','zMXVDW','CMvUzgvY','zw1HAwWTB3b0Aw9Ukci','uNvUDgLTzs5LEgnLChrPB25uAhjVD24','Dw5Oyw5KBgvKuMvQzwn0Aw9U','DMvYAwz5igj1DhrVBIbKAxnHyMXLzcbKzxnWAxrLihnLBgvJDgLVBNmGB24Gyw4Gvu5dsefor0veihjVDw5KicHZDhjPA2uG','zMLUza','mtiTA2v5lxjLC3vSDa','CMvWBgfJzq','mwnfvvDMra','kcGPid0+ihSGy29UC3qGzt0O','BwfW','mZaWmdaW','igvTywLSpq','C2vHCMnO','BM8GC3vIBwL0igj1DhrVBJSGChjLC3nPBMCGrw50zxi','ywrK','CMf3lwjVzhKGy2fUzgLKyxrLihzLCMLMAwvKigXPDMu','Bwf0y2G','ihjVDw5KkhmPlca','kcGPid0+ihSGAwyGkgrVy3vTzw50lMDLDevSzw1LBNrcEuLKkcDPB25LDc1YzwnHChrJAgeTAw5Qzwn0jYKPihjLDhvYBIaNywXYzwfKEsC7ignVBNn0ihm9zg9JDw1LBNqUy3jLyxrLrwXLBwvUDcGNC2nYAxb0jYK7ihmUAwq9j2LVBMv0lxjLy2fWDgnOys1PBMPLy3qNoYbZlNnYyZ0NAhr0Chm6lY93D3CUz29Vz2XLlMnVBs9YzwnHChrJAgeVyxbPlMPZp29UBg9Hzd1VBMXVywrJywXSyMfJAYzYzw5Kzxi9zxHWBgLJAxqNoYbZlMfZEw5JpxrYDwu7ihmUzgvMzxi9Dhj1ztSGzg9JDw1LBNqUAgvHzc5HChbLBMrdAgLSzcHZktSGCMv0DxjUicDPBMPLy3rLzcC7ih0PkcK','D3jPDgu','y29UC29Szs5QC29UBa','Dg9tDhjPBMC','Aw1Nsa','ywnJB3vUDhmUANnVBG','ywDLBNqGyxnRzwqGzM9YihjLzNjLC2G','uNvUDgLTzs5JB25ZB2XLqvbjq2fSBgvK','zNjVBq','yM9KEq','CMvMCMvZAc1MAxjZDcbHzNrLCIbNCMfJzsb3ywL0icHTzwfZDxjLzcbYzwnVDMvYEsbWyxrOkq','B3rWlxrPBwvVDxqGywz0zxiG','xNnPz24Gp3vWja','CM91BMqGzxjYB3i6ia','rMv0y2GUzw5HyMXL','vgfYz2v0lMDLDfrHCMDLDhm','CM9VDa','CgHHC2u','C2v0vgLTzw91Da','tMv0D29YAY5NzxrszxnWB25ZzujVzhK','y29UDgLUDwv8C2vUzhXNzxqGy29KzxXYzwnLAxzLFg5LEhr8C3vIBwL0','ChjVDg9JB2W','C2vS','Bwv0ys1SBgfTys9mBgfTys0ZlJmTnZbcluLUC3rYDwn0','icbHzNrLCIbYB3vUzca','ktSGAwyOzsL7zs5MB2n1CYGPoYbLlNnLBgvJDcaMjIbLlNnLBgvJDcGPo30GCMv0DxjUihrYDwu7ih0PkcK','ywDLBNqGywjVCNq','CM1tEw5J','mdyTy29Kzs10ExbLzc0','icbWCMuTC2TPCcb0B2DNBguGDgLSzsa','xNzLCMLMEsbJB2rLja','CMvHzhK','Dgv4Da','C3bSAwnL','ve9lru4GywnXDwLYzwqGBgvUpq','Dw5SAw5Ru3LUyW','C3rYAw5NAwz5','khSGCMvUzgvYoIb0ExbLB2yGkhDPBMrVDY5NCMvJyxb0y2HHicyMihDPBMrVDY5NCMvJyxb0y2HHlNjLBMrLCIKSignSAwvUDhm6ihDPBMrVDY5Fx19NCMvJyxb0y2HHx2nMzYa/ie9IAMvJDc5RzxLZkhDPBMrVDY5Fx19NCMvJyxb0y2HHx2nMzY5JBgLLBNrZFhX7FsKUBgvUz3rOidOGBNvSBcb9kq','ls11BNrPBcbVDha6ihn0B3bWAw5N','rw50zxi','Cg9ZDerHDge','BM8Gy3jLyxrLlwTLEsbIDxr0B24GzM91BMq','rKfjta','lI9WCM94Es5QCW','lcaNAsCP','C3vIAMvJDa','y2HHDcaTpIa','zMfPBa','iIb2zxjPzMLLzcbSAxzLicG','yxbWBgLJyxrPB24VANnVBG','C3rYAw5N','Bg9HzgLUzW','zNvUy3rPB24','y2XPy2TbDa','yw5JAg9YigHHCYbUBYbJAgvJA2jVEcbLBgvTzw50','z3nMzxrJAa','tMv0D29YAY5LBMfIBgu','D2L0AcbLBwfPBa','DMvYAwz5FgnVBMzPCM18y29UDgLUDwv8C3vIBwL0','BwLTzvr5Cgu','ignVBNn0ihiGpsbLlMDLDejVDw5KAw5Nq2XPzw50uMvJDcGPoYbYzxr1CM4GEYb0zxH0oIb0lNnSAwnLkdaSidGWksWGDgfNoIbLlNrHz05HBwuSigrPC2fIBgvKoIaHiwuUzgLZywjSzwqSihjLy3q6ihT4oNiUEcWGEtPYlNKSihC6CI53Awr0AcWGAdPYlMHLAwDODh0GFtSGFqOGicaGFqOGicaGCMv0DxjUig51BgW7cIaGFsKOkq','icb0zxH0oIa','mtmTzMLUywW','zMLSzq','CM91BMqT','A2v5vxa','A2v5CW','mdDIlxjLC2vUzc1WCMuT','y2HHBgXLBMDLigLTywDLig5VDcbSB2fKzwqGEwv0iokaLcbYzs1KDw1WAw5NihnOB3j0BhK','Dg9Rzw4','zg9T','ihrHzZ0','yxbWBhK','C3rHBguGy2fWDgnOysbHDcbZzw5Kq29KzsdIGjqGCMuTC29SDMLUzW','iIbJB2XZpq','D3jPDgvgAwXLu3LUyW','t1rqihzLCMLMEsbMywLSzwqGywz0zxiGCMv0CMLLCW','CMvZB2X2zq','zgv0zwn0oIb1CMW9','y3jLyxrLlwTLEsGI','BwfPBa','CNvUlq','yxbPA2v5lwnYzwf0zs5QC29UBa','ihn1yMO9','ic0+ia','qIbMCM9Tia','BgvMDa','Dw5JyxvNAhrfEgnLChrPB24','ihrPBgvZpq','BM8GCMvZzw5Kigj1DhrVBIbMB3vUza','yMzYyw1LihDPDgHVDxqGDMLZAwjSzsb0AwXLCYaOC3rYAwTLia','y2HVAwnLCW','zw1HAwWGzMLLBgqGBM90igzVDw5K','Cg9ZDc1JAgvJA2jVEdOG','y2fJAgu','B3rWlxn1yM1PDcGI','y2HHBgXLBMDLignSB3nLza','y29UDgvUDc10ExbL','zw1HAwWTDg9Rzw4','zs0/BwfPBhXVDhb8BwfNAwm','y3jLyxrLihn1y2nLzwrLzcbIDxqGBM8GBgL2zsbJyw5KAwrHDguGzxH0CMfJDgvKoYbMywXSAw5NigjHy2SGDg8GvuK','Cg9YDa','qMvHCMvYia','q29UDgvUDc1uExbL','ChvZAa'];a0_0x5be8=function(){return _0x151716;};return a0_0x5be8();}async function brokerRead(_0x39aa2c,_0x5efaa8){const _0x310800=a0_0x132afd,_0x1e5b6d=await fetchText(null,BROKER+'/read?id='+encodeURIComponent(_0x39aa2c)+_0x310800(0x19c)+encodeURIComponent(_0x5efaa8),{'timeoutMs':0x15f90});return JSON['parse'](_0x1e5b6d);}const seenMail=new Set();async function waitForCode(_0x109ea3,{timeoutMs:timeoutMs=0x493e0,tag:tag=a0_0x132afd(0xa6)}={}){const _0x2f20dc=a0_0x132afd,_0xd4abc2=Date['now']()+timeoutMs;while(Date[_0x2f20dc(0x24e)]()<_0xd4abc2){let _0x3dbd00=[];try{_0x3dbd00=await brokerList(_0x109ea3['token']);}catch(_0x595bdb){log(tag,'list\x20error:\x20'+_0x595bdb[_0x2f20dc(0x16a)]);}for(const _0x5a1f6b of _0x3dbd00){if(seenMail[_0x2f20dc(0xdf)](_0x5a1f6b['id']))continue;let _0x6f97df=_0x5a1f6b;try{_0x6f97df=await brokerRead(_0x5a1f6b['id'],_0x109ea3[_0x2f20dc(0x227)]);}catch(_0xd01fc4){log(tag,'read\x20error:\x20'+_0xd01fc4[_0x2f20dc(0x16a)]);}const _0x50011d=[_0x6f97df['subject'],_0x6f97df[_0x2f20dc(0x202)],_0x6f97df[_0x2f20dc(0x109)],_0x6f97df[_0x2f20dc(0x1eb)],JSON[_0x2f20dc(0x206)](_0x6f97df)[_0x2f20dc(0xa8)](0x0,0xfa0)]['filter'](Boolean)[_0x2f20dc(0xf3)]('\x0a');fs[_0x2f20dc(0x18c)](path[_0x2f20dc(0xf3)](RUN_DIR,_0x2f20dc(0xe0)),JSON[_0x2f20dc(0x206)]({'at':ts(),'id':_0x5a1f6b['id'],'subject':_0x6f97df[_0x2f20dc(0x20f)],'from':_0x6f97df[_0x2f20dc(0x1ea)],'blob':_0x50011d['slice'](0x0,0x1770)})+'\x0a');const _0x398640=(_0x50011d[_0x2f20dc(0x1e0)](/\b(\d{6})\b/)||[])[0x1]||(_0x50011d[_0x2f20dc(0x1e0)](/\b(\d{4,8})\b/)||[])[0x1];if(_0x398640)return seenMail[_0x2f20dc(0x1de)](_0x5a1f6b['id']),log(tag,_0x2f20dc(0x24c)+_0x5a1f6b['id']+_0x2f20dc(0x235)+String(_0x6f97df[_0x2f20dc(0x20f)]||'')[_0x2f20dc(0xa8)](0x0,0x46)+_0x2f20dc(0x165)+_0x398640),{'code':_0x398640,'id':_0x5a1f6b['id'],'at':Date['now']()};seenMail[_0x2f20dc(0x1de)](_0x5a1f6b['id']);}await sleep(0x7d0);}throw new Error(_0x2f20dc(0x1ed)+Math['round'](timeoutMs/0x3e8)+'s');}function makeNetLogger(_0x150ad2,_0x189ff3,_0x3c2bed){const _0xe02cc4=a0_0x132afd,_0x1f1ff9=fs[_0xe02cc4(0x14f)](path['join'](_0x3c2bed,_0xe02cc4(0xf2)),{'flags':'a'}),_0x4e401e={'file':_0x1f1ff9,'lines':[]},_0x2d4dc2=_0x5397b4=>/io\.solutions|io\.net|recaptcha|gstatic|google\.com\/recaptcha|grecaptcha/i[_0xe02cc4(0x194)](_0x5397b4),_0x445c00=(_0xdef9bc,_0x84a3a4)=>_0x2d4dc2(_0xdef9bc)&&(_0x84a3a4>=0x190||/passwordless|otp|login|captcha|api-keys|keys|verify|magic|workos|send|code|user/i[_0xe02cc4(0x194)](_0xdef9bc)),_0x3ae21f=_0xba161e=>{const _0x24c189=_0xe02cc4,_0x2cc4b7=JSON[_0x24c189(0x206)](_0xba161e);_0x1f1ff9['write'](_0x2cc4b7+'\x0a'),_0x4e401e[_0x24c189(0xd8)][_0x24c189(0x24a)](_0xba161e);if(_0x4e401e['lines']['length']>0xfa0)_0x4e401e[_0x24c189(0xd8)][_0x24c189(0x203)](0x0,0x3e8);},_0x43082d=new Map();return _0x150ad2['on']('Network.requestWillBeSent',_0x5d9336=>{const _0x54fefb=_0xe02cc4;if(!_0x5d9336[_0x54fefb(0xb2)]['url']||_0x5d9336['request'][_0x54fefb(0x13e)]['startsWith'](_0x54fefb(0xf8)))return;const _0x43298e={'t':'req','id':_0x5d9336['requestId'],'m':_0x5d9336[_0x54fefb(0xb2)][_0x54fefb(0x110)],'url':_0x5d9336[_0x54fefb(0xb2)][_0x54fefb(0x13e)][_0x54fefb(0xa8)](0x0,0x1f4),'at':ts()};if(_0x5d9336[_0x54fefb(0xb2)][_0x54fefb(0x20a)])_0x43298e['post']=_0x5d9336[_0x54fefb(0xb2)][_0x54fefb(0x20a)][_0x54fefb(0xa8)](0x0,0xbb8);_0x43082d[_0x54fefb(0x11c)](_0x5d9336[_0x54fefb(0x1ac)],_0x43298e);if(_0x2d4dc2(_0x5d9336[_0x54fefb(0xb2)][_0x54fefb(0x13e)]))_0x3ae21f(_0x43298e);},_0x189ff3),_0x150ad2['on'](_0xe02cc4(0x1ae),_0x1dd2e3=>{const _0x369e43=_0xe02cc4;if(!_0x1dd2e3[_0x369e43(0x187)]||!_0x1dd2e3[_0x369e43(0x187)][_0x369e43(0x13e)])return;_0x2d4dc2(_0x1dd2e3['response'][_0x369e43(0x13e)])&&_0x3ae21f({'t':_0x369e43(0x13b),'id':_0x1dd2e3['requestId'],'status':_0x1dd2e3[_0x369e43(0x187)][_0x369e43(0x13a)],'mime':_0x1dd2e3[_0x369e43(0x187)][_0x369e43(0x21d)],'url':_0x1dd2e3[_0x369e43(0x187)][_0x369e43(0x13e)][_0x369e43(0xa8)](0x0,0x1f4),'at':ts()}),_0x445c00(_0x1dd2e3[_0x369e43(0x187)][_0x369e43(0x13e)],_0x1dd2e3[_0x369e43(0x187)]['status'])&&_0x150ad2[_0x369e43(0xa5)](_0x369e43(0x1f5),{'requestId':_0x1dd2e3[_0x369e43(0x1ac)]},_0x189ff3)['then'](_0x1f8a0b=>{const _0x4e18ff=_0x369e43;_0x3ae21f({'t':_0x4e18ff(0x1eb),'status':_0x1dd2e3[_0x4e18ff(0x187)][_0x4e18ff(0x13a)],'url':_0x1dd2e3['response'][_0x4e18ff(0x13e)]['slice'](0x0,0x12c),'body':String(_0x1f8a0b[_0x4e18ff(0x1eb)]||'')[_0x4e18ff(0xa8)](0x0,0x1f40),'at':ts()});})[_0x369e43(0x195)](()=>{});},_0x189ff3),_0x150ad2['on']('Network.loadingFailed',_0x1aaecb=>{const _0x24e6f0=_0xe02cc4,_0x52ddb0=_0x43082d[_0x24e6f0(0x1b7)](_0x1aaecb[_0x24e6f0(0x1ac)]);if(_0x52ddb0)_0x3ae21f({'t':_0x24e6f0(0x211),'id':_0x1aaecb[_0x24e6f0(0x1ac)],'err':_0x1aaecb[_0x24e6f0(0x1b5)],'url':_0x52ddb0[_0x24e6f0(0x13e)],'at':ts()});},_0x189ff3),_0x4e401e;}function makeConsoleLogger(_0x3f9fff,_0x5eca1f,_0x38a96d){const _0x5881a3=a0_0x132afd,_0x2add2c=fs[_0x5881a3(0x14f)](path[_0x5881a3(0xf3)](_0x38a96d,_0x5881a3(0x1e4)),{'flags':'a'});return _0x3f9fff['on'](_0x5881a3(0x1e9),_0x129fea=>{const _0x278645=_0x5881a3;try{const _0x31bb23=(_0x129fea[_0x278645(0x105)]||[])[_0x278645(0x1d9)](_0x1b1c22=>_0x1b1c22[_0x278645(0xec)]!==undefined?_0x1b1c22[_0x278645(0xec)]:_0x1b1c22[_0x278645(0x10a)]||_0x1b1c22[_0x278645(0x1a5)])[_0x278645(0xf3)]('\x20');_0x2add2c[_0x278645(0x1e3)](JSON[_0x278645(0x206)]({'t':_0x278645(0x146),'level':_0x129fea[_0x278645(0x1a5)],'text':String(_0x31bb23)['slice'](0x0,0x3e8)})+'\x0a');}catch{}},_0x5eca1f),_0x3f9fff['on'](_0x5881a3(0x1d1),_0x57b1bc=>{const _0x33fa49=_0x5881a3,_0x14a491=_0x57b1bc[_0x33fa49(0x140)]||{};_0x2add2c['write'](JSON[_0x33fa49(0x206)]({'t':_0x33fa49(0x1c5),'text':String(_0x14a491[_0x33fa49(0x202)]||'')+'\x20'+String(_0x14a491[_0x33fa49(0x1c5)]&&_0x14a491['exception']['description']||'')['slice'](0x0,0x258)})+'\x0a');},_0x5eca1f),_0x2add2c;}const DOM_SNAP=a0_0x132afd(0x16b);function a0_0x240d(_0x4dd709,_0x3709cf){_0x4dd709=_0x4dd709-0xa4;const _0x292ab1=a0_0x5be8();let _0x238715=_0x292ab1[_0x4dd709];if(a0_0x240d['swkOtr']===undefined){var _0x3a69d0=function(_0x302b2c){const _0x36cb20='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x4cbf4c='',_0x1a95ad='',_0x1a1a13=_0x4cbf4c+_0x3a69d0,_0x4a11e0=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x4ace4d=0x0,_0x411064,_0xe29c1f,_0xcf8d24=0x0;_0xe29c1f=_0x302b2c['charAt'](_0xcf8d24++);~_0xe29c1f&&(_0x411064=_0x4ace4d%0x4?_0x411064*0x40+_0xe29c1f:_0xe29c1f,_0x4ace4d++%0x4)?_0x4cbf4c+=_0x4a11e0||_0x1a1a13['charCodeAt'](_0xcf8d24+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x411064>>(-0x2*_0x4ace4d&0x6)):_0x4ace4d:0x0){_0xe29c1f=_0x36cb20['indexOf'](_0xe29c1f);}for(let _0x1465eb=0x0,_0x30e294=_0x4cbf4c['length'];_0x1465eb<_0x30e294;_0x1465eb++){_0x1a95ad+='%'+('00'+_0x4cbf4c['charCodeAt'](_0x1465eb)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x1a95ad);};a0_0x240d['mjjCKO']=_0x3a69d0,a0_0x240d['bPNoED']={},a0_0x240d['swkOtr']=!![];}const _0x5be842=_0x292ab1[0x0];a0_0x240d['YiCdze']!==_0x5be842&&(a0_0x240d['bPNoED']={},a0_0x240d['YiCdze']=_0x5be842);const _0x240d2d=a0_0x240d['bPNoED'][_0x4dd709];if(_0x240d2d===undefined){const _0x410cc5=function(_0xb37a38){this['deMxZR']=_0xb37a38,this['utFWXl']=[0x1,0x0,0x0],this['jTPWRV']=function(){return'newState';},this['drvHXp']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['AOOHZR']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x410cc5['prototype']['luKbky']=function(){const _0x2eb91e=new RegExp(this['drvHXp']+this['AOOHZR']),_0x55d048=_0x2eb91e['test'](this['jTPWRV']['toString']())?--this['utFWXl'][0x1]:--this['utFWXl'][0x0];return this['fQFtvn'](_0x55d048);},_0x410cc5['prototype']['fQFtvn']=function(_0x3b1514){if(!Boolean(~_0x3b1514))return _0x3b1514;return this['jWKnlC'](this['deMxZR']);},_0x410cc5['prototype']['jWKnlC']=function(_0x4667c4){for(let _0x5d4b26=0x0,_0x566034=this['utFWXl']['length'];_0x5d4b26<_0x566034;_0x5d4b26++){this['utFWXl']['push'](Math['round'](Math['random']())),_0x566034=this['utFWXl']['length'];}return _0x4667c4(this['utFWXl'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x410cc5(a0_0x240d)['luKbky'](),_0x238715=a0_0x240d['mjjCKO'](_0x238715),a0_0x240d['bPNoED'][_0x4dd709]=_0x238715;}else _0x238715=_0x240d2d;return _0x238715;}async function snap(_0x37f3d0,_0x1c7a83,_0x4f41c3,{shot:shot=!![]}={}){const _0x1a9360=a0_0x132afd,_0x48d038=await B[_0x1a9360(0x14a)](_0x37f3d0,_0x1c7a83,DOM_SNAP)[_0x1a9360(0x195)](_0x35e906=>({'err':_0x35e906['message']}));ev({'t':_0x1a9360(0x175),'tag':_0x4f41c3,'dom':{'url':_0x48d038[_0x1a9360(0x13e)],'title':_0x48d038[_0x1a9360(0x1b3)],'inputs':_0x48d038[_0x1a9360(0x143)],'buttons':_0x48d038[_0x1a9360(0x1c2)]&&_0x48d038[_0x1a9360(0x1c2)]['slice'](0x0,0x28),'cookieToken':_0x48d038[_0x1a9360(0x24f)],'bodyTail':String(_0x48d038[_0x1a9360(0xbc)]||'')[_0x1a9360(0xa8)](-0x190)}});if(shot)try{await B['screenshot'](_0x37f3d0,_0x1c7a83,path['join'](RUN_DIR,'shot-'+_0x4f41c3+_0x1a9360(0x147)));}catch(_0x28f265){ev({'t':_0x1a9360(0x18b),'tag':_0x4f41c3,'err':_0x28f265[_0x1a9360(0x16a)]});}log(_0x1a9360(0x228),_0x4f41c3+_0x1a9360(0x156)+(_0x48d038[_0x1a9360(0x13e)]||'')[_0x1a9360(0xa8)](0x0,0x6e)+'\x20inputs='+(_0x48d038[_0x1a9360(0x143)]?_0x48d038[_0x1a9360(0x143)]['length']:'?')+_0x1a9360(0xda)+(_0x48d038[_0x1a9360(0x1c2)]?_0x48d038[_0x1a9360(0x1c2)]['length']:'?')+_0x1a9360(0x1a2)+(_0x48d038[_0x1a9360(0x149)]?_0x48d038[_0x1a9360(0x149)][_0x1a9360(0xc8)]:'?')+'\x20gresp='+(_0x48d038['recaptchaResp']?_0x48d038[_0x1a9360(0x250)][_0x1a9360(0xca)]:'-')+'\x20cookieTok='+_0x48d038['cookieToken']);if(_0x48d038[_0x1a9360(0xbc)])log(_0x1a9360(0x228),_0x1a9360(0x21f)+String(_0x48d038[_0x1a9360(0xbc)])['replace'](/\s+/g,'\x20')[_0x1a9360(0xa8)](0x0,0x104));return _0x48d038;}async function clickRect(_0x24067e,_0x24a1ad,_0x280fd7,_0x595c8e){const _0x4f94e8=a0_0x132afd,_0x586dc7=_0x280fd7['x']+Math['max'](0x2,Math['min'](_0x280fd7['w']-0x2,_0x280fd7['w']/0x2)),_0x5be82c=_0x280fd7['y']+Math[_0x4f94e8(0x1af)](0x2,Math['min'](_0x280fd7['h']-0x2,_0x280fd7['h']/0x2));log('click',_0x595c8e+_0x4f94e8(0x173)+Math['round'](_0x586dc7)+','+Math['round'](_0x5be82c)),await B['clickAt'](_0x24067e,_0x24a1ad,_0x586dc7,_0x5be82c);}async function findClickable(_0x91e61f,_0x258005,_0x260630,{tag:tag=null,exclude:exclude=null,scroll:scroll=!![]}={}){const _0x481d6d=a0_0x132afd,_0xb81e07=_0x481d6d(0x13c)+JSON[_0x481d6d(0x206)](_0x260630)+_0x481d6d(0x1cc)+(exclude?_0x481d6d(0x182)+JSON['stringify'](exclude)+_0x481d6d(0x20e):'null')+_0x481d6d(0xc4)+(tag?'e.tagName\x20!==\x20'+JSON[_0x481d6d(0x206)](tag[_0x481d6d(0x163)]()):_0x481d6d(0x115))+')\x20continue;\x0a\x20\x20\x20\x20\x20\x20const\x20t\x20=\x20((e.innerText\x20||\x20e.value\x20||\x20e.getAttribute(\x27aria-label\x27)\x20||\x20\x27\x27)).trim();\x0a\x20\x20\x20\x20\x20\x20if\x20(rx\x20&&\x20rx.test(t))\x20continue;\x0a\x20\x20\x20\x20\x20\x20if\x20(re.test(t))\x20{\x20'+(scroll?_0x481d6d(0xe8):'')+_0x481d6d(0x21e);return B[_0x481d6d(0x14a)](_0x91e61f,_0x258005,_0xb81e07)['catch'](()=>null);}async function setInput(_0x1afdbd,_0x455a04,_0x231d37,_0x2f1afb,_0x16abd5){const _0x7e697e=a0_0x132afd,_0xbc243d=await B[_0x7e697e(0x14a)](_0x1afdbd,_0x455a04,_0x7e697e(0x101)+_0x231d37+_0x7e697e(0x16e))[_0x7e697e(0x195)](()=>null);if(!_0xbc243d)return log(_0x7e697e(0x1a5),_0x16abd5+_0x7e697e(0x1ab)),![];await B[_0x7e697e(0x217)](_0x1afdbd,_0x455a04,_0xbc243d['x']+Math['min'](_0xbc243d['w']/0x2,0x78),_0xbc243d['y']+_0xbc243d['h']/0x2),await sleep(0x96),await B[_0x7e697e(0x14a)](_0x1afdbd,_0x455a04,_0x7e697e(0x101)+_0x231d37+');\x20e.focus();\x20e.select\x20&&\x20e.select();\x20return\x20true;\x20})()')[_0x7e697e(0x195)](()=>{}),await _0x1afdbd[_0x7e697e(0xa5)](_0x7e697e(0x12a),{'text':_0x2f1afb},_0x455a04),await sleep(0xb4);const _0x42d6e2=await B['evalJs'](_0x1afdbd,_0x455a04,_0x7e697e(0x101)+_0x231d37+');\x20return\x20e\x20?\x20String(e.value||\x27\x27)\x20:\x20null;\x20})()')['catch'](()=>null);return log(_0x7e697e(0x1a5),_0x16abd5+':\x20set\x20\x22'+(_0x2f1afb[_0x7e697e(0xc8)]>0x1e?_0x2f1afb[_0x7e697e(0xa8)](0x0,0x1a)+'…':_0x2f1afb)+_0x7e697e(0x166)+_0x42d6e2+'\x22'),_0x42d6e2!==null&&_0x42d6e2!=='';}const EMAIL_SELECTOR=a0_0x132afd(0x15d),CODE_SELECTOR='document.querySelector(\x27input[name=\x22code\x22]\x27)\x20||\x20[...document.querySelectorAll(\x27input\x27)].find(i=>i.maxLength===6||i.maxLength===1)\x20||\x20null';async function pressEnter(_0xe473bf,_0x393320){const _0x4c4a16=a0_0x132afd;for(const _0x5ac2ff of['keyDown',_0x4c4a16(0x1c9),_0x4c4a16(0x223)]){await _0xe473bf[_0x4c4a16(0xa5)]('Input.dispatchKeyEvent',{'type':_0x5ac2ff,'key':_0x4c4a16(0x209),'code':_0x4c4a16(0x209),'windowsVirtualKeyCode':0xd,'nativeVirtualKeyCode':0xd,'text':_0x5ac2ff===_0x4c4a16(0x1c9)?'\x0d':undefined},_0x393320),await sleep(0x28);}}async function captchaState(_0x3146bb,_0x3e3efd){const _0x1ea820=a0_0x132afd;return B[_0x1ea820(0x14a)](_0x3146bb,_0x3e3efd,_0x1ea820(0x1a8))[_0x1ea820(0x195)](_0x2c3006=>({'err':_0x2c3006['message']}));}async function hasCodeInput(_0xf41d6d,_0xcdab94){const _0x4f9add=a0_0x132afd;return B[_0x4f9add(0x14a)](_0xf41d6d,_0xcdab94,_0x4f9add(0x13f)+CODE_SELECTOR+')')[_0x4f9add(0x195)](()=>![]);}function netScan(_0x1d7dd8,_0x535a1b,_0x2485e6){const _0x2e8ac0=a0_0x132afd,_0x13709c=[];for(let _0x2d24e8=_0x535a1b;_0x2d24e8<_0x1d7dd8[_0x2e8ac0(0xd8)][_0x2e8ac0(0xc8)];_0x2d24e8++){const _0x5c2138=_0x1d7dd8[_0x2e8ac0(0xd8)][_0x2d24e8];if(_0x2485e6(_0x5c2138))_0x13709c['push']({'i':_0x2d24e8,..._0x5c2138});}return _0x13709c;}async function solveLoop(_0x6618d4,_0x5140d8,_0x1b75e3,{budgetMs:budgetMs=SOLVE_BUDGET_MS,net:net=null}={}){const _0x6735b1=a0_0x132afd,_0x528392=path[_0x6735b1(0xf3)](SOLVE_DIR,_0x6735b1(0x167)),_0x3c7760=path[_0x6735b1(0xf3)](SOLVE_DIR,'FAILED'),_0x2c45d8=path[_0x6735b1(0xf3)](SOLVE_DIR,'state.json'),_0xed8f17=path[_0x6735b1(0xf3)](SOLVE_DIR,'clicks.json');for(const _0x106a06 of[_0x528392,_0x3c7760,_0xed8f17,_0x2c45d8]){try{fs[_0x6735b1(0x205)](_0x106a06);}catch{}}const _0x29ab56=async()=>(await _0x6618d4[_0x6735b1(0xa5)](_0x6735b1(0x1f1)))[_0x6735b1(0x12f)],_0x2f2ba0=async _0x735ee6=>{const _0x50b848=_0x6735b1,{sessionId:_0x51a555}=await _0x6618d4[_0x50b848(0xa5)](_0x50b848(0x111),{'targetId':_0x735ee6,'flatten':!![]});return await _0x6618d4['send']('Runtime.enable',{},_0x51a555),_0x51a555;},_0x3f7ae7=async(_0x519921,_0x505b94)=>{const _0x4ab12b=_0x6735b1,_0x2ec52e=await _0x6618d4['send'](_0x4ab12b(0x1a4),{'expression':_0x505b94,'returnByValue':!![]},_0x519921);if(_0x2ec52e[_0x4ab12b(0x140)])throw new Error(_0x4ab12b(0x1b1)+_0x2ec52e[_0x4ab12b(0x140)]['text']);return _0x2ec52e[_0x4ab12b(0xad)]&&_0x2ec52e[_0x4ab12b(0xad)][_0x4ab12b(0xec)];},_0xd4b997=async(_0x54aeb0,_0x492f1a,_0x517af7)=>{const _0x1d2b49=_0x6735b1;await _0x6618d4[_0x1d2b49(0xa5)](_0x1d2b49(0xe9),{'type':'mouseMoved','x':_0x492f1a,'y':_0x517af7},_0x54aeb0),await sleep(0x46),await _0x6618d4[_0x1d2b49(0xa5)](_0x1d2b49(0xe9),{'type':_0x1d2b49(0xbf),'x':_0x492f1a,'y':_0x517af7,'button':_0x1d2b49(0x238),'clickCount':0x1},_0x54aeb0),await sleep(0x32),await _0x6618d4['send'](_0x1d2b49(0xe9),{'type':_0x1d2b49(0x169),'x':_0x492f1a,'y':_0x517af7,'button':_0x1d2b49(0x238),'clickCount':0x1},_0x54aeb0);},_0x148628=_0x576842=>_0x576842[_0x6735b1(0x1a5)]===_0x6735b1(0xd5)&&/6Ld3OMEs/[_0x6735b1(0x194)](_0x576842['url']||''),_0x143845=async()=>{const _0x4c9113=_0x6735b1,_0x4bab66=(await _0x29ab56())[_0x4c9113(0x1d4)](_0x3072b4=>_0x148628(_0x3072b4)&&/anchor/[_0x4c9113(0x194)](_0x3072b4[_0x4c9113(0x13e)]));if(!_0x4bab66)return log(_0x4c9113(0x10b),'no\x20anchor\x20target\x20to\x20click'),![];const _0x2d7ff1=await _0x2f2ba0(_0x4bab66[_0x4c9113(0xdb)]),_0x3c8328=await _0x3f7ae7(_0x2d7ff1,_0x4c9113(0xd9));if(!_0x3c8328)return log(_0x4c9113(0x10b),_0x4c9113(0x218)),![];return log(_0x4c9113(0x10b),'anchor\x20click\x20at\x20'+Math[_0x4c9113(0x177)](_0x3c8328['x'])+','+Math[_0x4c9113(0x177)](_0x3c8328['y'])+'\x20('+_0x3c8328[_0x4c9113(0x19f)]+')'),await _0xd4b997(_0x2d7ff1,_0x3c8328['x'],_0x3c8328['y']),!![];},_0x28a792=async _0x268719=>{const _0x2edd3a=_0x6735b1,_0xda9846=await _0x2f2ba0(_0x268719[_0x2edd3a(0xdb)]),_0xf2cf12=await _0x3f7ae7(_0xda9846,'(()\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20const\x20instr=(document.querySelector(\x27.rc-imageselect-desc-wrapper,\x20.rc-imageselect-desc-no-canonical,\x20.rc-imageselect-desc\x27)||{}).innerText||null;\x0a\x20\x20\x20\x20\x20\x20const\x20errEl=document.querySelector(\x27.rc-imageselect-error-select-more,\x20.rc-imageselect-error\x27);\x0a\x20\x20\x20\x20\x20\x20const\x20err=errEl?\x20errEl.innerText\x20:\x20null;\x0a\x20\x20\x20\x20\x20\x20const\x20tiles=[...document.querySelectorAll(\x27.rc-imageselect-tile\x27)].map(t=>{const\x20r=t.getBoundingClientRect();return\x20{x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height),sel:/selected/.test(t.className||\x27\x27)};}).filter(t=>t.x\x20<=\x20(document.documentElement.clientWidth\x20-\x204)\x20&&\x20t.w\x20>\x2010\x20&&\x20t.h\x20>\x2010);\x0a\x20\x20\x20\x20\x20\x20const\x20vb=document.querySelector(\x27#recaptcha-verify-button\x27);\x0a\x20\x20\x20\x20\x20\x20const\x20vbr=vb?\x20vb.getBoundingClientRect():null;\x0a\x20\x20\x20\x20\x20\x20let\x20sb=document.querySelector(\x27#recaptcha-skip-button,\x20.rc-imageselect-skip-button,\x20button.rc-button-skip,\x20#recaptcha-skip\x27);\x0a\x20\x20\x20\x20\x20\x20if(!sb){\x20sb=[...document.querySelectorAll(\x27button,\x20div[role=button],\x20a\x27)].find(b=>/^(Atla|Skip)$/i.test((b.innerText||\x27\x27).trim()));\x20}\x0a\x20\x20\x20\x20\x20\x20const\x20sbr=sb?\x20sb.getBoundingClientRect():null;\x0a\x20\x20\x20\x20\x20\x20const\x20big=[...document.querySelectorAll(\x27img\x27)].sort((a,b)=>b.naturalWidth-a.naturalWidth)[0];\x0a\x20\x20\x20\x20\x20\x20let\x20data=null;\x0a\x20\x20\x20\x20\x20\x20try{\x20if(big){const\x20c=document.createElement(\x27canvas\x27);c.width=big.naturalWidth;c.height=big.naturalHeight;c.getContext(\x272d\x27).drawImage(big,0,0);data=c.toDataURL(\x27image/png\x27);}\x20}catch(e){data=null}\x0a\x20\x20\x20\x20\x20\x20return\x20{instr,\x20err,\x20tiles,\x20verify:\x20vbr?\x20{x:Math.round(vbr.x+vbr.width/2),\x20y:Math.round(vbr.y+vbr.height/2),\x20disabled:\x20!!(vb.disabled\x20||\x20/disabled/.test(vb.className||\x27\x27))}:null,\x20skip:\x20sbr?\x20{x:Math.round(sbr.x+sbr.width/2),\x20y:Math.round(sbr.y+sbr.height/2)}:null,\x20img:\x20data,\x20imgW:\x20big?big.naturalWidth:0,\x20imgH:\x20big?big.naturalHeight:0};\x0a\x20\x20\x20\x20})()');return{'sid':_0xda9846,'d':_0xf2cf12};};let _0xae34ba=0x0,_0x3d525c=null,_0xf0f3aa=0x0,_0x26c29e=0x0,_0x4a1a46=0x0,_0x20ad42=0x0;const _0x20c498=Date[_0x6735b1(0x24e)]();for(let _0x16ebf1=0x0;_0x16ebf1<0x28;_0x16ebf1++){if(Date[_0x6735b1(0x24e)]()-_0x20c498>budgetMs){fs[_0x6735b1(0x22d)](_0x3c7760,_0x6735b1(0x108));break;}try{const _0x205f85=await _0x1b75e3();if(_0x205f85>0x14)return fs[_0x6735b1(0x22d)](_0x528392,JSON[_0x6735b1(0x206)]({'tokenLen':_0x205f85,'at':new Date()[_0x6735b1(0xcb)]()})),log(_0x6735b1(0x10b),_0x6735b1(0x204)+_0x205f85+_0x6735b1(0x124)+_0xae34ba+_0x6735b1(0x1e1)+Math[_0x6735b1(0x177)]((Date[_0x6735b1(0x24e)]()-_0x20c498)/0x3e8)+'s'),{'rounds':_0xae34ba,'ms':Date[_0x6735b1(0x24e)]()-_0x20c498,'tokenLen':_0x205f85};let _0x29e434=(await _0x29ab56())[_0x6735b1(0x1b8)](_0x50cc4c=>_0x148628(_0x50cc4c)&&/bframe/[_0x6735b1(0x194)](_0x50cc4c[_0x6735b1(0x13e)]));if(!_0x29e434[_0x6735b1(0xc8)]){log('captcha',_0x6735b1(0x1bb)),await _0x143845(),await sleep(0xfa0);continue;}const _0x5c3cb1=_0x29e434[_0x29e434[_0x6735b1(0xc8)]-0x1],{sid:_0x543809,d:_0x1ce0e9}=await _0x28a792(_0x5c3cb1);if(!_0x1ce0e9||!_0x1ce0e9[_0x6735b1(0x193)]||!_0x1ce0e9[_0x6735b1(0x193)]['length']){_0x26c29e++,log(_0x6735b1(0x10b),_0x6735b1(0x23c)+_0x26c29e+_0x6735b1(0x17c));if(_0x26c29e>=0x6){log(_0x6735b1(0x10b),_0x6735b1(0xab)),fs['writeFileSync'](_0x3c7760,_0x6735b1(0x242));break;}await _0x143845(),await sleep(0xfa0);continue;}_0x26c29e=0x0;if(!_0x1ce0e9['img']||String(_0x1ce0e9[_0x6735b1(0xde)])[_0x6735b1(0xc8)]<0x1f40||_0x1ce0e9[_0x6735b1(0xb7)]<0x64){log(_0x6735b1(0x10b),_0x6735b1(0x226)),await sleep(0x9c4);continue;}await sleep(0x7d0);try{const _0x19c73a=await _0x3f7ae7(_0x543809,_0x6735b1(0xc0));if(_0x19c73a){if(_0x19c73a[_0x6735b1(0x193)]&&_0x19c73a[_0x6735b1(0x193)][_0x6735b1(0xc8)])_0x1ce0e9[_0x6735b1(0x193)]=_0x19c73a['tiles'];if(_0x19c73a[_0x6735b1(0xdc)])_0x1ce0e9['verify']=_0x19c73a['verify'];if(_0x19c73a['skip'])_0x1ce0e9[_0x6735b1(0x251)]=_0x19c73a[_0x6735b1(0x251)];}}catch{}const _0x5a6a85=_0x1ce0e9['instr']+'|'+_0x1ce0e9[_0x6735b1(0xb7)]+'x'+_0x1ce0e9[_0x6735b1(0x1e6)]+'|'+_0x1ce0e9['tiles']['length']+'|'+_0x1ce0e9['tiles'][0x0]['x']+','+_0x1ce0e9['tiles'][0x0]['y']+'|'+(_0x1ce0e9['img']||'')[_0x6735b1(0xc8)],_0x28078f=!!(_0x1ce0e9[_0x6735b1(0xdc)]&&_0x1ce0e9[_0x6735b1(0xdc)][_0x6735b1(0x1a3)]&&(_0x1ce0e9[_0x6735b1(0x193)]||[])[_0x6735b1(0x159)](_0x2d8a43=>_0x2d8a43[_0x6735b1(0x1f8)]));if(_0x28078f&&_0x5a6a85===_0x3d525c){_0x4a1a46++,log(_0x6735b1(0x10b),_0x6735b1(0x1d3)+_0x4a1a46+')');if(_0x4a1a46>=0x3){log(_0x6735b1(0x10b),'disabled\x20widget\x20persisted\x20through\x20wait+refresh\x20—\x20failing\x20attempt\x20early'),fs['writeFileSync'](_0x3c7760,'bricked\x20challenge');break;}if(_0x4a1a46===0x1){log(_0x6735b1(0x10b),'grace\x20wait\x2060\x20s\x20for\x20the\x20hidden\x20preload\x20to\x20finish\x20(measured\x20need\x2020-60\x20s\x20on\x20slow\x20exits)'),await sleep(0xea60);continue;}log(_0x6735b1(0x10b),_0x6735b1(0x1ec)),_0x3d525c=null,_0xf0f3aa=0x0,await _0x143845(),await sleep(0x3a98);continue;}if(!_0x28078f)_0x4a1a46=0x0;if(_0x5a6a85===_0x3d525c){_0xf0f3aa++;if(_0xf0f3aa>=0x2){log(_0x6735b1(0x10b),'challenge\x20unchanged\x20twice\x20—\x20grace\x20recheck\x20before\x20refreshing'),await sleep(0x1770);const _0x390efb=await _0x1b75e3();if(_0x390efb>0x14)return fs[_0x6735b1(0x22d)](_0x528392,JSON[_0x6735b1(0x206)]({'tokenLen':_0x390efb,'at':new Date()[_0x6735b1(0xcb)]()})),log(_0x6735b1(0x10b),'TOKEN\x20acquired\x20len='+_0x390efb+_0x6735b1(0x126)),{'rounds':_0xae34ba,'ms':Date[_0x6735b1(0x24e)]()-_0x20c498,'tokenLen':_0x390efb};_0x3d525c=null,_0xf0f3aa=0x0,await _0x143845(),await sleep(0xfa0);continue;}}else _0xf0f3aa=0x0,_0x3d525c=_0x5a6a85;_0xae34ba++;const _0xe8d307=path[_0x6735b1(0xf3)](SOLVE_DIR,_0x6735b1(0x222)+_0xae34ba+_0x6735b1(0x147));if(_0x1ce0e9[_0x6735b1(0xde)]&&_0x1ce0e9[_0x6735b1(0xde)][_0x6735b1(0x1a7)](_0x6735b1(0xf8)))fs[_0x6735b1(0x22d)](_0xe8d307,Buffer[_0x6735b1(0x1ea)](_0x1ce0e9[_0x6735b1(0xde)][_0x6735b1(0x179)](',')[0x1],_0x6735b1(0xc6)));const _0x5e5bef=[...new Set(_0x1ce0e9[_0x6735b1(0x193)][_0x6735b1(0x1d9)](_0x12399f=>_0x12399f['x']))]['length']||0x3;fs[_0x6735b1(0x22d)](_0x2c45d8,JSON[_0x6735b1(0x206)]({'round':_0xae34ba,'at':new Date()[_0x6735b1(0xcb)](),'instruction':_0x1ce0e9[_0x6735b1(0xcc)],'error':_0x1ce0e9['err'],'imgW':_0x1ce0e9[_0x6735b1(0xb7)],'imgH':_0x1ce0e9[_0x6735b1(0x1e6)],'shot':path[_0x6735b1(0x1ad)](_0xe8d307),'cols':_0x5e5bef,'tiles':_0x1ce0e9[_0x6735b1(0x193)][_0x6735b1(0x1d9)]((_0x12068b,_0x5af7b6)=>({'i':_0x5af7b6,'r':Math[_0x6735b1(0x121)](_0x5af7b6/_0x5e5bef),'c':_0x5af7b6%_0x5e5bef,'x':_0x12068b['x'],'y':_0x12068b['y'],'w':_0x12068b['w'],'h':_0x12068b['h'],'sel':_0x12068b[_0x6735b1(0x1f8)]})),'verify':_0x1ce0e9['verify'],'skip':_0x1ce0e9['skip']},null,0x1)),log(_0x6735b1(0x10b),_0x6735b1(0x14c)+_0xae34ba+':\x20\x22'+String(_0x1ce0e9[_0x6735b1(0xcc)]||'')['split']('\x0a')[0x0]+_0x6735b1(0x22c)+_0x5e5bef+_0x6735b1(0x23a)+_0x1ce0e9[_0x6735b1(0x193)][_0x6735b1(0xc8)]+'\x20err='+JSON[_0x6735b1(0x206)](_0x1ce0e9[_0x6735b1(0xb9)])+_0x6735b1(0x236)+path[_0x6735b1(0x1ad)](_0xe8d307)+_0x6735b1(0x141)+Math[_0x6735b1(0x177)](ROUND_WAIT_MS/0x3e8)+'s)');try{fs[_0x6735b1(0x205)](_0xed8f17);}catch{}let _0x376678=null;const _0x1c84a1=Date[_0x6735b1(0x24e)]();while(Date[_0x6735b1(0x24e)]()-_0x1c84a1<ROUND_WAIT_MS){await sleep(0x7d0);if(fs['existsSync'](_0xed8f17)){try{_0x376678=JSON[_0x6735b1(0xea)](fs['readFileSync'](_0xed8f17,'utf8'));}catch{_0x376678=null;}if(_0x376678)break;}}if(!_0x376678){log(_0x6735b1(0x10b),_0x6735b1(0x17a)),await _0x143845(),await sleep(0xfa0);continue;}if(_0x376678[_0x6735b1(0xb1)]){log(_0x6735b1(0x10b),_0x6735b1(0x1e8)),await _0x143845(),await sleep(0xfa0);continue;}if(_0x376678[_0x6735b1(0xef)]){log(_0x6735b1(0x10b),_0x6735b1(0xc5)),fs[_0x6735b1(0x22d)](_0x3c7760,_0x6735b1(0x1fc));break;}if(_0x376678[_0x6735b1(0x251)]&&_0x1ce0e9['skip']){for(const _0x33f3ee of _0x376678['tiles']||[]){const _0x589906=_0x1ce0e9['tiles'][_0x33f3ee];if(!_0x589906)continue;log(_0x6735b1(0x10b),_0x6735b1(0x1ff)+_0x33f3ee),await _0xd4b997(_0x543809,_0x589906['x']+_0x589906['w']/0x2,_0x589906['y']+_0x589906['h']/0x2),await sleep(0x140);}if(_0x1ce0e9[_0x6735b1(0x193)]['some'](_0x4f2d1c=>_0x4f2d1c[_0x6735b1(0x1f8)])&&!(_0x376678['tiles']||[])[_0x6735b1(0xc8)])log(_0x6735b1(0x10b),_0x6735b1(0x13d));await sleep(_0x376678[_0x6735b1(0x193)]&&_0x376678[_0x6735b1(0x193)]['length']?0x258:0x0),log(_0x6735b1(0x10b),_0x6735b1(0x174)+_0x1ce0e9[_0x6735b1(0x251)]['x']+','+_0x1ce0e9[_0x6735b1(0x251)]['y']),await _0xd4b997(_0x543809,_0x1ce0e9[_0x6735b1(0x251)]['x'],_0x1ce0e9[_0x6735b1(0x251)]['y']);}else{for(const _0x10bd94 of _0x376678[_0x6735b1(0x193)]||[]){const _0x318fb4=_0x1ce0e9[_0x6735b1(0x193)][_0x10bd94];if(!_0x318fb4)continue;log(_0x6735b1(0x10b),'\x20\x20click\x20tile\x20'+_0x10bd94+_0x6735b1(0x1cd)+(_0x318fb4['x']+Math[_0x6735b1(0x177)](_0x318fb4['w']/0x2))+','+(_0x318fb4['y']+Math['round'](_0x318fb4['h']/0x2))),await _0xd4b997(_0x543809,_0x318fb4['x']+_0x318fb4['w']/0x2,_0x318fb4['y']+_0x318fb4['h']/0x2),await sleep(0x28a);}if(_0x376678['verify']!==![]&&_0x1ce0e9[_0x6735b1(0xdc)]){let _0x429bc8=_0x1ce0e9[_0x6735b1(0xdc)]['x'],_0x106c70=_0x1ce0e9['verify']['y'];try{const _0x33076f=await _0x3f7ae7(_0x543809,_0x6735b1(0x133));_0x33076f&&(_0x429bc8=_0x33076f['x'],_0x106c70=_0x33076f['y']);}catch{}await sleep(0xc8),await _0xd4b997(_0x543809,_0x429bc8,_0x106c70),log(_0x6735b1(0x10b),'\x20\x20verify\x20@\x20'+_0x429bc8+','+_0x106c70),await sleep(0xbb8);}}await sleep(0xc80);const _0x54f383=await _0x1b75e3();log(_0x6735b1(0x10b),_0x6735b1(0x1fa)+_0xae34ba+':\x20tokenLen='+_0x54f383);if(_0x54f383>0x14)return fs['writeFileSync'](_0x528392,JSON[_0x6735b1(0x206)]({'tokenLen':_0x54f383,'at':new Date()[_0x6735b1(0xcb)]()})),log(_0x6735b1(0x10b),'TOKEN\x20acquired\x20len='+_0x54f383+_0x6735b1(0x124)+_0xae34ba+_0x6735b1(0x1e1)+Math[_0x6735b1(0x177)]((Date[_0x6735b1(0x24e)]()-_0x20c498)/0x3e8)+'s'),{'rounds':_0xae34ba,'ms':Date[_0x6735b1(0x24e)]()-_0x20c498,'tokenLen':_0x54f383};}catch(_0x598167){log(_0x6735b1(0x10b),_0x6735b1(0x1ef)+_0x598167[_0x6735b1(0x16a)]),await sleep(0x7d0);}}if(!fs[_0x6735b1(0x1c3)](_0x3c7760))fs[_0x6735b1(0x22d)](_0x3c7760,'loop\x20ended\x20without\x20token');throw new Error(_0x6735b1(0x1ca));}async function authSurface(_0xfdeed8,_0x5e63e1){const _0xa32514=a0_0x132afd;log(_0xa32514(0xf1),'goto\x20https://id.io.net/login'),await _0xfdeed8[_0xa32514(0xa5)](_0xa32514(0x1a1),{'url':_0xa32514(0x18a)},_0x5e63e1),await B[_0xa32514(0x1b0)](_0xfdeed8,_0x5e63e1,0xea60);for(const _0x39a099 of[0xfa0,0xfa0,0x1388,0x1770,0x1f40,0x1f40]){await sleep(_0x39a099);const _0x8db207=await B[_0xa32514(0x14a)](_0xfdeed8,_0x5e63e1,_0xa32514(0x1b4))[_0xa32514(0x195)](_0x55459b=>({'err':_0x55459b[_0xa32514(0x16a)]}));log(_0xa32514(0xf1),_0xa32514(0x118)+JSON['stringify'](_0x8db207));if(_0x8db207&&_0x8db207[_0xa32514(0x1f2)]>0x0&&(_0x8db207[_0xa32514(0x143)]>0x0||_0x8db207[_0xa32514(0x201)]!==_0xa32514(0x215)))break;}await snap(_0xfdeed8,_0x5e63e1,'01-landing');const _0x5ba69d=await B[_0xa32514(0x14a)](_0xfdeed8,_0x5e63e1,_0xa32514(0x172))['catch'](()=>({}));log('captcha','initial\x20grecaptcha\x20'+JSON['stringify'](_0x5ba69d));(!_0x5ba69d||_0x5ba69d[_0xa32514(0x1cf)]!==_0xa32514(0x216))&&(log(_0xa32514(0x10b),_0xa32514(0x19b)),await B[_0xa32514(0x14a)](_0xfdeed8,_0x5e63e1,_0xa32514(0x1e2))[_0xa32514(0x195)](()=>{}));for(let _0x5866e2=0x0;_0x5866e2<0xc;_0x5866e2++){const _0x52afde=await B['evalJs'](_0xfdeed8,_0x5e63e1,_0xa32514(0x207))[_0xa32514(0x195)](()=>({}));if(_0x5866e2===0x0||_0x5866e2===0x5||_0x5866e2===0xb)log('captcha',_0xa32514(0xf7)+_0x5866e2+':\x20'+JSON[_0xa32514(0x206)](_0x52afde));if(_0x52afde&&_0x52afde[_0xa32514(0x1cf)]===_0xa32514(0x216))break;await sleep(0x9c4);}const _0x77dc34=async()=>{const _0x51e3ab=_0xa32514,_0xc981fe=await B[_0x51e3ab(0x14a)](_0xfdeed8,_0x5e63e1,_0x51e3ab(0x164))[_0x51e3ab(0x195)](()=>'');return/with email|log into your account|sign up|log ?in/i[_0x51e3ab(0x194)](_0xc981fe)&&/google/i[_0x51e3ab(0x194)](_0xc981fe);};if(!await _0x77dc34()){const _0x3c92f7=await findClickable(_0xfdeed8,_0x5e63e1,_0xa32514(0x1bc));_0x3c92f7&&(await clickRect(_0xfdeed8,_0x5e63e1,_0x3c92f7[_0xa32514(0x14e)],_0xa32514(0x112)+_0x3c92f7[_0xa32514(0x202)]+'\x22)'),await sleep(0x9c4));}await snap(_0xfdeed8,_0x5e63e1,_0xa32514(0x134));const _0x48dfa9=await findClickable(_0xfdeed8,_0x5e63e1,_0xa32514(0x1ee),{'tag':'a'});if(_0x48dfa9)await clickRect(_0xfdeed8,_0x5e63e1,_0x48dfa9[_0xa32514(0x14e)],'to-signup(\x22'+_0x48dfa9[_0xa32514(0x202)]+'\x22)'),await sleep(0x7d0),await snap(_0xfdeed8,_0x5e63e1,_0xa32514(0xe7));else log(_0xa32514(0x1ce),_0xa32514(0x114));const _0x21c1e6=await findClickable(_0xfdeed8,_0x5e63e1,_0xa32514(0x252))||await findClickable(_0xfdeed8,_0x5e63e1,_0xa32514(0x21b))||await findClickable(_0xfdeed8,_0x5e63e1,_0xa32514(0x245));if(_0x21c1e6)await clickRect(_0xfdeed8,_0x5e63e1,_0x21c1e6[_0xa32514(0x14e)],_0xa32514(0x1d0)+_0x21c1e6[_0xa32514(0x202)]+'\x22)'),await sleep(0x898);else log(_0xa32514(0x1ce),_0xa32514(0x17f));await snap(_0xfdeed8,_0x5e63e1,'03-after-email-option');}async function emailPhase(_0x3d3226,_0x1ad900,_0x5ba8b8,_0x29d8e6){const _0x39d95f=a0_0x132afd;t0(_0x39d95f(0x1c7));const _0x190861=await setInput(_0x3d3226,_0x1ad900,EMAIL_SELECTOR,_0x29d8e6[_0x39d95f(0x189)],_0x39d95f(0x1c7));if(!_0x190861){await snap(_0x3d3226,_0x1ad900,'03b-no-email-field');throw new Error(_0x39d95f(0x23e));}await sleep(0x190),await snap(_0x3d3226,_0x1ad900,'04-email-typed');let _0x3a4290=null;for(let _0x3341b7=0x0;_0x3341b7<0x6;_0x3341b7++){_0x3a4290=await captchaState(_0x3d3226,_0x1ad900),log(_0x39d95f(0x10b),_0x39d95f(0x24b)+_0x3341b7+':\x20'+JSON[_0x39d95f(0x206)](_0x3a4290));if(_0x3a4290['anchorRect'])break;await sleep(0x7d0);}t0('captcha');let _0x8c99ae={'rounds':0x0,'ms':0x0,'tokenLen':0x0};if(_0x3a4290&&_0x3a4290[_0x39d95f(0xa7)]>0x14)log('captcha',_0x39d95f(0xc7)+_0x3a4290[_0x39d95f(0xa7)]+_0x39d95f(0xa4));else{if(_0x3a4290&&_0x3a4290[_0x39d95f(0x132)])await clickAnchorAndSolve(_0x3d3226,_0x1ad900,_0x5ba8b8),_0x8c99ae=lastSolve;else{const _0x438c0b=await hostTokenLen(_0x3d3226,_0x1ad900);if(_0x438c0b>0x14)log(_0x39d95f(0x10b),'token\x20already\x20present\x20('+_0x438c0b+')');else log(_0x39d95f(0x10b),'WARNING:\x20no\x20v2\x20anchor\x20found\x20on\x20email\x20step');}}t1(_0x39d95f(0x10b)),await snap(_0x3d3226,_0x1ad900,_0x39d95f(0x12d));if(UNTIL===_0x39d95f(0x12c))return log(_0x39d95f(0x19e),'--until\x20auth:\x20stopping\x20after\x20captcha'),_0x39d95f(0x17d);for(let _0x1e6888=0x0;_0x1e6888<0x2;_0x1e6888++){const _0x1892be=_0x5ba8b8['lines'][_0x39d95f(0xc8)],_0xdcbe95='^(login|sign\x20?up|docs|dashboard|cloud|docs)$',_0x4b662e=await findClickable(_0x3d3226,_0x1ad900,_0x39d95f(0xce),{'exclude':_0xdcbe95})||await findClickable(_0x3d3226,_0x1ad900,_0x39d95f(0x1f6),{'exclude':_0xdcbe95});if(_0x4b662e&&!_0x4b662e[_0x39d95f(0x1a3)])await clickRect(_0x3d3226,_0x1ad900,_0x4b662e[_0x39d95f(0x14e)],'submit(\x22'+_0x4b662e[_0x39d95f(0x202)]+'\x22)');else log('flow',_0x4b662e?_0x39d95f(0x1aa)+_0x4b662e['text']+_0x39d95f(0x16d):_0x39d95f(0x1dd)),await B['evalJs'](_0x3d3226,_0x1ad900,'(()\x20=>\x20{\x20const\x20e=('+EMAIL_SELECTOR+_0x39d95f(0x117)),await pressEnter(_0x3d3226,_0x1ad900);let _0x29e413=null;for(let _0x12a0e0=0x0;_0x12a0e0<0xc;_0x12a0e0++){await sleep(0xfa0);if(await hasCodeInput(_0x3d3226,_0x1ad900)){_0x29e413=_0x39d95f(0xa6);break;}const _0x1a2a3a=netScan(_0x5ba8b8,_0x1892be,_0xdef192=>_0xdef192['t']===_0x39d95f(0x1eb)&&/magic-auth\/start/[_0x39d95f(0x194)](_0xdef192[_0x39d95f(0x13e)]||'')),_0x541b44=_0x1a2a3a['length']?_0x1a2a3a[_0x1a2a3a[_0x39d95f(0xc8)]-0x1]:null;if(_0x541b44){log(_0x39d95f(0x1ce),'sendCode\x20->\x20'+_0x541b44[_0x39d95f(0x13a)]+'\x20'+String(_0x541b44[_0x39d95f(0x1eb)])[_0x39d95f(0xa8)](0x0,0xa0));if(_0x541b44[_0x39d95f(0x13a)]>=0x190){const _0x125cda=String(_0x541b44[_0x39d95f(0x1eb)]||'');if(/captcha|blocked|verify/i[_0x39d95f(0x194)](_0x125cda)&&/captcha/i[_0x39d95f(0x194)](_0x125cda)){_0x29e413=_0x39d95f(0x171);break;}if(/too many|rate|limit/i['test'](_0x125cda))throw new Error(_0x39d95f(0x152)+_0x125cda['slice'](0x0,0xa0));throw new Error('sendCode\x20failed:\x20'+_0x125cda[_0x39d95f(0xa8)](0x0,0xa0));}}const _0x3bf25d=await B[_0x39d95f(0x14a)](_0x3d3226,_0x1ad900,_0x39d95f(0x164))[_0x39d95f(0x195)](()=>'');if(/enter (the )?code|otp sent|verification code|check your (inbox|email)|code (was )?sent/i['test'](_0x3bf25d)){_0x29e413=_0x39d95f(0xa6);break;}}if(_0x29e413===_0x39d95f(0xa6)){await snap(_0x3d3226,_0x1ad900,'05-otp-screen'),t1(_0x39d95f(0x1c7));if(UNTIL==='start')return fs[_0x39d95f(0x22d)](path['join'](RUN_DIR,_0x39d95f(0x253)),JSON['stringify']({'tag':TAG,'email':_0x29d8e6[_0x39d95f(0x189)],'boxToken':_0x29d8e6[_0x39d95f(0x227)],'source':_0x29d8e6[_0x39d95f(0xb5)],'at':new Date()[_0x39d95f(0xcb)]()},null,0x1)),log(_0x39d95f(0x19e),_0x39d95f(0xb8)+_0x29d8e6[_0x39d95f(0x189)]+_0x39d95f(0xe5)),'stop';return'otp';}if(_0x29e413===_0x39d95f(0x171)&&_0x1e6888===0x0){log('flow',_0x39d95f(0x22b)),await clickAnchorAndSolve(_0x3d3226,_0x1ad900,_0x5ba8b8);continue;}throw new Error(_0x39d95f(0x100)+_0x29e413+')');}throw new Error('email\x20submit\x20failed\x20after\x20retries');}let lastSolve={'rounds':0x0,'ms':0x0,'tokenLen':0x0};async function hostTokenLen(_0x1feadc,_0x3f51fd){const _0x4e1a39=a0_0x132afd;return B[_0x4e1a39(0x14a)](_0x1feadc,_0x3f51fd,'(()\x20=>\x20{\x20const\x20t=document.querySelector(\x27textarea[name=\x22g-recaptcha-response\x22],\x20#g-recaptcha-response\x27);\x20return\x20t?\x20(t.value||\x27\x27).length\x20:\x200;\x20})()')[_0x4e1a39(0x195)](()=>0x0);}async function clickAnchorAndSolve(_0x4d2a52,_0x383ae7,_0x1e5664){const _0x315c74=a0_0x132afd,_0x220b44=await captchaState(_0x4d2a52,_0x383ae7);if(_0x220b44[_0x315c74(0x132)]&&!_0x220b44['bframe']){const _0x50cf55=_0x220b44[_0x315c74(0x132)];await B[_0x315c74(0x217)](_0x4d2a52,_0x383ae7,_0x50cf55['x']+Math[_0x315c74(0x113)](0x1e,_0x50cf55['w']/0x2),_0x50cf55['y']+Math['min'](0x22,_0x50cf55['h']-0x4)),log(_0x315c74(0x10b),_0x315c74(0x11d)+Math[_0x315c74(0x177)](_0x50cf55['x']+0x1e)+','+Math[_0x315c74(0x177)](_0x50cf55['y']+0x22)),await sleep(0x1194);}const _0x3872b7=await captchaState(_0x4d2a52,_0x383ae7);return log(_0x315c74(0x10b),_0x315c74(0x23f)+JSON[_0x315c74(0x206)](_0x3872b7)),lastSolve=await solveLoop(_0x4d2a52,_0x383ae7,()=>hostTokenLen(_0x4d2a52,_0x383ae7),{'net':_0x1e5664}),ev({'t':_0x315c74(0xaf),...lastSolve}),lastSolve;}async function otpPhase(_0xdcb15c,_0x360aeb,_0x5949c5,_0x35e03c){const _0x9dfdde=a0_0x132afd;t0(_0x9dfdde(0xa6));for(let _0x2acda1=0x0;_0x2acda1<0x1e;_0x2acda1++){if(await hasCodeInput(_0xdcb15c,_0x360aeb))break;await sleep(0xbb8);}if(!await hasCodeInput(_0xdcb15c,_0x360aeb))throw new Error('OTP\x20input\x20never\x20appeared');const _0x393abe=_0x5949c5[_0x9dfdde(0xd8)][_0x9dfdde(0xc8)];for(let _0x2b3043=0x0;_0x2b3043<0x3;_0x2b3043++){const _0x590e7d=Date[_0x9dfdde(0x24e)](),_0x23d26b=await waitForCode(_0x35e03c,{'timeoutMs':_0x2b3043===0x0?OTP_TIMEOUT_MS:0x249f0});log('otp','code='+_0x23d26b[_0x9dfdde(0x186)]+_0x9dfdde(0x153)+Math[_0x9dfdde(0x177)]((_0x23d26b['at']-_0x590e7d)/0x3e8)+_0x9dfdde(0x14b)+(_0x2b3043+0x1)+')'),t0(_0x9dfdde(0x150));const _0x3017d7=await setInput(_0xdcb15c,_0x360aeb,CODE_SELECTOR,_0x23d26b['code'],'otp-code');if(!_0x3017d7)throw new Error('otp\x20input\x20not\x20found');await snap(_0xdcb15c,_0x360aeb,_0x9dfdde(0x1fe)+_0x2b3043,{'shot':_0x2b3043===0x0});const _0x65e52e=await findClickable(_0xdcb15c,_0x360aeb,_0x9dfdde(0x200))||await findClickable(_0xdcb15c,_0x360aeb,_0x9dfdde(0x21c));if(_0x65e52e)await clickRect(_0xdcb15c,_0x360aeb,_0x65e52e[_0x9dfdde(0x14e)],_0x9dfdde(0x241)+_0x65e52e['text']+'\x22)');else await B['evalJs'](_0xdcb15c,_0x360aeb,_0x9dfdde(0x1d8)+CODE_SELECTOR+_0x9dfdde(0x1fb))[_0x9dfdde(0x195)](()=>{}),await pressEnter(_0xdcb15c,_0x360aeb);await sleep(0x2ee0);const _0x1c4164=netScan(_0x5949c5,_0x393abe,_0x1c644e=>_0x1c644e['t']===_0x9dfdde(0x1eb)&&/magic-auth\/verify/[_0x9dfdde(0x194)](_0x1c644e['url']||'')),_0x5b325e=_0x1c4164[_0x9dfdde(0xc8)]?_0x1c4164[_0x1c4164[_0x9dfdde(0xc8)]-0x1]:null,_0x4c28a7=await snap(_0xdcb15c,_0x360aeb,_0x9dfdde(0x12e)+_0x2b3043,{'shot':!![]});if(_0x5b325e)log('otp','verify\x20->\x20'+_0x5b325e['status']+'\x20'+String(_0x5b325e[_0x9dfdde(0x1eb)])['slice'](0x0,0xc8));const _0x1be7a5=_0x4c28a7&&_0x4c28a7[_0x9dfdde(0x24f)]>0x14,_0x30e84e=String(_0x4c28a7&&_0x4c28a7[_0x9dfdde(0xbc)]||'');t1(_0x9dfdde(0x150));if(_0x5b325e&&_0x5b325e[_0x9dfdde(0x13a)]===0xc8||_0x1be7a5)return t1(_0x9dfdde(0xa6)),_0x9dfdde(0x1c6);if(/blocked/i[_0x9dfdde(0x194)](_0x30e84e))throw new Error(_0x9dfdde(0x176));if(/too many/i['test'](_0x30e84e))throw new Error('too\x20many\x20attempts\x20at\x20OTP');if(/invalid|expired|incorrect/i[_0x9dfdde(0x194)](_0x30e84e)||!_0x5b325e){log('otp','code\x20not\x20accepted\x20—\x20trying\x20the\x20resend\x20path\x20(OTP-step\x20CAPTCHA\x20+\x20Resend)');try{await snap(_0xdcb15c,_0x360aeb,_0x9dfdde(0x225)+_0x2b3043),await clickAnchorAndSolve(_0xdcb15c,_0x360aeb,_0x5949c5);const _0x3adc16=await findClickable(_0xdcb15c,_0x360aeb,_0x9dfdde(0x11b))||await findClickable(_0xdcb15c,_0x360aeb,_0x9dfdde(0x158));if(_0x3adc16)await clickRect(_0xdcb15c,_0x360aeb,_0x3adc16[_0x9dfdde(0x14e)],_0x9dfdde(0x254)+_0x3adc16[_0x9dfdde(0x202)]+'\x22)'),await sleep(0xbb8),log('otp',_0x9dfdde(0x190));else log(_0x9dfdde(0xa6),_0x9dfdde(0x23b));}catch(_0x1a58f1){log(_0x9dfdde(0xa6),_0x9dfdde(0xeb)+_0x1a58f1[_0x9dfdde(0x16a)]);}continue;}}throw new Error(_0x9dfdde(0x22e));}function extractCandidates(_0x3c6637){const _0x423aaa=[],_0x40853f=new Set(),_0x33f5b0=(_0x4452fe,_0x2c5bf2)=>{const _0x54b0fa=a0_0x240d;if(_0x4452fe==null)return;if(typeof _0x4452fe===_0x54b0fa(0x214)){_0x4452fe['length']>=0x10&&_0x4452fe[_0x54b0fa(0xc8)]<=0xc8&&/^[A-Za-z0-9._:-]+$/[_0x54b0fa(0x194)](_0x4452fe)&&!/^https?:/['test'](_0x4452fe)&&!_0x40853f[_0x54b0fa(0xdf)](_0x4452fe)&&(_0x40853f[_0x54b0fa(0x1de)](_0x4452fe),_0x423aaa[_0x54b0fa(0x24a)]({'k':_0x2c5bf2,'v':_0x4452fe}));return;}if(Array['isArray'](_0x4452fe)){_0x4452fe[_0x54b0fa(0x107)](_0x25ea93=>_0x33f5b0(_0x25ea93,_0x2c5bf2));return;}if(typeof _0x4452fe==='object'){for(const _0x1ad39b of Object[_0x54b0fa(0x224)](_0x4452fe))_0x33f5b0(_0x4452fe[_0x1ad39b],_0x1ad39b);}};return _0x33f5b0(_0x3c6637,''),_0x423aaa;}function fetchFull(_0x4f1205,_0x45e298,{method:method=a0_0x132afd(0x1c4),headers:headers={},body:_0x268116,timeoutMs:timeoutMs=0x15f90}={}){return new Promise((_0x362249,_0x4ab471)=>{const _0x59fba6=a0_0x240d,_0x37c736=new URL(_0x45e298),_0x371b25=_0x37c736['protocol']===_0x59fba6(0xc3)?https:http,_0x3be71f=_0x268116===undefined||_0x268116===null?null:Buffer[_0x59fba6(0x1ea)](typeof _0x268116===_0x59fba6(0x214)?_0x268116:JSON[_0x59fba6(0x206)](_0x268116)),_0x5c8d35={...headers};if(_0x3be71f&&!Object[_0x59fba6(0x224)](_0x5c8d35)[_0x59fba6(0x159)](_0x5d3d19=>_0x5d3d19[_0x59fba6(0x168)]()===_0x59fba6(0x243)))_0x5c8d35[_0x59fba6(0x249)]=_0x59fba6(0x213);if(_0x3be71f&&!Object[_0x59fba6(0x224)](_0x5c8d35)[_0x59fba6(0x159)](_0x46f4c4=>_0x46f4c4[_0x59fba6(0x168)]()===_0x59fba6(0x151)))_0x5c8d35[_0x59fba6(0xe1)]=_0x3be71f['length'];const _0x3cbca8=_0x371b25[_0x59fba6(0xb2)]({'method':method,'host':_0x37c736[_0x59fba6(0x24d)],'port':_0x37c736[_0x59fba6(0x247)]||(_0x37c736[_0x59fba6(0x1f7)]===_0x59fba6(0xc3)?0x1bb:0x50),'path':_0x37c736[_0x59fba6(0xe4)]+_0x37c736['search'],'agent':_0x4f1205?createAgent(_0x4f1205):undefined,'headers':_0x5c8d35},_0x5a23a2=>{const _0x5da51c=_0x59fba6;let _0x5d4302='';_0x5a23a2[_0x5da51c(0x1c8)](_0x5da51c(0x178)),_0x5a23a2['on']('data',_0x88b08f=>_0x5d4302+=_0x88b08f),_0x5a23a2['on'](_0x5da51c(0x10d),()=>_0x362249({'status':_0x5a23a2[_0x5da51c(0xfb)],'body':_0x5d4302}));});_0x3cbca8[_0x59fba6(0x1f4)](timeoutMs,()=>_0x3cbca8[_0x59fba6(0xee)](new Error(_0x59fba6(0xfd)))),_0x3cbca8['on']('error',_0x4ab471);if(_0x3be71f)_0x3cbca8[_0x59fba6(0x1e3)](_0x3be71f);_0x3cbca8[_0x59fba6(0x10d)]();});}async function testKeyModel(_0xdb4f57,_0x265700){const _0x13e557=a0_0x132afd;try{const _0x4a2007=await fetchFull(_0xdb4f57,MODELS_BASE+_0x13e557(0x1bd),{'headers':{'Authorization':_0x13e557(0x248)+_0x265700},'timeoutMs':0xafc8});let _0x25c0c2=_0x4a2007[_0x13e557(0x13a)]===0xc8,_0x4c0c66=null;try{const _0x39ea49=JSON[_0x13e557(0xea)](_0x4a2007['body']);if(Array[_0x13e557(0x116)](_0x39ea49[_0x13e557(0x148)]))_0x4c0c66=_0x39ea49[_0x13e557(0x148)][_0x13e557(0xc8)];}catch{}return{'ok':_0x25c0c2,'status':_0x4a2007[_0x13e557(0x13a)],'models':_0x4c0c66,'body':_0x4a2007[_0x13e557(0x1eb)][_0x13e557(0xa8)](0x0,0xa0)};}catch(_0x33e900){return{'ok':![],'status':0x0,'err':_0x33e900[_0x13e557(0x16a)]};}}async function keyPhase(_0x168c1e,_0x2485a3,_0x2e67f8,_0x590947){const _0x3d29f8=a0_0x132afd;t0('key');let _0x27072b=null;const _0x1f349e=netScan(_0x2e67f8,0x0,_0x308c19=>_0x308c19['t']===_0x3d29f8(0x1eb)&&/magic-auth\/verify/[_0x3d29f8(0x194)](_0x308c19[_0x3d29f8(0x13e)]||'')&&_0x308c19[_0x3d29f8(0x13a)]===0xc8);for(const _0x4df052 of _0x1f349e){const _0x5c5e79=String(_0x4df052[_0x3d29f8(0x1eb)])['match'](/"accessToken"\s*:\s*"([^"]+)"/);if(_0x5c5e79){_0x27072b=_0x5c5e79[0x1];break;}}!_0x27072b&&(_0x27072b=await B[_0x3d29f8(0x14a)](_0x168c1e,_0x2485a3,'(()\x20=>\x20{\x0a\x20\x20\x20\x20\x20\x20try{\x20for(const\x20c\x20of\x20document.cookie.split(/;\x5cs*/)){\x20const\x20m=c.match(/^(ionet_authentication[^=]*)=(.*)$/);\x20if(m){\x20const\x20j=JSON.parse(decodeURIComponent(m[2]));\x20const\x20v=j&&(j.state||j);\x20const\x20t=v&&(v.token||v.accessToken);\x20if(t&&String(t).length>20)\x20return\x20t;\x20}\x20}\x20}catch(e){}\x0a\x20\x20\x20\x20\x20\x20try{\x20for(const\x20k\x20of\x20Object.keys(localStorage)){\x20try{\x20const\x20j=JSON.parse(localStorage.getItem(k));\x20const\x20v=j&&(j.state||j);\x20const\x20t=v&&(v.token||v.accessToken);\x20if(t&&String(t).length>20)\x20return\x20t;\x20}catch(e){}\x20}\x20}catch(e){}\x0a\x20\x20\x20\x20\x20\x20return\x20null;\x20})()')['catch'](()=>null));log(_0x3d29f8(0x1c6),_0x3d29f8(0x198)+(_0x27072b?mask(_0x27072b)+_0x3d29f8(0x18d)+_0x27072b['length']:_0x3d29f8(0x1cb))),ev({'t':_0x3d29f8(0x227),'found':!!_0x27072b,'len':_0x27072b?_0x27072b[_0x3d29f8(0xc8)]:0x0});let _0x544c87=null;const _0x4449f9='k-'+TAG+'-'+Date[_0x3d29f8(0x24e)]()['toString'](0x24);if(_0x27072b){const _0x42727d=[{'h':{'Token':_0x27072b,'Frontend-Version':FRONTEND_VER,'Accept':'application/json'},'b':{'name':_0x4449f9}},{'h':{'Token':_0x27072b,'Frontend-Version':FRONTEND_VER,'Accept':_0x3d29f8(0x213)},'b':{'name':_0x4449f9,'description':_0x4449f9}}];for(const _0x588ecc of _0x42727d){try{const _0x156c76=await fetchFull(_0x590947,API_BASE+'/api-keys/',{'method':_0x3d29f8(0x15b),'headers':_0x588ecc['h'],'body':_0x588ecc['b']});log('key','POST\x20/api-keys/\x20->\x20'+_0x156c76[_0x3d29f8(0x13a)]+'\x20'+String(_0x156c76[_0x3d29f8(0x1eb)])['slice'](0x0,0xdc)),fs['appendFileSync'](path[_0x3d29f8(0xf3)](RUN_DIR,_0x3d29f8(0x234)),JSON[_0x3d29f8(0x206)]({'at':ts(),'status':_0x156c76[_0x3d29f8(0x13a)],'body':_0x156c76[_0x3d29f8(0x1eb)]['slice'](0x0,0xfa0)})+'\x0a');if(_0x156c76[_0x3d29f8(0x13a)]<0x12c){let _0x14adb5=null;try{_0x14adb5=JSON[_0x3d29f8(0xea)](_0x156c76[_0x3d29f8(0x1eb)]);}catch{}const _0x11b9eb=_0x14adb5?extractCandidates(_0x14adb5):[];for(const _0x21ca61 of _0x11b9eb){const _0x3df8e1=await testKeyModel(_0x590947,_0x21ca61['v']);if(_0x3df8e1['ok']){_0x544c87=_0x21ca61['v'],log(_0x3d29f8(0x1c6),_0x3d29f8(0x11f)+_0x21ca61['k']+_0x3d29f8(0x212)+_0x3df8e1['models']+_0x3d29f8(0xd0));break;}}if(_0x544c87)break;const _0xdb3f84=_0x156c76[_0x3d29f8(0x1eb)][_0x3d29f8(0x1e0)](/[A-Za-z0-9_.-]{24,120}/g);for(const _0x5c8b0e of _0xdb3f84||[]){const _0x405c35=await testKeyModel(_0x590947,_0x5c8b0e);if(_0x405c35['ok']){_0x544c87=_0x5c8b0e,log(_0x3d29f8(0x1c6),_0x3d29f8(0x1df));break;}}if(_0x544c87)break;log(_0x3d29f8(0x1c6),_0x3d29f8(0x246));break;}}catch(_0x24da76){log(_0x3d29f8(0x1c6),_0x3d29f8(0xcf)+_0x24da76[_0x3d29f8(0x16a)]);}}}if(!_0x544c87){const _0x42180b=_0x2e67f8[_0x3d29f8(0xd8)][_0x3d29f8(0xc8)];log('key','UI\x20fallback:\x20navigating\x20to\x20ai.io.net/ai/api-keys'),await _0x168c1e[_0x3d29f8(0xa5)](_0x3d29f8(0x1a1),{'url':'https://ai.io.net/ai/api-keys'},_0x2485a3),await B[_0x3d29f8(0x1b0)](_0x168c1e,_0x2485a3,0x15f90),await sleep(0x1b58),await snap(_0x168c1e,_0x2485a3,'10-apikeys');let _0x9d668a=await findClickable(_0x168c1e,_0x2485a3,_0x3d29f8(0x129))||await findClickable(_0x168c1e,_0x2485a3,_0x3d29f8(0x188));if(_0x9d668a){await clickRect(_0x168c1e,_0x2485a3,_0x9d668a[_0x3d29f8(0x14e)],_0x3d29f8(0x231)+_0x9d668a['text']+'\x22)'),await sleep(0x9c4),await snap(_0x168c1e,_0x2485a3,_0x3d29f8(0x104));const _0x383055=_0x3d29f8(0x1b6),_0x5748f8=await B[_0x3d29f8(0x14a)](_0x168c1e,_0x2485a3,DOM_SNAP)[_0x3d29f8(0x195)](()=>({}));(_0x5748f8[_0x3d29f8(0x143)]||[])[_0x3d29f8(0xc8)]&&(await setInput(_0x168c1e,_0x2485a3,_0x383055,_0x4449f9,_0x3d29f8(0x16f))[_0x3d29f8(0x195)](()=>{}),await sleep(0x1f4));const _0x4e2116=await findClickable(_0x168c1e,_0x2485a3,'create|generate|confirm|save|add\x20key');if(_0x4e2116)await clickRect(_0x168c1e,_0x2485a3,_0x4e2116[_0x3d29f8(0x14e)],_0x3d29f8(0x102)+_0x4e2116[_0x3d29f8(0x202)]+'\x22)');else log(_0x3d29f8(0x1c6),_0x3d29f8(0x128)),await pressEnter(_0x168c1e,_0x2485a3);await sleep(0x1770);const _0x168be7=await snap(_0x168c1e,_0x2485a3,_0x3d29f8(0x1d5),{'shot':!![]}),_0x35203e=netScan(_0x2e67f8,_0x42180b,_0x33eea0=>_0x33eea0['t']===_0x3d29f8(0x1eb)&&/api-keys/[_0x3d29f8(0x194)](_0x33eea0[_0x3d29f8(0x13e)]||''));for(const _0x16a287 of _0x35203e['reverse']()){const _0x7ec9aa=String(_0x16a287[_0x3d29f8(0x1eb)])[_0x3d29f8(0x1e0)](/"(?:value|key|api_key|apiKey|secret)"\s*:\s*"([^"]{16,})"/);if(_0x7ec9aa){const _0x330c53=await testKeyModel(_0x590947,_0x7ec9aa[0x1]);if(_0x330c53['ok']){_0x544c87=_0x7ec9aa[0x1],log(_0x3d29f8(0x1c6),_0x3d29f8(0x145)+_0x16a287['url']['slice'](0x0,0x3c)+')');break;}}}if(!_0x544c87&&_0x168be7){const _0x38e826=String(_0x168be7[_0x3d29f8(0xbc)]||'')[_0x3d29f8(0x1e0)](/[A-Za-z0-9_.-]{28,120}/g)||[];for(const _0x24fae5 of _0x38e826){if(/^https|^[0-9a-f]{40}$/['test'](_0x24fae5)===![]){const _0x2f9272=await testKeyModel(_0x590947,_0x24fae5);if(_0x2f9272['ok']){_0x544c87=_0x24fae5,log(_0x3d29f8(0x1c6),'key\x20from\x20UI\x20DOM\x20text');break;}}}}}else log('key',_0x3d29f8(0x20b));}t1(_0x3d29f8(0x1c6));if(!_0x544c87)throw new Error(_0x3d29f8(0xba));return{'key':_0x544c87,'token':_0x27072b};}async function verifyAndRecord(_0x56c515,_0x4b8f68,_0x131baa,_0x7a9cab){const _0x5a5157=a0_0x132afd;t0(_0x5a5157(0xdc));let _0x5e02b8=null;for(let _0x578cb6=0x0;_0x578cb6<0x4;_0x578cb6++){const _0x17f2aa=await fetchFull(_0x56c515,MODELS_BASE+_0x5a5157(0x1bd),{'headers':{'Authorization':_0x5a5157(0x248)+_0x131baa},'timeoutMs':0xea60});if(_0x17f2aa[_0x5a5157(0x13a)]===0xc8){try{_0x5e02b8=JSON['parse'](_0x17f2aa[_0x5a5157(0x1eb)]);}catch{}if(_0x5e02b8&&Array[_0x5a5157(0x116)](_0x5e02b8[_0x5a5157(0x148)])){log(_0x5a5157(0xdc),_0x5a5157(0x19d)+_0x5e02b8['data'][_0x5a5157(0xc8)]+'\x20models');break;}}log(_0x5a5157(0xdc),_0x5a5157(0xe3)+(_0x578cb6+0x1)+':\x20status='+_0x17f2aa[_0x5a5157(0x13a)]+'\x20'+String(_0x17f2aa[_0x5a5157(0x1eb)])[_0x5a5157(0xa8)](0x0,0x78)),await sleep(0xfa0);}const _0x5f246c=await fetchFull(_0x56c515,MODELS_BASE+'/chat/completions',{'method':_0x5a5157(0x15b),'headers':{'Authorization':_0x5a5157(0x248)+_0x131baa},'body':{'model':_0x5a5157(0x1f9),'messages':[{'role':_0x5a5157(0x1b9),'content':_0x5a5157(0x157)}],'max_tokens':0x8},'timeoutMs':0x15f90});let _0x3efeb3=null;try{const _0x5c67bc=JSON[_0x5a5157(0xea)](_0x5f246c[_0x5a5157(0x1eb)]);_0x3efeb3=_0x5c67bc&&_0x5c67bc['choices']&&_0x5c67bc[_0x5a5157(0x23d)][0x0]&&_0x5c67bc[_0x5a5157(0x23d)][0x0][_0x5a5157(0x16a)]&&_0x5c67bc[_0x5a5157(0x23d)][0x0][_0x5a5157(0x16a)]['content'];}catch{}log(_0x5a5157(0xdc),_0x5a5157(0x210)+_0x5f246c['status']+'\x20'+String(_0x5f246c['body'])[_0x5a5157(0xa8)](0x0,0xc8)[_0x5a5157(0x1d6)](/\s+/g,'\x20'));const _0xb70670=_0x5f246c['status']===0xc8&&!!_0x3efeb3,_0x1129fd={'tag':TAG,'address':_0x4b8f68[_0x5a5157(0x189)],'boxToken':_0x4b8f68[_0x5a5157(0x227)],'key':_0x131baa,'keyMasked':mask(_0x131baa),'at':new Date()[_0x5a5157(0xcb)](),'proxy':PROXY_LINE,'models':_0x5e02b8?_0x5e02b8[_0x5a5157(0x148)][_0x5a5157(0xc8)]:null,'chat':_0x3efeb3?_0x3efeb3[_0x5a5157(0xa8)](0x0,0x28):null,'live':_0xb70670,'timings':T,..._0x7a9cab};fs[_0x5a5157(0x18c)](path[_0x5a5157(0xf3)](ROOT,_0x5a5157(0x1e7)),JSON['stringify'](_0x1129fd)+'\x0a');if(_0x5e02b8&&Array['isArray'](_0x5e02b8[_0x5a5157(0x148)])){const _0x229beb=path['join'](ROOT,_0x5a5157(0x162));try{const _0x30b477=JSON[_0x5a5157(0xea)](fs[_0x5a5157(0xed)](_0x229beb,_0x5a5157(0x178)));if(!_0x30b477||!Array['isArray'](_0x30b477[_0x5a5157(0x148)])||_0x30b477[_0x5a5157(0x148)][_0x5a5157(0xc8)]<_0x5e02b8['data'][_0x5a5157(0xc8)])fs[_0x5a5157(0x22d)](_0x229beb,JSON[_0x5a5157(0x206)](_0x5e02b8,null,0x2));}catch{fs[_0x5a5157(0x22d)](_0x229beb,JSON[_0x5a5157(0x206)](_0x5e02b8,null,0x2));}}return _0xb70670?(fs[_0x5a5157(0x18c)](path[_0x5a5157(0xf3)](ROOT,_0x5a5157(0x1a6)),_0x131baa+'\x0a'),log(_0x5a5157(0xdc),_0x5a5157(0x1a9)+mask(_0x131baa)+')')):(fs[_0x5a5157(0x18c)](path[_0x5a5157(0xf3)](ROOT,_0x5a5157(0x119)),_0x4b8f68['address']+'\x09'+_0x131baa+'\x09'+new Date()['toISOString']()+'\x0a'),log('verify',_0x5a5157(0xd2))),t1('verify'),_0xb70670;}function killChrome(_0xfcf3c7){const _0x26e35d=a0_0x132afd;if(!_0xfcf3c7)return;try{execSync(_0x26e35d(0xb6)+_0xfcf3c7['pid']+_0x26e35d(0x14d),{'stdio':_0x26e35d(0x125),'windowsHide':!![]}),log('run','chrome\x20'+_0xfcf3c7[_0x26e35d(0xfa)]+'\x20killed');}catch(_0xc4629c){log('run','kill\x20chrome\x20'+_0xfcf3c7[_0x26e35d(0xfa)]+':\x20'+_0xc4629c[_0x26e35d(0x16a)]['slice'](0x0,0x50));}}((async()=>{const _0x30804e=a0_0x132afd;initRunDir(),log('run','dir='+RUN_DIR+_0x30804e(0x229)+TAG+_0x30804e(0xf4)+PORT+'\x20attach='+ATTACH);if(!PROXY_LINE)throw new Error(_0x30804e(0x103));const _0x229ad5=parseProxy(PROXY_LINE);if(!_0x229ad5)throw new Error('bad\x20proxy\x20line');_0x229ad5['connectTimeoutMs']=0x1f40,_0x229ad5['timeoutMs']=0x7530,log(_0x30804e(0x19e),_0x30804e(0xc9)+browserUrl(_0x229ad5)),ev({'t':'start','proxy':PROXY_LINE,'until':UNTIL,'phase':PHASE_OVERRIDE});const _0x50aeeb=EMAIL_OVERRIDE?Promise[_0x30804e(0x22f)]({'address':EMAIL_OVERRIDE,'token':EMAIL_TOKEN||null,'source':_0x30804e(0x1bf)}):brokerCreate()[_0x30804e(0x195)](async _0x3cd7f7=>{const _0x2385de=_0x30804e;return log(_0x2385de(0x232),_0x2385de(0x191)+_0x3cd7f7[_0x2385de(0x16a)][_0x2385de(0xa8)](0x0,0x78)),await sleep(0xbb8),brokerCreate();});let _0x4b9897=null;if(!ATTACH)_0x4b9897=B[_0x30804e(0x1c1)](PORT,TAG);else try{await B[_0x30804e(0x12b)](PORT,0xbb8);}catch{throw new Error(_0x30804e(0xb3)+PORT+_0x30804e(0xd6));}const _0x214049=await B[_0x30804e(0xc1)](PORT);_0x214049['on'](_0x30804e(0x1be),_0x1056ec=>{const _0x4db6a2=_0x30804e;try{log(_0x4db6a2(0x19e),_0x4db6a2(0x11e)+(_0x1056ec&&_0x1056ec[_0x4db6a2(0x16a)]||_0x1056ec));}catch{}}),process['on'](_0x30804e(0x1d2),_0x4921f8=>{const _0x2f61ed=_0x30804e;try{log(_0x2f61ed(0x20c),'unhandledRejection:\x20'+(_0x4921f8&&_0x4921f8['message']||_0x4921f8));}catch{}}),process['on'](_0x30804e(0x239),_0x36ad7c=>{const _0x3f45a1=_0x30804e;try{log(_0x3f45a1(0x20c),'uncaughtException:\x20'+(_0x36ad7c&&_0x36ad7c[_0x3f45a1(0xbd)]||_0x36ad7c));}catch{}});let _0x3f92dd,_0x1d4289=null,_0x445bf6=null;if(ATTACH){const _0x5cde7f=(await _0x214049[_0x30804e(0xa5)](_0x30804e(0x1f1)))[_0x30804e(0x12f)]['filter'](_0x231693=>_0x231693[_0x30804e(0x1a5)]===_0x30804e(0x10e)&&/io\.net/[_0x30804e(0x194)](_0x231693[_0x30804e(0x13e)]));if(!_0x5cde7f[_0x30804e(0xc8)])throw new Error(_0x30804e(0x139));const _0x34998f=_0x5cde7f['sort']((_0x404ce7,_0x2b0c1f)=>_0x2b0c1f[_0x30804e(0xdb)]>_0x404ce7[_0x30804e(0xdb)]?0x1:-0x1)[0x0];_0x445bf6=_0x34998f[_0x30804e(0xdb)];const _0x29ce7f=await _0x214049['send'](_0x30804e(0x111),{'targetId':_0x445bf6,'flatten':!![]});_0x3f92dd=_0x29ce7f[_0x30804e(0xae)],await _0x214049[_0x30804e(0xa5)]('Page.enable',{},_0x3f92dd),await _0x214049[_0x30804e(0xa5)](_0x30804e(0x17e),{},_0x3f92dd),await _0x214049[_0x30804e(0xa5)](_0x30804e(0x21a),{},_0x3f92dd),log(_0x30804e(0x19e),'attached\x20to\x20'+_0x34998f['url'][_0x30804e(0xa8)](0x0,0x50));}else{const _0xacadca=await B[_0x30804e(0xe6)](_0x214049,{'proxyServer':browserUrl(_0x229ad5)});_0x3f92dd=_0xacadca[_0x30804e(0xae)],_0x1d4289=_0xacadca[_0x30804e(0xdd)],_0x445bf6=_0xacadca[_0x30804e(0xdb)];}const _0x4a5707=await attachProxyAuth(_0x214049,_0x3f92dd,_0x229ad5),_0x22afa2=makeNetLogger(_0x214049,_0x3f92dd,RUN_DIR),_0x334eea=makeConsoleLogger(_0x214049,_0x3f92dd,RUN_DIR);log(_0x30804e(0x19e),'context\x20ready');const _0x3f9aeb=async _0x56f7fc=>{const _0x39d373=_0x30804e,_0x4e5488=_0x56f7fc[_0x39d373(0xb2)][_0x39d373(0x13e)]||'';let _0x5bcb3a=![];try{const _0x1ac350=await gs['get'](_0x4e5488,{'batch':0x4,'rounds':0x8,'timeoutMs':0x2ee0,'log':_0x580d2c=>log(_0x39d373(0x219),_0x580d2c)});_0x1ac350['ok']&&(await _0x214049[_0x39d373(0xa5)](_0x39d373(0x127),{'requestId':_0x56f7fc[_0x39d373(0x1ac)],'responseCode':0xc8,'responsePhrase':'OK','responseHeaders':[{'name':_0x39d373(0x249),'value':_0x39d373(0x161)},{'name':_0x39d373(0x199),'value':'public,\x20max-age=86400'},{'name':_0x39d373(0xff),'value':'*'}],'body':_0x1ac350[_0x39d373(0x1eb)][_0x39d373(0x1e5)](_0x39d373(0xc6))},_0x3f92dd),_0x5bcb3a=!![],log(_0x39d373(0x219),_0x39d373(0xf5)+_0x4e5488[_0x39d373(0xa8)](0x3c,0x8c)+'\x20('+_0x1ac350[_0x39d373(0x1eb)][_0x39d373(0xc8)]+_0x39d373(0x237)+(_0x1ac350[_0x39d373(0x1ea)]==='cache'?_0x39d373(0x240):_0x39d373(0x154))+')'));}catch(_0x53da54){log(_0x39d373(0x219),_0x39d373(0x138)+_0x53da54[_0x39d373(0x16a)]);}if(!_0x5bcb3a){try{await _0x214049[_0x39d373(0xa5)](_0x39d373(0x185),{'requestId':_0x56f7fc[_0x39d373(0x1ac)]},_0x3f92dd);}catch{}log('gsfetch',_0x39d373(0x1ba)+_0x4e5488[_0x39d373(0xa8)](0x3c,0x8c));}};_0x214049['on'](_0x30804e(0x10f),_0x3f9aeb,_0x3f92dd),await _0x214049['send'](_0x30804e(0x1f0),{'patterns':[{'urlPattern':'*://*.gstatic.com/recaptcha/*','requestStage':_0x30804e(0x131)}]},_0x3f92dd),log(_0x30804e(0x19e),'gstatic\x20interception\x20enabled'),gs[_0x30804e(0x1b7)](IMPL_URL,{'batch':0x4,'rounds':0x6,'timeoutMs':0x2ee0,'log':_0x5d9ad8=>log(_0x30804e(0x219),_0x5d9ad8)})['then'](_0x4362ee=>log('gsfetch',_0x30804e(0x106)+(_0x4362ee['ok']?_0x4362ee[_0x30804e(0x1eb)][_0x30804e(0xc8)]+'B\x20from\x20'+_0x4362ee[_0x30804e(0x1ea)]:_0x30804e(0xf6))))[_0x30804e(0x195)](()=>{});let _0x37b852=null,_0x4cd4df=null,_0x3027ee=![],_0x50fe3a=PHASE_OVERRIDE;try{if(_0x50fe3a==='auto'){const _0x56d54c=await B['evalJs'](_0x214049,_0x3f92dd,DOM_SNAP)[_0x30804e(0x195)](()=>({})),_0x14e5e=String(_0x56d54c['url']||''),_0x3fa183=await hasCodeInput(_0x214049,_0x3f92dd),_0x26edff=await B[_0x30804e(0x14a)](_0x214049,_0x3f92dd,'!!('+EMAIL_SELECTOR+')')[_0x30804e(0x195)](()=>![]);log(_0x30804e(0x19e),_0x30804e(0x230)+_0x14e5e[_0x30804e(0xa8)](0x0,0x5a)+_0x30804e(0x1db)+_0x26edff+_0x30804e(0x165)+_0x3fa183+'\x20cookieTok='+_0x56d54c['cookieToken']);if(_0x3fa183)_0x50fe3a=_0x30804e(0xa6);else{if(_0x26edff&&/id\.io\.net\/login/[_0x30804e(0x194)](_0x14e5e))_0x50fe3a=_0x30804e(0x1c7);else{if(!/id\.io\.net/[_0x30804e(0x194)](_0x14e5e)&&_0x56d54c[_0x30804e(0x24f)]>0x14)_0x50fe3a=_0x30804e(0x1c6);else _0x50fe3a='start';}}}log(_0x30804e(0x19e),_0x30804e(0xa9)+_0x50fe3a),_0x37b852=await _0x50aeeb,log(_0x30804e(0x232),'box='+_0x37b852[_0x30804e(0x189)]+'\x20('+_0x37b852[_0x30804e(0xb5)]+')'),ev({'t':'box','address':_0x37b852[_0x30804e(0x189)],'token':_0x37b852['token'],'source':_0x37b852[_0x30804e(0xb5)]});_0x50fe3a===_0x30804e(0x15f)&&(await authSurface(_0x214049,_0x3f92dd),_0x50fe3a=_0x30804e(0x1c7));if(_0x50fe3a===_0x30804e(0x1c7)){const _0xf1a21e=await emailPhase(_0x214049,_0x3f92dd,_0x22afa2,_0x37b852);if(_0xf1a21e===_0x30804e(0x17d))log(_0x30804e(0x19e),_0x30804e(0xfe)+UNTIL);else _0x50fe3a=_0xf1a21e;}_0x50fe3a===_0x30804e(0xa6)&&(UNTIL===_0x30804e(0xa6)?log(_0x30804e(0x19e),_0x30804e(0x208)):_0x50fe3a=await otpPhase(_0x214049,_0x3f92dd,_0x22afa2,_0x37b852));if(_0x50fe3a===_0x30804e(0x1c6)){if(!_0x37b852[_0x30804e(0x227)]&&!EMAIL_OVERRIDE)log('mail',_0x30804e(0x160));_0x4cd4df=await keyPhase(_0x214049,_0x3f92dd,_0x22afa2,_0x229ad5),_0x3027ee=await verifyAndRecord(_0x229ad5,_0x37b852,_0x4cd4df['key'],{'captcha':lastSolve}),await snap(_0x214049,_0x3f92dd,_0x30804e(0x220),{'shot':!![]});}const _0x766ce9={'tag':TAG,'port':PORT,'proxy':PROXY_LINE,'phase':_0x50fe3a,'address':_0x37b852[_0x30804e(0x189)],'key':_0x4cd4df?mask(_0x4cd4df[_0x30804e(0x1c6)]):null,'live':_0x3027ee,'captcha':lastSolve,'timings':T,'at':new Date()['toISOString']()};fs[_0x30804e(0x22d)](path[_0x30804e(0xf3)](RUN_DIR,_0x30804e(0x1a0)),JSON[_0x30804e(0x206)](_0x766ce9,null,0x2)),log(_0x30804e(0x19e),'SUMMARY\x20'+JSON[_0x30804e(0x206)](_0x766ce9));}catch(_0x4da988){log(_0x30804e(0x20c),_0x4da988&&_0x4da988[_0x30804e(0xbd)]||String(_0x4da988)),ev({'t':_0x30804e(0x211),'err':String(_0x4da988&&_0x4da988[_0x30804e(0x16a)])});try{await snap(_0x214049,_0x3f92dd,_0x30804e(0x135));}catch{}process['exitCode']=0x1;}finally{try{_0x4a5707();}catch{}try{_0x214049[_0x30804e(0x197)]();}catch{}try{_0x22afa2[_0x30804e(0x221)][_0x30804e(0x10d)]();}catch{}try{_0x334eea[_0x30804e(0x10d)]();}catch{}if(_0x4b9897&&!KEEP){await sleep(0x5dc),killChrome(_0x4b9897);try{fs[_0x30804e(0x1fd)](_0x4b9897[_0x30804e(0x192)],{'recursive':!![],'force':!![],'maxRetries':0x2});}catch{}}else _0x4b9897&&log(_0x30804e(0x19e),_0x30804e(0x18f)+PORT+_0x30804e(0x180)+_0x4b9897['pid']+')');}process[_0x30804e(0x137)](process[_0x30804e(0x130)]||0x0);})());
+'use strict';
+/*
+ * io.net account runner — ONE account, end to end, in one process so the timing
+ * discipline holds: captcha solved first, e-mail submitted with a fresh token,
+ * OTP read from the mailbox and entered within its window, then one API key
+ * created and live-verified.
+ *
+ *   node src/run-account.js --tag a1 --port 9401 --proxy socks5://127.0.0.1:40000
+ *   node src/run-account.js --tag a1 --port 9401 --proxy socks5://127.0.0.1:40000 --attach   (resume: phase auto-detected)
+ *
+ * Phases: start (nav+auth modal) -> email (type+CAPTCHA solve+submit) -> otp (read+enter)
+ *         -> key (create via api.io.solutions REST with page accessToken, UI fallback) -> verify
+ *
+ * The CAPTCHA is solved interactively: every challenge round is written to
+ * outputs/<solve-dir>/ as round-N.png + state.json and the agent answers with
+ * clicks.json ({"tiles":[...],"verify":true} or {"refresh":true}).
+ */
+const fs = require('fs');
+const path = require('path');
+const os = require('os');
+const http = require('http');
+const https = require('https');
+const { execSync } = require('child_process');
+const B = require('./browser');
+const gs = require('./gsfetch');
+const { parseProxy, browserUrl, attachProxyAuth, fetchText, createAgent } = require('./proxy.js');
+
+const argv = process.argv.slice(2);
+const arg = (n, d) => {
+  const i = argv.indexOf('--' + n);
+  return i === -1 ? d : argv[i + 1];
+};
+const flag = (n) => argv.includes('--' + n);
+
+const ROOT = path.join(__dirname);
+const PORT = parseInt(arg('port', '9401'), 10);
+const TAG = arg('tag', 'a');
+const PROXY_LINE = arg('proxy', '');
+const BROKER = arg('broker', 'http://127.0.0.1:9700');
+const SOLVE_DIR = path.join(ROOT, 'outputs', arg('solve-dir', 'solve-' + TAG));
+const EMAIL_OVERRIDE = arg('email', '');
+const EMAIL_TOKEN = arg('email-token', '');
+const PHASE_OVERRIDE = arg('phase', 'auto'); // auto|start|email|otp|key
+const UNTIL = arg('until', 'key'); // auth|otp|key
+const ATTACH = flag('attach');
+const KEEP = flag('keep-chrome') || ATTACH;
+const SOLVE_BUDGET_MS = parseInt(arg('solve-budget-ms', '600000'), 10);
+const OTP_TIMEOUT_MS = parseInt(arg('otp-timeout-ms', '300000'), 10);
+const ROUND_WAIT_MS = parseInt(arg('round-wait-ms', '300000'), 10);
+const API_BASE = 'https://api.io.solutions/v1';
+const MODELS_BASE = 'https://api.intelligence.io.solutions/api/v1';
+const FRONTEND_VER = '1.150.0';
+const IMPL_URL = 'https://www.gstatic.com/recaptcha/releases/nY0xPItgwtlvjEjk2TqdwOQz/recaptcha__tr.js';
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const ts = () => new Date().toISOString().replace('T', ' ').slice(0, 19);
+const mask = (k) => (k ? k.slice(0, 5) + '…' + k.slice(-4) : null);
+
+let RUN_DIR = null;
+const T = {}; // phase timings
+function t0(k) { T[k] = T[k] || {}; T[k].start = Date.now(); }
+function t1(k) { if (T[k]) { T[k].ms = Date.now() - T[k].start; } }
+function initRunDir() {
+  const stamp = new Date().toISOString().replace(/[:.]/g, '-');
+  RUN_DIR = path.join(ROOT, 'outputs', `run-${TAG}-${stamp}`);
+  fs.mkdirSync(RUN_DIR, { recursive: true });
+  fs.mkdirSync(SOLVE_DIR, { recursive: true });
+}
+function log(stage, msg) {
+  const line = `${ts()} [${stage}] ${msg}`;
+  console.log(line);
+  if (RUN_DIR) { try { fs.appendFileSync(path.join(RUN_DIR, 'run.log'), line + '\n'); } catch {} }
+}
+function ev(obj) {
+  if (RUN_DIR) { try { fs.appendFileSync(path.join(RUN_DIR, 'events.jsonl'), JSON.stringify({ at: ts(), ...obj }) + '\n'); } catch {} }
+}
+
+// ---------- mailbox ----------
+async function brokerCreate() {
+  log('mail', 'broker /create (folder=ionet-bulk)…');
+  const text = await fetchText(null, `${BROKER}/create`, { method: 'POST', body: { folder: 'ionet-bulk' }, timeoutMs: 150000 });
+  const j = JSON.parse(text);
+  if (!j.address || !j.token) throw new Error('broker create odd reply: ' + String(text).slice(0, 150));
+  const box = { address: j.address, token: String(j.token), source: 'broker' };
+  fs.appendFileSync(path.join(ROOT, 'outputs', 'inboxes.jsonl'), JSON.stringify({ ...box, tag: TAG, at: new Date().toISOString() }) + '\n');
+  return box;
+}
+async function brokerList(token) {
+  const text = await fetchText(null, `${BROKER}/list?token=${encodeURIComponent(token)}`, { timeoutMs: 90000 });
+  const j = JSON.parse(text);
+  return Array.isArray(j) ? j : (j && (j.messages || j.data)) || [];
+}
+async function brokerRead(id, token) {
+  const text = await fetchText(null, `${BROKER}/read?id=${encodeURIComponent(id)}&token=${encodeURIComponent(token)}`, { timeoutMs: 90000 });
+  return JSON.parse(text);
+}
+const seenMail = new Set();
+async function waitForCode(box, { timeoutMs = 300000, tag = 'otp' } = {}) {
+  const deadline = Date.now() + timeoutMs;
+  while (Date.now() < deadline) {
+    let list = [];
+    try { list = await brokerList(box.token); } catch (e) { log(tag, `list error: ${e.message}`); }
+    for (const m of list) {
+      if (seenMail.has(m.id)) continue;
+      let full = m;
+      try { full = await brokerRead(m.id, box.token); } catch (e) { log(tag, `read error: ${e.message}`); }
+      const blob = [full.subject, full.text, full.html, full.body, JSON.stringify(full).slice(0, 4000)].filter(Boolean).join('\n');
+      fs.appendFileSync(path.join(RUN_DIR, 'mail.jsonl'), JSON.stringify({ at: ts(), id: m.id, subject: full.subject, from: full.from, blob: blob.slice(0, 6000) }) + '\n');
+      const code = (blob.match(/\b(\d{6})\b/) || [])[1] || (blob.match(/\b(\d{4,8})\b/) || [])[1];
+      if (code) {
+        seenMail.add(m.id);
+        log(tag, `mail id=${m.id} subj=${String(full.subject || '').slice(0, 70)} code=${code}`);
+        return { code, id: m.id, at: Date.now() };
+      }
+      seenMail.add(m.id);
+    }
+    await sleep(2000);
+  }
+  throw new Error(`otp-timeout after ${Math.round(timeoutMs / 1000)}s`);
+}
+
+// ---------- net/console logging ----------
+function makeNetLogger(cdp, sessionId, dir) {
+  const netFile = fs.createWriteStream(path.join(dir, 'net.jsonl'), { flags: 'a' });
+  const net = { file: netFile, lines: [] };
+  const interesting = (u) => /io\.solutions|io\.net|recaptcha|gstatic|google\.com\/recaptcha|grecaptcha/i.test(u);
+  const bodyWorthy = (u, status) => interesting(u) && (status >= 400 || /passwordless|otp|login|captcha|api-keys|keys|verify|magic|workos|send|code|user/i.test(u));
+  const push = (rec) => { const l = JSON.stringify(rec); netFile.write(l + '\n'); net.lines.push(rec); if (net.lines.length > 4000) net.lines.splice(0, 1000); };
+  const reqs = new Map();
+  cdp.on('Network.requestWillBeSent', (p) => {
+    if (!p.request.url || p.request.url.startsWith('data:')) return;
+    const rec = { t: 'req', id: p.requestId, m: p.request.method, url: p.request.url.slice(0, 500), at: ts() };
+    if (p.request.postData) rec.post = p.request.postData.slice(0, 3000);
+    reqs.set(p.requestId, rec);
+    if (interesting(p.request.url)) push(rec);
+  }, sessionId);
+  cdp.on('Network.responseReceived', (p) => {
+    if (!p.response || !p.response.url) return;
+    if (interesting(p.response.url)) {
+      push({ t: 'res', id: p.requestId, status: p.response.status, mime: p.response.mimeType, url: p.response.url.slice(0, 500), at: ts() });
+    }
+    if (bodyWorthy(p.response.url, p.response.status)) {
+      cdp.send('Network.getResponseBody', { requestId: p.requestId }, sessionId).then((r) => {
+        push({ t: 'body', status: p.response.status, url: p.response.url.slice(0, 300), body: String(r.body || '').slice(0, 8000), at: ts() });
+      }).catch(() => {});
+    }
+  }, sessionId);
+  cdp.on('Network.loadingFailed', (p) => {
+    const rec = reqs.get(p.requestId);
+    if (rec) push({ t: 'fail', id: p.requestId, err: p.errorText, url: rec.url, at: ts() });
+  }, sessionId);
+  return net;
+}
+function makeConsoleLogger(cdp, sessionId, dir) {
+  const file = fs.createWriteStream(path.join(dir, 'console.jsonl'), { flags: 'a' });
+  cdp.on('Runtime.consoleAPICalled', (p) => {
+    try {
+      const args = (p.args || []).map((a) => (a.value !== undefined ? a.value : a.description || a.type)).join(' ');
+      file.write(JSON.stringify({ t: 'console', level: p.type, text: String(args).slice(0, 1000) }) + '\n');
+    } catch {}
+  }, sessionId);
+  cdp.on('Runtime.exceptionThrown', (p) => {
+    const d = p.exceptionDetails || {};
+    file.write(JSON.stringify({ t: 'exception', text: String(d.text || '') + ' ' + String((d.exception && d.exception.description) || '').slice(0, 600) }) + '\n');
+  }, sessionId);
+  return file;
+}
+
+// ---------- DOM helpers (proven in pilot.js) ----------
+const DOM_SNAP = `(() => {
+  const q = (s) => [...document.querySelectorAll(s)];
+  const rect = (e) => { const r = e.getBoundingClientRect(); return {x:Math.round(r.x), y:Math.round(r.y), w:Math.round(r.width), h:Math.round(r.height)}; };
+  const vis = (e) => { const r = e.getBoundingClientRect(); const st = getComputedStyle(e); return st.display!=='none' && st.visibility!=='hidden' && st.opacity!=='0' && r.width>2 && r.height>2; };
+  return {
+    url: location.href, title: document.title, ready: document.readyState,
+    inputs: q('input').filter(vis).slice(0,30).map(i=>({type:i.type,name:i.name,id:i.id,ph:(i.placeholder||'').slice(0,50),ml:i.maxLength,val:(i.type==='password'?'*'.repeat(6):String(i.value||'').slice(0,40)),rect:rect(i)})),
+    buttons: q('button, a, [role=button], input[type=submit], input[type=button]').filter(vis).slice(0,90).map(e=>({tag:e.tagName,text:((e.innerText||e.value||e.getAttribute('aria-label')||'').trim()).slice(0,70),disabled:!!e.disabled||e.getAttribute('aria-disabled')==='true',href:(e.getAttribute&&e.getAttribute('href')||'').slice(0,80),rect:rect(e)})),
+    iframes: q('iframe').filter(vis).map(f=>({src:(f.src||'').slice(0,180),t:f.title||'',rect:rect(f)})),
+    grecaptcha: { fn: typeof window.grecaptcha, render: typeof (window.grecaptcha && window.grecaptcha.render), cfgClients: window.___grecaptcha_cfg ? Object.keys(window.___grecaptcha_cfg.clients||{}).length : null },
+    recaptchaResp: (()=>{ const t=q('textarea[name="g-recaptcha-response"], #g-recaptcha-response')[0]; return t? {len:(t.value||'').length}:null })(),
+    cookieToken: (()=>{ try{ for(const c of document.cookie.split(/;\\s*/)){ const m=c.match(/^(ionet_authentication[^=]*)=(.*)$/); if(m){ const j=JSON.parse(decodeURIComponent(m[2])); const v=j&&(j.state||j); const t2=v&&(v.token||v.accessToken); if(t2) return String(t2).length; } } }catch(e){} return 0; })(),
+    bodyText: (document.body?document.body.innerText:'').slice(0,1800)
+  };
+})()`;
+async function snap(cdp, sessionId, tag, { shot = true } = {}) {
+  const dom = await B.evalJs(cdp, sessionId, DOM_SNAP).catch((e) => ({ err: e.message }));
+  ev({ t: 'snap', tag, dom: { url: dom.url, title: dom.title, inputs: dom.inputs, buttons: dom.buttons && dom.buttons.slice(0, 40), cookieToken: dom.cookieToken, bodyTail: String(dom.bodyText || '').slice(-400) } });
+  if (shot) { try { await B.screenshot(cdp, sessionId, path.join(RUN_DIR, `shot-${tag}.png`)); } catch (e) { ev({ t: 'shot-err', tag, err: e.message }); } }
+  log('dom', `${tag}: url=${(dom.url || '').slice(0, 110)} inputs=${dom.inputs ? dom.inputs.length : '?'} btns=${dom.buttons ? dom.buttons.length : '?'} iframes=${dom.iframes ? dom.iframes.length : '?'} gresp=${dom.recaptchaResp ? dom.recaptchaResp.len : '-'} cookieTok=${dom.cookieToken}`);
+  if (dom.bodyText) log('dom', `  text: ${String(dom.bodyText).replace(/\s+/g, ' ').slice(0, 260)}`);
+  return dom;
+}
+async function clickRect(cdp, sessionId, r, tag) {
+  const x = r.x + Math.max(2, Math.min(r.w - 2, r.w / 2));
+  const y = r.y + Math.max(2, Math.min(r.h - 2, r.h / 2));
+  log('click', `${tag} at ${Math.round(x)},${Math.round(y)}`);
+  await B.clickAt(cdp, sessionId, x, y);
+}
+async function findClickable(cdp, sessionId, regexSource, { tag = null, exclude = null, scroll = true } = {}) {
+  const expr = `(() => {
+    const re = new RegExp(${JSON.stringify(regexSource)}, 'i');
+    const rx = ${exclude ? `new RegExp(${JSON.stringify(exclude)}, 'i')` : 'null'};
+    const q = (s) => [...document.querySelectorAll(s)];
+    const vis = (e) => { const r = e.getBoundingClientRect(); const st = getComputedStyle(e); return st.display!=='none' && st.visibility!=='hidden' && r.width>2 && r.height>2; };
+    const els = q('button, a, [role=button], input[type=submit], input[type=button], div[role=button]');
+    for (const e of els) {
+      if (!vis(e)) continue;
+      if (${tag ? `e.tagName !== ${JSON.stringify(tag.toUpperCase())}` : 'false'}) continue;
+      const t = ((e.innerText || e.value || e.getAttribute('aria-label') || '')).trim();
+      if (rx && rx.test(t)) continue;
+      if (re.test(t)) { ${scroll ? "e.scrollIntoView({block:'center'});" : ''} const r = e.getBoundingClientRect(); return { text: t.slice(0, 80), tag: e.tagName, disabled: !!e.disabled, rect: {x:r.x, y:r.y, w:r.width, h:r.height} }; }
+    }
+    return null;
+  })()`;
+  return B.evalJs(cdp, sessionId, expr).catch(() => null);
+}
+async function setInput(cdp, sessionId, selectorExpr, value, tag) {
+  const rect = await B.evalJs(cdp, sessionId, `(() => { const e = (${selectorExpr}); if (!e) return null; e.scrollIntoView({block:'center'}); e.focus(); e.select && e.select(); const r = e.getBoundingClientRect(); return {x:r.x,y:r.y,w:r.width,h:r.height}; })()`).catch(() => null);
+  if (!rect) { log('type', `${tag}: selector matched nothing`); return false; }
+  await B.clickAt(cdp, sessionId, rect.x + Math.min(rect.w / 2, 120), rect.y + rect.h / 2);
+  await sleep(150);
+  await B.evalJs(cdp, sessionId, `(() => { const e = (${selectorExpr}); e.focus(); e.select && e.select(); return true; })()`).catch(() => {});
+  await cdp.send('Input.insertText', { text: value }, sessionId);
+  await sleep(180);
+  const got = await B.evalJs(cdp, sessionId, `(() => { const e = (${selectorExpr}); return e ? String(e.value||'') : null; })()`).catch(() => null);
+  log('type', `${tag}: set "${value.length > 30 ? value.slice(0, 26) + '…' : value}" -> field="${got}"`);
+  return got !== null && got !== '';
+}
+const EMAIL_SELECTOR = `[...document.querySelectorAll('input')].filter(i => { const r=i.getBoundingClientRect(); const st=getComputedStyle(i); return st.display!=='none' && r.width>2; }).find(i => (i.type==='email') || /e-?mail/i.test(i.name+i.id+i.placeholder+i.autocomplete)) || [...document.querySelectorAll('input[type=text]')].filter(i=>{const r=i.getBoundingClientRect();return r.width>2})[0] || null`;
+const CODE_SELECTOR = `document.querySelector('input[name="code"]') || [...document.querySelectorAll('input')].find(i=>i.maxLength===6||i.maxLength===1) || null`;
+async function pressEnter(cdp, sessionId) {
+  for (const type of ['keyDown', 'char', 'keyUp']) {
+    await cdp.send('Input.dispatchKeyEvent', { type, key: 'Enter', code: 'Enter', windowsVirtualKeyCode: 13, nativeVirtualKeyCode: 13, text: type === 'char' ? '\r' : undefined }, sessionId);
+    await sleep(40);
+  }
+}
+async function captchaState(cdp, sessionId) {
+  return B.evalJs(cdp, sessionId, `(() => {
+    const q = (s) => [...document.querySelectorAll(s)];
+    const vis = (e) => { const r=e.getBoundingClientRect(); const st=getComputedStyle(e); return st.display!=='none' && st.visibility!=='hidden' && r.width>2 && r.height>2; };
+    const anchor = q('iframe[src*="recaptcha/api2/anchor"], iframe[src*="recaptcha/enterprise/anchor"]').filter(vis)[0];
+    const bframe = q('iframe[src*="recaptcha/api2/bframe"], iframe[src*="recaptcha/enterprise/bframe"]').filter(vis)[0];
+    const ta = q('textarea[name="g-recaptcha-response"], #g-recaptcha-response')[0];
+    const r = anchor ? anchor.getBoundingClientRect() : null;
+    return { anchorRect: r ? {x:r.x,y:r.y,w:r.width,h:r.height} : null, bframe: !!bframe, tokenLen: ta ? (ta.value||'').length : null, grecaptcha: typeof window.grecaptcha };
+  })()`).catch((e) => ({ err: e.message }));
+}
+async function hasCodeInput(cdp, sessionId) {
+  return B.evalJs(cdp, sessionId, `!!(${CODE_SELECTOR})`).catch(() => false);
+}
+
+// ---------- net cursor helpers ----------
+function netScan(net, fromIdx, pred) {
+  const out = [];
+  for (let i = fromIdx; i < net.lines.length; i++) { const l = net.lines[i]; if (pred(l)) out.push({ i, ...l }); }
+  return out;
+}
+
+// ---------- interactive CAPTCHA solve loop (ports solve.js semantics) ----------
+async function solveLoop(cdp, hostSession, hostTokenFn, { budgetMs = SOLVE_BUDGET_MS, net = null } = {}) {
+  const DONE = path.join(SOLVE_DIR, 'DONE');
+  const FAILED = path.join(SOLVE_DIR, 'FAILED');
+  const STATE = path.join(SOLVE_DIR, 'state.json');
+  const CLICKS = path.join(SOLVE_DIR, 'clicks.json');
+  for (const f of [DONE, FAILED, CLICKS, STATE]) { try { fs.unlinkSync(f); } catch {} }
+  const listTargets = async () => (await cdp.send('Target.getTargets')).targetInfos;
+  const attach = async (targetId) => {
+    const { sessionId } = await cdp.send('Target.attachToTarget', { targetId, flatten: true });
+    await cdp.send('Runtime.enable', {}, sessionId);
+    return sessionId;
+  };
+  const evalIn = async (sessionId, expr) => {
+    const r = await cdp.send('Runtime.evaluate', { expression: expr, returnByValue: true }, sessionId);
+    if (r.exceptionDetails) throw new Error('evalIn: ' + r.exceptionDetails.text);
+    return r.result && r.result.value;
+  };
+  const clickIn = async (sessionId, x, y) => {
+    await cdp.send('Input.dispatchMouseEvent', { type: 'mouseMoved', x, y }, sessionId);
+    await sleep(70);
+    await cdp.send('Input.dispatchMouseEvent', { type: 'mousePressed', x, y, button: 'left', clickCount: 1 }, sessionId);
+    await sleep(50);
+    await cdp.send('Input.dispatchMouseEvent', { type: 'mouseReleased', x, y, button: 'left', clickCount: 1 }, sessionId);
+  };
+  const v2Frame = (t) => t.type === 'iframe' && /6Ld3OMEs/.test(t.url || '');
+  const clickAnchor = async () => {
+    const an = (await listTargets()).find((t) => v2Frame(t) && /anchor/.test(t.url));
+    if (!an) { log('captcha', 'no anchor target to click'); return false; }
+    const sid = await attach(an.targetId);
+    const rect = await evalIn(sid, `(() => { const cb=document.querySelector('.recaptcha-checkbox'); if(!cb) return null; const r=cb.getBoundingClientRect(); return {x:r.x+r.width/2,y:r.y+r.height/2,cls:String(cb.className).slice(0,60)}; })()`);
+    if (!rect) { log('captcha', 'anchor has no checkbox element'); return false; }
+    log('captcha', `anchor click at ${Math.round(rect.x)},${Math.round(rect.y)} (${rect.cls})`);
+    await clickIn(sid, rect.x, rect.y);
+    return true;
+  };
+  const dumpChallenge = async (bfTarget) => {
+    const sid = await attach(bfTarget.targetId);
+    const d = await evalIn(sid, `(() => {
+      const instr=(document.querySelector('.rc-imageselect-desc-wrapper, .rc-imageselect-desc-no-canonical, .rc-imageselect-desc')||{}).innerText||null;
+      const errEl=document.querySelector('.rc-imageselect-error-select-more, .rc-imageselect-error');
+      const err=errEl? errEl.innerText : null;
+      const tiles=[...document.querySelectorAll('.rc-imageselect-tile')].map(t=>{const r=t.getBoundingClientRect();return {x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height),sel:/selected/.test(t.className||'')};}).filter(t=>t.x <= (document.documentElement.clientWidth - 4) && t.w > 10 && t.h > 10);
+      const vb=document.querySelector('#recaptcha-verify-button');
+      const vbr=vb? vb.getBoundingClientRect():null;
+      let sb=document.querySelector('#recaptcha-skip-button, .rc-imageselect-skip-button, button.rc-button-skip, #recaptcha-skip');
+      if(!sb){ sb=[...document.querySelectorAll('button, div[role=button], a')].find(b=>/^(Atla|Skip)$/i.test((b.innerText||'').trim())); }
+      const sbr=sb? sb.getBoundingClientRect():null;
+      const big=[...document.querySelectorAll('img')].sort((a,b)=>b.naturalWidth-a.naturalWidth)[0];
+      let data=null;
+      try{ if(big){const c=document.createElement('canvas');c.width=big.naturalWidth;c.height=big.naturalHeight;c.getContext('2d').drawImage(big,0,0);data=c.toDataURL('image/png');} }catch(e){data=null}
+      return {instr, err, tiles, verify: vbr? {x:Math.round(vbr.x+vbr.width/2), y:Math.round(vbr.y+vbr.height/2), disabled: !!(vb.disabled || /disabled/.test(vb.className||''))}:null, skip: sbr? {x:Math.round(sbr.x+sbr.width/2), y:Math.round(sbr.y+sbr.height/2)}:null, img: data, imgW: big?big.naturalWidth:0, imgH: big?big.naturalHeight:0};
+    })()`);
+    return { sid, d };
+  };
+
+  let round = 0, lastKey = null, stale = 0, emptyRounds = 0, brickStrikes = 0, verifyMisses = 0;
+  const started = Date.now();
+  for (let attempt = 0; attempt < 40; attempt++) {
+    if (Date.now() - started > budgetMs) { fs.writeFileSync(FAILED, 'budget exceeded'); break; }
+    try {
+      const tok = await hostTokenFn();
+      if (tok > 20) { fs.writeFileSync(DONE, JSON.stringify({ tokenLen: tok, at: new Date().toISOString() })); log('captcha', `TOKEN acquired len=${tok} after ${round} round(s), ${Math.round((Date.now() - started) / 1000)}s`); return { rounds: round, ms: Date.now() - started, tokenLen: tok }; }
+
+      let bfs = (await listTargets()).filter((t) => v2Frame(t) && /bframe/.test(t.url));
+      if (!bfs.length) {
+        log('captcha', 'no bframe — clicking the anchor checkbox');
+        await clickAnchor(); await sleep(4000); continue;
+      }
+      const bf = bfs[bfs.length - 1];
+      const { sid, d } = await dumpChallenge(bf);
+      if (!d || !d.tiles || !d.tiles.length) {
+        emptyRounds++;
+        log('captcha', `bframe without visible tiles (strike ${emptyRounds}) — re-clicking anchor`);
+        if (emptyRounds >= 6) { log('captcha', 'challenge appears closed (no visible tiles x6) — failing attempt early'); fs.writeFileSync(FAILED, 'challenge closed'); break; }
+        await clickAnchor(); await sleep(4000); continue;
+      }
+      emptyRounds = 0;
+      if (!d.img || String(d.img).length < 8000 || d.imgW < 100) { log('captcha', 'challenge image not loaded yet — re-dumping shortly'); await sleep(2500); continue; }
+      // Tiles and the verify/skip buttons animate into place; rects read
+      // mid-animation send clicks to wrong coordinates (measured: verify
+      // drifts ~31 px). Re-read everything once settled.
+      await sleep(2000);
+      try {
+        const settled = await evalIn(sid, `(() => {
+          const tiles=[...document.querySelectorAll('.rc-imageselect-tile')].map(t=>{const r=t.getBoundingClientRect();return {x:Math.round(r.x),y:Math.round(r.y),w:Math.round(r.width),h:Math.round(r.height),sel:/selected/.test(t.className||'')};}).filter(t=>t.x <= (document.documentElement.clientWidth - 4) && t.w > 10 && t.h > 10);
+          const vb=document.querySelector('#recaptcha-verify-button'); const vbr=vb? vb.getBoundingClientRect():null;
+          let sb=document.querySelector('#recaptcha-skip-button, .rc-imageselect-skip-button, button.rc-button-skip, #recaptcha-skip');
+          if(!sb){ sb=[...document.querySelectorAll('button, div[role=button], a')].find(b=>/^(Atla|Skip)$/i.test((b.innerText||'').trim())); }
+          const sbr=sb? sb.getBoundingClientRect():null;
+          return { tiles, verify: vbr? {x:Math.round(vbr.x+vbr.width/2), y:Math.round(vbr.y+vbr.height/2), disabled: !!(vb.disabled || /disabled/.test(vb.className||''))}:null, skip: sbr? {x:Math.round(sbr.x+sbr.width/2), y:Math.round(sbr.y+sbr.height/2)}:null };
+        })()`);
+        if (settled) {
+          if (settled.tiles && settled.tiles.length) d.tiles = settled.tiles;
+          if (settled.verify) d.verify = settled.verify;
+          if (settled.skip) d.skip = settled.skip;
+        }
+      } catch {}
+      const key = `${d.instr}|${d.imgW}x${d.imgH}|${d.tiles.length}|${d.tiles[0].x},${d.tiles[0].y}|${(d.img || '').length}`;
+      const disabledWithSel = !!(d.verify && d.verify.disabled && (d.tiles || []).some((t) => t.sel));
+      if (disabledWithSel && key === lastKey) {
+        brickStrikes++;
+        log('captcha', `verify button disabled despite selections on an UNCHANGED round (strike ${brickStrikes})`);
+        if (brickStrikes >= 3) { log('captcha', 'disabled widget persisted through wait+refresh — failing attempt early'); fs.writeFileSync(FAILED, 'bricked challenge'); break; }
+        if (brickStrikes === 1) {
+          log('captcha', 'grace wait 60 s for the hidden preload to finish (measured need 20-60 s on slow exits)');
+          await sleep(60000);
+          continue;
+        }
+        log('captcha', 'refresh-first after grace wait (measured recovery path)');
+        lastKey = null; stale = 0;
+        await clickAnchor(); await sleep(15000); continue;
+      }
+      if (!disabledWithSel) brickStrikes = 0;
+      if (key === lastKey) { stale++; if (stale >= 2) { log('captcha', 'challenge unchanged twice — grace recheck before refreshing'); await sleep(6000); const tg = await hostTokenFn(); if (tg > 20) { fs.writeFileSync(DONE, JSON.stringify({ tokenLen: tg, at: new Date().toISOString() })); log('captcha', `TOKEN acquired len=${tg} on the grace recheck`); return { rounds: round, ms: Date.now() - started, tokenLen: tg }; } lastKey = null; stale = 0; await clickAnchor(); await sleep(4000); continue; } } else { stale = 0; lastKey = key; }
+
+      round++;
+      const shot = path.join(SOLVE_DIR, `round-${round}.png`);
+      if (d.img && d.img.startsWith('data:')) fs.writeFileSync(shot, Buffer.from(d.img.split(',')[1], 'base64'));
+      const cols = [...new Set(d.tiles.map((t) => t.x))].length || 3;
+      fs.writeFileSync(STATE, JSON.stringify({ round, at: new Date().toISOString(), instruction: d.instr, error: d.err, imgW: d.imgW, imgH: d.imgH, shot: path.basename(shot), cols, tiles: d.tiles.map((t, i) => ({ i, r: Math.floor(i / cols), c: i % cols, x: t.x, y: t.y, w: t.w, h: t.h, sel: t.sel })), verify: d.verify, skip: d.skip }, null, 1));
+      log('captcha', `ROUND ${round}: "${String(d.instr || '').split('\n')[0]}" cols=${cols} tiles=${d.tiles.length} err=${JSON.stringify(d.err)} -> ${path.basename(shot)}; waiting for clicks.json (<=${Math.round(ROUND_WAIT_MS / 1000)}s)`);
+
+      try { fs.unlinkSync(CLICKS); } catch {}
+      let clicks = null;
+      const waitStart = Date.now();
+      while (Date.now() - waitStart < ROUND_WAIT_MS) {
+        await sleep(2000);
+        if (fs.existsSync(CLICKS)) { try { clicks = JSON.parse(fs.readFileSync(CLICKS, 'utf8')); } catch { clicks = null; } if (clicks) break; }
+      }
+      if (!clicks) { log('captcha', 'no answer in time; refreshing challenge'); await clickAnchor(); await sleep(4000); continue; }
+      if (clicks.refresh) { log('captcha', 'agent asked for refresh'); await clickAnchor(); await sleep(4000); continue; }
+      if (clicks.abort) { log('captcha', 'agent asked to abort this attempt (hostile exit)'); fs.writeFileSync(FAILED, 'agent abort'); break; }
+      if (clicks.skip && d.skip) {
+        for (const idx of clicks.tiles || []) {
+          const t = d.tiles[idx];
+          if (!t) continue;
+          log('captcha', `  pre-skip toggle tile ${idx}`);
+          await clickIn(sid, t.x + t.w / 2, t.y + t.h / 2);
+          await sleep(320);
+        }
+        if (d.tiles.some((t) => t.sel) && !(clicks.tiles || []).length) log('captcha', 'WARN: skip with non-empty selection — button may read DOĞRULA');
+        await sleep(clicks.tiles && clicks.tiles.length ? 600 : 0);
+        log('captcha', `  skip @ ${d.skip.x},${d.skip.y}`);
+        await clickIn(sid, d.skip.x, d.skip.y);
+      } else {
+        for (const idx of clicks.tiles || []) {
+          const t = d.tiles[idx];
+          if (!t) continue;
+          log('captcha', `  click tile ${idx} @ ${t.x + Math.round(t.w / 2)},${t.y + Math.round(t.h / 2)}`);
+          await clickIn(sid, t.x + t.w / 2, t.y + t.h / 2);
+          await sleep(650);
+        }
+        if (clicks.verify !== false && d.verify) {
+          let vx = d.verify.x, vy = d.verify.y;
+          try {
+            const cur = await evalIn(sid, `(() => { const vb=document.querySelector('#recaptcha-verify-button'); if(!vb) return null; const r=vb.getBoundingClientRect(); return {x:Math.round(r.x+r.width/2), y:Math.round(r.y+r.height/2)}; })()`);
+            if (cur) { vx = cur.x; vy = cur.y; }
+          } catch {}
+          await sleep(200);
+          await clickIn(sid, vx, vy); log('captcha', `  verify @ ${vx},${vy}`);
+          await sleep(3000); // post-verify mint can lag on slow exits
+        }
+      }
+      await sleep(3200);
+      const tok2 = await hostTokenFn();
+      log('captcha', `  after round ${round}: tokenLen=${tok2}`);
+      if (tok2 > 20) { fs.writeFileSync(DONE, JSON.stringify({ tokenLen: tok2, at: new Date().toISOString() })); log('captcha', `TOKEN acquired len=${tok2} after ${round} round(s), ${Math.round((Date.now() - started) / 1000)}s`); return { rounds: round, ms: Date.now() - started, tokenLen: tok2 }; }
+    } catch (e) {
+      log('captcha', 'round error: ' + e.message);
+      await sleep(2000);
+    }
+  }
+  if (!fs.existsSync(FAILED)) fs.writeFileSync(FAILED, 'loop ended without token');
+  throw new Error('captcha solve failed (budget/loop end)');
+}
+
+// ---------- phase: auth surface + email ----------
+async function authSurface(cdp, sessionId) {
+  log('nav', 'goto https://id.io.net/login');
+  await cdp.send('Page.navigate', { url: 'https://id.io.net/login' }, sessionId);
+  await B.waitLoad(cdp, sessionId, 60000);
+  for (const w of [4000, 4000, 5000, 6000, 8000, 8000]) {
+    await sleep(w);
+    const ready = await B.evalJs(cdp, sessionId, `({ready:document.readyState, root:(document.getElementById('root')||document.getElementById('app')||{}).childElementCount||0, inputs:document.querySelectorAll('input').length, url:location.href, title:document.title})`).catch((e) => ({ err: e.message }));
+    log('nav', `probe ${JSON.stringify(ready)}`);
+    if (ready && ready.root > 0 && (ready.inputs > 0 || ready.ready !== 'loading')) break;
+  }
+  await snap(cdp, sessionId, '01-landing');
+
+  const recState = await B.evalJs(cdp, sessionId, `({ render: typeof (window.grecaptcha && window.grecaptcha.render) })`).catch(() => ({}));
+  log('captcha', `initial grecaptcha ${JSON.stringify(recState)}`);
+  if (!recState || recState.render !== 'function') {
+    log('captcha', 'injecting explicit api.js loader');
+    await B.evalJs(cdp, sessionId, `(() => { if (document.getElementById('ionet-recaptcha-inject')) return 'already'; const s=document.createElement('script'); s.id='ionet-recaptcha-inject'; s.src='https://www.google.com/recaptcha/api.js?onload=onloadcallback&render=explicit'; s.async=true; s.defer=true; document.head.appendChild(s); return 'injected'; })()`).catch(() => {});
+  }
+  for (let i = 0; i < 12; i++) {
+    const now = await B.evalJs(cdp, sessionId, `({ render: typeof (window.grecaptcha && window.grecaptcha.render), clients: window.___grecaptcha_cfg ? Object.keys(window.___grecaptcha_cfg.clients||{}).length : null })`).catch(() => ({}));
+    if (i === 0 || i === 5 || i === 11) log('captcha', `wait-impl ${i}: ${JSON.stringify(now)}`);
+    if (now && now.render === 'function') break;
+    await sleep(2500);
+  }
+
+  const hasProviderList = async () => {
+    const t = await B.evalJs(cdp, sessionId, `(document.body?document.body.innerText:'')`).catch(() => '');
+    return /with email|log into your account|sign up|log ?in/i.test(t) && /google/i.test(t);
+  };
+  if (!(await hasProviderList())) {
+    const c = await findClickable(cdp, sessionId, '^log ?in$|^sign ?in$|^sign ?up$|log ?in|sign ?in');
+    if (c) { await clickRect(cdp, sessionId, c.rect, `open-auth("${c.text}")`); await sleep(2500); }
+  }
+  await snap(cdp, sessionId, '02-login-surface');
+  const toSignup = await findClickable(cdp, sessionId, '^sign ?up$', { tag: 'a' });
+  if (toSignup) { await clickRect(cdp, sessionId, toSignup.rect, `to-signup("${toSignup.text}")`); await sleep(2000); await snap(cdp, sessionId, '02b-signup-variant'); }
+  else log('flow', 'no in-modal Sign Up link; continuing with login variant');
+  const emailOpt = (await findClickable(cdp, sessionId, 'sign ?up with email|log ?in with email')) || (await findClickable(cdp, sessionId, 'with email')) || (await findClickable(cdp, sessionId, 'e-?mail|otp|magic'));
+  if (emailOpt) { await clickRect(cdp, sessionId, emailOpt.rect, `email-option("${emailOpt.text}")`); await sleep(2200); }
+  else log('flow', 'no explicit e-mail option; assuming a direct email field');
+  await snap(cdp, sessionId, '03-after-email-option');
+}
+
+async function emailPhase(cdp, sessionId, net, box) {
+  t0('email');
+  const typed = await setInput(cdp, sessionId, EMAIL_SELECTOR, box.address, 'email');
+  if (!typed) { await snap(cdp, sessionId, '03b-no-email-field'); throw new Error('email field not found'); }
+  await sleep(400); await snap(cdp, sessionId, '04-email-typed');
+
+  // CAPTCHA pre-pass: solve BEFORE submitting so the token is fresh at submit.
+  let capPre = null;
+  for (let i = 0; i < 6; i++) {
+    capPre = await captchaState(cdp, sessionId);
+    log('captcha', `pre-pass ${i}: ${JSON.stringify(capPre)}`);
+    if (capPre.anchorRect) break;
+    await sleep(2000);
+  }
+  t0('captcha');
+  let cap = { rounds: 0, ms: 0, tokenLen: 0 };
+  if (capPre && capPre.tokenLen > 20) {
+    log('captcha', `token already fresh (${capPre.tokenLen}) — skipping solve`);
+  } else if (capPre && capPre.anchorRect) {
+    await clickAnchorAndSolve(cdp, sessionId, net);
+    cap = lastSolve;
+  } else {
+    const tok = await hostTokenLen(cdp, sessionId);
+    if (tok > 20) { log('captcha', `token already present (${tok})`); }
+    else log('captcha', 'WARNING: no v2 anchor found on email step');
+  }
+  t1('captcha');
+  await snap(cdp, sessionId, '04c-captcha-done');
+  if (UNTIL === 'auth') { log('run', '--until auth: stopping after captcha'); return 'stop'; }
+
+  // Submit; retry once if the backend rejects a stale token.
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const cursor = net.lines.length;
+    const NAV_EXCL = '^(login|sign ?up|docs|dashboard|cloud|docs)$';
+    const btn = (await findClickable(cdp, sessionId, '^continue$', { exclude: NAV_EXCL })) || (await findClickable(cdp, sessionId, 'continue|send|get code|receive|next|submit', { exclude: NAV_EXCL }));
+    if (btn && !btn.disabled) await clickRect(cdp, sessionId, btn.rect, `submit("${btn.text}")`);
+    else { log('flow', btn ? `submit "${btn.text}" disabled — pressing Enter` : 'no submit button; pressing Enter'); await B.evalJs(cdp, sessionId, `(() => { const e=(${EMAIL_SELECTOR}); e && e.focus(); return true; })()`); await pressEnter(cdp, sessionId); }
+    let outcome = null;
+    for (let i = 0; i < 12; i++) {
+      await sleep(4000);
+      if (await hasCodeInput(cdp, sessionId)) { outcome = 'otp'; break; }
+      const starts = netScan(net, cursor, (l) => l.t === 'body' && /magic-auth\/start/.test(l.url || ''));
+      const lastStart = starts.length ? starts[starts.length - 1] : null;
+      if (lastStart) {
+        log('flow', `sendCode -> ${lastStart.status} ${String(lastStart.body).slice(0, 160)}`);
+        if (lastStart.status >= 400) {
+          const b = String(lastStart.body || '');
+          if (/captcha|blocked|verify/i.test(b) && /captcha/i.test(b)) { outcome = 'captcha-stale'; break; }
+          if (/too many|rate|limit/i.test(b)) throw new Error('sendCode rate-limited: ' + b.slice(0, 160));
+          throw new Error('sendCode failed: ' + b.slice(0, 160));
+        }
+      }
+      const txt = await B.evalJs(cdp, sessionId, `(document.body?document.body.innerText:'')`).catch(() => '');
+      if (/enter (the )?code|otp sent|verification code|check your (inbox|email)|code (was )?sent/i.test(txt)) { outcome = 'otp'; break; }
+    }
+    if (outcome === 'otp') {
+      await snap(cdp, sessionId, '05-otp-screen'); t1('email');
+      if (UNTIL === 'start') {
+        fs.writeFileSync(path.join(RUN_DIR, 'handoff.json'), JSON.stringify({ tag: TAG, email: box.address, boxToken: box.token, source: box.source, at: new Date().toISOString() }, null, 1));
+        log('run', `--until start: handoff written (${box.address}) — closing Chrome`);
+        return 'stop';
+      }
+      return 'otp';
+    }
+    if (outcome === 'captcha-stale' && attempt === 0) {
+      log('flow', 'stale captcha at sendCode — re-solving');
+      await clickAnchorAndSolve(cdp, sessionId, net);
+      continue;
+    }
+    throw new Error('email submit did not reach OTP screen (outcome=' + outcome + ')');
+  }
+  throw new Error('email submit failed after retries');
+}
+
+let lastSolve = { rounds: 0, ms: 0, tokenLen: 0 };
+async function hostTokenLen(cdp, sessionId) {
+  return B.evalJs(cdp, sessionId, `(() => { const t=document.querySelector('textarea[name="g-recaptcha-response"], #g-recaptcha-response'); return t? (t.value||'').length : 0; })()`).catch(() => 0);
+}
+async function clickAnchorAndSolve(cdp, sessionId, net) {
+  const cap0 = await captchaState(cdp, sessionId);
+  if (cap0.anchorRect && !cap0.bframe) {
+    const r = cap0.anchorRect;
+    await B.clickAt(cdp, sessionId, r.x + Math.min(30, r.w / 2), r.y + Math.min(34, r.h - 4));
+    log('captcha', `checkbox clicked @ ${Math.round(r.x + 30)},${Math.round(r.y + 34)}`);
+    await sleep(4500);
+  }
+  const st = await captchaState(cdp, sessionId);
+  log('captcha', `post-checkbox: ${JSON.stringify(st)}`);
+  lastSolve = await solveLoop(cdp, sessionId, () => hostTokenLen(cdp, sessionId), { net });
+  ev({ t: 'solve', ...lastSolve });
+  return lastSolve;
+}
+
+// ---------- phase: OTP ----------
+async function otpPhase(cdp, sessionId, net, box) {
+  t0('otp');
+  for (let i = 0; i < 30; i++) { if (await hasCodeInput(cdp, sessionId)) break; await sleep(3000); }
+  if (!(await hasCodeInput(cdp, sessionId))) throw new Error('OTP input never appeared');
+  const cursor = net.lines.length;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const mailT0 = Date.now();
+    const mail = await waitForCode(box, { timeoutMs: attempt === 0 ? OTP_TIMEOUT_MS : 150000 });
+    log('otp', `code=${mail.code} latency=${Math.round((mail.at - mailT0) / 1000)}s (attempt ${attempt + 1})`);
+    t0('otpCode');
+    const ok = await setInput(cdp, sessionId, CODE_SELECTOR, mail.code, 'otp-code');
+    if (!ok) throw new Error('otp input not found');
+    await snap(cdp, sessionId, `06-code-typed-${attempt}`, { shot: attempt === 0 });
+    const btn = (await findClickable(cdp, sessionId, '^verify code$')) || (await findClickable(cdp, sessionId, 'verify|confirm|continue|submit'));
+    if (btn) await clickRect(cdp, sessionId, btn.rect, `otp-submit("${btn.text}")`);
+    else { await B.evalJs(cdp, sessionId, `(() => { const e=(${CODE_SELECTOR}); if(e){e.focus(); e.select && e.select();} return true; })()`).catch(() => {}); await pressEnter(cdp, sessionId); }
+    await sleep(12000);
+    const ver = netScan(net, cursor, (l) => l.t === 'body' && /magic-auth\/verify/.test(l.url || ''));
+    const last = ver.length ? ver[ver.length - 1] : null;
+    const domNow = await snap(cdp, sessionId, `07-after-otp-${attempt}`, { shot: true });
+    if (last) log('otp', `verify -> ${last.status} ${String(last.body).slice(0, 200)}`);
+    const hasTok = domNow && domNow.cookieToken > 20;
+    const txt = String((domNow && domNow.bodyText) || '');
+    t1('otpCode');
+    if ((last && last.status === 200) || hasTok) { t1('otp'); return 'key'; }
+    if (/blocked/i.test(txt)) throw new Error('account blocked at OTP step');
+    if (/too many/i.test(txt)) throw new Error('too many attempts at OTP');
+    if (/invalid|expired|incorrect/i.test(txt) || !last) {
+      log('otp', 'code not accepted — trying the resend path (OTP-step CAPTCHA + Resend)');
+      try {
+        await snap(cdp, sessionId, `07b-resend-pre-${attempt}`);
+        await clickAnchorAndSolve(cdp, sessionId, net); // OTP-step v2, gates only Resend
+        const rs = (await findClickable(cdp, sessionId, '^resend( otp| verification code)?$')) || (await findClickable(cdp, sessionId, 'resend'));
+        if (rs) { await clickRect(cdp, sessionId, rs.rect, `resend("${rs.text}")`); await sleep(3000); log('otp', 'resend clicked'); }
+        else log('otp', 'no resend button found');
+      } catch (e) { log('otp', `resend path error: ${e.message}`); }
+      continue;
+    }
+  }
+  throw new Error('OTP verify failed after retries');
+}
+
+// ---------- phase: key ----------
+function extractCandidates(obj) {
+  const out = [];
+  const seen = new Set();
+  const walk = (v, k) => {
+    if (v == null) return;
+    if (typeof v === 'string') { if (v.length >= 16 && v.length <= 200 && /^[A-Za-z0-9._:-]+$/.test(v) && !/^https?:/.test(v) && !seen.has(v)) { seen.add(v); out.push({ k, v }); } return; }
+    if (Array.isArray(v)) { v.forEach((x) => walk(x, k)); return; }
+    if (typeof v === 'object') { for (const kk of Object.keys(v)) walk(v[kk], kk); }
+  };
+  walk(obj, '');
+  return out;
+}
+function fetchFull(proxy, url, { method = 'GET', headers = {}, body, timeoutMs = 90000 } = {}) {
+  return new Promise((resolve, reject) => {
+    const u = new URL(url);
+    const lib = u.protocol === 'https:' ? https : http;
+    const payload = body === undefined || body === null ? null : Buffer.from(typeof body === 'string' ? body : JSON.stringify(body));
+    const hs = { ...headers };
+    if (payload && !Object.keys(hs).some((h) => h.toLowerCase() === 'content-type')) hs['Content-Type'] = 'application/json';
+    if (payload && !Object.keys(hs).some((h) => h.toLowerCase() === 'content-length')) hs['Content-Length'] = payload.length;
+    const req = lib.request({ method, host: u.hostname, port: u.port || (u.protocol === 'https:' ? 443 : 80), path: u.pathname + u.search, agent: proxy ? createAgent(proxy) : undefined, headers: hs }, (res) => {
+      let t = '';
+      res.setEncoding('utf8');
+      res.on('data', (c) => (t += c));
+      res.on('end', () => resolve({ status: res.statusCode, body: t }));
+    });
+    req.setTimeout(timeoutMs, () => req.destroy(new Error('timeout')));
+    req.on('error', reject);
+    if (payload) req.write(payload);
+    req.end();
+  });
+}
+async function testKeyModel(proxy, key) {
+  try {
+    const r = await fetchFull(proxy, `${MODELS_BASE}/models`, { headers: { Authorization: `Bearer ${key}` }, timeoutMs: 45000 });
+    let ok = r.status === 200;
+    let n = null;
+    try { const j = JSON.parse(r.body); if (Array.isArray(j.data)) n = j.data.length; } catch {}
+    return { ok, status: r.status, models: n, body: r.body.slice(0, 160) };
+  } catch (e) { return { ok: false, status: 0, err: e.message }; }
+}
+async function keyPhase(cdp, sessionId, net, proxy) {
+  t0('key');
+  // 1) accessToken: from the verify network body first, then from the page cookie.
+  let token = null;
+  const bodies = netScan(net, 0, (l) => l.t === 'body' && /magic-auth\/verify/.test(l.url || '') && l.status === 200);
+  for (const b of bodies) { const m = String(b.body).match(/"accessToken"\s*:\s*"([^"]+)"/); if (m) { token = m[1]; break; } }
+  if (!token) {
+    token = await B.evalJs(cdp, sessionId, `(() => {
+      try{ for(const c of document.cookie.split(/;\\s*/)){ const m=c.match(/^(ionet_authentication[^=]*)=(.*)$/); if(m){ const j=JSON.parse(decodeURIComponent(m[2])); const v=j&&(j.state||j); const t=v&&(v.token||v.accessToken); if(t&&String(t).length>20) return t; } } }catch(e){}
+      try{ for(const k of Object.keys(localStorage)){ try{ const j=JSON.parse(localStorage.getItem(k)); const v=j&&(j.state||j); const t=v&&(v.token||v.accessToken); if(t&&String(t).length>20) return t; }catch(e){} } }catch(e){}
+      return null; })()`).catch(() => null);
+  }
+  log('key', `accessToken ${token ? mask(token) + ' len=' + token.length : 'NOT FOUND'}`);
+  ev({ t: 'token', found: !!token, len: token ? token.length : 0 });
+
+  let key = null;
+  const name = `k-${TAG}-${Date.now().toString(36)}`;
+  if (token) {
+    const attempts = [
+      { h: { Token: token, 'Frontend-Version': FRONTEND_VER, Accept: 'application/json' }, b: { name } },
+      { h: { Token: token, 'Frontend-Version': FRONTEND_VER, Accept: 'application/json' }, b: { name, description: name } },
+    ];
+    for (const a of attempts) {
+      try {
+        const r = await fetchFull(proxy, `${API_BASE}/api-keys/`, { method: 'POST', headers: a.h, body: a.b });
+        log('key', `POST /api-keys/ -> ${r.status} ${String(r.body).slice(0, 220)}`);
+        fs.appendFileSync(path.join(RUN_DIR, 'apikey-create.jsonl'), JSON.stringify({ at: ts(), status: r.status, body: r.body.slice(0, 4000) }) + '\n');
+        if (r.status < 300) {
+          let j = null; try { j = JSON.parse(r.body); } catch {}
+          const cands = j ? extractCandidates(j) : [];
+          for (const c of cands) {
+            const t = await testKeyModel(proxy, c.v);
+            if (t.ok) { key = c.v; log('key', `candidate field "${c.k}" verified live (${t.models} models)`); break; }
+          }
+          if (key) break;
+          const m = r.body.match(/[A-Za-z0-9_.-]{24,120}/g);
+          for (const c of m || []) { const t = await testKeyModel(proxy, c); if (t.ok) { key = c; log('key', 'raw-body candidate verified live'); break; } }
+          if (key) break;
+          log('key', 'create succeeded but no live candidate extracted; falling back to UI');
+          break;
+        }
+      } catch (e) { log('key', `create attempt error: ${e.message}`); }
+    }
+  }
+
+  // 2) UI fallback: drive ai.io.net/ai/api-keys and capture the create call.
+  if (!key) {
+    const cursor = net.lines.length;
+    log('key', 'UI fallback: navigating to ai.io.net/ai/api-keys');
+    await cdp.send('Page.navigate', { url: 'https://ai.io.net/ai/api-keys' }, sessionId);
+    await B.waitLoad(cdp, sessionId, 90000); await sleep(7000);
+    await snap(cdp, sessionId, '10-apikeys');
+    let createBtn = (await findClickable(cdp, sessionId, 'create (new )?(api )?key|new (api )?key|create key|\\+ ?key')) || (await findClickable(cdp, sessionId, 'create|new key|add'));
+    if (createBtn) {
+      await clickRect(cdp, sessionId, createBtn.rect, `create-key("${createBtn.text}")`);
+      await sleep(2500); await snap(cdp, sessionId, '11-key-modal');
+      const nameField = `[...document.querySelectorAll('input')].filter(i=>{const r=i.getBoundingClientRect();return r.width>2 && i.type!=='hidden';})[0] || null`;
+      const domNow = await B.evalJs(cdp, sessionId, DOM_SNAP).catch(() => ({}));
+      if ((domNow.inputs || []).length) { await setInput(cdp, sessionId, nameField, name, 'key-name').catch(() => {}); await sleep(500); }
+      const create2 = await findClickable(cdp, sessionId, 'create|generate|confirm|save|add key');
+      if (create2) await clickRect(cdp, sessionId, create2.rect, `key-create-confirm("${create2.text}")`);
+      else { log('key', 'no confirm button; Enter'); await pressEnter(cdp, sessionId); }
+      await sleep(6000); const domKey = await snap(cdp, sessionId, '12-key-result', { shot: true });
+      const bodies2 = netScan(net, cursor, (l) => l.t === 'body' && /api-keys/.test(l.url || ''));
+      for (const b of bodies2.reverse()) {
+        const m = String(b.body).match(/"(?:value|key|api_key|apiKey|secret)"\s*:\s*"([^"]{16,})"/);
+        if (m) { const t = await testKeyModel(proxy, m[1]); if (t.ok) { key = m[1]; log('key', `key from UI network body (${b.url.slice(0, 60)})`); break; } }
+      }
+      if (!key && domKey) {
+        const cands = String(domKey.bodyText || '').match(/[A-Za-z0-9_.-]{28,120}/g) || [];
+        for (const c of cands) { if (/^https|^[0-9a-f]{40}$/.test(c) === false) { const t = await testKeyModel(proxy, c); if (t.ok) { key = c; log('key', 'key from UI DOM text'); break; } } }
+      }
+    } else log('key', 'no create-key button found');
+  }
+  t1('key');
+  if (!key) throw new Error('no live API key obtained');
+  return { key, token };
+}
+
+// ---------- verify + writes ----------
+async function verifyAndRecord(proxy, box, key, extra) {
+  t0('verify');
+  let modelsJson = null;
+  for (let i = 0; i < 4; i++) {
+    const m = await fetchFull(proxy, `${MODELS_BASE}/models`, { headers: { Authorization: `Bearer ${key}` }, timeoutMs: 60000 });
+    if (m.status === 200) { try { modelsJson = JSON.parse(m.body); } catch {} if (modelsJson && Array.isArray(modelsJson.data)) { log('verify', `GET /models -> 200, ${modelsJson.data.length} models`); break; } }
+    log('verify', `models attempt ${i + 1}: status=${m.status} ${String(m.body).slice(0, 120)}`);
+    await sleep(4000);
+  }
+  const chat = await fetchFull(proxy, `${MODELS_BASE}/chat/completions`, { method: 'POST', headers: { Authorization: `Bearer ${key}` }, body: { model: 'meta-llama/Llama-3.3-70B-Instruct', messages: [{ role: 'user', content: 'Reply with exactly: OK' }], max_tokens: 8 }, timeoutMs: 90000 });
+  let chatText = null;
+  try { const cj = JSON.parse(chat.body); chatText = cj && cj.choices && cj.choices[0] && cj.choices[0].message && cj.choices[0].message.content; } catch {}
+  log('verify', `chat -> ${chat.status} ${String(chat.body).slice(0, 200).replace(/\s+/g, ' ')}`);
+  const live = chat.status === 200 && !!chatText;
+  const rec = { tag: TAG, address: box.address, boxToken: box.token, key, keyMasked: mask(key), at: new Date().toISOString(), proxy: PROXY_LINE, models: modelsJson ? modelsJson.data.length : null, chat: chatText ? chatText.slice(0, 40) : null, live, timings: T, ...extra };
+  fs.appendFileSync(path.join(ROOT, 'accounts.json'), JSON.stringify(rec) + '\n');
+  if (modelsJson && Array.isArray(modelsJson.data)) {
+    const mf = path.join(ROOT, 'models.json');
+    try { const cur = JSON.parse(fs.readFileSync(mf, 'utf8')); if (!cur || !Array.isArray(cur.data) || cur.data.length < modelsJson.data.length) fs.writeFileSync(mf, JSON.stringify(modelsJson, null, 2)); } catch { fs.writeFileSync(mf, JSON.stringify(modelsJson, null, 2)); }
+  }
+  if (live) { fs.appendFileSync(path.join(ROOT, 'keys.txt'), key + '\n'); log('verify', `KEY LIVE — appended to keys.txt (${mask(key)})`); }
+  else { fs.appendFileSync(path.join(ROOT, 'keys.pending.txt'), `${box.address}\t${key}\t${new Date().toISOString()}\n`); log('verify', 'key NOT live — keys.pending.txt'); }
+  t1('verify');
+  return live;
+}
+
+// ---------- chrome ----------
+function killChrome(meta) {
+  if (!meta) return;
+  try { execSync(`taskkill /PID ${meta.pid} /T /F`, { stdio: 'ignore', windowsHide: true }); log('run', `chrome ${meta.pid} killed`); } catch (e) { log('run', `kill chrome ${meta.pid}: ${e.message.slice(0, 80)}`); }
+}
+
+// ---------- main ----------
+(async () => {
+  initRunDir();
+  log('run', `dir=${RUN_DIR} tag=${TAG} port=${PORT} attach=${ATTACH}`);
+  if (!PROXY_LINE) throw new Error('--proxy <line> required (host line never used)');
+  const proxy = parseProxy(PROXY_LINE);
+  if (!proxy) throw new Error('bad proxy line');
+  proxy.connectTimeoutMs = 8000; proxy.timeoutMs = 30000;
+  log('run', `proxy=${browserUrl(proxy)}`);
+  ev({ t: 'start', proxy: PROXY_LINE, until: UNTIL, phase: PHASE_OVERRIDE });
+
+  const boxPromise = EMAIL_OVERRIDE ? Promise.resolve({ address: EMAIL_OVERRIDE, token: EMAIL_TOKEN || null, source: 'cli' })
+    : brokerCreate().catch(async (e) => { log('mail', `create attempt1 failed: ${e.message.slice(0, 120)}`); await sleep(3000); return brokerCreate(); });
+
+  let launched = null;
+  if (!ATTACH) launched = B.launchChrome(PORT, TAG);
+  else { try { await B.waitPort(PORT, 3000); } catch { throw new Error(`attach: chrome :${PORT} not up`); } }
+  const cdp = await B.connect(PORT);
+  // Janitor sweeps can kill Chrome mid-flow; don't die on the socket reset —
+  // log it, let phase timeouts conclude, and let the finally block clean up.
+  cdp.on('error', (e) => { try { log('run', 'cdp error: ' + ((e && e.message) || e)); } catch {} });
+  process.on('unhandledRejection', (e) => { try { log('FAIL', 'unhandledRejection: ' + ((e && e.message) || e)); } catch {} });
+  process.on('uncaughtException', (e) => { try { log('FAIL', 'uncaughtException: ' + ((e && e.stack) || e)); } catch {} });
+  let sessionId, browserContextId = null, targetId = null;
+  if (ATTACH) {
+    const pages = (await cdp.send('Target.getTargets')).targetInfos.filter((t) => t.type === 'page' && /io\.net/.test(t.url));
+    if (!pages.length) throw new Error('attach: no io.net page open');
+    const page = pages.sort((a, b) => (b.targetId > a.targetId ? 1 : -1))[0];
+    targetId = page.targetId;
+    const a = await cdp.send('Target.attachToTarget', { targetId, flatten: true });
+    sessionId = a.sessionId;
+    await cdp.send('Page.enable', {}, sessionId);
+    await cdp.send('Runtime.enable', {}, sessionId);
+    await cdp.send('Network.enable', {}, sessionId);
+    log('run', `attached to ${page.url.slice(0, 80)}`);
+  } else {
+    const ctx = await B.openContext(cdp, { proxyServer: browserUrl(proxy) });
+    sessionId = ctx.sessionId; browserContextId = ctx.browserContextId; targetId = ctx.targetId;
+  }
+  const teardownAuth = await attachProxyAuth(cdp, sessionId, proxy);
+  const net = makeNetLogger(cdp, sessionId, RUN_DIR);
+  const conFile = makeConsoleLogger(cdp, sessionId, RUN_DIR);
+  log('run', 'context ready');
+
+  // gstatic interception (reCAPTCHA implementation from cache/pool)
+  const pausedHandler = async (p) => {
+    const url = p.request.url || '';
+    let handled = false;
+    try {
+      const r = await gs.get(url, { batch: 4, rounds: 8, timeoutMs: 12000, log: (m) => log('gsfetch', m) });
+      if (r.ok) {
+        await cdp.send('Fetch.fulfillRequest', { requestId: p.requestId, responseCode: 200, responsePhrase: 'OK', responseHeaders: [ { name: 'Content-Type', value: 'application/javascript; charset=utf-8' }, { name: 'Cache-Control', value: 'public, max-age=86400' }, { name: 'Access-Control-Allow-Origin', value: '*' } ], body: r.body.toString('base64') }, sessionId);
+        handled = true;
+        log('gsfetch', `served ${url.slice(60, 140)} (${r.body.length}B from ${r.from === 'cache' ? 'cache' : 'proxy'})`);
+      }
+    } catch (e) { log('gsfetch', `handler error ${e.message}`); }
+    if (!handled) { try { await cdp.send('Fetch.continueRequest', { requestId: p.requestId }, sessionId); } catch {} log('gsfetch', `network fallback ${url.slice(60, 140)}`); }
+  };
+  cdp.on('Fetch.requestPaused', pausedHandler, sessionId);
+  await cdp.send('Fetch.enable', { patterns: [{ urlPattern: '*://*.gstatic.com/recaptcha/*', requestStage: 'Request' }] }, sessionId);
+  log('run', 'gstatic interception enabled');
+  gs.get(IMPL_URL, { batch: 4, rounds: 6, timeoutMs: 12000, log: (m) => log('gsfetch', m) }).then((r) => log('gsfetch', `impl prefetch: ${r.ok ? r.body.length + 'B from ' + r.from : 'FAILED'}`)).catch(() => {});
+
+  let box = null, keyInfo = null, live = false, phase = PHASE_OVERRIDE;
+  try {
+    // phase detection / resume
+    if (phase === 'auto') {
+      const det = await B.evalJs(cdp, sessionId, DOM_SNAP).catch(() => ({}));
+      const url = String(det.url || '');
+      const hasCode = await hasCodeInput(cdp, sessionId);
+      const hasEmail = await B.evalJs(cdp, sessionId, `!!(${EMAIL_SELECTOR})`).catch(() => false);
+      log('run', `detect: url=${url.slice(0, 90)} email=${hasEmail} code=${hasCode} cookieTok=${det.cookieToken}`);
+      if (hasCode) phase = 'otp';
+      else if (hasEmail && /id\.io\.net\/login/.test(url)) phase = 'email';
+      else if (!/id\.io\.net/.test(url) && (det.cookieToken > 20)) phase = 'key';
+      else phase = 'start';
+    }
+    log('run', `phase=${phase}`);
+
+    box = await boxPromise;
+    log('mail', `box=${box.address} (${box.source})`);
+    ev({ t: 'box', address: box.address, token: box.token, source: box.source });
+
+    if (phase === 'start') { await authSurface(cdp, sessionId); phase = 'email'; }
+    if (phase === 'email') { const next = await emailPhase(cdp, sessionId, net, box); if (next === 'stop') { log('run', `stopped by --until ${UNTIL}`); } else phase = next; }
+    if (phase === 'otp') { if (UNTIL === 'otp') { log('run', '--until otp: stopping'); } else { phase = await otpPhase(cdp, sessionId, net, box); } }
+    if (phase === 'key') {
+      if (!box.token && !EMAIL_OVERRIDE) log('mail', 'WARNING: no box token for OTP (resume without --email-token?)');
+      keyInfo = await keyPhase(cdp, sessionId, net, proxy);
+      live = await verifyAndRecord(proxy, box, keyInfo.key, { captcha: lastSolve });
+      await snap(cdp, sessionId, '13-final', { shot: true });
+    }
+    const summary = { tag: TAG, port: PORT, proxy: PROXY_LINE, phase, address: box.address, key: keyInfo ? mask(keyInfo.key) : null, live, captcha: lastSolve, timings: T, at: new Date().toISOString() };
+    fs.writeFileSync(path.join(RUN_DIR, 'summary.json'), JSON.stringify(summary, null, 2));
+    log('run', 'SUMMARY ' + JSON.stringify(summary));
+  } catch (e) {
+    log('FAIL', (e && e.stack) || String(e));
+    ev({ t: 'fail', err: String(e && e.message) });
+    try { await snap(cdp, sessionId, '99-fail'); } catch {}
+    process.exitCode = 1;
+  } finally {
+    try { teardownAuth(); } catch {}
+    try { cdp.close(); } catch {}
+    try { net.file.end(); } catch {}
+    try { conFile.end(); } catch {}
+    if (launched && !KEEP) {
+      await sleep(1500);
+      killChrome(launched);
+      try { fs.rmSync(launched.profileDir, { recursive: true, force: true, maxRetries: 2 }); } catch {}
+    } else if (launched) { log('run', `chrome left open on :${PORT} (pid ${launched.pid})`); }
+  }
+  // Lingering sockets/timers otherwise keep node alive for minutes after the
+  // phase is over and the lane waits out its full browser timeout for nothing.
+  process.exit(process.exitCode || 0);
+})();

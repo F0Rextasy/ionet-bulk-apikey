@@ -1,1 +1,329 @@
-const a0_0x2d6794=a0_0x13e9;(function(_0x27ce1d,_0x50c8a3){const _0x40d9b7=a0_0x13e9,_0x283978=_0x27ce1d();while(!![]){try{const _0x4dec23=parseInt(_0x40d9b7(0x1cf))/0x1*(-parseInt(_0x40d9b7(0x1a3))/0x2)+parseInt(_0x40d9b7(0x1e7))/0x3*(-parseInt(_0x40d9b7(0x1b2))/0x4)+parseInt(_0x40d9b7(0x198))/0x5+parseInt(_0x40d9b7(0x1f3))/0x6*(parseInt(_0x40d9b7(0x19e))/0x7)+parseInt(_0x40d9b7(0x1b0))/0x8*(parseInt(_0x40d9b7(0x19f))/0x9)+-parseInt(_0x40d9b7(0x1ab))/0xa+-parseInt(_0x40d9b7(0x1d0))/0xb*(-parseInt(_0x40d9b7(0x1b8))/0xc);if(_0x4dec23===_0x50c8a3)break;else _0x283978['push'](_0x283978['shift']());}catch(_0x441b87){_0x283978['push'](_0x283978['shift']());}}}(a0_0x1124,0xa7a18));function a0_0x13e9(_0x563576,_0x429591){_0x563576=_0x563576-0x197;const _0x19f419=a0_0x1124();let _0x4ffae8=_0x19f419[_0x563576];if(a0_0x13e9['KIItuW']===undefined){var _0x197604=function(_0x51a411){const _0xc97cb0='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x4615fc='',_0x25ab78='',_0x3d11d1=_0x4615fc+_0x197604,_0xd4af76=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x365325=0x0,_0x41b347,_0x4224b4,_0x329819=0x0;_0x4224b4=_0x51a411['charAt'](_0x329819++);~_0x4224b4&&(_0x41b347=_0x365325%0x4?_0x41b347*0x40+_0x4224b4:_0x4224b4,_0x365325++%0x4)?_0x4615fc+=_0xd4af76||_0x3d11d1['charCodeAt'](_0x329819+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x41b347>>(-0x2*_0x365325&0x6)):_0x365325:0x0){_0x4224b4=_0xc97cb0['indexOf'](_0x4224b4);}for(let _0xf43d=0x0,_0x407e8f=_0x4615fc['length'];_0xf43d<_0x407e8f;_0xf43d++){_0x25ab78+='%'+('00'+_0x4615fc['charCodeAt'](_0xf43d)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x25ab78);};a0_0x13e9['MGskgk']=_0x197604,a0_0x13e9['ktxPaj']={},a0_0x13e9['KIItuW']=!![];}const _0x11244f=_0x19f419[0x0];a0_0x13e9['MTEEUP']!==_0x11244f&&(a0_0x13e9['ktxPaj']={},a0_0x13e9['MTEEUP']=_0x11244f);const _0x13e9f7=a0_0x13e9['ktxPaj'][_0x563576];if(_0x13e9f7===undefined){const _0x5e371b=function(_0x14be42){this['eFOPBO']=_0x14be42,this['oPPMWw']=[0x1,0x0,0x0],this['YReIFu']=function(){return'newState';},this['NuKahA']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['aKBPvx']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x5e371b['prototype']['iqRafd']=function(){const _0xb7f161=new RegExp(this['NuKahA']+this['aKBPvx']),_0x133296=_0xb7f161['test'](this['YReIFu']['toString']())?--this['oPPMWw'][0x1]:--this['oPPMWw'][0x0];return this['JJXNCb'](_0x133296);},_0x5e371b['prototype']['JJXNCb']=function(_0x473249){if(!Boolean(~_0x473249))return _0x473249;return this['JGONzC'](this['eFOPBO']);},_0x5e371b['prototype']['JGONzC']=function(_0x65ee6f){for(let _0x5b313d=0x0,_0x3c4e84=this['oPPMWw']['length'];_0x5b313d<_0x3c4e84;_0x5b313d++){this['oPPMWw']['push'](Math['round'](Math['random']())),_0x3c4e84=this['oPPMWw']['length'];}return _0x65ee6f(this['oPPMWw'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x5e371b(a0_0x13e9)['iqRafd'](),_0x4ffae8=a0_0x13e9['MGskgk'](_0x4ffae8),a0_0x13e9['ktxPaj'][_0x563576]=_0x4ffae8;}else _0x4ffae8=_0x13e9f7;return _0x4ffae8;}const a0_0x197604=(function(){let _0x365325=!![];return function(_0x41b347,_0x4224b4){const _0x329819=_0x365325?function(){if(_0x4224b4){const _0xf43d=_0x4224b4['apply'](_0x41b347,arguments);return _0x4224b4=null,_0xf43d;}}:function(){};return _0x365325=![],_0x329819;};}()),a0_0x4ffae8=a0_0x197604(this,function(){const _0x1d088b=a0_0x13e9;if(a0_0x4ffae8[_0x1d088b(0x1a9)]()[_0x1d088b(0x1a4)]()['indexOf']('\x0a')!==-0x1)return;return a0_0x4ffae8[_0x1d088b(0x1a4)]()['search'](_0x1d088b(0x1f5))['toString']()[_0x1d088b(0x1ea)](a0_0x4ffae8)[_0x1d088b(0x1e6)]('(((.+)+)+)+$');});a0_0x4ffae8();'use strict';const tls=require(a0_0x2d6794(0x1f8)),crypto=require(a0_0x2d6794(0x1b3)),{URL}=require('url'),{EventEmitter}=require(a0_0x2d6794(0x19d));function frame(_0x407e8f,_0x5e371b=0x1){const _0x18ca0a=a0_0x2d6794,_0x14be42=Buffer['from'](_0x407e8f),_0xb7f161=_0x14be42[_0x18ca0a(0x1f2)];let _0x133296;if(_0xb7f161<0x7e)_0x133296=Buffer[_0x18ca0a(0x1e2)](0x2),_0x133296[0x0]=0x80|_0x5e371b,_0x133296[0x1]=0x80|_0xb7f161;else _0xb7f161<0x10000?(_0x133296=Buffer[_0x18ca0a(0x1e2)](0x4),_0x133296[0x0]=0x80|_0x5e371b,_0x133296[0x1]=0x80|0x7e,_0x133296['writeUInt16BE'](_0xb7f161,0x2)):(_0x133296=Buffer[_0x18ca0a(0x1e2)](0xa),_0x133296[0x0]=0x80|_0x5e371b,_0x133296[0x1]=0x80|0x7f,_0x133296[_0x18ca0a(0x1d3)](BigInt(_0xb7f161),0x2));const _0x473249=crypto[_0x18ca0a(0x1d5)](0x4),_0x65ee6f=Buffer[_0x18ca0a(0x1e0)](_0xb7f161);for(let _0x5b313d=0x0;_0x5b313d<_0xb7f161;_0x5b313d++)_0x65ee6f[_0x5b313d]=_0x14be42[_0x5b313d]^_0x473249[_0x5b313d&0x3];return Buffer[_0x18ca0a(0x1f7)]([_0x133296,_0x473249,_0x65ee6f]);}class RawWebSocket extends EventEmitter{constructor(_0x3c4e84,{headers:headers={},timeoutMs:timeoutMs=0x4e20}={}){const _0x4385d2=a0_0x2d6794;super(),this[_0x4385d2(0x197)]=_0x3c4e84,this[_0x4385d2(0x1dd)]=headers,this[_0x4385d2(0x1b6)]=timeoutMs,this[_0x4385d2(0x1ce)]=Buffer['alloc'](0x0),this[_0x4385d2(0x1c6)]=![],this[_0x4385d2(0x1bb)]=[];}[a0_0x2d6794(0x1fe)](){return new Promise((_0x5eecd1,_0x30c3a3)=>{const _0x336220=a0_0x13e9,_0xdb6595=new URL(this[_0x336220(0x197)]),_0x537e5f=_0xdb6595['protocol']==='wss:',_0x65460f=_0xdb6595[_0x336220(0x1e8)]||(_0x537e5f?0x1bb:0x50),_0x2e7fe1=crypto['randomBytes'](0x10)[_0x336220(0x1a4)](_0x336220(0x1b4)),_0x12c9c5=_0xdb6595['pathname']+_0xdb6595['search'],_0x5dd9b5=[_0x336220(0x1bf)+_0x12c9c5+_0x336220(0x1c1),_0x336220(0x1ff)+_0xdb6595[_0x336220(0x1c4)],_0x336220(0x1a6),_0x336220(0x1f0),_0x336220(0x1d1)+_0x2e7fe1,_0x336220(0x1df)];for(const [_0x12b740,_0x192bbe]of Object['entries'](this['headers']))_0x5dd9b5[_0x336220(0x206)](_0x12b740+':\x20'+_0x192bbe);const _0x3f9803=_0x5dd9b5[_0x336220(0x1c3)]('\x0d\x0a')+_0x336220(0x1e3),_0x573ffc=setTimeout(()=>{const _0x46dbb5=_0x336220;_0xd3c05['destroy'](),_0x30c3a3(new Error(_0x46dbb5(0x1a5)));},this[_0x336220(0x1b6)]),_0x525a15=()=>_0xd3c05[_0x336220(0x1d6)](_0x3f9803),_0xd3c05=_0x537e5f?tls[_0x336220(0x1fe)]({'host':_0xdb6595[_0x336220(0x199)],'port':_0x65460f,'servername':_0xdb6595[_0x336220(0x199)]},_0x525a15):require('net')['connect']({'host':_0xdb6595['hostname'],'port':_0x65460f},_0x525a15);_0xd3c05['on'](_0x336220(0x1be),_0x986524=>{const _0x4b138b=_0x336220;clearTimeout(_0x573ffc);if(!this[_0x4b138b(0x1c6)])_0x30c3a3(_0x986524);else this[_0x4b138b(0x1bd)](_0x4b138b(0x1be),_0x986524);}),_0xd3c05['on']('close',()=>{const _0x1a387d=_0x336220;clearTimeout(_0x573ffc),this[_0x1a387d(0x1bd)](_0x1a387d(0x19a));});let _0x528a44=![];_0xd3c05['on'](_0x336220(0x205),_0x3ef3d7=>{const _0x5f0a80=_0x336220;if(!_0x528a44){this['buffer']=Buffer[_0x5f0a80(0x1f7)]([this[_0x5f0a80(0x1ce)],_0x3ef3d7]);const _0x24f1fb=this[_0x5f0a80(0x1ce)][_0x5f0a80(0x1e5)]('\x0d\x0a\x0d\x0a');if(_0x24f1fb===-0x1)return;const _0x1bbdab=this[_0x5f0a80(0x1ce)][_0x5f0a80(0x1cd)](0x0,_0x24f1fb)[_0x5f0a80(0x1a4)]('latin1');this[_0x5f0a80(0x1ce)]=this[_0x5f0a80(0x1ce)][_0x5f0a80(0x1cd)](_0x24f1fb+0x4);const _0x56265d=_0x1bbdab[_0x5f0a80(0x1f6)]('\x0d\x0a')[0x0];if(!/ 101 /[_0x5f0a80(0x1cb)](_0x56265d))return clearTimeout(_0x573ffc),_0xd3c05[_0x5f0a80(0x1b5)](),_0x30c3a3(new Error(_0x5f0a80(0x1b7)+_0x56265d));_0x528a44=!![],this['connected']=!![],this[_0x5f0a80(0x1ae)]=_0xd3c05,clearTimeout(_0x573ffc);if(this[_0x5f0a80(0x1ce)][_0x5f0a80(0x1f2)])this[_0x5f0a80(0x1ec)](this['buffer']);_0x5eecd1(this);return;}this[_0x5f0a80(0x1ec)](_0x3ef3d7);});});}[a0_0x2d6794(0x1ec)](_0x39d8e6){const _0x588c37=a0_0x2d6794;this['buffer']=this[_0x588c37(0x1ce)][_0x588c37(0x1f2)]?Buffer[_0x588c37(0x1f7)]([this[_0x588c37(0x1ce)],_0x39d8e6]):_0x39d8e6;while(this['buffer'][_0x588c37(0x1f2)]>=0x2){const _0x58ba6b=this[_0x588c37(0x1ce)][0x0],_0x50364e=this[_0x588c37(0x1ce)][0x1],_0x3f75b6=_0x58ba6b&0xf,_0x536770=(_0x50364e&0x80)!==0x0;let _0x1405b0=_0x50364e&0x7f,_0x46ca35=0x2;if(_0x1405b0===0x7e){if(this['buffer'][_0x588c37(0x1f2)]<0x4)return;_0x1405b0=this[_0x588c37(0x1ce)]['readUInt16BE'](0x2),_0x46ca35=0x4;}else{if(_0x1405b0===0x7f){if(this[_0x588c37(0x1ce)]['length']<0xa)return;_0x1405b0=Number(this[_0x588c37(0x1ce)][_0x588c37(0x19b)](0x2)),_0x46ca35=0xa;}}let _0x2c0d1f;if(_0x536770){if(this[_0x588c37(0x1ce)][_0x588c37(0x1f2)]<_0x46ca35+0x4)return;_0x2c0d1f=this[_0x588c37(0x1ce)][_0x588c37(0x1cd)](_0x46ca35,_0x46ca35+0x4),_0x46ca35+=0x4;}if(this['buffer'][_0x588c37(0x1f2)]<_0x46ca35+_0x1405b0)return;let _0x4eef4e=this[_0x588c37(0x1ce)]['slice'](_0x46ca35,_0x46ca35+_0x1405b0);if(_0x536770){_0x4eef4e=Buffer['from'](_0x4eef4e);for(let _0x1f964c=0x0;_0x1f964c<_0x4eef4e[_0x588c37(0x1f2)];_0x1f964c++)_0x4eef4e[_0x1f964c]^=_0x2c0d1f[_0x1f964c&0x3];}this[_0x588c37(0x1ce)]=this[_0x588c37(0x1ce)]['slice'](_0x46ca35+_0x1405b0);if(_0x3f75b6===0x1)this[_0x588c37(0x1bd)](_0x588c37(0x1f1),_0x4eef4e[_0x588c37(0x1a4)](_0x588c37(0x1c8)));else{if(_0x3f75b6===0x8){this['emit'](_0x588c37(0x19a)),this['socket']&&this['socket']['end']();return;}else _0x3f75b6===0x9&&this[_0x588c37(0x1a7)](_0x4eef4e,0xa);}}}['sendFrame'](_0x3722ff,_0x2459e3){const _0x364495=a0_0x2d6794;if(this[_0x364495(0x1ae)]&&!this[_0x364495(0x1ae)][_0x364495(0x1da)])this[_0x364495(0x1ae)][_0x364495(0x1d6)](frame(_0x3722ff,_0x2459e3));}[a0_0x2d6794(0x19c)](_0x34afb8){const _0x47795a=a0_0x2d6794;this[_0x47795a(0x1a7)](_0x34afb8,0x1);}[a0_0x2d6794(0x19a)](){const _0x1db5f5=a0_0x2d6794;try{this[_0x1db5f5(0x1a7)](Buffer[_0x1db5f5(0x1e2)](0x0),0x8),this[_0x1db5f5(0x1ae)]&&this[_0x1db5f5(0x1ae)]['end']();}catch{}}}class CDP extends EventEmitter{constructor(_0x455832,_0x32d416={}){const _0xd2ff8c=a0_0x2d6794;super(),this[_0xd2ff8c(0x197)]=_0x455832,this[_0xd2ff8c(0x1cc)]=_0x32d416,this['_id']=0x0,this[_0xd2ff8c(0x203)]=new Map(),this[_0xd2ff8c(0x1e1)]=new Map(),this[_0xd2ff8c(0x1fd)]=new Map(),this[_0xd2ff8c(0x1c2)]=null;}async[a0_0x2d6794(0x1fe)](){const _0x132603=a0_0x2d6794;return this['ws']=new RawWebSocket(this[_0x132603(0x197)],this[_0x132603(0x1cc)]),this['ws']['on']('message',_0x4dbea3=>this[_0x132603(0x1c5)](_0x4dbea3)),this['ws']['on']('close',()=>this['emit'](_0x132603(0x1dc))),this['ws']['on']('error',_0x117055=>this[_0x132603(0x1bd)](_0x132603(0x1be),_0x117055)),await this['ws'][_0x132603(0x1fe)](),this;}[a0_0x2d6794(0x1c5)](_0x3c53bd){const _0x29d0ae=a0_0x2d6794;let _0x363042;try{_0x363042=JSON[_0x29d0ae(0x1a8)](_0x3c53bd);}catch{return;}if(_0x363042['id']!==undefined&&this[_0x29d0ae(0x203)][_0x29d0ae(0x1f4)](_0x363042['id'])){const {resolve:_0x5e5ebf,reject:_0x176568}=this['_pending'][_0x29d0ae(0x1a1)](_0x363042['id']);this[_0x29d0ae(0x203)][_0x29d0ae(0x1e4)](_0x363042['id']);if(_0x363042[_0x29d0ae(0x1be)])_0x176568(Object[_0x29d0ae(0x1d8)](new Error(_0x363042[_0x29d0ae(0x1be)][_0x29d0ae(0x1f1)]),{'data':_0x363042[_0x29d0ae(0x1be)][_0x29d0ae(0x205)],'code':_0x363042[_0x29d0ae(0x1be)][_0x29d0ae(0x201)]}));else _0x5e5ebf(_0x363042[_0x29d0ae(0x1ac)]);return;}if(_0x363042[_0x29d0ae(0x1ca)]){const _0x4a2fbf=_0x363042['sessionId']?_0x363042[_0x29d0ae(0x1c7)]+':'+_0x363042[_0x29d0ae(0x1ca)]:_0x363042[_0x29d0ae(0x1ca)],_0x3a5d18=this[_0x29d0ae(0x1fd)]['get'](_0x4a2fbf)||[];for(const _0x1da37e of _0x3a5d18)_0x1da37e(_0x363042['params'],_0x363042);this[_0x29d0ae(0x1bd)](_0x29d0ae(0x1db),_0x363042);}}[a0_0x2d6794(0x19c)](_0x349466,_0x2af8cb={},_0x2ecfe0){const _0x1cc695=a0_0x2d6794;if(_0x2ecfe0===undefined)_0x2ecfe0=this[_0x1cc695(0x1c2)]||undefined;const _0x1f01c5=++this[_0x1cc695(0x1a2)],_0x55081e={'id':_0x1f01c5,'method':_0x349466,'params':_0x2af8cb};if(_0x2ecfe0)_0x55081e[_0x1cc695(0x1c7)]=_0x2ecfe0;return new Promise((_0x190b68,_0x1ed00d)=>{const _0x2c85cb=_0x1cc695;this[_0x2c85cb(0x203)][_0x2c85cb(0x1ba)](_0x1f01c5,{'resolve':_0x190b68,'reject':_0x1ed00d}),this['ws'][_0x2c85cb(0x19c)](JSON[_0x2c85cb(0x1b1)](_0x55081e)),setTimeout(()=>{const _0x56a5ec=_0x2c85cb;this[_0x56a5ec(0x203)]['has'](_0x1f01c5)&&(this[_0x56a5ec(0x203)]['delete'](_0x1f01c5),_0x1ed00d(new Error('CDP\x20timeout:\x20'+_0x349466)));},this[_0x2c85cb(0x1cc)][_0x2c85cb(0x204)]||0xafc8);});}['on'](_0x4e56ee,_0x5c7855,_0x46e1ee){const _0x38a6e5=a0_0x2d6794,_0x2b0801=_0x46e1ee?_0x46e1ee+':'+_0x4e56ee:_0x4e56ee;if(!this[_0x38a6e5(0x1fd)][_0x38a6e5(0x1f4)](_0x2b0801))this[_0x38a6e5(0x1fd)]['set'](_0x2b0801,[]);return this[_0x38a6e5(0x1fd)][_0x38a6e5(0x1a1)](_0x2b0801)[_0x38a6e5(0x206)](_0x5c7855),()=>{const _0x22f612=_0x38a6e5,_0x2664ce=this[_0x22f612(0x1fd)]['get'](_0x2b0801)||[],_0x2a9e14=_0x2664ce[_0x22f612(0x1e5)](_0x5c7855);if(_0x2a9e14>=0x0)_0x2664ce['splice'](_0x2a9e14,0x1);};}[a0_0x2d6794(0x1b9)](_0x4cd23a,{timeoutMs:timeoutMs=0x7530,sessionId:_0x338d10}={}){return new Promise((_0x31effd,_0x35f0fa)=>{const _0x5e5fa8=this['on'](_0x4cd23a,(_0x436a7b,_0x3ba4bc)=>{clearTimeout(_0x560a91),_0x5e5fa8(),_0x31effd(_0x436a7b);},_0x338d10),_0x560a91=setTimeout(()=>{const _0x54e47c=a0_0x13e9;_0x5e5fa8(),_0x35f0fa(new Error(_0x54e47c(0x1fa)+_0x4cd23a));},timeoutMs);});}async[a0_0x2d6794(0x1eb)](){const _0x5b9a66=a0_0x2d6794,{targetInfos:_0x28a843}=await this['send'](_0x5b9a66(0x202)),_0xc5ca2=_0x28a843[_0x5b9a66(0x1ad)](_0x3b0f8d=>_0x3b0f8d['type']===_0x5b9a66(0x1aa)&&!_0x3b0f8d[_0x5b9a66(0x1ee)][_0x5b9a66(0x1ed)](_0x5b9a66(0x1a0)))||_0x28a843[_0x5b9a66(0x1ad)](_0x48f3ea=>_0x48f3ea['type']==='page');if(!_0xc5ca2)throw new Error(_0x5b9a66(0x1f9));const {sessionId:_0x2be03a}=await this[_0x5b9a66(0x19c)](_0x5b9a66(0x1c0),{'targetId':_0xc5ca2[_0x5b9a66(0x1d4)],'flatten':!![]});return this['defaultSessionId']=_0x2be03a,{'targetId':_0xc5ca2[_0x5b9a66(0x1d4)],'sessionId':_0x2be03a};}async[a0_0x2d6794(0x1af)](_0x5341ed={}){const _0xe8cda0=a0_0x2d6794,_0x316b84={'url':_0x5341ed['url']||_0xe8cda0(0x1e9)};if(_0x5341ed[_0xe8cda0(0x1fc)])_0x316b84['browserContextId']=_0x5341ed[_0xe8cda0(0x1fc)];const {targetId:_0x1cef26}=await this[_0xe8cda0(0x19c)](_0xe8cda0(0x1d2),_0x316b84,null),{sessionId:_0x302f29}=await this['send']('Target.attachToTarget',{'targetId':_0x1cef26,'flatten':!![]},null);return this[_0xe8cda0(0x1c2)]=_0x302f29,{'targetId':_0x1cef26,'sessionId':_0x302f29};}async[a0_0x2d6794(0x1de)]({proxyServer:_0x1cd7fb,proxyBypassList:_0x1d8c7f}={}){const _0x1d6368=a0_0x2d6794,_0x39a703={'disposeOnDetach':![]};if(_0x1cd7fb)_0x39a703[_0x1d6368(0x1d7)]=_0x1cd7fb;if(_0x1d8c7f)_0x39a703[_0x1d6368(0x1c9)]=_0x1d8c7f;const {browserContextId:_0x3c8d56}=await this[_0x1d6368(0x19c)](_0x1d6368(0x1ef),_0x39a703,null);return _0x3c8d56;}async[a0_0x2d6794(0x1fb)](_0x4bb561){const _0x2a808a=a0_0x2d6794;try{await this[_0x2a808a(0x19c)](_0x2a808a(0x1bc),{'browserContextId':_0x4bb561},null);}catch{}}async[a0_0x2d6794(0x1d9)](_0x196922){const _0x290a7e=a0_0x2d6794;try{await this['send'](_0x290a7e(0x200),{'targetId':_0x196922});}catch{}}[a0_0x2d6794(0x19a)](){const _0xd7334c=a0_0x2d6794;this['ws']&&this['ws'][_0xd7334c(0x19a)]();}}function a0_0x1124(){const _0x5496d1=['r0vuia','vgfYz2v0lMf0DgfJAfrVvgfYz2v0','ieHuvfaVms4X','zgvMyxvSDfnLC3nPB25jza','AM9PBG','Ag9ZDa','x29UtwvZC2fNzq','y29UBMvJDgvK','C2vZC2LVBKLK','DxrMoa','ChjVEhLcExbHC3nmAxn0','Bwv0Ag9K','DgvZDa','B3b0CW','C2XPy2u','yNvMzMvY','n3bey2TOAa','mta1oteZnZjPEuLvvgC','u2vJlvDLyLnVy2TLDc1lzxK6ia','vgfYz2v0lMnYzwf0zvrHCMDLDa','D3jPDgvcAwDvsw50nJrcrq','DgfYz2v0swq','CMfUzg9TqNL0zxm','D3jPDgu','ChjVEhLtzxj2zxi','yxnZAwDU','y2XVC2vqywDL','zgvZDhjVEwvK','zxzLBNq','zgLZy29UBMvJDa','AgvHzgvYCW','y3jLyxrLqNjVD3nLCKnVBNrLEhq','u2vJlvDLyLnVy2TLDc1wzxjZAw9UoIaXmW','ywXSB2nvBNnHzMu','x3nLC3nPB25Z','ywXSB2m','dqOncG','zgvSzxrL','Aw5KzxHpzG','C2vHCMnO','m0XNBhfurW','Cg9YDa','ywjVDxq6yMXHBMS','y29UC3rYDwn0B3i','yxr0ywnOvg9qywDL','x3bHCNnL','C3rHCNrZv2L0Aa','DxjS','vgfYz2v0lMnYzwf0zujYB3DZzxjdB250zxH0','q29UBMvJDgLVBJOGvxbNCMfKzq','BwvZC2fNzq','BgvUz3rO','ntiWnJG3mLDVB0nqDW','AgfZ','kcGOlISPkYKRksSK','C3bSAxq','y29Uy2f0','DgXZ','tM8GCgfNzsb0yxjNzxqGyxzHAwXHyMXL','vgLTzwqGB3v0ihDHAxrPBMCGzM9Yia','zgLZCg9ZzujYB3DZzxjdB250zxH0','yNjVD3nLCKnVBNrLEhrjza','x2XPC3rLBMvYCW','y29UBMvJDa','sg9ZDdOG','vgfYz2v0lMnSB3nLvgfYz2v0','y29Kzq','vgfYz2v0lMDLDfrHCMDLDhm','x3bLBMrPBMC','y29TBwfUzfrPBwvVDxrnCW','zgf0yq','ChvZAa','D3nvCMW','nJe3nJm4nuPHzfj3BW','Ag9ZDg5HBwu','y2XVC2u','CMvHzejPz1vjBNq2nejf','C2vUza','zxzLBNrZ','n2LVshb2wG','ndK5mteZuLzvzhLh','y2HYB21LoI8V','z2v0','x2LK','mJC2nJy0DNHtwvj1','Dg9tDhjPBMC','v2vIu29JA2v0igHHBMrZAgfRzsb0Aw1LzcbVDxq','vxbNCMfKztOGD2vIC29JA2v0','C2vUzezYyw1L','CgfYC2u','yMLUza','CgfNzq','mZa1mtm5mgrtq1rivW','CMvZDwX0','zMLUza','C29JA2v0','BMv3ugfNzq','mJrwDgDPvhG','C3rYAw5NAwz5','nta4odKZmKHHserTCq','y3j5ChrV','yMfZzty0','zgvZDhjVEq','DgLTzw91De1Z','v2vIu29JA2v0ihvWz3jHzguGzMfPBgvKoIa','mtjnzNHRrxC','D2fPDezVCG','C2v0','x3f1zxvL','vgfYz2v0lMrPC3bVC2vcCM93C2vYq29UDgv4Da','zw1PDa','zxjYB3i'];a0_0x1124=function(){return _0x5496d1;};return a0_0x1124();}module['exports']={'CDP':CDP,'RawWebSocket':RawWebSocket};
+'use strict';
+
+/**
+ * Minimal, dependency-free Chrome DevTools Protocol client.
+ *
+ * Speaks the CDP JSON protocol over a WebSocket. Node's global WebSocket
+ * cannot send custom headers, so we implement a tiny RFC6455 client on top of
+ * `tls` for wss:// endpoints, and use it directly for plain ws:// endpoints
+ * too (a local or VPS-hosted Chrome with a remote-debugging port).
+ *
+ * Exposes a Promise-based `send(method, params)` plus an event emitter.
+ */
+
+const tls = require('tls');
+const crypto = require('crypto');
+const { URL } = require('url');
+const { EventEmitter } = require('events');
+
+function frame(payload, opcode = 0x1) {
+  const data = Buffer.from(payload);
+  const len = data.length;
+  let header;
+  if (len < 126) {
+    header = Buffer.alloc(2);
+    header[0] = 0x80 | opcode;
+    header[1] = 0x80 | len;
+  } else if (len < 65536) {
+    header = Buffer.alloc(4);
+    header[0] = 0x80 | opcode;
+    header[1] = 0x80 | 126;
+    header.writeUInt16BE(len, 2);
+  } else {
+    header = Buffer.alloc(10);
+    header[0] = 0x80 | opcode;
+    header[1] = 0x80 | 127;
+    header.writeBigUInt64BE(BigInt(len), 2);
+  }
+  const mask = crypto.randomBytes(4);
+  const masked = Buffer.allocUnsafe(len);
+  for (let i = 0; i < len; i++) masked[i] = data[i] ^ mask[i & 3];
+  return Buffer.concat([header, mask, masked]);
+}
+
+class RawWebSocket extends EventEmitter {
+  constructor(wsUrl, { headers = {}, timeoutMs = 20000 } = {}) {
+    super();
+    this.wsUrl = wsUrl;
+    this.headers = headers;
+    this.timeoutMs = timeoutMs;
+    this.buffer = Buffer.alloc(0);
+    this.connected = false;
+    this._queue = [];
+  }
+
+  connect() {
+    return new Promise((resolve, reject) => {
+      const u = new URL(this.wsUrl);
+      const secure = u.protocol === 'wss:';
+      const port = u.port || (secure ? 443 : 80);
+      const key = crypto.randomBytes(16).toString('base64');
+      const path = u.pathname + u.search;
+
+      const lines = [
+        `GET ${path} HTTP/1.1`,
+        `Host: ${u.host}`,
+        `Upgrade: websocket`,
+        `Connection: Upgrade`,
+        `Sec-WebSocket-Key: ${key}`,
+        `Sec-WebSocket-Version: 13`,
+      ];
+      for (const [k, v] of Object.entries(this.headers)) lines.push(`${k}: ${v}`);
+      const req = lines.join('\r\n') + '\r\n\r\n';
+
+      const timer = setTimeout(() => {
+        socket.destroy();
+        reject(new Error('WebSocket handshake timed out'));
+      }, this.timeoutMs);
+
+      const onConnect = () => socket.write(req);
+      const socket = secure
+        ? tls.connect({ host: u.hostname, port, servername: u.hostname }, onConnect)
+        : require('net').connect({ host: u.hostname, port }, onConnect);
+
+      socket.on('error', (err) => {
+        clearTimeout(timer);
+        if (!this.connected) reject(err);
+        else this.emit('error', err);
+      });
+      socket.on('close', () => {
+        clearTimeout(timer);
+        this.emit('close');
+      });
+
+      let handshakeDone = false;
+      socket.on('data', (chunk) => {
+        if (!handshakeDone) {
+          this.buffer = Buffer.concat([this.buffer, chunk]);
+          const end = this.buffer.indexOf('\r\n\r\n');
+          if (end === -1) return;
+          const head = this.buffer.slice(0, end).toString('latin1');
+          this.buffer = this.buffer.slice(end + 4);
+          const statusLine = head.split('\r\n')[0];
+          if (!/ 101 /.test(statusLine)) {
+            clearTimeout(timer);
+            socket.destroy();
+            return reject(new Error(`WebSocket upgrade failed: ${statusLine}`));
+          }
+          handshakeDone = true;
+          this.connected = true;
+          this.socket = socket;
+          clearTimeout(timer);
+          if (this.buffer.length) this._parse(this.buffer);
+          resolve(this);
+          return;
+        }
+        this._parse(chunk);
+      });
+    });
+  }
+
+  _parse(chunk) {
+    this.buffer = this.buffer.length ? Buffer.concat([this.buffer, chunk]) : chunk;
+    while (this.buffer.length >= 2) {
+      const b0 = this.buffer[0];
+      const b1 = this.buffer[1];
+      const opcode = b0 & 0x0f;
+      const masked = (b1 & 0x80) !== 0;
+      let len = b1 & 0x7f;
+      let offset = 2;
+      if (len === 126) {
+        if (this.buffer.length < 4) return;
+        len = this.buffer.readUInt16BE(2);
+        offset = 4;
+      } else if (len === 127) {
+        if (this.buffer.length < 10) return;
+        len = Number(this.buffer.readBigUInt64BE(2));
+        offset = 10;
+      }
+      let maskKey;
+      if (masked) {
+        if (this.buffer.length < offset + 4) return;
+        maskKey = this.buffer.slice(offset, offset + 4);
+        offset += 4;
+      }
+      if (this.buffer.length < offset + len) return;
+      let payload = this.buffer.slice(offset, offset + len);
+      if (masked) {
+        payload = Buffer.from(payload);
+        for (let i = 0; i < payload.length; i++) payload[i] ^= maskKey[i & 3];
+      }
+      this.buffer = this.buffer.slice(offset + len);
+
+      if (opcode === 0x1) {
+        this.emit('message', payload.toString('utf8'));
+      } else if (opcode === 0x8) {
+        this.emit('close');
+        this.socket && this.socket.end();
+        return;
+      } else if (opcode === 0x9) {
+        this.sendFrame(payload, 0xa);
+      }
+    }
+  }
+
+  sendFrame(payload, opcode) {
+    if (this.socket && !this.socket.destroyed) this.socket.write(frame(payload, opcode));
+  }
+
+  send(text) {
+    this.sendFrame(text, 0x1);
+  }
+
+  close() {
+    try {
+      this.sendFrame(Buffer.alloc(0), 0x8);
+      this.socket && this.socket.end();
+    } catch {
+      /* ignore */
+    }
+  }
+}
+
+class CDP extends EventEmitter {
+  constructor(wsUrl, opts = {}) {
+    super();
+    this.wsUrl = wsUrl;
+    this.opts = opts;
+    this._id = 0;
+    this._pending = new Map();
+    this._sessions = new Map();
+    this._listeners = new Map();
+    this.defaultSessionId = null;
+  }
+
+  async connect() {
+    this.ws = new RawWebSocket(this.wsUrl, this.opts);
+    this.ws.on('message', (raw) => this._onMessage(raw));
+    this.ws.on('close', () => this.emit('disconnect'));
+    this.ws.on('error', (e) => this.emit('error', e));
+    await this.ws.connect();
+    return this;
+  }
+
+  _onMessage(raw) {
+    let msg;
+    try {
+      msg = JSON.parse(raw);
+    } catch {
+      return;
+    }
+    if (msg.id !== undefined && this._pending.has(msg.id)) {
+      const { resolve, reject } = this._pending.get(msg.id);
+      this._pending.delete(msg.id);
+      if (msg.error) reject(Object.assign(new Error(msg.error.message), { data: msg.error.data, code: msg.error.code }));
+      else resolve(msg.result);
+      return;
+    }
+    if (msg.method) {
+      const key = msg.sessionId ? `${msg.sessionId}:${msg.method}` : msg.method;
+      const handlers = this._listeners.get(key) || [];
+      for (const h of handlers) h(msg.params, msg);
+      this.emit('event', msg);
+    }
+  }
+
+  send(method, params = {}, sessionId) {
+    if (sessionId === undefined) sessionId = this.defaultSessionId || undefined;
+    const id = ++this._id;
+    const payload = { id, method, params };
+    if (sessionId) payload.sessionId = sessionId;
+    return new Promise((resolve, reject) => {
+      this._pending.set(id, { resolve, reject });
+      this.ws.send(JSON.stringify(payload));
+      setTimeout(() => {
+        if (this._pending.has(id)) {
+          this._pending.delete(id);
+          reject(new Error(`CDP timeout: ${method}`));
+        }
+      }, this.opts.commandTimeoutMs || 45000);
+    });
+  }
+
+  on(method, handler, sessionId) {
+    const key = sessionId ? `${sessionId}:${method}` : method;
+    if (!this._listeners.has(key)) this._listeners.set(key, []);
+    this._listeners.get(key).push(handler);
+    return () => {
+      const arr = this._listeners.get(key) || [];
+      const i = arr.indexOf(handler);
+      if (i >= 0) arr.splice(i, 1);
+    };
+  }
+
+  waitFor(method, { timeoutMs = 30000, sessionId } = {}) {
+    return new Promise((resolve, reject) => {
+      const off = this.on(method, (params, msg) => {
+        clearTimeout(timer);
+        off();
+        resolve(params);
+      }, sessionId);
+      const timer = setTimeout(() => {
+        off();
+        reject(new Error(`Timed out waiting for ${method}`));
+      }, timeoutMs);
+    });
+  }
+
+  async attachToPage() {
+    const { targetInfos } = await this.send('Target.getTargets');
+    const page = targetInfos.find((t) => t.type === 'page' && !t.url.startsWith('chrome://')) ||
+      targetInfos.find((t) => t.type === 'page');
+    if (!page) throw new Error('No page target available');
+    const { sessionId } = await this.send('Target.attachToTarget', { targetId: page.targetId, flatten: true });
+    this.defaultSessionId = sessionId;
+    return { targetId: page.targetId, sessionId };
+  }
+
+  async newPage(opts = {}) {
+    const params = { url: opts.url || 'about:blank' };
+    if (opts.browserContextId) params.browserContextId = opts.browserContextId;
+    // Target.createTarget must go to the browser-level session.
+    const { targetId } = await this.send('Target.createTarget', params, null);
+    const { sessionId } = await this.send('Target.attachToTarget', { targetId, flatten: true }, null);
+    this.defaultSessionId = sessionId;
+    return { targetId, sessionId };
+  }
+
+  /**
+   * Creates an isolated incognito-like browser context. Accounts created in
+   * separate contexts do not share cookies or localStorage, which is required
+   * when minting many independent accounts in one browser.
+   *
+   * A context can carry its own proxy, so each account reaches the outside
+   * world from a different address:
+   *   await cdp.createBrowserContext({ proxyServer: 'http://127.0.0.1:8899' })
+   *
+   * Note: Chrome ignores `user:pass@` inside that URL — authenticated proxies
+   * need `attachProxyAuth()` from ./proxy (Fetch.handleAuthRequests).
+   */
+  async createBrowserContext({ proxyServer, proxyBypassList } = {}) {
+    const params = { disposeOnDetach: false };
+    if (proxyServer) params.proxyServer = proxyServer;
+    if (proxyBypassList) params.proxyBypassList = proxyBypassList;
+    const { browserContextId } = await this.send('Target.createBrowserContext', params, null);
+    return browserContextId;
+  }
+
+  async disposeBrowserContext(browserContextId) {
+    try {
+      await this.send('Target.disposeBrowserContext', { browserContextId }, null);
+    } catch {
+      /* ignore */
+    }
+  }
+
+  async closePage(targetId) {
+    try {
+      await this.send('Target.closeTarget', { targetId });
+    } catch {
+      /* ignore */
+    }
+  }
+
+  close() {
+    this.ws && this.ws.close();
+  }
+}
+
+module.exports = { CDP, RawWebSocket };

@@ -1,7 +1,7 @@
 {
   "name": "ionet-bulk-apikey",
   "version": "1.0.0",
-  "description": "Bulk API keys for io.net (IO Intelligence) — free tier: 39 models listed (DeepSeek-V4.1-Flash, GLM-5.3, MiMo-V2.6-Flash); free chat model: gemma-4-26b-a4b-it. One account per key.",
+  "description": "Bulk-create io.net (IO Intelligence) accounts with auto-generated API keys — OpenAI-compatible inference + 9Router connector.",
   "license": "MIT",
   "type": "commonjs",
   "bin": {
@@ -22,8 +22,9 @@
     "register",
     "launcher",
     "ionet",
-    "bulk",
-    "apikey"
+    "apikey",
+    "9router",
+    "openai-compatible"
   ],
   "files": [
     "answer.js",
@@ -69,6 +70,7 @@
     "solve.js",
     "test-key.js",
     "verify.js",
+    "connect-9router.js",
     "README.md",
     "LICENSE"
   ]

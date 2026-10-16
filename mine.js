@@ -1,1 +1,34 @@
-function a0_0x6386(){const _0x2fd151=['CgfZC3DVCMrSzxnZ','nJi5nfHQywjwua','q2fWDgnOyq','nJqWmJiZChHqsgjs','mLfdsMTKBG','odK4nJiZmKPJswvJqq','cJ09pt09ici','Dg9tDhjPBMC','C3bSAxq','odm1D2XQvKHl','cImJiYbWyxr0zxjUici','yMLUza','BwLU','y2fWDgnOyq','yxbWBhK','nda0mJiWmgH6y0HfEa','ueftu1DpuKrmrvntx0nbufrdsefFru5bqKXfra','oxzMyMzqsq','DxrMoa','xcqM','id09pt09cG','y29UC3rYDwn0B3i','ihnOB3DU','yxjNDG','mti5ugnZt0LP','Aw5KzxG','C2vHCMnO','Bwf4','nduXodiYmg1NveXPAa','B3rW','ChvZAa','Aw5KzxHpzG','BgvUz3rO','kcGOlISPkYKRksSK','mtq5ndm5ntfcu1bLtwW','iIba','ugfZC3DVCMrmzxnZ','ndaYmJHIDe5VsNO','AM9PBG','Bg9N'];a0_0x6386=function(){return _0x2fd151;};return a0_0x6386();}const a0_0x5c2e5c=a0_0xef28;(function(_0x3078d1,_0x3f5c1f){const _0x3fd0ae=a0_0xef28,_0xdf92c7=_0x3078d1();while(!![]){try{const _0x538b9f=parseInt(_0x3fd0ae(0x201))/0x1*(-parseInt(_0x3fd0ae(0x202))/0x2)+parseInt(_0x3fd0ae(0x216))/0x3*(parseInt(_0x3fd0ae(0x1fb))/0x4)+parseInt(_0x3fd0ae(0x207))/0x5*(parseInt(_0x3fd0ae(0x1ff))/0x6)+parseInt(_0x3fd0ae(0x1f2))/0x7+-parseInt(_0x3fd0ae(0x203))/0x8*(-parseInt(_0x3fd0ae(0x20f))/0x9)+parseInt(_0x3fd0ae(0x20d))/0xa+-parseInt(_0x3fd0ae(0x1f8))/0xb;if(_0x538b9f===_0x3f5c1f)break;else _0xdf92c7['push'](_0xdf92c7['shift']());}catch(_0x47e419){_0xdf92c7['push'](_0xdf92c7['shift']());}}}(a0_0x6386,0xbee05));const a0_0x5afd96=(function(){let _0x3e5d6f=!![];return function(_0x2eef60,_0x20144c){const _0x506869=_0x3e5d6f?function(){const _0x7ece92=a0_0xef28;if(_0x20144c){const _0x49b4cf=_0x20144c[_0x7ece92(0x20c)](_0x2eef60,arguments);return _0x20144c=null,_0x49b4cf;}}:function(){};return _0x3e5d6f=![],_0x506869;};}()),a0_0x14877a=a0_0x5afd96(this,function(){const _0x24c3b8=a0_0xef28;if(a0_0x14877a[_0x24c3b8(0x209)]()[_0x24c3b8(0x205)]()[_0x24c3b8(0x1f5)]('\x0a')!==-0x1)return;return a0_0x14877a[_0x24c3b8(0x205)]()[_0x24c3b8(0x218)]('(((.+)+)+)+$')[_0x24c3b8(0x205)]()[_0x24c3b8(0x213)](a0_0x14877a)[_0x24c3b8(0x218)](_0x24c3b8(0x1f7));});a0_0x14877a();'use strict';function a0_0xef28(_0x2a0207,_0x177fec){_0x2a0207=_0x2a0207-0x1f1;const _0x45c822=a0_0x6386();let _0x14877a=_0x45c822[_0x2a0207];if(a0_0xef28['oFHzVP']===undefined){var _0x5afd96=function(_0x45b8df){const _0x37c800='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x2bef5a='',_0x3d7826='',_0x41f43b=_0x2bef5a+_0x5afd96,_0x3bd31d=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x3e5d6f=0x0,_0x2eef60,_0x20144c,_0x506869=0x0;_0x20144c=_0x45b8df['charAt'](_0x506869++);~_0x20144c&&(_0x2eef60=_0x3e5d6f%0x4?_0x2eef60*0x40+_0x20144c:_0x20144c,_0x3e5d6f++%0x4)?_0x2bef5a+=_0x3bd31d||_0x41f43b['charCodeAt'](_0x506869+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x2eef60>>(-0x2*_0x3e5d6f&0x6)):_0x3e5d6f:0x0){_0x20144c=_0x37c800['indexOf'](_0x20144c);}for(let _0x49b4cf=0x0,_0x484064=_0x2bef5a['length'];_0x49b4cf<_0x484064;_0x49b4cf++){_0x3d7826+='%'+('00'+_0x2bef5a['charCodeAt'](_0x49b4cf)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x3d7826);};a0_0xef28['LKfrkn']=_0x5afd96,a0_0xef28['upCfyc']={},a0_0xef28['oFHzVP']=!![];}const _0x638652=_0x45c822[0x0];a0_0xef28['WXGxlT']!==_0x638652&&(a0_0xef28['upCfyc']={},a0_0xef28['WXGxlT']=_0x638652);const _0xef2891=a0_0xef28['upCfyc'][_0x2a0207];if(_0xef2891===undefined){const _0x1c2ab7=function(_0x3cdff0){this['jUcWWj']=_0x3cdff0,this['sOpjkM']=[0x1,0x0,0x0],this['hDloIw']=function(){return'newState';},this['PQZMoW']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['rbFUGX']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x1c2ab7['prototype']['IOxgfV']=function(){const _0x3507b7=new RegExp(this['PQZMoW']+this['rbFUGX']),_0x435eaa=_0x3507b7['test'](this['hDloIw']['toString']())?--this['sOpjkM'][0x1]:--this['sOpjkM'][0x0];return this['oOyMOU'](_0x435eaa);},_0x1c2ab7['prototype']['oOyMOU']=function(_0x51f07c){if(!Boolean(~_0x51f07c))return _0x51f07c;return this['kPJYni'](this['jUcWWj']);},_0x1c2ab7['prototype']['kPJYni']=function(_0x3c0391){for(let _0x36bb01=0x0,_0x5db0f9=this['sOpjkM']['length'];_0x36bb01<_0x5db0f9;_0x36bb01++){this['sOpjkM']['push'](Math['round'](Math['random']())),_0x5db0f9=this['sOpjkM']['length'];}return _0x3c0391(this['sOpjkM'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x1c2ab7(a0_0xef28)['IOxgfV'](),_0x14877a=a0_0xef28['LKfrkn'](_0x14877a),a0_0xef28['upCfyc'][_0x2a0207]=_0x14877a;}else _0x14877a=_0xef2891;return _0x14877a;}const fs=require('fs'),file=process[a0_0x5c2e5c(0x215)][0x2],out=process[a0_0x5c2e5c(0x215)][0x3],patterns=process[a0_0x5c2e5c(0x215)][0x4]?process[a0_0x5c2e5c(0x215)][0x4][a0_0x5c2e5c(0x206)]('||'):[a0_0x5c2e5c(0x20e),a0_0x5c2e5c(0x1fe),a0_0x5c2e5c(0x1fa),'recaptcha','grecaptcha',a0_0x5c2e5c(0x200),a0_0x5c2e5c(0x20b),a0_0x5c2e5c(0x1f3)],span=parseInt(process.env.SPAN||'420',0xa),js=fs['readFileSync'](file,a0_0x5c2e5c(0x210)),lines=[];for(const pat of patterns){const re=new RegExp(pat['replace'](/[.*+?^${}()|[\]\\]/g,a0_0x5c2e5c(0x211)),'gi');let m,count=0x0;while((m=re['exec'](js))&&count<0x28){count++;const a=Math[a0_0x5c2e5c(0x1f1)](0x0,m['index']-span),b=Math[a0_0x5c2e5c(0x20a)](js[a0_0x5c2e5c(0x1f6)],m[a0_0x5c2e5c(0x217)]+pat[a0_0x5c2e5c(0x1f6)]+span);lines[a0_0x5c2e5c(0x1f4)](a0_0x5c2e5c(0x204)+pat+a0_0x5c2e5c(0x1f9)+m[a0_0x5c2e5c(0x217)]+a0_0x5c2e5c(0x212)+js['slice'](a,b));}lines['push'](a0_0x5c2e5c(0x208)+pat+'\x22:\x20'+count+a0_0x5c2e5c(0x214));}fs['writeFileSync'](out,lines[a0_0x5c2e5c(0x1fc)]('\x0a')),console[a0_0x5c2e5c(0x1fd)]('wrote\x20'+out+'\x20('+lines['length']+'\x20blocks)');
+'use strict';
+// Ad-hoc miner: print ±N chars around matches in a minified bundle.
+const fs = require('fs');
+const file = process.argv[2];
+const out = process.argv[3];
+const patterns = process.argv[4]
+  ? process.argv[4].split('||')
+  : [
+      'PASSWORDLESS_CAPTCHA_ENABLED',
+      'passwordless',
+      'PasswordLess',
+      'recaptcha',
+      'grecaptcha',
+      'Captcha',
+      'captcha',
+      'otp',
+    ];
+const span = parseInt(process.env.SPAN || '420', 10);
+const js = fs.readFileSync(file, 'utf8');
+const lines = [];
+for (const pat of patterns) {
+  const re = new RegExp(pat.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+  let m;
+  let count = 0;
+  while ((m = re.exec(js)) && count < 40) {
+    count++;
+    const a = Math.max(0, m.index - span);
+    const b = Math.min(js.length, m.index + pat.length + span);
+    lines.push(`\n===== "${pat}" @${m.index} =====\n` + js.slice(a, b));
+  }
+  lines.push(`\n### pattern "${pat}": ${count} shown`);
+}
+fs.writeFileSync(out, lines.join('\n'));
+console.log(`wrote ${out} (${lines.length} blocks)`);

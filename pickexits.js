@@ -1,1 +1,68 @@
-const a0_0x5ad733=a0_0xdd7a;(function(_0x57fb70,_0x13415b){const _0x2a535c=a0_0xdd7a,_0xb198f5=_0x57fb70();while(!![]){try{const _0x22112d=parseInt(_0x2a535c(0x99))/0x1*(parseInt(_0x2a535c(0xc8))/0x2)+parseInt(_0x2a535c(0xba))/0x3+parseInt(_0x2a535c(0xa4))/0x4*(parseInt(_0x2a535c(0xbc))/0x5)+parseInt(_0x2a535c(0x94))/0x6*(-parseInt(_0x2a535c(0xc9))/0x7)+parseInt(_0x2a535c(0xc4))/0x8*(-parseInt(_0x2a535c(0xaa))/0x9)+-parseInt(_0x2a535c(0xbf))/0xa+parseInt(_0x2a535c(0x93))/0xb;if(_0x22112d===_0x13415b)break;else _0xb198f5['push'](_0xb198f5['shift']());}catch(_0x2602ba){_0xb198f5['push'](_0xb198f5['shift']());}}}(a0_0x44cb,0x9cf27));const a0_0x5051d5=(function(){let _0x70d3ba=!![];return function(_0x47db3f,_0x330a2f){const _0x4a7c2e=_0x70d3ba?function(){const _0x306541=a0_0xdd7a;if(_0x330a2f){const _0x240d6f=_0x330a2f[_0x306541(0xc3)](_0x47db3f,arguments);return _0x330a2f=null,_0x240d6f;}}:function(){};return _0x70d3ba=![],_0x4a7c2e;};}()),a0_0x4b65b8=a0_0x5051d5(this,function(){const _0x398f62=a0_0xdd7a;if(a0_0x4b65b8[_0x398f62(0x97)]()[_0x398f62(0xa3)]()[_0x398f62(0x98)]('\x0a')!==-0x1)return;return a0_0x4b65b8[_0x398f62(0xa3)]()[_0x398f62(0x91)]('(((.+)+)+)+$')['toString']()[_0x398f62(0xa0)](a0_0x4b65b8)['search']('(((.+)+)+)+$');});a0_0x4b65b8();'use strict';const fs=require('fs'),path=require('path'),{parseProxy,fetchText}=require(a0_0x5ad733(0x9a)),argv=process['argv'][a0_0x5ad733(0xbe)](0x2),arg=(_0x17116c,_0x4d518e)=>{const _0x57a7f3=a0_0x5ad733,_0x26a6fe=argv[_0x57a7f3(0x98)]('--'+_0x17116c);return _0x26a6fe===-0x1?_0x4d518e:argv[_0x26a6fe+0x1];},FILE=arg('file',''),LINE=arg(a0_0x5ad733(0xbb),''),WANT=parseInt(arg(a0_0x5ad733(0xc5),'4'),0xa),LIMIT=parseInt(arg('limit','80'),0xa),CONC=parseInt(arg(a0_0x5ad733(0xc7),'8'),0xa),TO=parseInt(arg(a0_0x5ad733(0xb0),a0_0x5ad733(0xb4)),0xa),ROOT=path[a0_0x5ad733(0x9d)](__dirname),sleep=_0x32298c=>new Promise(_0x6a4511=>setTimeout(_0x6a4511,_0x32298c));async function test(_0x1a15ec){const _0x578dce=a0_0x5ad733,_0xd038a1=parseProxy(_0x1a15ec);if(!_0xd038a1)return{'line':_0x1a15ec,'ok':![],'err':_0x578dce(0xa6)};_0xd038a1[_0x578dce(0xbd)]=TO,_0xd038a1[_0x578dce(0xc6)]=TO;const _0x312568=Date[_0x578dce(0xb7)]();try{const _0x527300=(await fetchText(_0xd038a1,_0x578dce(0x9e),{'timeoutMs':TO}))[_0x578dce(0xa8)](),_0x57d469=await fetchText(_0xd038a1,_0x578dce(0xa1),{'timeoutMs':TO}),_0x37472b=/<html|io\.net|Log in/i[_0x578dce(0xb5)](_0x57d469)&&_0x57d469[_0x578dce(0xb3)]>0xc8,_0x30f7e6=await fetchText(_0xd038a1,'https://www.google.com/recaptcha/api.js',{'timeoutMs':TO}),_0xe65cb6=/grecaptcha|recaptcha/i[_0x578dce(0xb5)](_0x30f7e6),_0x21fa68=Boolean(_0x527300)&&_0x37472b&&_0xe65cb6;return{'line':_0x1a15ec,'ok':_0x21fa68,'ip':_0x527300,'idOk':_0x37472b,'ggOk':_0xe65cb6,'ms':Date[_0x578dce(0xb7)]()-_0x312568};}catch(_0x4155d9){return{'line':_0x1a15ec,'ok':![],'err':_0x4155d9[_0x578dce(0xb9)]['slice'](0x0,0x3c),'ms':Date[_0x578dce(0xb7)]()-_0x312568};}}(async()=>{const _0x216e8c=a0_0x5ad733;let _0x38f822=[];if(LINE)_0x38f822=[LINE];else{if(FILE)_0x38f822=fs[_0x216e8c(0xaf)](FILE,_0x216e8c(0xc2))[_0x216e8c(0xb6)](/\r?\n/)['map'](_0x1f95c4=>_0x1f95c4[_0x216e8c(0xa8)]())['filter'](_0x3d4eda=>_0x3d4eda&&!_0x3d4eda[_0x216e8c(0xac)]('#'))[_0x216e8c(0xbe)](0x0,LIMIT);else throw new Error('--file\x20or\x20--line\x20required');}console[_0x216e8c(0xab)](_0x216e8c(0xae)+_0x38f822[_0x216e8c(0xb3)]+_0x216e8c(0xb8)+CONC+',\x20timeout='+TO+'ms');const _0x1afd36=[];let _0xe4fff3=0x0;const _0xbcaf4=async()=>{const _0x5949b7=_0x216e8c;while(_0xe4fff3<_0x38f822['length']&&_0x1afd36[_0x5949b7(0xb3)]<WANT){const _0x2ea669=_0x38f822[_0xe4fff3++],_0x181add=await test(_0x2ea669);console[_0x5949b7(0xab)]('[pick]\x20'+(_0x181add['ok']?_0x5949b7(0xb1):_0x5949b7(0x9c))+'\x20'+(_0x181add['ip']||_0x181add['err']||'')+'\x20'+_0x181add['line']['slice'](0x0,0x32)+'\x20'+_0x181add['ms']+'ms');if(_0x181add['ok'])_0x1afd36[_0x5949b7(0xa2)](_0x181add);}};await Promise[_0x216e8c(0x95)](Array[_0x216e8c(0xa9)]({'length':CONC},_0xbcaf4));const _0x46a6b0=new Date()['toISOString']()['replace'](/[:.]/g,'-'),_0x2c8f5a=path['join'](ROOT,_0x216e8c(0xc1),'pick-'+_0x46a6b0+'.txt');fs[_0x216e8c(0x9b)](_0x2c8f5a,_0x1afd36[_0x216e8c(0xad)](_0x5cab11=>_0x5cab11['line']+'\x09'+_0x5cab11['ip'])['join']('\x0a')+'\x0a'),console[_0x216e8c(0xab)](_0x216e8c(0xc0)+_0x1afd36[_0x216e8c(0xb3)]+_0x216e8c(0x9f)+_0x2c8f5a);for(const _0x383b1a of _0x1afd36)console['log']('WIN\x20'+_0x383b1a['line']+_0x216e8c(0xa7)+_0x383b1a['ip']);})()[a0_0x5ad733(0xb2)](_0x1cf0c0=>{const _0x3fed67=a0_0x5ad733;console[_0x3fed67(0x96)](_0x3fed67(0x92),_0x1cf0c0[_0x3fed67(0xb9)]),process[_0x3fed67(0xa5)](0x1);});function a0_0xdd7a(_0x5ac193,_0x5ec2ff){_0x5ac193=_0x5ac193-0x91;const _0x59b607=a0_0x44cb();let _0x4b65b8=_0x59b607[_0x5ac193];if(a0_0xdd7a['zpSgSJ']===undefined){var _0x5051d5=function(_0x2da727){const _0x2e11ed='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x3cc789='',_0x163577='',_0x4745c5=_0x3cc789+_0x5051d5,_0x59a380=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0x70d3ba=0x0,_0x47db3f,_0x330a2f,_0x4a7c2e=0x0;_0x330a2f=_0x2da727['charAt'](_0x4a7c2e++);~_0x330a2f&&(_0x47db3f=_0x70d3ba%0x4?_0x47db3f*0x40+_0x330a2f:_0x330a2f,_0x70d3ba++%0x4)?_0x3cc789+=_0x59a380||_0x4745c5['charCodeAt'](_0x4a7c2e+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x47db3f>>(-0x2*_0x70d3ba&0x6)):_0x70d3ba:0x0){_0x330a2f=_0x2e11ed['indexOf'](_0x330a2f);}for(let _0x240d6f=0x0,_0x17116c=_0x3cc789['length'];_0x240d6f<_0x17116c;_0x240d6f++){_0x163577+='%'+('00'+_0x3cc789['charCodeAt'](_0x240d6f)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x163577);};a0_0xdd7a['ADcGuj']=_0x5051d5,a0_0xdd7a['fMumop']={},a0_0xdd7a['zpSgSJ']=!![];}const _0x44cbdd=_0x59b607[0x0];a0_0xdd7a['UdPYSm']!==_0x44cbdd&&(a0_0xdd7a['fMumop']={},a0_0xdd7a['UdPYSm']=_0x44cbdd);const _0xdd7ab6=a0_0xdd7a['fMumop'][_0x5ac193];if(_0xdd7ab6===undefined){const _0x4d518e=function(_0x26a6fe){this['rgEgyq']=_0x26a6fe,this['ZApbRT']=[0x1,0x0,0x0],this['pJmQEY']=function(){return'newState';},this['QKleen']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['HMmmyM']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x4d518e['prototype']['zUHqYN']=function(){const _0x32298c=new RegExp(this['QKleen']+this['HMmmyM']),_0x6a4511=_0x32298c['test'](this['pJmQEY']['toString']())?--this['ZApbRT'][0x1]:--this['ZApbRT'][0x0];return this['YsTCZQ'](_0x6a4511);},_0x4d518e['prototype']['YsTCZQ']=function(_0x1a15ec){if(!Boolean(~_0x1a15ec))return _0x1a15ec;return this['GTkrfh'](this['rgEgyq']);},_0x4d518e['prototype']['GTkrfh']=function(_0xd038a1){for(let _0x312568=0x0,_0x527300=this['ZApbRT']['length'];_0x312568<_0x527300;_0x312568++){this['ZApbRT']['push'](Math['round'](Math['random']())),_0x527300=this['ZApbRT']['length'];}return _0xd038a1(this['ZApbRT'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x4d518e(a0_0xdd7a)['zUHqYN'](),_0x4b65b8=a0_0xdd7a['ADcGuj'](_0x4b65b8),a0_0xdd7a['fMumop'][_0x5ac193]=_0x4b65b8;}else _0x4b65b8=_0xdd7ab6;return _0x4b65b8;}function a0_0x44cb(){const _0x2071aa=['DgLTzw91Dc1TCW','t0SGia','y2f0y2G','BgvUz3rO','mtaWmda','DgvZDa','C3bSAxq','BM93','igv4AxrZlcbJB25Jpq','BwvZC2fNzq','mtC5mtyXmKfVCvfmDq','BgLUzq','mte4nwzRsezZza','y29UBMvJDfrPBwvVDxrnCW','C2XPy2u','mZiZodu2mhveqvjSzW','w3bPy2TDia','B3v0Chv0CW','DxrMoa','yxbWBhK','oeT2C3rjrG','D2fUDa','DgLTzw91De1Z','y29UyW','mJa4mtK2ngXmseLcvq','odiXmJqWn0HtyK1XtG','C2vHCMnO','w3bPy2TDiezbsuW','mtaWnZu4mdjrr3HLCeC','nLPfueLSDG','ywXS','zxjYB3i','yMLUza','Aw5KzxHpzG','mxnAv0j5uW','lI9WCM94Es5QCW','D3jPDgvgAwXLu3LUyW','zMfPBa','AM9PBG','Ahr0Chm6lY9HCgKUAxbPzNKUB3jN','ihDPBM5LCIHZksaTpIa','y29UC3rYDwn0B3i','Ahr0Chm6lY9Pzc5PBY5UzxqVBg9NAw4','ChvZAa','Dg9tDhjPBMC','otm0mhnNwvjusq','zxHPDa','CgfYC2u','igLWpq','DhjPBq','zNjVBq','odCWodG1oxbswNDmvq','Bg9N','C3rHCNrZv2L0Aa','BwfW','w3bPy2TDihrLC3rPBMCG','CMvHzezPBgvtEw5J'];a0_0x44cb=function(){return _0x2071aa;};return a0_0x44cb();}
+'use strict';
+/*
+ * Point-of-use egress picker for io.net: a line is usable only if it carries
+ * id.io.net AND www.google.com (reCAPTCHA script host) right now — static
+ * "live" lists go stale in minutes (measured: half-life < 30 min).
+ *
+ *   node src/pickexits.js --file ../../out/union-live.txt --want 4 [--limit 80] [--conc 8]
+ *   node src/pickexits.js --line socks5://...   (test one)
+ *
+ * Prints winners (one per line) to stdout and outputs/pick-<stamp>.txt
+ */
+const fs = require('fs');
+const path = require('path');
+const { parseProxy, fetchText } = require('./proxy.js');
+
+const argv = process.argv.slice(2);
+const arg = (n, d) => { const i = argv.indexOf('--' + n); return i === -1 ? d : argv[i + 1]; };
+const FILE = arg('file', '');
+const LINE = arg('line', '');
+const WANT = parseInt(arg('want', '4'), 10);
+const LIMIT = parseInt(arg('limit', '80'), 10);
+const CONC = parseInt(arg('conc', '8'), 10);
+const TO = parseInt(arg('timeout-ms', '10000'), 10);
+
+const ROOT = path.join(__dirname);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function test(line) {
+  const proxy = parseProxy(line);
+  if (!proxy) return { line, ok: false, err: 'parse' };
+  proxy.connectTimeoutMs = TO; proxy.timeoutMs = TO;
+  const t0 = Date.now();
+  try {
+    const ip = (await fetchText(proxy, 'https://api.ipify.org', { timeoutMs: TO })).trim();
+    const id = await fetchText(proxy, 'https://id.io.net/login', { timeoutMs: TO });
+    const idOk = /<html|io\.net|Log in/i.test(id) && id.length > 200;
+    const gg = await fetchText(proxy, 'https://www.google.com/recaptcha/api.js', { timeoutMs: TO });
+    const ggOk = /grecaptcha|recaptcha/i.test(gg);
+    const ok = Boolean(ip) && idOk && ggOk;
+    return { line, ok, ip, idOk, ggOk, ms: Date.now() - t0 };
+  } catch (e) {
+    return { line, ok: false, err: e.message.slice(0, 60), ms: Date.now() - t0 };
+  }
+}
+
+(async () => {
+  let lines = [];
+  if (LINE) lines = [LINE];
+  else if (FILE) lines = fs.readFileSync(FILE, 'utf8').split(/\r?\n/).map((l) => l.trim()).filter((l) => l && !l.startsWith('#')).slice(0, LIMIT);
+  else throw new Error('--file or --line required');
+  console.log(`[pick] testing ${lines.length} exits, conc=${CONC}, timeout=${TO}ms`);
+  const winners = [];
+  let idx = 0;
+  const worker = async () => {
+    while (idx < lines.length && winners.length < WANT) {
+      const line = lines[idx++];
+      const r = await test(line);
+      console.log(`[pick] ${r.ok ? 'OK  ' : 'fail'} ${r.ip || r.err || ''} ${r.line.slice(0, 50)} ${r.ms}ms`);
+      if (r.ok) winners.push(r);
+    }
+  };
+  await Promise.all(Array.from({ length: CONC }, worker));
+  const stamp = new Date().toISOString().replace(/[:.]/g, '-');
+  const out = path.join(ROOT, 'outputs', `pick-${stamp}.txt`);
+  fs.writeFileSync(out, winners.map((w) => `${w.line}\t${w.ip}`).join('\n') + '\n');
+  console.log(`[pick] ${winners.length} winner(s) -> ${out}`);
+  for (const w of winners) console.log('WIN ' + w.line + ' ip=' + w.ip);
+})().catch((e) => { console.error('[pick] FAIL', e.message); process.exit(1); });

@@ -1,1 +1,50 @@
-const a0_0x242f9e=a0_0x58d6;function a0_0x58d6(_0x174025,_0x58eecb){_0x174025=_0x174025-0x1d1;const _0x5cffb7=a0_0x1224();let _0x3dcdf0=_0x5cffb7[_0x174025];if(a0_0x58d6['BlFrPp']===undefined){var _0x42b31a=function(_0x571173){const _0x8cbaf0='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0xb784ef='',_0xae240b='',_0x46e87e=_0xb784ef+_0x42b31a,_0x8e21cb=(''+function(){return 0x0;})['indexOf']('\x0a')!==-0x1;for(let _0xb78aa4=0x0,_0x219d55,_0x4c2303,_0x25337a=0x0;_0x4c2303=_0x571173['charAt'](_0x25337a++);~_0x4c2303&&(_0x219d55=_0xb78aa4%0x4?_0x219d55*0x40+_0x4c2303:_0x4c2303,_0xb78aa4++%0x4)?_0xb784ef+=_0x8e21cb||_0x46e87e['charCodeAt'](_0x25337a+0xa)-0xa!==0x0?String['fromCharCode'](0xff&_0x219d55>>(-0x2*_0xb78aa4&0x6)):_0xb78aa4:0x0){_0x4c2303=_0x8cbaf0['indexOf'](_0x4c2303);}for(let _0x58b96d=0x0,_0x4b43f6=_0xb784ef['length'];_0x58b96d<_0x4b43f6;_0x58b96d++){_0xae240b+='%'+('00'+_0xb784ef['charCodeAt'](_0x58b96d)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0xae240b);};a0_0x58d6['VcmPTj']=_0x42b31a,a0_0x58d6['OLaOaF']={},a0_0x58d6['BlFrPp']=!![];}const _0x122484=_0x5cffb7[0x0];a0_0x58d6['AFbxuh']!==_0x122484&&(a0_0x58d6['OLaOaF']={},a0_0x58d6['AFbxuh']=_0x122484);const _0x58d6d9=a0_0x58d6['OLaOaF'][_0x174025];if(_0x58d6d9===undefined){const _0x39f84f=function(_0x597a08){this['uPbFKM']=_0x597a08,this['zwgsGl']=[0x1,0x0,0x0],this['FNqcVa']=function(){return'newState';},this['gCkyOO']='\x5c\x77\x2b\x20\x2a\x5c\x28\x5c\x29\x20\x2a\x7b\x5c\x77\x2b\x20\x2a',this['huUfAG']='\x5b\x27\x7c\x22\x5d\x2e\x2b\x5b\x27\x7c\x22\x5d\x3b\x3f\x20\x2a\x7d';};_0x39f84f['prototype']['QVbWUn']=function(){const _0x4f2664=new RegExp(this['gCkyOO']+this['huUfAG']),_0x59bbbe=_0x4f2664['test'](this['FNqcVa']['toString']())?--this['zwgsGl'][0x1]:--this['zwgsGl'][0x0];return this['OcfVWX'](_0x59bbbe);},_0x39f84f['prototype']['OcfVWX']=function(_0x4150ac){if(!Boolean(~_0x4150ac))return _0x4150ac;return this['NXBYFM'](this['uPbFKM']);},_0x39f84f['prototype']['NXBYFM']=function(_0x3426c8){for(let _0x571834=0x0,_0x81a99=this['zwgsGl']['length'];_0x571834<_0x81a99;_0x571834++){this['zwgsGl']['push'](Math['round'](Math['random']())),_0x81a99=this['zwgsGl']['length'];}return _0x3426c8(this['zwgsGl'][0x0]);},(''+function(){return 0x0;})['indexOf']('\x0a')===-0x1&&new _0x39f84f(a0_0x58d6)['QVbWUn'](),_0x3dcdf0=a0_0x58d6['VcmPTj'](_0x3dcdf0),a0_0x58d6['OLaOaF'][_0x174025]=_0x3dcdf0;}else _0x3dcdf0=_0x58d6d9;return _0x3dcdf0;}(function(_0x5c0f74,_0x1fab22){const _0x2adce7=a0_0x58d6,_0x14c085=_0x5c0f74();while(!![]){try{const _0x4e51c5=parseInt(_0x2adce7(0x1d3))/0x1+parseInt(_0x2adce7(0x1df))/0x2+parseInt(_0x2adce7(0x1e5))/0x3+parseInt(_0x2adce7(0x1e7))/0x4+parseInt(_0x2adce7(0x1d9))/0x5+parseInt(_0x2adce7(0x1e4))/0x6+-parseInt(_0x2adce7(0x1dc))/0x7*(parseInt(_0x2adce7(0x1f4))/0x8);if(_0x4e51c5===_0x1fab22)break;else _0x14c085['push'](_0x14c085['shift']());}catch(_0x21d3a2){_0x14c085['push'](_0x14c085['shift']());}}}(a0_0x1224,0x9df7e));const a0_0x42b31a=(function(){let _0xb78aa4=!![];return function(_0x219d55,_0x4c2303){const _0x25337a=_0xb78aa4?function(){const _0x1ff302=a0_0x58d6;if(_0x4c2303){const _0x58b96d=_0x4c2303[_0x1ff302(0x1e8)](_0x219d55,arguments);return _0x4c2303=null,_0x58b96d;}}:function(){};return _0xb78aa4=![],_0x25337a;};}()),a0_0x3dcdf0=a0_0x42b31a(this,function(){const _0x43e72d=a0_0x58d6;if(a0_0x3dcdf0[_0x43e72d(0x1f0)]()[_0x43e72d(0x1f7)]()[_0x43e72d(0x1e3)]('\x0a')!==-0x1)return;return a0_0x3dcdf0['toString']()[_0x43e72d(0x1dd)](_0x43e72d(0x1ec))[_0x43e72d(0x1f7)]()['constructor'](a0_0x3dcdf0)['search'](_0x43e72d(0x1ec));});a0_0x3dcdf0();'use strict';function a0_0x1224(){const _0x40de08=['yxbWBhK','uhjLzMvYie9orsbICM93C2vYihDPDgGGBxvSDgLWBguGAxnVBgf0zwqGy29UDgv4DhmGB3zLCIbVBMuGyNjVD3nLCIbWzxiGywnJB3vUDdO','ls1OzwfKBgvZCZ1UzxC','ls1QCY1MBgfNCZ0Tlw1HEc1VBgqTC3bHy2uTC2L6zt0Ynty','kcGOlISPkYKRksSK','zxHWB3j0CW','ChjVy2vZCYb0CMvLicHHBMqGDgHLCMvMB3jLihrOzsbsqu0Gy29ZDcKGAxmGC2HHCMvKlIbpBMX5ihrOzsbJyxb0y2HHihbOyxnLihrYDwX5','ls1KAxnHyMXLlwv4DgvUC2LVBNm','yMLUza','ls1KAxnHyMXLlxnVzNr3yxjLlxjHC3rLCML6zxi','ls1KAxnHyMXLlwDWDq','ls1KAxnHyMXLlwrLzMf1BhqTyxbWCW','ntuZnta4mg1bthngDW','ls1KAxnHyMXLlwjHy2TNCM91BMrPBMCTB2nJBhvKzwqTD2LUzg93CW','ls1KAxnHyMXLlxn5BMm','Dg9tDhjPBMC','AM9PBG','BMvLzhmGysb2AxnPyMXLlcbKzwrPy2f0zwqGD2LUzg93lG','mteZnde5m3L1uvnKta','ChvZAa','ls1Yzw5KzxjLCI1WCM9JzxnZlwXPBwL0pti','ls1UBY1KzwzHDwX0lwjYB3DZzxiTy2HLy2S','ls1KAxnHyMXLlxjLBMrLCMvYlwjHy2TNCM91BMrPBMC','ls1TDxrLlwf1zgLV','nJa1nJy1sLbkz0HZ','ls1KAxnHyMXLlwrLDI1ZAg0TDxnHz2u','icbJB25ZDcb7ihrHCMDLDeLKih0GpsbHD2fPDcbJBgLLBNqUC2vUzcGNvgfYz2v0lMnYzwf0zvrHCMDLDcCSihSGDxjSlcbICM93C2vYq29UDgv4DeLKih0PoW','ndjRr1rWChO','C2vHCMnO','ls1UBY1MAxjZDc1YDw4','mtCWnZGYmLrluuDtta','ls1KAxnHyMXLlwjHy2TNCM91BMqTDgLTzxiTDgHYB3r0BgLUzW','ls1KAxnHyMXLlwjHy2TNCM91BMqTBMv0D29YA2LUzW','icbJB25ZDcb7igjYB3DZzxjdB250zxH0swqGFsa9igf3ywL0ignSAwvUDc5Zzw5KkcDuyxjNzxqUy3jLyxrLqNjVD3nLCKnVBNrLEhqNlcb7ihbYB3H5u2vYDMvYoIaNC29JA3m1oI8V4OcMjYb9ktS','Aw5KzxHpzG','nJqXnZiYoeDrAxH4wG','mZqYmZq4mfLRz1DzuG','ls1KAxnHyMXLlwzLyxr1CMvZpvrYyw5ZBgf0zsXcywnRrM9YD2fYzenHy2HLlefJy2vWDenirNjHBwuStwvKAwfsB3v0zxiSt3b0Aw1PEMf0Aw9UsgLUDhm','mtKXmZy1mLPxrNb5uW'];a0_0x1224=function(){return _0x40de08;};return a0_0x1224();}function leanArgs({headless:headless=![],extra:extra=[]}={}){const _0x56481e=a0_0x58d6,_0x4b43f6=[_0x56481e(0x1f2),_0x56481e(0x1f1),_0x56481e(0x1da),_0x56481e(0x1ef),_0x56481e(0x1e1),_0x56481e(0x1e0),_0x56481e(0x1f5),_0x56481e(0x1d7),_0x56481e(0x1f3),_0x56481e(0x1f6),_0x56481e(0x1e6),_0x56481e(0x1d5),_0x56481e(0x1eb),_0x56481e(0x1de),_0x56481e(0x1d6),_0x56481e(0x1d8),...extra];if(headless)_0x4b43f6[_0x56481e(0x1d4)](_0x56481e(0x1ea));return _0x4b43f6;}function sharedBrowserNote(){const _0x2bfae6=a0_0x58d6;return[_0x2bfae6(0x1e9),_0x2bfae6(0x1e2),_0x2bfae6(0x1db),'Each\x20context\x20has\x20its\x20own\x20cookies/proxy/UA\x20and\x20is\x20invisible\x20to\x20the\x20others,\x20while\x20the',_0x2bfae6(0x1ee),_0x2bfae6(0x1d2)][_0x2bfae6(0x1d1)]('\x0a');}module[a0_0x242f9e(0x1ed)]={'leanArgs':leanArgs,'sharedBrowserNote':sharedBrowserNote};
+// Shared lean launch flags for every CDP browser the toolchain opens.
+//
+// Measured 2026-10-14: 97 chrome.exe processes across the tool’s profiles cost
+// 7.42 GB of RAM (~6.55 GB free left). Each profile spawns ~8-12 processes
+// (browser + renderers + GPU + utility). Two levers matter, in this order:
+//   1) fewer concurrent profiles (the biggest win by far),
+//   2) lean flags per profile — GPU/utility/renderer trimming is worth ~30-40 %.
+//
+// Usage:  const { leanArgs } = require('./chrome-flags');
+//         puppeteer.launch({ args: [...leanArgs(), '--user-data-dir=…'], … })
+'use strict';
+
+/** Flags that cut memory without touching JS execution or rendering fidelity. */
+function leanArgs({ headless = false, extra = [] } = {}) {
+  const args = [
+    '--disable-gpu',
+    '--disable-software-rasterizer',
+    '--disable-dev-shm-usage',
+    '--disable-extensions',
+    '--disable-background-networking',
+    '--disable-background-timer-throttling',
+    '--disable-backgrounding-occluded-windows',
+    '--disable-renderer-backgrounding',
+    '--disable-default-apps',
+    '--disable-sync',
+    '--disable-features=Translate,BackForwardCache,AcceptCHFrame,MediaRouter,OptimizationHints',
+    '--renderer-process-limit=2',
+    '--js-flags=--max-old-space-size=256',
+    '--no-first-run',
+    '--no-default-browser-check',
+    '--mute-audio',
+    ...extra,
+  ];
+  if (headless) args.push('--headless=new');
+  return args;
+}
+
+/** A realistic lower bound: one browser with several isolated contexts. */
+function sharedBrowserNote() {
+  return [
+    'Prefer ONE browser with multiple isolated contexts over one browser per account:',
+    "  const { browserContextId } = await client.send('Target.createBrowserContext', { proxyServer: 'socks5://…' });",
+    "  const { targetId } = await client.send('Target.createTarget', { url, browserContextId });",
+    'Each context has its own cookies/proxy/UA and is invisible to the others, while the',
+    'process tree (and therefore the RAM cost) is shared. Only the captcha phase truly',
+    'needs a visible, dedicated window.',
+  ].join('\n');
+}
+
+module.exports = { leanArgs, sharedBrowserNote };
