@@ -24,6 +24,12 @@
 
 </div>
 
+<div align="center">
+
+**English** · [Türkçe](README.tr.md) · [中文](README.cn.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Español](README.es.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Русский](README.ru.md) · [Português](README.pt.md)
+
+</div>
+
 ---
 
 ## ✨ Why this exists
@@ -70,10 +76,9 @@ node src/cli.js verify --proxy socks5://127.0.0.1:1080     # every key is re-tes
 
 Measured free-tier coverage:
 
-| id | free-tier result |
-| --- | --- |
-| `google/gemma-4-26b-a4b-it` | **200** — real completion (the verifier here) |
-| 24 other ids | `402 requires a higher IO Intelligence tier` — gated until upgrade |
+|Model|✓|
+|---|---|
+|`google/gemma-4-26b-a4b-it`|✓|
 
 The full 39 ids are in [`models.json`](models.json). Live probe of one key (exactly what the verifier does):
 
