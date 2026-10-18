@@ -170,9 +170,9 @@ Two knobs worth knowing: the API key must be created with `project: "io-intellig
 | tool | flags |
 | --- | --- |
 | `cli.js` | `mint` · `finish` · `verify` · `screen` — each task prints its own flags (`node src/lane.js --help`) |
-| `lane.js` | `--tag` (RP) · `--port` (9411) · `--target N` · `--pick` (fresh pool exit per attempt) or `--proxy <line>` (fixed exit) · `--max-attempts N` · `--solve-dir` · `--solve-budget-ms` |
-| `run-account.js` | `--until start\|otp\|key` · `--solve-budget-ms` · `--round-wait-ms` · `--proxy <line>` · `--broker <url>` · `--email` / `--email-token` (resume an inbox) |
-| `http-finish.js` | `--email` + `--box-token`, or `--token <accessToken>`, or `--from-log <net.jsonl>` · `--key-name` |
+| `lane.js` | `--tag` (L) · `--port` (9411) · `--target N` (5) · `--pick` (fresh pool exit per attempt) or `--proxy <line>` (fixed exit) · `--max-attempts N` · `--union-file` / `--new-file` |
+| `run-account.js` | `--tag` · `--port` · `--until start\|email\|otp\|key` · `--proxy <line>` · `--broker <url>` · `--solve-dir` · `--solve-budget-ms` · `--round-wait-ms` · `--otp-timeout-ms` · `--email` / `--email-token` (resume an inbox) |
+| `http-finish.js` | `--email` + `--box-token`, or `--token <accessToken>` / `--token-file`, or `--from-log <net.jsonl>` · `--name` · `--model` · `--otp-timeout-ms` |
 | 9Router | `--connect-9router` on any task — after it finishes, registers every key in `keys.txt` into a running 9Router (`node src/connect-9router.js --help`) |
 
 ## 🛰️ Behind a proxy
