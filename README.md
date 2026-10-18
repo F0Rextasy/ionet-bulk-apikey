@@ -41,7 +41,7 @@ broker mailbox ──▶ exit pick + point-of-use preflight (id.io.net + recaptc
   (GET /v1/models 200 + real completion)
 ```
 
-> **Scope note:** ionet/bazaarlink are on the blocked-provider list — the flow below is kept as measured. Registrations are rate-limited by the provider and challenges are human-gated; scale is capped by those gates.
+> **Status note (2026-10-18):** repo was archived earlier the same day while the rail was believed dead; an evening re-audit re-verified it — the on-disk pool of 30 keys was swept end-to-end and **29/30 answered a live chat completion** (`google/gemma-4-26b-a4b-it` → 200 `"pong"`; the one miss was a timeout), and the rail `id.io.net/login` answered `200`. Repo is **active** again. Registrations are rate-limited by the provider and challenges are human-gated; scale is capped by those gates.
 
 ## 🎁 Free tier — how much you get
 
