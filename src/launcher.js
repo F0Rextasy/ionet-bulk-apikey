@@ -12,13 +12,20 @@ const readline = require('readline');
 const { spawnSync } = require('child_process');
 const { connectKeysFile, connect9Router } = require('./connect-9router.js');
 
+// Keep the menu alive when a task's socket dies mid-run.
+process.on('uncaughtException', (e) => console.log(`WARN uncaught: ${String(e && e.message).slice(0, 180)}`));
+
+// Leftovers from crashed runs are 40-90 MB each: sweep the profile dirs the
+// lanes create. Only dirs older than 12 h go (a live Chrome keeps its own).
+require('./chrome-flags.js').sweepProfiles('.ionet-chrome-');
+
 const HERE = __dirname;                     // src/ — the task modules
 const ROOT = path.resolve(HERE, '..');      // checkout root — user-facing files
 const CONFIG = path.join(ROOT, 'launcher.config.json');
 const POOL = path.join(ROOT, 'proxies.txt');
 const KEYS = path.join(ROOT, 'keys.txt');
 
-const defaults = { count: 30, conc: 2, routerBase: 'http://localhost:20128', routerPassword: '123456' };
+const defaults = { count: 30, conc: 2, preset: '', routerBase: 'http://localhost:20128', routerPassword: '123456' };
 let cfg = { ...defaults };
 try { Object.assign(cfg, JSON.parse(fs.readFileSync(CONFIG, 'utf8'))); } catch (e) {}
 const save = () => fs.writeFileSync(CONFIG, JSON.stringify(cfg, null, 2) + '\n');
@@ -55,17 +62,23 @@ function run(args) {
 
 function argsFor(task) {
   const spec = ARGS[task] || [];
-  return spec.map((v) => (v === 'count' ? String(cfg.count) : v === 'conc' ? String(cfg.conc) : v));
+  const a = spec.map((v) => (v === 'count' ? String(cfg.count) : v === 'conc' ? String(cfg.conc) : v));
+  // Run-shape presets (operator standard v3): turbo / balanced / safe set the
+  // lane's pacing gap; empty keeps the lane's own timing.
+  if (cfg.preset) a.push('--preset=' + cfg.preset);
+  return a;
 }
 
 async function settings() {
   console.log('\nSettings');
   console.log('  1) count      ' + cfg.count);
   console.log('  2) conc       ' + cfg.conc);
+  console.log('  3) preset     ' + (cfg.preset || '(none — the lane default)'));
   console.log('  0) back');
   const p = await ask('choose', '0');
   if (p === '1') cfg.count = parseInt(await ask('count', cfg.count), 10) || cfg.count;
   if (p === '2') cfg.conc = parseInt(await ask('concurrency', cfg.conc), 10) || cfg.conc;
+  if (p === '3') cfg.preset = String(await ask('preset (turbo/balanced/safe, blank = none)', cfg.preset)).trim().toLowerCase();
   save();
 }
 

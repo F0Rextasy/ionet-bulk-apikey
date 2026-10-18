@@ -9,8 +9,11 @@ const { CDP } = require('./cdp.js');
 
 // Checkout root — runtime artefacts (logs/, outputs/) stay there, not in src/.
 const ROOT = path.resolve(__dirname, '..');
-const CHROME = 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe';
+const { chromePath, fingerprintForSeed } = require('./chrome-flags.js');
+// SD_CHROME (or SD_CHROME_HEADLESS_SHELL for a headless run) can move the binary.
+const CHROME = chromePath();
 const UA =
+  process.env.SD_UA ||
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36';
 
 function httpJson(port, p) {
@@ -44,13 +47,27 @@ async function waitPort(port, timeoutMs = 30000) {
   throw new Error(`chrome debug port ${port} not up`);
 }
 
-function launchChrome(port, tag = 'ionet') {
+/** `--headless` (or SD_HEADLESS=1) asks for a headless run; `--headed` /
+ *  SD_HEADLESS=0 wins back. The proven io.net captcha flow is headed, so
+ *  headless stays opt-in — but when it is asked for, the UA pin comes with it. */
+function headlessWanted() {
+  const a = process.argv.slice(2);
+  if (a.includes('--headed') || process.env.SD_HEADLESS === '0') return false;
+  return a.includes('--headless') || process.env.SD_HEADLESS === '1';
+}
+
+function launchChrome(port, tag = 'ionet', { headless = headlessWanted() } = {}) {
   const profileDir = path.join(os.homedir(), `.ionet-chrome-${tag}-${Date.now().toString(36)}`);
   const { leanArgs } = require('./chrome-flags.js');
+  // One fingerprint per profile: UA (headless only), viewport, timezone and
+  // locale come from this profile's index. SD_UA / SD_UA_POOL pin a UA instead.
+  const fp = fingerprintForSeed(profileDir);
   const args = [
     '--remote-debugging-port=' + port,
     '--user-data-dir=' + profileDir,
     ...leanArgs({
+      headless,
+      ua: fp.userAgent,
       extra: [
         '--disable-component-update',
         '--disable-domain-reliability',
@@ -59,12 +76,13 @@ function launchChrome(port, tag = 'ionet') {
         '--no-service-autorun',
         '--metrics-recording-only',
         '--password-store=basic',
-        '--window-size=1280,900',
+        `--window-size=${fp.windowSize}`,
+        `--lang=${fp.locale.lang}`,
       ],
     }),
     'about:blank',
   ];
-  const child = spawn(CHROME, args, { detached: true, stdio: 'ignore', windowsHide: true });
+  const child = spawn(CHROME, args, { detached: true, stdio: 'ignore', windowsHide: true, env: { ...process.env, TZ: fp.timezone } });
   child.unref();
   const meta = { pid: child.pid, port, profileDir, at: new Date().toISOString() };
   try {
@@ -134,4 +152,4 @@ async function clickAt(cdp, sessionId, x, y, { moves = true } = {}) {
   await cdp.send('Input.dispatchMouseEvent', { type: 'mouseReleased', x: Math.round(x), y: Math.round(y), button: 'left', clickCount: 1 }, sessionId);
 }
 
-module.exports = { UA, CHROME, launchChrome, connect, openContext, evalJs, waitLoad, screenshot, waitPort, httpJson, clickAt };
+module.exports = { UA, CHROME, headlessWanted, launchChrome, connect, openContext, evalJs, waitLoad, screenshot, waitPort, httpJson, clickAt };

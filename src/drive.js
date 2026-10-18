@@ -14,6 +14,9 @@
 const fs = require('fs');
 const B = require('./browser');
 
+// A dead CDP socket must not take the driver down mid-click.
+process.on('uncaughtException', (e) => console.log(`WARN uncaught: ${String(e && e.message).slice(0, 180)}`));
+
 const argv = process.argv.slice(2);
 const arg = (n, d) => {
   const i = argv.indexOf('--' + n);

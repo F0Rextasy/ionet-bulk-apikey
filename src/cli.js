@@ -33,6 +33,8 @@ function help() {
   console.log('\noptions: every task takes its own flags — ask it directly:');
   console.log('  node src/<task-file> --help');
   console.log('  --connect-9router  register the keys in keys.txt with 9Router when the task finishes');
+  console.log('\nrun-shape presets (forwarded to the task as-is):');
+  console.log('  --preset=turbo|balanced|safe   lane pacing gap (turbo = 3 s, recommended)');
   console.log('\nproxy pool:');
   console.log('  one exit per line in proxies.txt — scheme://host:port[#comment], user:pass@ supported');
   console.log('\nno options? run the interactive launcher:  node src/launcher.js');

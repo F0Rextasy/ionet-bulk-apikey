@@ -15,17 +15,29 @@ const fs = require('fs');
 const path = require('path');
 const { spawn, spawnSync } = require('child_process');
 
+// Keep the lane alive when a CDP socket dies mid-run.
+process.on('uncaughtException', (e) => console.log(`WARN uncaught: ${String(e && e.message).slice(0, 180)}`));
+
 const argv = process.argv.slice(2);
 const arg = (n, d) => { const i = argv.indexOf('--' + n); return i === -1 ? d : argv[i + 1]; };
-const ROOT = path.resolve(__dirname, '..');
+const ROOT = path.join(__dirname);
 const TAG = arg('tag', 'L');
 const PORT = parseInt(arg('port', '9411'), 10);
 const TARGET = parseInt(arg('target', '5'), 10);
 const MAX_ATTEMPTS = parseInt(arg('max-attempts', String(Math.max(TARGET * 3, TARGET + 6))), 10);
+
+// Run-shape presets (operator standard v3): the browser lane is single-Chrome by
+// design, so `--preset` sets the pacing gap between attempts (explicit `--gap`
+// wins); with no `--preset` today's timing is untouched.
+const { presetArgv, resolvePreset } = require('./preset');
+const PRESET = resolvePreset({ preset: presetArgv(argv), gap: arg('gap', null) == null ? null : parseFloat(arg('gap', null)) });
+const GAP_MS = PRESET.gap == null ? null : Math.max(0, PRESET.gap) * 1000;
+/** Proxy line for the live console: credentials masked. */
+const maskExit = (raw) => (raw ? String(raw).replace(/:[^:@/]+@/, ':***@') : 'direct');
 const FIXED = arg('proxy', '');
 const PICK = argv.includes('--pick') || !FIXED;
-const UNION = arg('union-file', path.join(ROOT, 'union-live.txt'));
-const NEW = arg('new-file', path.join(ROOT, 'new-live.txt'));
+const UNION = arg('union-file', path.join(__dirname, 'union-live.txt'));
+const NEW = arg('new-file', path.join(__dirname, 'new-live.txt'));
 const PICKE = path.join(__dirname, 'pickexits.js');
 const BROKER = 'http://127.0.0.1:9700';
 const { parseProxy, fetchText } = require('./proxy.js');
@@ -198,6 +210,7 @@ function newestDir(prefix) {
     killChrome(); // sweep any stale chrome from a crashed attempt on this port
     await sleep(1000);
     log(`[${tag}] browser phase via ${proxy}`);
+    console.log(`… #${attempts} başladı (${maskExit(proxy)})`);
     const bp = await runC('node', ['src/run-account.js', '--tag', tag, '--port', String(PORT), '--proxy', proxy, '--until', 'start', '--solve-dir', `solve-${tag}`, '--solve-budget-ms', '840000', '--round-wait-ms', '360000'], { timeoutMs: 22 * 60 * 1000, logFile: TRACE });
     const runDir = newestDir(`run-${tag}-`);
     let handoff = null;
@@ -257,9 +270,13 @@ function newestDir(prefix) {
     fs.appendFileSync(OUTJSONL, JSON.stringify({ tag, attempt: attempts, proxy, ok, live, keyMasked: result ? result.keyMasked : null, models: result ? result.models : null, exit: hfr.code, at: ts() }) + '\n');
     setState({ phase: ok ? 'live' : 'fail', current: tag, proxy, live, attempts });
     log(`[${tag}] ${ok ? 'LIVE KEY' : 'failed'} — lane live=${live}/${TARGET}`);
+    if (ok) console.log(`✓ #${attempts} KEY ALINDI: ${(result && result.keyMasked) || '(key)'}   [${live} ok / ${attempts} deneme]`);
+    else console.log(`✗ #${attempts} key yok: ${(result && (result.error || result.note)) || 'no key'}`);
     await sleep(2000);
+    if (GAP_MS) await sleep(GAP_MS);
   }
   setState({ phase: 'done', live, attempts, finishedAt: ts() });
   log(`LANE ${TAG} DONE live=${live} attempts=${attempts}`);
+  console.log(`LANE ${live}/${TARGET} OK`);
   process.exit(live >= TARGET ? 0 : 3);
 })().catch((e) => { log('LANE CRASH ' + ((e && e.message) || e)); setState({ phase: 'crash' }); process.exit(1); });
