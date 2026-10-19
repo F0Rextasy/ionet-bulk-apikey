@@ -79,6 +79,9 @@ Measured free-tier coverage:
 |Model|✓|
 |---|---|
 |`google/gemma-4-26b-a4b-it`|✓|
+|`nvidia/nemotron-3.5-lightning`|✓|
+
+2026-10-19 live re-check (5 keys × 4 exits): `nvidia/nemotron-3.5-lightning` answered `200` on 20/20 probes; the rest of the 39-id catalogue answers `402 requires a higher IO Intelligence tier`.
 
 The full 39 ids are in [`models.json`](models.json). Live probe of one key (exactly what the verifier does):
 
