@@ -35,8 +35,9 @@ function help() {
   console.log('  --connect-9router  register the keys in keys.txt with 9Router when the task finishes');
   console.log('\nrun-shape presets (forwarded to the task as-is):');
   console.log('  --preset=turbo|balanced|safe   lane pacing gap (turbo = 3 s, recommended)');
-  console.log('\nproxy pool:');
+  console.log('\nproxy pool (optional):');
   console.log('  one exit per line in proxies.txt — scheme://host:port[#comment], user:pass@ supported');
+  console.log('  requests go through your proxy list when one is provided (--pool / env); without a pool the tool connects directly');
   console.log('\nno options? run the interactive launcher:  node src/launcher.js');
 }
 

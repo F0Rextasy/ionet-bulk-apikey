@@ -1,9 +1,10 @@
 'use strict';
 /*
  * Verify io.net / IO Intelligence keys the way a user would: GET /models and a
- * real mini chat completion, through a live exit (never the host line).
+ * real mini chat completion, through a live exit when one is given (direct
+ * otherwise).
  *
- *   node src/verify.js --keys keys.txt --proxy "socks5://…" [--models models.json]
+ *   node src/verify.js --keys keys.txt [--proxy "socks5://…"] [--models models.json]
  */
 const fs = require('fs');
 const path = require('path');
@@ -24,13 +25,12 @@ const MODEL = arg('model', 'meta-llama/Llama-3.3-70B-Instruct');
 const mask = (k) => k.slice(0, 4) + '…' + k.slice(-4);
 
 (async () => {
-  if (!PROXY_LINE) throw new Error('--proxy required');
-  const proxy = parseProxy(PROXY_LINE);
-  proxy.connectTimeoutMs = 8000;
-  proxy.timeoutMs = 40000;
+  const proxy = PROXY_LINE ? parseProxy(PROXY_LINE) : null;
+  if (PROXY_LINE && !proxy) throw new Error('bad proxy line');
+  if (proxy) { proxy.connectTimeoutMs = 8000; proxy.timeoutMs = 40000; }
 
   const keys = fs.readFileSync(KEYS_FILE, 'utf8').split(/\r?\n/).map((l) => l.trim()).filter((l) => l && !l.startsWith('#'));
-  console.log(`[verify] ${keys.length} key(s) via ${PROXY_LINE} on ${BASE}`);
+  console.log(`[verify] ${keys.length} key(s) via ${proxy ? PROXY_LINE : 'direct (no proxy)'} on ${BASE}`);
   const results = [];
   for (const key of keys) {
     const row = { key: mask(key), models: null, chat: null, verdict: 'fail', err: null };

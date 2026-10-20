@@ -7,7 +7,13 @@
  *
  *   node src/lane.js --tag LW --port 9411 --target 6 --proxy socks5://127.0.0.1:40000
  *   node src/lane.js --tag LP --port 9421 --target 8 --pick
+ *   node src/lane.js --tag LD --port 9431 --target 2 --direct
  *
+ * The proxy is OPTIONAL: with --proxy (one fixed exit) or --pick (a fresh exit
+ * from the pool per attempt) every attempt runs on an exit; --pick turns into
+ * DIRECT mode on its own when no pool file carries a single line, and --direct
+ * forces it. Direct attempts spawn run-account.js / http-finish.js with no
+ * --proxy at all, so the whole run leaves this machine directly.
  * Records every attempt to outputs/lane-<TAG>.jsonl; live state in
  * outputs/lane-<TAG>.state.json. Exits 0 when --target live keys reached.
  */
@@ -36,6 +42,9 @@ const GAP_MS = PRESET.gap == null ? null : Math.max(0, PRESET.gap) * 1000;
 const maskExit = (raw) => (raw ? String(raw).replace(/:[^:@/]+@/, ':***@') : 'direct');
 const FIXED = arg('proxy', '');
 const PICK = argv.includes('--pick') || !FIXED;
+const DIRECT = argv.includes('--direct');
+/** Lines the pool files carried on the last pick(); 0 means there is no pool. */
+let POOL_LINES = 0;
 const UNION = arg('union-file', path.join(__dirname, 'union-live.txt'));
 const NEW = arg('new-file', path.join(__dirname, 'new-live.txt'));
 const PICKE = path.join(__dirname, 'pickexits.js');
@@ -104,6 +113,7 @@ async function pick() {
   const tail = lines.slice(freeStart);
   for (let i = tail.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [tail[i], tail[j]] = [tail[j], tail[i]]; }
   const ordered = lines.slice(0, freeStart).concat(tail);
+  POOL_LINES = ordered.length; // 0 = not one pool file carries a line
   // Exits that already produced a failed attempt for this lane are dead weight:
   // drop them so scans don't rediscover the same walls.
   let bad = new Set();
@@ -193,9 +203,10 @@ function newestDir(prefix) {
 }
 
 (async () => {
-  fs.appendFileSync(TRACE, `\n===== LANE ${TAG} start ${ts()} port=${PORT} target=${TARGET} mode=${PICK ? 'pick' : 'fixed:' + FIXED} =====\n`);
+  fs.appendFileSync(TRACE, `\n===== LANE ${TAG} start ${ts()} port=${PORT} target=${TARGET} mode=${DIRECT ? 'direct (forced)' : PICK ? 'pick' : 'fixed:' + FIXED} =====\n`);
   let live = 0;
   let attempts = 0;
+  let direct = DIRECT; // flips on by itself when no pool file carries a line
   setState({ phase: 'boot', live, attempts });
   while (live < TARGET && attempts < MAX_ATTEMPTS) {
     attempts++;
@@ -203,15 +214,25 @@ function newestDir(prefix) {
     setState({ phase: 'gate', current: tag, live, attempts });
     try { await guardChrome(); } catch (e) { log('guard: ' + e.message); break; }
     setState({ phase: 'pick', current: tag, live, attempts });
-    const proxy = FIXED || await pick();
-    if (!proxy) { log('NO EXIT AVAILABLE — backing off'); await sleep(20000); continue; }
+    let proxy = null;
+    if (!direct) {
+      proxy = FIXED || await pick();
+      if (!proxy) {
+        if (!FIXED && POOL_LINES === 0) {
+          direct = true;
+          log('no pool file carries a line — switching to DIRECT mode (no proxy at all)');
+        } else {
+          log('NO EXIT AVAILABLE — backing off'); await sleep(20000); continue;
+        }
+      }
+    }
 
     setState({ phase: 'browser', current: tag, proxy, live, attempts });
     killChrome(); // sweep any stale chrome from a crashed attempt on this port
     await sleep(1000);
-    log(`[${tag}] browser phase via ${proxy}`);
+    log(`[${tag}] browser phase via ${proxy || 'direct (no proxy)'}`);
     console.log(`… #${attempts} başladı (${maskExit(proxy)})`);
-    const bp = await runC('node', ['src/run-account.js', '--tag', tag, '--port', String(PORT), '--proxy', proxy, '--until', 'start', '--solve-dir', `solve-${tag}`, '--solve-budget-ms', '840000', '--round-wait-ms', '360000'], { timeoutMs: 22 * 60 * 1000, logFile: TRACE });
+    const bp = await runC('node', ['src/run-account.js', '--tag', tag, '--port', String(PORT), ...(proxy ? ['--proxy', proxy] : []), '--until', 'start', '--solve-dir', `solve-${tag}`, '--solve-budget-ms', '840000', '--round-wait-ms', '360000'], { timeoutMs: 22 * 60 * 1000, logFile: TRACE });
     const runDir = newestDir(`run-${tag}-`);
     let handoff = null;
     try { handoff = JSON.parse(fs.readFileSync(path.join(runDir, 'handoff.json'), 'utf8')); } catch {}
@@ -252,7 +273,7 @@ function newestDir(prefix) {
     }
     if (!box) {
       log(`[${tag}] no handoff (browser exit=${bp.code}) — attempt failed`);
-      try { fs.appendFileSync(path.join(ROOT, 'outputs', `lane-${TAG}-bad.txt`), proxy + '\n'); } catch {}
+      try { if (proxy) fs.appendFileSync(path.join(ROOT, 'outputs', `lane-${TAG}-bad.txt`), proxy + '\n'); } catch {}
       fs.appendFileSync(OUTJSONL, JSON.stringify({ tag, attempt: attempts, proxy, ok: false, err: 'no-handoff', exit: bp.code, at: ts() }) + '\n');
       setState({ phase: 'fail', current: tag, proxy, live, attempts });
       await sleep(3000);
@@ -260,13 +281,13 @@ function newestDir(prefix) {
     }
     setState({ phase: 'http', current: tag, proxy, live, attempts });
     log(`[${tag}] http finish (box ${box.email})`);
-    const hfr = await runC('node', ['src/http-finish.js', '--tag', tag, '--email', box.email, '--box-token', box.boxToken, '--proxy', proxy], { timeoutMs: 7 * 60 * 1000, logFile: TRACE });
+    const hfr = await runC('node', ['src/http-finish.js', '--tag', tag, '--email', box.email, '--box-token', box.boxToken, ...(proxy ? ['--proxy', proxy] : [])], { timeoutMs: 7 * 60 * 1000, logFile: TRACE });
     const hdir = newestDir(`http-${tag}-`);
     let result = null;
     try { result = JSON.parse(fs.readFileSync(path.join(hdir, 'result.json'), 'utf8')); } catch {}
     const ok = !!(result && result.ok);
     if (ok) live++;
-    else { try { fs.appendFileSync(path.join(ROOT, 'outputs', `lane-${TAG}-bad.txt`), proxy + '\n'); } catch {} }
+    else { try { if (proxy) fs.appendFileSync(path.join(ROOT, 'outputs', `lane-${TAG}-bad.txt`), proxy + '\n'); } catch {} }
     fs.appendFileSync(OUTJSONL, JSON.stringify({ tag, attempt: attempts, proxy, ok, live, keyMasked: result ? result.keyMasked : null, models: result ? result.models : null, exit: hfr.code, at: ts() }) + '\n');
     setState({ phase: ok ? 'live' : 'fail', current: tag, proxy, live, attempts });
     log(`[${tag}] ${ok ? 'LIVE KEY' : 'failed'} — lane live=${live}/${TARGET}`);

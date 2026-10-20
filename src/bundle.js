@@ -1,9 +1,9 @@
 'use strict';
 /*
- * Fetch id.io.net HTML + main bundle through a live exit and mine it for the
- * passwordless/OTP + captcha wiring.
+ * Fetch id.io.net HTML + main bundle through a live exit (or straight out when
+ * no exit is given) and mine it for the passwordless/OTP + captcha wiring.
  *
- *   node src/bundle.js --proxy "socks5://…" [--url https://id.io.net/]
+ *   node src/bundle.js [--proxy "socks5://…"] [--url https://id.io.net/]
  */
 const fs = require('fs');
 const path = require('path');
@@ -19,10 +19,9 @@ const PROXY_LINE = arg('proxy', '');
 const URL_ = arg('url', 'https://id.io.net/');
 
 (async () => {
-  const proxy = parseProxy(PROXY_LINE);
-  if (!proxy) throw new Error('--proxy required');
-  proxy.connectTimeoutMs = 8000;
-  proxy.timeoutMs = 40000;
+  const proxy = PROXY_LINE ? parseProxy(PROXY_LINE) : null;
+  if (PROXY_LINE && !proxy) throw new Error('bad proxy line');
+  if (proxy) { proxy.connectTimeoutMs = 8000; proxy.timeoutMs = 40000; }
 
   const outDir = path.join(ROOT, 'outputs', 'bundle');
   fs.mkdirSync(outDir, { recursive: true });

@@ -5,8 +5,8 @@
  * OTP read from the mailbox and entered within its window, then one API key
  * created and live-verified.
  *
- *   node src/run-account.js --tag a1 --port 9401 --proxy socks5://127.0.0.1:40000
- *   node src/run-account.js --tag a1 --port 9401 --proxy socks5://127.0.0.1:40000 --attach   (resume: phase auto-detected)
+ *   node src/run-account.js --tag a1 --port 9401 [--proxy socks5://127.0.0.1:40000]
+ *   node src/run-account.js --tag a1 --port 9401 [--proxy socks5://127.0.0.1:40000] --attach   (resume: phase auto-detected)
  *
  * Phases: start (nav+auth modal) -> email (type+CAPTCHA solve+submit) -> otp (read+enter)
  *         -> key (create via api.io.solutions REST with page accessToken, UI fallback) -> verify
@@ -770,11 +770,10 @@ function killChrome(meta) {
 (async () => {
   initRunDir();
   log('run', `dir=${RUN_DIR} tag=${TAG} port=${PORT} attach=${ATTACH}`);
-  if (!PROXY_LINE) throw new Error('--proxy <line> required (host line never used)');
-  const proxy = parseProxy(PROXY_LINE);
-  if (!proxy) throw new Error('bad proxy line');
-  proxy.connectTimeoutMs = 8000; proxy.timeoutMs = 30000;
-  log('run', `proxy=${browserUrl(proxy)}`);
+  const proxy = PROXY_LINE ? parseProxy(PROXY_LINE) : null;
+  if (PROXY_LINE && !proxy) throw new Error('bad proxy line');
+  if (proxy) { proxy.connectTimeoutMs = 8000; proxy.timeoutMs = 30000; }
+  log('run', `proxy=${proxy ? browserUrl(proxy) : '(direct, no proxy)'}`);
   ev({ t: 'start', proxy: PROXY_LINE, until: UNTIL, phase: PHASE_OVERRIDE });
 
   const boxPromise = EMAIL_OVERRIDE ? Promise.resolve({ address: EMAIL_OVERRIDE, token: EMAIL_TOKEN || null, source: 'cli' })
@@ -802,10 +801,10 @@ function killChrome(meta) {
     await cdp.send('Network.enable', {}, sessionId);
     log('run', `attached to ${page.url.slice(0, 80)}`);
   } else {
-    const ctx = await B.openContext(cdp, { proxyServer: browserUrl(proxy) });
+    const ctx = await B.openContext(cdp, proxy ? { proxyServer: browserUrl(proxy) } : {});
     sessionId = ctx.sessionId; browserContextId = ctx.browserContextId; targetId = ctx.targetId;
   }
-  const teardownAuth = await attachProxyAuth(cdp, sessionId, proxy);
+  const teardownAuth = proxy ? await attachProxyAuth(cdp, sessionId, proxy) : async () => {};
   const net = makeNetLogger(cdp, sessionId, RUN_DIR);
   const conFile = makeConsoleLogger(cdp, sessionId, RUN_DIR);
   log('run', 'context ready');

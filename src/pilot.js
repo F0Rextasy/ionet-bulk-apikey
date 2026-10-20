@@ -2,13 +2,14 @@
 /*
  * io.net pilot — id.io.net signup via e-mail OTP, through a proxied Chrome.
  *
- *   node src/pilot.js --proxy "socks5://1.2.3.4:1080" [--port 9341]
+ *   node src/pilot.js [--proxy "socks5://1.2.3.4:1080"] [--port 9341]
  *        [--email you@x.tld | --pool-take | --broker-create] [--until auth|key|verify]
  *
  * Everything the run sees lands in outputs/pilot-<ts>/: events.jsonl, net.jsonl,
  * console.jsonl, shot-*.png and (when the pass-through worked) key.txt.
- * Never falls back to the host line: the browser context and every HTTP call
- * go through the given exit.
+ * --proxy is OPTIONAL: with it the browser context and every HTTP call go
+ * through that exit; without it the Chrome context opens untunnelled and the
+ * requests leave this machine directly.
  */
 const fs = require('fs');
 const path = require('path');
@@ -300,13 +301,11 @@ async function captchaState(cdp, sessionId) {
 (async () => {
   initRunDir();
   log('run', `dir=${RUN_DIR}`);
-  if (!PROXY_LINE) throw new Error('--proxy <line> is required (host line must never be used)');
-  const proxy = parseProxy(PROXY_LINE);
-  if (!proxy) throw new Error('bad proxy line');
-  proxy.connectTimeoutMs = 8000;
-  proxy.timeoutMs = 30000;
-  const proxyServer = browserUrl(proxy);
-  log('run', `proxy=${proxyServer} (scheme ${proxy.protocol}) until=${UNTIL}`);
+  const proxy = PROXY_LINE ? parseProxy(PROXY_LINE) : null;
+  if (PROXY_LINE && !proxy) throw new Error('bad proxy line');
+  if (proxy) { proxy.connectTimeoutMs = 8000; proxy.timeoutMs = 30000; }
+  const proxyServer = proxy ? browserUrl(proxy) : null;
+  log('run', `proxy=${proxy ? `${proxyServer} (scheme ${proxy.protocol})` : '(direct, no proxy)'} until=${UNTIL}`);
   ev({ t: 'start', proxy: PROXY_LINE, until: UNTIL, port: PORT });
 
   // Chrome
@@ -319,8 +318,8 @@ async function captchaState(cdp, sessionId) {
     log('run', `chrome pid=${launched.pid} profile=${launched.profileDir}`);
   }
   const cdp = await B.connect(PORT);
-  const { sessionId, browserContextId } = await B.openContext(cdp, { proxyServer });
-  const teardownAuth = await attachProxyAuth(cdp, sessionId, proxy);
+  const { sessionId, browserContextId } = await B.openContext(cdp, proxy ? { proxyServer } : {});
+  const teardownAuth = proxy ? await attachProxyAuth(cdp, sessionId, proxy) : async () => {};
   const netFile = makeNetLogger(cdp, sessionId, RUN_DIR);
   const conFile = makeConsoleLogger(cdp, sessionId, RUN_DIR);
   log('run', `context ready (${browserContextId.slice(0, 8)}…)`);

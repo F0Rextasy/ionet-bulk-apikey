@@ -116,8 +116,8 @@ curl https://api.intelligence.io.solutions/api/v1/chat/completions \
 git clone https://github.com/F0Rextasy/ionet-bulk-apikey.git
 cd ionet-bulk-apikey
 
-# 1) your proxy list, one exit per line (http://, socks5://, socks4:// or bare host:port)
-printf 'socks5://127.0.0.1:1080\n' > proxies.txt
+# 1) your proxy list, one exit per line (http://, socks5://, socks4:// or bare host:port) — optional, see below
+printf 'socks5://127.0.0.1:1080\n' > proxies.txt   # optional — without it the tool runs direct
 
 # 2) go — one run == one account attempt, end to end
 node src/cli.js mint --target 5 --pick    # driver: exit → browser → HTTP finish, per account
@@ -178,7 +178,7 @@ Two knobs worth knowing: the API key must be created with `project: "io-intellig
 | tool | flags |
 | --- | --- |
 | `cli.js` | `mint` · `finish` · `verify` · `screen` — each task prints its own flags (`node src/lane.js --help`) |
-| `lane.js` | `--tag` (L) · `--port` (9411) · `--target N` (5) · `--preset turbo\|balanced\|safe` (pacing gap) · `--gap S` · `--pick` (fresh pool exit per attempt) or `--proxy <line>` (fixed exit) · `--max-attempts N` · `--union-file` / `--new-file` |
+| `lane.js` | `--tag` (L) · `--port` (9411) · `--target N` (5) · `--preset turbo\|balanced\|safe` (pacing gap) · `--gap S` · `--pick` (fresh pool exit per attempt) or `--proxy <line>` (fixed exit) · `--direct` (no proxy at all) · `--max-attempts N` · `--union-file` / `--new-file` |
 | `run-account.js` | `--tag` · `--port` · `--until start\|email\|otp\|key` · `--proxy <line>` · `--broker <url>` · `--solve-dir` · `--solve-budget-ms` · `--round-wait-ms` · `--otp-timeout-ms` · `--email` / `--email-token` (resume an inbox) |
 | `http-finish.js` | `--email` + `--box-token`, or `--token <accessToken>` / `--token-file`, or `--from-log <net.jsonl>` · `--name` · `--model` · `--otp-timeout-ms` |
 | 9Router | `--connect-9router` on any task — after it finishes, registers every key in `keys.txt` into a running 9Router (`node src/connect-9router.js --help`) |
@@ -187,10 +187,12 @@ Turbo önerilir (5); daha fazlası zayıf bilgisayarda yük/ban riski.
 
 ## 🛰️ Behind a proxy
 
-* Exits come from a text pool (one line per exit, `scheme://host:port`); each attempt gets a fresh exit and a use-time preflight, and exits that produced a failed attempt are blacklisted per lane.
-* Every provider call — the browser, the code read, the key create, the verify — goes through the pool; nothing is sent from your own address.
-* The reCAPTCHA implementation script is served to the page from a local cache, so an exit only needs to reach `id.io.net` and `www.google.com` for the browser phase.
-* The mailbox broker runs on loopback (`127.0.0.1`) — it is yours, not the provider's, and it holds your mail credentials, never the repo.
+**Optional — recommended at scale (per-IP limits, bans).** The tool works without a proxy too.
+
+- **With a pool:** exits come from a text pool (one line per exit, `scheme://host:port`); each attempt gets a fresh exit and a use-time preflight, and exits that produced a failed attempt are blacklisted per lane.
+- **Without a pool:** nothing to pick — the lane switches to DIRECT mode by itself (or force it with `--direct`); the Chrome context opens untunnelled and every request — browser, code read, key create, verify — leaves this machine directly.
+- The reCAPTCHA implementation script is served to the page from a local cache, so an exit only needs to reach `id.io.net` and `www.google.com` for the browser phase.
+- The mailbox broker runs on loopback (`127.0.0.1`) — it is yours, not the provider's, and it holds your mail credentials, never the repo.
 
 ## 📄 Files
 
@@ -200,7 +202,7 @@ Turbo önerilir (5); daha fazlası zayıf bilgisayarda yük/ban riski.
 | `accounts.json` | one record per account: mailbox, key, the exit that minted it — git-ignored |
 | [`models.json`](models.json) | `GET /v1/models` as answered by a minted key (39 ids) |
 | `out/` | per-attempt dumps (screenshots + DOM/network logs), batch log, exit bookkeeping — git-ignored |
-| `proxies.txt` | your exit pool, one proxy per line — git-ignored |
+| `proxies.txt` | your exit pool, one proxy per line (optional) — git-ignored |
 
 ## 🔌 Connect to 9Router
 
