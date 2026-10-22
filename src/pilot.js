@@ -3,7 +3,7 @@
  * io.net pilot — id.io.net signup via e-mail OTP, through a proxied Chrome.
  *
  *   node src/pilot.js [--proxy "socks5://1.2.3.4:1080"] [--port 9341]
- *        [--email you@x.tld | --pool-take | --broker-create] [--until auth|key|verify]
+ *        [--email <you>@x.tld | --pool-take | --broker-create] [--until auth|key|verify]
  *
  * Everything the run sees lands in outputs/pilot-<ts>/: events.jsonl, net.jsonl,
  * console.jsonl, shot-*.png and (when the pass-through worked) key.txt.
