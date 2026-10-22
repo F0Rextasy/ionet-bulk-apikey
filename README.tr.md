@@ -1,6 +1,7 @@
 <div align="center">
 
 ```
+
 ██╗ ██████╗ ███╗   ██╗███████╗████████╗
 ██║██╔═══██╗████╗  ██║██╔════╝╚══██╔══╝
 ██║██║   ██║██╔██╗ ██║█████╗     ██║
@@ -37,6 +38,7 @@
 io.net (IO Intelligence) her hesaba API erişimi verir ve kullanışlı birim *anahtar başına bir hesaptır*. Kayıt tek bir barındırılan sayfadır: e-posta adresi, e-posta ile gelen tek kullanımlık kod ve bir API anahtarı uç noktası. Bu araç tüm yolu yürür — sayfanın gerektirdiği yerde gerçek bir tarayıcı, geri kalan her şey için düz HTTP — ve bir anahtarı ancak gerçek bir tamamlama sonrasında kaydeder:
 
 ```
+
 broker mailbox ──▶ exit pick + point-of-use preflight (id.io.net + recaptcha api.js)
                         │
                         ▼

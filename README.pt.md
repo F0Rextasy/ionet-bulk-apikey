@@ -1,6 +1,7 @@
 <div align="center">
 
 ```
+
 ██╗ ██████╗ ███╗   ██╗███████╗████████╗
 ██║██╔═══██╗████╗  ██║██╔════╝╚══██╔══╝
 ██║██║   ██║██╔██╗ ██║█████╗     ██║
@@ -37,6 +38,7 @@
 io.net (IO Intelligence) dá a toda conta acesso à API, e a unidade útil é *uma conta por chave*. O cadastro é uma única página hospedada: endereço de e-mail, um código de uso único por e-mail e um endpoint de chave de API. Esta ferramenta percorre todo o caminho — um navegador real onde a página exige um, HTTP simples para todo o resto — e só registra uma chave após uma completion real:
 
 ```
+
 broker mailbox ──▶ exit pick + point-of-use preflight (id.io.net + recaptcha api.js)
                         │
                         ▼
