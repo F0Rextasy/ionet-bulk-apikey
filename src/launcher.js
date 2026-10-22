@@ -28,7 +28,7 @@ const KEYS = path.join(ROOT, 'keys.txt');
 const defaults = { count: 30, conc: 2, preset: '', routerBase: 'http://localhost:20128', routerPassword: '123456' };
 let cfg = { ...defaults };
 try { Object.assign(cfg, JSON.parse(fs.readFileSync(CONFIG, 'utf8'))); } catch (e) {}
-const save = () => fs.writeFileSync(CONFIG, JSON.stringify(cfg, null, 2) + '\n');
+const save = () => fs.writeFileSync(CONFIG, JSON.stringify(cfg, null, 2) + '\n', { mode: 0o600 }); // holds the 9Router password
 const ARGS = {"mint":["--target","count"],"finish":[],"verify":["--keys","keys.txt"],"screen":[]};
 
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout });

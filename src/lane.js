@@ -26,11 +26,17 @@ process.on('uncaughtException', (e) => console.log(`WARN uncaught: ${String(e &&
 
 const argv = process.argv.slice(2);
 const arg = (n, d) => { const i = argv.indexOf('--' + n); return i === -1 ? d : argv[i + 1]; };
-const ROOT = path.join(__dirname);
+// A bare flag (`--target`) or a missing value answers `undefined`, and parseInt
+// turns that into NaN: the loop then never runs and the run reports a numberless
+// result. Keep the documented default instead.
+const num = (raw, dflt) => { const n = parseInt(raw, 10); return Number.isFinite(n) ? n : dflt; };
+// The checkout root: the children are spawned as `src/<file>.js` from here, and
+// outputs/, proxies.txt and the pool files live here (as in every other tool).
+const ROOT = path.resolve(__dirname, '..');
 const TAG = arg('tag', 'L');
-const PORT = parseInt(arg('port', '9411'), 10);
-const TARGET = parseInt(arg('target', '5'), 10);
-const MAX_ATTEMPTS = parseInt(arg('max-attempts', String(Math.max(TARGET * 3, TARGET + 6))), 10);
+const PORT = num(arg('port', '9411'), 9411);
+const TARGET = num(arg('target', '5'), 5);
+const MAX_ATTEMPTS = num(arg('max-attempts', String(Math.max(TARGET * 3, TARGET + 6))), Math.max(TARGET * 3, TARGET + 6));
 
 // Run-shape presets (operator standard v3): the browser lane is single-Chrome by
 // design, so `--preset` sets the pacing gap between attempts (explicit `--gap`
@@ -45,8 +51,10 @@ const PICK = argv.includes('--pick') || !FIXED;
 const DIRECT = argv.includes('--direct');
 /** Lines the pool files carried on the last pick(); 0 means there is no pool. */
 let POOL_LINES = 0;
-const UNION = arg('union-file', path.join(__dirname, 'union-live.txt'));
-const NEW = arg('new-file', path.join(__dirname, 'new-live.txt'));
+const UNION = arg('union-file', path.join(ROOT, 'union-live.txt'));
+const NEW = arg('new-file', path.join(ROOT, 'new-live.txt'));
+// The documented pool file (README/cli help): one exit per line, optional.
+const PROXIES = path.join(ROOT, 'proxies.txt');
 const PICKE = path.join(__dirname, 'pickexits.js');
 const BROKER = 'http://127.0.0.1:9700';
 const { parseProxy, fetchText } = require('./proxy.js');
@@ -104,7 +112,7 @@ async function pick() {
     }
   } catch {}
   const freeStart = lines.length;
-  for (const f of [UNION, NEW]) {
+  for (const f of [PROXIES, UNION, NEW]) {
     try {
       for (const l of fs.readFileSync(f, 'utf8').split(/\r?\n/)) { const t = l.trim(); if (t && !t.startsWith('#') && !seen.has(t)) { seen.add(t); lines.push(t); } }
     } catch {}
@@ -203,6 +211,7 @@ function newestDir(prefix) {
 }
 
 (async () => {
+  fs.mkdirSync(path.join(ROOT, 'outputs'), { recursive: true });
   fs.appendFileSync(TRACE, `\n===== LANE ${TAG} start ${ts()} port=${PORT} target=${TARGET} mode=${DIRECT ? 'direct (forced)' : PICK ? 'pick' : 'fixed:' + FIXED} =====\n`);
   let live = 0;
   let attempts = 0;
@@ -298,6 +307,6 @@ function newestDir(prefix) {
   }
   setState({ phase: 'done', live, attempts, finishedAt: ts() });
   log(`LANE ${TAG} DONE live=${live} attempts=${attempts}`);
-  console.log(`LANE ${live}/${TARGET} OK`);
+  console.log(`LANE ${live}/${TARGET} ${live >= TARGET ? 'OK' : '— short of the target'}`);
   process.exit(live >= TARGET ? 0 : 3);
 })().catch((e) => { log('LANE CRASH ' + ((e && e.message) || e)); setState({ phase: 'crash' }); process.exit(1); });

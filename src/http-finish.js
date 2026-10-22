@@ -224,7 +224,7 @@ async function verifyKeyLive(key) {
   }
 
   if (!token) throw new Error('no accessToken (none in log, none from verify)');
-  try { fs.writeFileSync(path.join(RUN_DIR, 'token.txt'), token); } catch {}
+  try { fs.writeFileSync(path.join(RUN_DIR, 'token.txt'), token, { mode: 0o600 }); } catch {}
 
   let key = null;
   const headers = { Token: token, 'Frontend-Version': FRONTEND_VER, Accept: 'application/json', Origin: 'https://ai.io.net', Referer: 'https://ai.io.net/' };
@@ -288,10 +288,10 @@ async function verifyKeyLive(key) {
     at: new Date().toISOString(), proxy: PROXY_LINE, models: v.models, chat: v.chat ? String(v.chat).slice(0, 40) : null,
     live: v.live, via: 'http-finish',
   };
-  fs.appendFileSync(path.join(ROOT, 'accounts.json'), JSON.stringify(rec) + '\n');
-  if (v.live) { fs.appendFileSync(path.join(ROOT, 'keys.txt'), key + '\n'); log(`KEY LIVE — appended to keys.txt (${mask(key)})`); }
-  else { fs.appendFileSync(path.join(ROOT, 'keys.pending.txt'), `${EMAIL || TAG}\t${key}\t${new Date().toISOString()}\n`); log('key NOT live — keys.pending.txt'); }
-  fs.writeFileSync(path.join(RUN_DIR, 'result.json'), JSON.stringify({ ...rec, ok: v.live }, null, 1));
+  fs.appendFileSync(path.join(ROOT, 'accounts.json'), JSON.stringify(rec) + '\n', { mode: 0o600 });
+  if (v.live) { fs.appendFileSync(path.join(ROOT, 'keys.txt'), key + '\n', { mode: 0o600 }); log(`KEY LIVE — appended to keys.txt (${mask(key)})`); }
+  else { fs.appendFileSync(path.join(ROOT, 'keys.pending.txt'), `${EMAIL || TAG}\t${key}\t${new Date().toISOString()}\n`, { mode: 0o600 }); log('key NOT live — keys.pending.txt'); }
+  fs.writeFileSync(path.join(RUN_DIR, 'result.json'), JSON.stringify({ ...rec, ok: v.live }, null, 1), { mode: 0o600 });
   log(`RESULT ${JSON.stringify({ ok: v.live, key: mask(key), models: v.models, chat: v.chat })}`);
   process.exit(v.live ? 0 : 2);
 })().catch((e) => { console.error(ts(), 'FAIL', (e && e.message) || e); process.exit(1); });

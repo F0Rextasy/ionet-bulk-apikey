@@ -81,7 +81,7 @@ async function brokerCreate() {
   const j = JSON.parse(text);
   if (!j.address || !j.token) throw new Error('broker create odd reply: ' + String(text).slice(0, 150));
   const box = { address: j.address, token: String(j.token), source: 'broker' };
-  fs.appendFileSync(path.join(ROOT, 'outputs', 'inboxes.jsonl'), JSON.stringify({ ...box, tag: TAG, at: new Date().toISOString() }) + '\n');
+  fs.appendFileSync(path.join(ROOT, 'outputs', 'inboxes.jsonl'), JSON.stringify({ ...box, tag: TAG, at: new Date().toISOString() }) + '\n', { mode: 0o600 });
   return box;
 }
 async function brokerList(token) {
@@ -534,7 +534,7 @@ async function emailPhase(cdp, sessionId, net, box) {
     if (outcome === 'otp') {
       await snap(cdp, sessionId, '05-otp-screen'); t1('email');
       if (UNTIL === 'start') {
-        fs.writeFileSync(path.join(RUN_DIR, 'handoff.json'), JSON.stringify({ tag: TAG, email: box.address, boxToken: box.token, source: box.source, at: new Date().toISOString() }, null, 1));
+        fs.writeFileSync(path.join(RUN_DIR, 'handoff.json'), JSON.stringify({ tag: TAG, email: box.address, boxToken: box.token, source: box.source, at: new Date().toISOString() }, null, 1), { mode: 0o600 });
         log('run', `--until start: handoff written (${box.address}) — closing Chrome`);
         return 'stop';
       }
@@ -749,13 +749,13 @@ async function verifyAndRecord(proxy, box, key, extra) {
   log('verify', `chat -> ${chat.status} ${String(chat.body).slice(0, 200).replace(/\s+/g, ' ')}`);
   const live = chat.status === 200 && !!chatText;
   const rec = { tag: TAG, address: box.address, boxToken: box.token, key, keyMasked: mask(key), at: new Date().toISOString(), proxy: PROXY_LINE, models: modelsJson ? modelsJson.data.length : null, chat: chatText ? chatText.slice(0, 40) : null, live, timings: T, ...extra };
-  fs.appendFileSync(path.join(ROOT, 'accounts.json'), JSON.stringify(rec) + '\n');
+  fs.appendFileSync(path.join(ROOT, 'accounts.json'), JSON.stringify(rec) + '\n', { mode: 0o600 });
   if (modelsJson && Array.isArray(modelsJson.data)) {
     const mf = path.join(ROOT, 'models.json');
     try { const cur = JSON.parse(fs.readFileSync(mf, 'utf8')); if (!cur || !Array.isArray(cur.data) || cur.data.length < modelsJson.data.length) fs.writeFileSync(mf, JSON.stringify(modelsJson, null, 2)); } catch { fs.writeFileSync(mf, JSON.stringify(modelsJson, null, 2)); }
   }
-  if (live) { fs.appendFileSync(path.join(ROOT, 'keys.txt'), key + '\n'); log('verify', `KEY LIVE — appended to keys.txt (${mask(key)})`); }
-  else { fs.appendFileSync(path.join(ROOT, 'keys.pending.txt'), `${box.address}\t${key}\t${new Date().toISOString()}\n`); log('verify', 'key NOT live — keys.pending.txt'); }
+  if (live) { fs.appendFileSync(path.join(ROOT, 'keys.txt'), key + '\n', { mode: 0o600 }); log('verify', `KEY LIVE — appended to keys.txt (${mask(key)})`); }
+  else { fs.appendFileSync(path.join(ROOT, 'keys.pending.txt'), `${box.address}\t${key}\t${new Date().toISOString()}\n`, { mode: 0o600 }); log('verify', 'key NOT live — keys.pending.txt'); }
   t1('verify');
   return live;
 }

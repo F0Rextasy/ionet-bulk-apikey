@@ -137,7 +137,7 @@ function tokenFromSetCookie(setCookie) {
     }
   }
   if (!token) throw new Error('no accessToken');
-  fs.writeFileSync(path.join(RUN_DIR, 'token.txt'), token);
+  fs.writeFileSync(path.join(RUN_DIR, 'token.txt'), token, { mode: 0o600 });
   log(`token len=${token.length} (${mask(token)}) — TTL 5 min; brute-forcing scopes`);
 
   const iso = (days) => new Date(Date.now() + days * 86400000).toISOString().replace(/\.\d{3}Z$/, 'Z');

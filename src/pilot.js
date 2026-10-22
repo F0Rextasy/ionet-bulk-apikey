@@ -3,7 +3,7 @@
  * io.net pilot — id.io.net signup via e-mail OTP, through a proxied Chrome.
  *
  *   node src/pilot.js [--proxy "socks5://1.2.3.4:1080"] [--port 9341]
- *        [--email <you>@x.tld | --pool-take | --broker-create] [--until auth|key|verify]
+ *        [--email <addr> | --pool-take | --broker-create] [--until auth|key|verify]
  *
  * Everything the run sees lands in outputs/pilot-<ts>/: events.jsonl, net.jsonl,
  * console.jsonl, shot-*.png and (when the pass-through worked) key.txt.
@@ -66,7 +66,7 @@ async function takeFromPool() {
   raw[idx].used = true;
   raw[idx].takenBy = 'ionet-pilot';
   raw[idx].takenAt = new Date().toISOString();
-  fs.writeFileSync(POOL_FILE, raw.map((b) => JSON.stringify(b)).join('\n') + '\n');
+  fs.writeFileSync(POOL_FILE, raw.map((b) => JSON.stringify(b)).join('\n') + '\n', { mode: 0o600 });
   return { address: raw[idx].address, token: String(raw[idx].token), source: 'pool' };
 }
 async function brokerCreate() {
@@ -662,8 +662,8 @@ async function captchaState(cdp, sessionId) {
       log('key', `text candidates: ${JSON.stringify(domKey)}`);
     }
     if (key) {
-      fs.writeFileSync(path.join(RUN_DIR, 'key.txt'), key + '\n');
-      fs.appendFileSync(path.join(ROOT, 'keys.pending.txt'), `${box.address}\t${key}\t${new Date().toISOString()}\n`);
+      fs.writeFileSync(path.join(RUN_DIR, 'key.txt'), key + '\n', { mode: 0o600 });
+      fs.appendFileSync(path.join(ROOT, 'keys.pending.txt'), `${box.address}\t${key}\t${new Date().toISOString()}\n`, { mode: 0o600 });
       log('key', `key ${key.slice(0, 6)}…${key.slice(-4)} written to key.txt + keys.pending.txt`);
 
       if (UNTIL === 'verify') {

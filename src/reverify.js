@@ -28,24 +28,26 @@ async function testKey(key) {
     try {
       const m = await req('https://api.intelligence.io.solutions/api/v1/models', { headers: { Authorization: `Bearer ${key}` } });
       if (m.status === 200) { let n = 0; try { n = (JSON.parse(m.body).data || []).length; } catch {} return { ok: true, models: n }; }
-      if (m.status === 401 || m.status === 403) return { ok: false, status: m.status, note: m.body.slice(0, 90) };
-      return { ok: false, status: m.status, note: m.body.slice(0, 90) };
-    } catch (e) { if (i === 1) return { ok: false, status: 0, note: e.message.slice(0, 60) }; }
+      // Only the key's own answer to its own key decides the verdict: a 429, a 5xx
+      // or a dead exit is not the key's fault and must not read as "dead".
+      if (m.status === 401 || m.status === 403) return { ok: false, dead: true, status: m.status, note: m.body.slice(0, 90) };
+      return { ok: false, dead: false, status: m.status, note: m.body.slice(0, 90) };
+    } catch (e) { if (i === 1) return { ok: false, dead: false, status: 0, note: e.message.slice(0, 60) }; }
   }
 }
 (async () => {
   const keys = fs.readFileSync(path.join(ROOT, 'keys.txt'), 'utf8').split(/\r?\n/).map((s) => s.trim()).filter(Boolean);
-  let ok = 0, bad = 0;
+  let ok = 0, dead = 0, unknown = 0;
   const lines = [];
   for (const k of keys) {
     const t = await testKey(k);
-    if (t.ok) ok++; else bad++;
-    const row = `${t.ok ? 'OK ' : 'BAD'} ${k.slice(0, 14)}… owner=${(() => { try { return JSON.parse(Buffer.from(k.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString()).owner.slice(0, 8); } catch { return '?'; } })()} models=${t.models || '-'} ${t.ok ? '' : t.status + ' ' + (t.note || '')}`;
+    if (t.ok) ok++; else if (t.dead) dead++; else unknown++;
+    const row = `${t.ok ? 'OK ' : t.dead ? 'BAD' : 'UNKNOWN'} ${k.slice(0, 14)}… owner=${(() => { try { return JSON.parse(Buffer.from(k.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'), 'base64').toString()).owner.slice(0, 8); } catch { return '?'; } })()} models=${t.models || '-'} ${t.ok ? '' : t.status + ' ' + (t.note || '')}`;
     console.log(row);
     lines.push(row);
     await new Promise((r) => setTimeout(r, 400));
   }
   const stamp = new Date().toISOString().replace(/[:.]/g, '-');
-  fs.writeFileSync(path.join(ROOT, 'outputs', `reverify-${stamp}.log`), `keys=${keys.length} ok=${ok} bad=${bad}\n` + lines.join('\n'));
-  console.log(`SUMMARY keys=${keys.length} ok=${ok} bad=${bad}`);
+  fs.writeFileSync(path.join(ROOT, 'outputs', `reverify-${stamp}.log`), `keys=${keys.length} ok=${ok} dead=${dead} unknown=${unknown}\n` + lines.join('\n'));
+  console.log(`SUMMARY keys=${keys.length} ok=${ok} dead=${dead} unknown=${unknown}`);
 })().catch((e) => { console.error('FAIL', e.message); process.exit(1); });

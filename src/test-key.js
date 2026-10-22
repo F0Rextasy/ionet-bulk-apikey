@@ -63,8 +63,8 @@ function req(url, { method = 'GET', headers = {}, body = null, timeoutMs = 45000
   const live = models !== null && !!chat;
   console.log(`RESULT live=${live} models=${models} chat=${chat}`);
   if (live && APPEND) {
-    fs.appendFileSync(path.join(ROOT, 'keys.txt'), KEY + '\n');
-    fs.appendFileSync(path.join(ROOT, 'accounts.json'), JSON.stringify({ tag: TAG, key: KEY, keyMasked: `${KEY.slice(0, 10)}…${KEY.slice(-4)}`, at: new Date().toISOString(), proxy: PROXY_LINE, models, chat: String(chat).slice(0, 40), live: true, via: 'http-finish' }) + '\n');
+    fs.appendFileSync(path.join(ROOT, 'keys.txt'), KEY + '\n', { mode: 0o600 });
+    fs.appendFileSync(path.join(ROOT, 'accounts.json'), JSON.stringify({ tag: TAG, key: KEY, keyMasked: `${KEY.slice(0, 10)}…${KEY.slice(-4)}`, at: new Date().toISOString(), proxy: PROXY_LINE, models, chat: String(chat).slice(0, 40), live: true, via: 'http-finish' }) + '\n', { mode: 0o600 });
     console.log('APPENDED to keys.txt + accounts.json');
   }
   process.exit(live ? 0 : 2);

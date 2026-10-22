@@ -103,7 +103,7 @@ async function probeRound(proxy) {
         if (idx >= targets.length) return;
         const line = targets[idx];
         const proxy = parseProxy(line);
-        if (!proxy) return;
+        if (!proxy) continue; // a line that cannot be parsed is not a reason to stop screening the rest
         proxy.connectTimeoutMs = 8000;
         proxy.timeoutMs = T;
         const res = await probeRound(proxy);
