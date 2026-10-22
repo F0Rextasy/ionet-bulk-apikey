@@ -19,6 +19,7 @@
 [![License](https://img.shields.io/badge/license-MIT-6ea8fe?style=for-the-badge)](LICENSE)
 [![Models](https://img.shields.io/badge/models-39%20served-412991?style=for-the-badge)](https://io.net)
 [![9Router](https://img.shields.io/badge/9Router-connector-8B5CF6?style=for-the-badge)](#-connect-to-9router)
+[![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
 [🛠 快速开始](#-quick-start) · [🎁 免费额度](#-free-tier--how-much-you-get) · [🤖 模型](#-models--all-39-of-them) · [🧪 使用 API](#-how-to-use-the-api) · [✅ 已验证](#-verified-working--every-key-is-tested) · [🧭 工作原理](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ 选项](#️-cli-options) · [🛰️ 代理](#️-behind-a-proxy) · [🐞 问题](#-issues)
@@ -226,6 +227,27 @@ ionet/zai-org/GLM-5.3-Flash
 
 `node src/cli.js mint --target 5 --pick --connect-9router` 可一次性创建并注册，`node src/launcher.js` 则从其菜单驱动相同流程。
 
+## 🔌 连接到 OmniRoute
+
+[OmniRoute](https://omniroute.online) 是一个自托管、兼容 OpenAI 的路由器。io.net 提供兼容 OpenAI 的端点（`https://api.intelligence.io.solutions/api/v1`），因此注册一次后，你创建的每个密钥都会成为同一个提供商节点下的连接——OmniRoute 会在它们之间进行负载均衡：
+
+```bash
+node src/connect-omniroute.js \
+  --base http://localhost:20128 --password 123456 \
+  --api-key io-v2-xxxxxxxx
+```
+
+不带 `--api-key` 运行它会注册 `keys.txt` 中的**每个**密钥。重复运行是幂等的：节点通过 `--prefix ionet` 匹配，每个连接按名称匹配（`ionet-001`、`ionet-002`、……），已注册的密钥会被保持不变。默认值：`--base http://localhost:20128`、`--password 123456`、`--name "IO Intelligence"`、`--prefix ionet`、`--base-url https://api.intelligence.io.solutions/api/v1`、`--model google/gemma-4-26b-a4b-it`。
+
+在 OmniRoute 中，目录以如下形式提供：
+
+```
+ionet/google/gemma-4-26b-a4b-it
+ionet/deepseek-ai/DeepSeek-V4.1-Flash
+ionet/zai-org/GLM-5.3-Flash
+```
+
+`node src/cli.js mint --target 5 --pick --connect-omniroute` 可一次性创建并注册，`node src/launcher.js` 则从其菜单驱动相同流程。
 ## 🔑 一个密钥能带来什么
 
 | | |

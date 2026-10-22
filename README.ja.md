@@ -19,6 +19,7 @@
 [![License](https://img.shields.io/badge/license-MIT-6ea8fe?style=for-the-badge)](LICENSE)
 [![Models](https://img.shields.io/badge/models-39%20served-412991?style=for-the-badge)](https://io.net)
 [![9Router](https://img.shields.io/badge/9Router-connector-8B5CF6?style=for-the-badge)](#-connect-to-9router)
+[![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
 [🛠 クイックスタート](#-quick-start) · [🎁 無料枠](#-free-tier--how-much-you-get) · [🤖 モデル](#-models--all-39-of-them) · [🧪 API の使い方](#-how-to-use-the-api) · [✅ 動作確認済み](#-verified-working--every-key-is-tested) · [🧭 仕組み](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ オプション](#️-cli-options) · [🛰️ プロキシ](#️-behind-a-proxy) · [🐞 問題報告](#-issues)
@@ -226,6 +227,27 @@ ionet/zai-org/GLM-5.3-Flash
 
 `node src/cli.js mint --target 5 --pick --connect-9router` は 1 回の実行で発行と登録を行い、`node src/launcher.js` はそのメニューから同じ流れを操作します。
 
+## 🔌 OmniRoute への接続
+
+[OmniRoute](https://omniroute.online) はセルフホスト型の OpenAI 互換ルーターです。io.net は OpenAI 互換エンドポイント（`https://api.intelligence.io.solutions/api/v1`）を提供しているので、一度登録すれば、発行したすべてのキーが 1 つのプロバイダノード配下の接続となり、OmniRoute がそれらをロードバランスします:
+
+```bash
+node src/connect-omniroute.js \
+  --base http://localhost:20128 --password 123456 \
+  --api-key io-v2-xxxxxxxx
+```
+
+`--api-key` を付けずに実行すると、`keys.txt` の **すべて** のキーを登録します。再実行しても冪等です。ノードは `--prefix ionet` で照合され、各接続は名前（`ionet-001`、`ionet-002`、…）で照合され、登録済みのキーはそのまま残されます。デフォルト: `--base http://localhost:20128`、`--password 123456`、`--name "IO Intelligence"`、`--prefix ionet`、`--base-url https://api.intelligence.io.solutions/api/v1`、`--model google/gemma-4-26b-a4b-it`。
+
+OmniRoute ではカタログは次のように提供されます:
+
+```
+ionet/google/gemma-4-26b-a4b-it
+ionet/deepseek-ai/DeepSeek-V4.1-Flash
+ionet/zai-org/GLM-5.3-Flash
+```
+
+`node src/cli.js mint --target 5 --pick --connect-omniroute` は 1 回の実行で発行と登録を行い、`node src/launcher.js` はそのメニューから同じ流れを操作します。
 ## 🔑 1 つのキーで得られるもの
 
 | | |

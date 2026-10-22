@@ -19,6 +19,7 @@
 [![License](https://img.shields.io/badge/license-MIT-6ea8fe?style=for-the-badge)](LICENSE)
 [![Models](https://img.shields.io/badge/models-39%20served-412991?style=for-the-badge)](https://io.net)
 [![9Router](https://img.shields.io/badge/9Router-connector-8B5CF6?style=for-the-badge)](#-connect-to-9router)
+[![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
 [🛠 Inicio rápido](#-quick-start) · [🎁 Nivel gratuito](#-free-tier--how-much-you-get) · [🤖 Modelos](#-models--all-39-of-them) · [🧪 Usar la API](#-how-to-use-the-api) · [✅ Verificado](#-verified-working--every-key-is-tested) · [🧭 Cómo funciona](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ Opciones](#️-cli-options) · [🛰️ Proxies](#️-behind-a-proxy) · [🐞 Problemas](#-issues)
@@ -226,6 +227,27 @@ ionet/zai-org/GLM-5.3-Flash
 
 `node src/cli.js mint --target 5 --pick --connect-9router` crea y registra en una sola pasada, y `node src/launcher.js` impulsa el mismo flujo desde su menú.
 
+## 🔌 Conectar con OmniRoute
+
+[OmniRoute](https://omniroute.online) es un router autoalojado y compatible con OpenAI. io.net sirve un endpoint compatible con OpenAI (`https://api.intelligence.io.solutions/api/v1`), así que regístralo una vez y cada clave que hayas creado se convierte en una conexión bajo un mismo nodo de proveedor — OmniRoute equilibra la carga entre ellas:
+
+```bash
+node src/connect-omniroute.js \
+  --base http://localhost:20128 --password 123456 \
+  --api-key io-v2-xxxxxxxx
+```
+
+Ejecútalo sin `--api-key` para registrar **todas** las claves de `keys.txt`. Volver a ejecutarlo es idempotente: el nodo se empareja por `--prefix ionet`, cada conexión se empareja por nombre (`ionet-001`, `ionet-002`, …), y una clave ya registrada se deja intacta. Valores predeterminados: `--base http://localhost:20128`, `--password 123456`, `--name "IO Intelligence"`, `--prefix ionet`, `--base-url https://api.intelligence.io.solutions/api/v1`, `--model google/gemma-4-26b-a4b-it`.
+
+En OmniRoute el catálogo se sirve como:
+
+```
+ionet/google/gemma-4-26b-a4b-it
+ionet/deepseek-ai/DeepSeek-V4.1-Flash
+ionet/zai-org/GLM-5.3-Flash
+```
+
+`node src/cli.js mint --target 5 --pick --connect-omniroute` crea y registra en una sola pasada, y `node src/launcher.js` impulsa el mismo flujo desde su menú.
 ## 🔑 Qué obtienes con una clave
 
 | | |

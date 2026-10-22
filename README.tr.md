@@ -19,6 +19,7 @@
 [![License](https://img.shields.io/badge/license-MIT-6ea8fe?style=for-the-badge)](LICENSE)
 [![Models](https://img.shields.io/badge/models-39%20served-412991?style=for-the-badge)](https://io.net)
 [![9Router](https://img.shields.io/badge/9Router-connector-8B5CF6?style=for-the-badge)](#-connect-to-9router)
+[![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
 [🛠 Hızlı başlangıç](#-quick-start) · [🎁 Ücretsiz katman](#-free-tier--how-much-you-get) · [🤖 Modeller](#-models--all-39-of-them) · [🧪 API'yi kullanma](#-how-to-use-the-api) · [✅ Doğrulandı](#-verified-working--every-key-is-tested) · [🧭 Nasıl çalışır](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ Seçenekler](#️-cli-options) · [🛰️ Proxy'ler](#️-behind-a-proxy) · [🐞 Sorunlar](#-issues)
@@ -226,6 +227,27 @@ ionet/zai-org/GLM-5.3-Flash
 
 `node src/cli.js mint --target 5 --pick --connect-9router` tek geçişte üretir ve kaydeder; `node src/launcher.js` aynı akışı menüsünden yürütür.
 
+## 🔌 OmniRoute'a bağlan
+
+[OmniRoute](https://omniroute.online) kendi sunucunuzda barındırılan, OpenAI uyumlu bir yönlendiricidir. io.net, OpenAI uyumlu bir uç nokta (`https://api.intelligence.io.solutions/api/v1`) sunar; bir kez kaydedin ve ürettiğiniz her anahtar tek bir sağlayıcı düğümü altında bir bağlantı haline gelir — OmniRoute bunlar arasında yük dengelemesi yapar:
+
+```bash
+node src/connect-omniroute.js \
+  --base http://localhost:20128 --password 123456 \
+  --api-key io-v2-xxxxxxxx
+```
+
+`--api-key` olmadan çalıştırırsanız `keys.txt` içindeki **her** anahtarı kaydeder. Yeniden çalıştırmak etkisizdir: düğüm `--prefix ionet` ile eşleştirilir, her bağlantı adıyla eşleştirilir (`ionet-001`, `ionet-002`, …) ve zaten kayıtlı bir anahtara dokunulmaz. Varsayılanlar: `--base http://localhost:20128`, `--password 123456`, `--name "IO Intelligence"`, `--prefix ionet`, `--base-url https://api.intelligence.io.solutions/api/v1`, `--model google/gemma-4-26b-a4b-it`.
+
+OmniRoute'da katalog şu şekilde sunulur:
+
+```
+ionet/google/gemma-4-26b-a4b-it
+ionet/deepseek-ai/DeepSeek-V4.1-Flash
+ionet/zai-org/GLM-5.3-Flash
+```
+
+`node src/cli.js mint --target 5 --pick --connect-omniroute` tek geçişte üretir ve kaydeder; `node src/launcher.js` aynı akışı menüsünden yürütür.
 ## 🔑 Bir anahtar size ne kazandırır
 
 | | |

@@ -140,6 +140,11 @@ node src/http-finish.js --tag L1-1 --email <box@…> --box-token <id> --proxy so
 
 ## ✅ Verified working — every key is tested
 
+> **Quality gates.** Every key here passed a live `chat-200` before it was written to `keys.txt`
+> (dead keys are never shipped). Router combos follow the same rule at the model level: an entry is
+> added **only if the model answers `chat-200` and can call tools** — a model without tool support,
+> a dead key or a dead provider is dropped instead of added. Works with **9Router and OmniRoute**.
+
 A key is written to `keys.txt` only after the live API answers with it:
 
 | check | call | expected |
@@ -226,7 +231,6 @@ ionet/zai-org/GLM-5.3-Flash
 ```
 
 `node src/cli.js mint --target 5 --pick --connect-9router` mints and registers in one pass, and `node src/launcher.js` drives the same flow from its menu.
-
 
 ## 🔌 Connect to OmniRoute
 

@@ -19,6 +19,7 @@
 [![License](https://img.shields.io/badge/license-MIT-6ea8fe?style=for-the-badge)](LICENSE)
 [![Models](https://img.shields.io/badge/models-39%20served-412991?style=for-the-badge)](https://io.net)
 [![9Router](https://img.shields.io/badge/9Router-connector-8B5CF6?style=for-the-badge)](#-connect-to-9router)
+[![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
 [🛠 빠른 시작](#-quick-start) · [🎁 무료 티어](#-free-tier--how-much-you-get) · [🤖 모델](#-models--all-39-of-them) · [🧪 API 사용](#-how-to-use-the-api) · [✅ 검증됨](#-verified-working--every-key-is-tested) · [🧭 작동 방식](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ 옵션](#️-cli-options) · [🛰️ 프록시](#️-behind-a-proxy) · [🐞 이슈](#-issues)
@@ -226,6 +227,27 @@ ionet/zai-org/GLM-5.3-Flash
 
 `node src/cli.js mint --target 5 --pick --connect-9router`는 한 번에 발급과 등록을 수행하며, `node src/launcher.js`는 메뉴에서 같은 흐름을 실행합니다.
 
+## 🔌 OmniRoute에 연결
+
+[OmniRoute](https://omniroute.online)는 자체 호스팅되는 OpenAI 호환 라우터입니다. io.net은 OpenAI 호환 엔드포인트(`https://api.intelligence.io.solutions/api/v1`)를 제공하므로, 한 번 등록하면 발급한 모든 키가 하나의 제공자 노드 아래 연결이 됩니다 — OmniRoute가 이들 사이에서 로드 밸런싱합니다:
+
+```bash
+node src/connect-omniroute.js \
+  --base http://localhost:20128 --password 123456 \
+  --api-key io-v2-xxxxxxxx
+```
+
+`--api-key` 없이 실행하면 `keys.txt`의 **모든** 키를 등록합니다. 다시 실행해도 멱등적입니다: 노드는 `--prefix ionet`으로 매칭되고, 각 연결은 이름(`ionet-001`, `ionet-002`, …)으로 매칭되며, 이미 등록된 키는 그대로 둡니다. 기본값: `--base http://localhost:20128`, `--password 123456`, `--name "IO Intelligence"`, `--prefix ionet`, `--base-url https://api.intelligence.io.solutions/api/v1`, `--model google/gemma-4-26b-a4b-it`.
+
+OmniRoute에서 카탈로그는 다음과 같이 제공됩니다:
+
+```
+ionet/google/gemma-4-26b-a4b-it
+ionet/deepseek-ai/DeepSeek-V4.1-Flash
+ionet/zai-org/GLM-5.3-Flash
+```
+
+`node src/cli.js mint --target 5 --pick --connect-omniroute`는 한 번에 발급과 등록을 수행하며, `node src/launcher.js`는 메뉴에서 같은 흐름을 실행합니다.
 ## 🔑 키 하나로 얻는 것
 
 | | |

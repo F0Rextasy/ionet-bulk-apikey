@@ -19,6 +19,7 @@
 [![License](https://img.shields.io/badge/license-MIT-6ea8fe?style=for-the-badge)](LICENSE)
 [![Models](https://img.shields.io/badge/models-39%20served-412991?style=for-the-badge)](https://io.net)
 [![9Router](https://img.shields.io/badge/9Router-connector-8B5CF6?style=for-the-badge)](#-connect-to-9router)
+[![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
 [🛠 Быстрый старт](#-quick-start) · [🎁 Бесплатный уровень](#-free-tier--how-much-you-get) · [🤖 Модели](#-models--all-39-of-them) · [🧪 Как использовать API](#-how-to-use-the-api) · [✅ Проверено — каждый ключ протестирован](#-verified-working--every-key-is-tested) · [🧭 Как это работает](#-how-it-works) · [🔌 Подключить к 9router](#-connect-to-9router) · [⚙️ Опции CLI](#️-cli-options) · [🛰️ Через прокси](#️-behind-a-proxy) · [🐞 Проблемы](#-issues)
@@ -226,6 +227,27 @@ ionet/zai-org/GLM-5.3-Flash
 
 `node src/cli.js mint --target 5 --pick --connect-9router` создаёт и регистрирует ключи за один проход, а `node src/launcher.js` управляет тем же процессом через меню.
 
+## 🔌 Подключить к OmniRoute
+
+[OmniRoute](https://omniroute.online) — самостоятельно хостируемый роутер, совместимый с OpenAI. io.net предоставляет совместимую точку (`https://api.intelligence.io.solutions/api/v1`), поэтому зарегистрируйте её один раз, и каждый созданный ключ станет соединением под одним провайдер‑узлом — OmniRoute будет балансировать нагрузку между ними:
+
+```bash
+node src/connect-omniroute.js \
+  --base http://localhost:20128 --password 123456 \
+  --api-key io-v2-xxxxxxxx
+```
+
+Запустите без `--api-key`, чтобы зарегистрировать **каждый** ключ из `keys.txt`. Повторный запуск идемпотентен: узел сопоставляется по `--prefix ionet`, каждое соединение — по имени (`ionet-001`, `ionet-002`, …), а уже зарегистрированный ключ оставляется без изменений. По умолчанию: `--base http://localhost:20128`, `--password 123456`, `--name "IO Intelligence"`, `--prefix ionet`, `--base-url https://api.intelligence.io.solutions/api/v1`, `--model google/gemma-4-26b-a4b-it`.
+
+В OmniRoute каталог подаётся как:
+
+```
+ionet/google/gemma-4-26b-a4b-it
+ionet/deepseek-ai/DeepSeek-V4.1-Flash
+ionet/zai-org/GLM-5.3-Flash
+```
+
+`node src/cli.js mint --target 5 --pick --connect-omniroute` создаёт и регистрирует ключи за один проход, а `node src/launcher.js` управляет тем же процессом через меню.
 ## 🔑 Что дает один ключ
 
 |  |  |
