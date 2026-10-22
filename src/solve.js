@@ -41,7 +41,6 @@ fs.mkdirSync(OUT, { recursive: true });
   const listTargets = async () => (await cdp.send('Target.getTargets')).targetInfos;
   const attach = async (targetId) => {
     const { sessionId } = await cdp.send('Target.attachToTarget', { targetId, flatten: true });
-    await cdp.send('Runtime.enable', {}, sessionId);
     return sessionId;
   };
   const evalIn = async (sessionId, expr) => {

@@ -74,7 +74,6 @@ const DUMP = `(async () => {
   const targets = (await cdp.send('Target.getTargets')).targetInfos;
   const attach = async (id) => {
     const { sessionId } = await cdp.send('Target.attachToTarget', { targetId: id, flatten: true });
-    await cdp.send('Runtime.enable', {}, sessionId);
     return sessionId;
   };
   const bfs = targets.filter((t) => t.type === 'iframe' && /6Ld3OMEs/.test(t.url || '') && /bframe/.test(t.url));

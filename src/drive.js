@@ -44,7 +44,6 @@ const [action, a1, a2] = argv.filter((a, i) => {
   if (!page) throw new Error('no page target');
   const { sessionId } = await cdp.send('Target.attachToTarget', { targetId: page.targetId, flatten: true });
   await cdp.send('Page.enable', {}, sessionId);
-  await cdp.send('Runtime.enable', {}, sessionId);
 
   if (action === 'state') {
     const st = await B.evalJs(
