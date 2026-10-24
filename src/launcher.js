@@ -29,7 +29,7 @@ const defaults = { count: 30, conc: 2, preset: '', routerBase: 'http://localhost
 let cfg = { ...defaults };
 try { Object.assign(cfg, JSON.parse(fs.readFileSync(CONFIG, 'utf8'))); } catch (e) {}
 const save = () => fs.writeFileSync(CONFIG, JSON.stringify(cfg, null, 2) + '\n', { mode: 0o600 }); // holds the 9Router password
-const ARGS = {"mint":["--target","count"],"finish":[],"verify":["--keys","keys.txt"],"screen":[]};
+const ARGS = {"mint":["--auto","--target","count"],"finish":[],"verify":["--keys","keys.txt"],"screen":[]};
 
 const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
 const ask = (q, fb) => new Promise((r) => rl.question(q + (fb !== undefined ? ' [' + fb + ']' : '') + ': ', (a) => r(String(a).trim() || fb)));
@@ -102,19 +102,42 @@ async function nineRouter() {
   }
 }
 
+async function omniRouter() {
+  console.log('\nOmniRoute — register the keys in keys.txt as one connection each');
+  const base = await ask('OmniRoute base URL', cfg.routerBase);
+  const password = await ask('OmniRoute password', cfg.routerPassword);
+  cfg.routerBase = base;
+  cfg.routerPassword = password;
+  save();
+  try {
+    const conns = await connectKeysFile({ base, password });
+    conns.forEach((c, i) => console.log('  key ' + (i + 1) + '/' + conns.length + ' → ' + ((c && c.name) || 'registered')));
+  } catch (e) {
+    if (!/no API keys/.test(String(e.message))) throw e;
+    console.log('  ⚠ ' + e.message);
+    const apiKey = await ask('API key', '');
+    if (!apiKey) return;
+    const conn = await connectOmniRoute({ base, password, apiKey });
+    console.log('  key 1/1 → ' + ((conn && conn.name) || 'registered'));
+  }
+}
+
 async function main() {
   process.stdout.write('\x1b[2J\x1b[H');
   banner();
   console.log('  proxy exits: ' + (count(POOL) || 'none — running WITHOUT a proxy (direct)') + '     keys on disk: ' + count(KEYS) + '\n');
-  console.log('  1) mint      create fresh accounts and mint one key each');
+  console.log('  1) Mint keys      create fresh accounts and mint one key each');
   console.log('  2) finish    log in to accounts already created and finish their key');
   console.log('  3) verify    re-check keys that are already on disk');
   console.log('  4) screen    keep only proxy exits that reach the provider');
   console.log('  5) Settings');
   console.log('  6) Connect to 9Router   register every key in keys.txt with a 9Router instance');
+  console.log('  7) Connect to OmniRoute   register every key in keys.txt with a OmniRoute instance');
   console.log('  0) Exit\n');
   const choice = await ask('choose', '1');
   if (choice === '1') {
+    cfg.count = Number(await ask('How many keys?', cfg.count)) || cfg.count;
+    save();
     run(['lane.js', ...argsFor('mint')]);
   }
   else if (choice === '2') {

@@ -21,7 +21,7 @@
 [![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
-[🛠 Quick start](#-quick-start) · [🎁 Free tier](#-free-tier--how-much-you-get) · [🤖 Models](#-models--all-39-of-them) · [🧪 Use the API](#-how-to-use-the-api) · [✅ Verified](#-verified-working--every-key-is-tested) · [🧭 How it works](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ Options](#️-cli-options) · [🛰️ Proxies](#️-behind-a-proxy) · [🐞 Issues](#-issues)
+[🛠 Quick start](#-quick-start) · [🎁 Free tier](#-free-tier--how-much-you-get) · [🤖 Models](#-models--all-39-of-them) · [🧪 Use the API](#-how-to-use-the-api) · [✅ Verified](#-verified-working--every-key-is-tested) · [🧭 How it works](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [🔌 OmniRoute](#-connect-to-omniroute) · [⚙️ Options](#️-cli-options) · [🛰️ Proxies](#️-behind-a-proxy) · [🐞 Issues](#-issues)
 
 </div>
 
@@ -110,6 +110,17 @@ curl https://api.intelligence.io.solutions/api/v1/chat/completions \
   -H "Authorization: Bearer io-v2-…" -H "Content-Type: application/json" \
   -d '{"model":"google/gemma-4-26b-a4b-it","messages":[{"role":"user","content":"hi"}]}'
 ```
+
+## ⚡ One command
+
+```bash
+node src/cli.js --count N      # mint N keys — exit screen, browser, HTTP finish, one account at a time
+node src/cli.js --dry          # print the resolved plan: writes nothing, sends nothing
+```
+
+`--auto` is the default: the mint path needs no token, captcha answer or proxy question from you. A `proxies.txt` next to the CLI is used automatically (otherwise the tool goes direct), and the interactive menu (`node src/launcher.js`) wraps the same tasks.
+
+> ⚠️ **Terms & account risk.** Automating a provider can violate its Terms of Service and get accounts or IPs banned. You run this on accounts you own, from your own machine, at your own risk; the tool only drives the site's own sign-up page and never bypasses a paid gate. Read the provider's ToS before a large campaign.
 
 ## 🛠 Quick start
 

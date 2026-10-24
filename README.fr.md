@@ -1,7 +1,6 @@
 <div align="center">
 
 ```
-
 ██╗ ██████╗ ███╗   ██╗███████╗████████╗
 ██║██╔═══██╗████╗  ██║██╔════╝╚══██╔══╝
 ██║██║   ██║██╔██╗ ██║█████╗     ██║
@@ -12,7 +11,7 @@
 
 # ionet-bulk-apikey
 
-**Bulk-create IO Intelligence (io.net) accounts with auto-generated API keys — OpenAI-compatible inference + 9Router connector.**
+**Créez en masse des comptes IO Intelligence (io.net) avec des clés API générées automatiquement — inférence compatible OpenAI + connecteur 9Router.**
 
 [![Node](https://img.shields.io/badge/Node-%E2%89%A518-3DA639?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org)
 [![Dependencies](https://img.shields.io/badge/dependencies-0-blue?style=for-the-badge)](#)
@@ -22,7 +21,7 @@
 [![OmniRoute](https://img.shields.io/badge/OmniRoute-connector-8B5CF6?style=for-the-badge)](#-connect-to-omniroute)
 [![X](https://img.shields.io/badge/X-%40bigbullapp-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/bigbullapp)
 
-[🛠 Quick start](#-quick-start) · [🎁 Free tier](#-free-tier--how-much-you-get) · [🤖 Models](#-models--all-39-of-them) · [🧪 Use the API](#-how-to-use-the-api) · [✅ Verified](#-verified-working--every-key-is-tested) · [🧭 How it works](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [⚙️ Options](#️-cli-options) · [🛰️ Proxies](#️-behind-a-proxy) · [🐞 Issues](#-issues)
+[🛠 Démarrage rapide](#-quick-start) · [🎁 Niveau gratuit](#-free-tier--how-much-you-get) · [🤖 Modèles](#-models--all-39-of-them) · [🧪 Utiliser l'API](#-how-to-use-the-api) · [✅ Vérifié](#-verified-working--every-key-is-tested) · [🧭 Comment ça marche](#-how-it-works) · [🔌 9Router](#-connect-to-9router) · [🔌 OmniRoute](#-connect-to-omniroute) · [⚙️ Options](#️-cli-options) · [🛰️ Proxies](#️-behind-a-proxy) · [🐞 Problèmes](#-issues)
 
 </div>
 
@@ -36,10 +35,9 @@
 
 ## ✨ Pourquoi cet outil existe
 
-io.net (IO Intelligence) donne à chaque compte un accès API, et l'unité utile est *un compte par clé*. L'inscription tient sur une seule page hébergée : une adresse e-mail, un code à usage unique envoyé par mail, et un point de terminaison de clé API. Cet outil parcourt tout le chemin — un vrai navigateur là où la page l'exige, du HTTP simple pour tout le reste — et n'enregistre une clé qu'après une vraie complétion :
+io.net (IO Intelligence) donne à chaque compte un accès API, et l'unité utile est *un compte par clé*. L'inscription tient sur une seule page hébergée : une adresse e-mail, un code à usage unique par e-mail, et un point de terminaison de clé API. Cet outil parcourt tout le chemin — un vrai navigateur là où la page l'exige, du HTTP simple pour tout le reste — et n'enregistre une clé qu'après une complétion réelle :
 
 ```
-
 broker mailbox ──▶ exit pick + point-of-use preflight (id.io.net + recaptcha api.js)
                         │
                         ▼
@@ -50,43 +48,43 @@ broker mailbox ──▶ exit pick + point-of-use preflight (id.io.net + recaptc
   (GET /v1/models 200 + real completion)
 ```
 
-> **Note de statut (2026-10-18) :** le dépôt a été archivé plus tôt le même jour, alors que l'on croyait le rail mort ; une ré-audit en soirée l'a re-vérifié — un balayage en direct du pool sur disque a obtenu de vraies complétions de chat (`google/gemma-4-26b-a4b-it` → `200` `"pong"`) et le rail `id.io.net/login` a répondu `200`. Le dépôt est de nouveau **actif**. Les inscriptions sont limitées en débit par le fournisseur et les challenges sont verrouillés par une validation humaine ; l'échelle est plafonnée par ces barrières.
+> **Note de statut (2026-10-18) :** le dépôt a été archivé plus tôt le même jour alors que le rail était cru mort ; un nouvel audit en soirée l'a re-vérifié — un balayage en direct du pool sur disque a répondu à de vraies complétions de chat (`google/gemma-4-26b-a4b-it` → 200 `"pong"`) et le rail `id.io.net/login` a répondu `200`. Le dépôt est de nouveau **actif**. Les inscriptions sont limitées en débit par le fournisseur et les défis sont contrôlés par des humains ; l'échelle est plafonnée par ces barrières.
 
 ## 🎁 Niveau gratuit — ce que vous obtenez
 
-**Ce qu'un compte gratuit peut réellement appeler :** le catalogue est *listé* pour chaque clé, mais la génération est conditionnée par le niveau du compte, modèle par modèle. Mesuré avec une clé de niveau gratuit sur 24 de ces ids, exactement un a répondu à une complétion — **`google/gemma-4-26b-a4b-it`** (`200`, un vrai message d'assistant ; c'est un modèle de raisonnement, le texte peut donc arriver dans `reasoning_content`). Tous les autres ids ont répondu `402 {"note":"Model '<id>' requires a higher IO Intelligence tier"}`.
+**Ce qu'un compte gratuit peut réellement appeler :** le catalogue est *listé* pour chaque clé, mais la génération est contrôlée par modèle selon le niveau du compte. Mesuré avec une clé de niveau gratuit sur 24 de ces identifiants, un seul a répondu à une complétion — **`google/gemma-4-26b-a4b-it`** (`200`, un vrai message d'assistant ; c'est un modèle de raisonnement, donc le texte peut arriver dans `reasoning_content`). Tous les autres identifiants ont répondu `402 {"note":"Model '<id>' requires a higher IO Intelligence tier"}`.
 
-| Quoi | Valeur |
+| Élément | Valeur |
 | --- | --- |
-| Catalogue par clé | **39 ids** sur `GET /v1/models` (capturés dans [`models.json`](models.json)) |
+| Catalogue par clé | **39 identifiants** sur `GET /v1/models` (capturés dans [`models.json`](models.json)) |
 | Vérificateur du niveau gratuit | `google/gemma-4-26b-a4b-it` — **200** avec du contenu réel |
-| Autres ids en niveau gratuit | `402 requires a higher IO Intelligence tier` jusqu'à la mise à niveau |
+| Autres identifiants en niveau gratuit | `402 requires a higher IO Intelligence tier` jusqu'à mise à niveau |
 | Métadonnées par modèle | chaque modèle porte `min_access_tier` (1–3) et `higher_tier_required` |
 | Inscription | `id.io.net/login` (e-mail → code → `magic-auth/verify` → `accessToken` → `POST /v1/api-keys`) |
-| L'unité qui passe à l'échelle | **un compte = une clé** → `--target N` correspond à N comptes/clés |
+| L'unité qui s'adapte | **un compte = une clé** → `--target N` correspond à N comptes/clés |
 
-> 💡 Le niveau gratuit est fixé par IO Intelligence et peut changer. Vérifiez les chiffres en direct sur [io.net](https://io.net) — et laissez la barrière de l'outil décider :
+> 💡 Le niveau gratuit est défini par IO Intelligence et peut changer. Vérifiez les chiffres en direct sur [io.net](https://io.net) — et laissez la barrière de l'outil décider :
 
 ```bash
 node src/cli.js verify --proxy socks5://127.0.0.1:1080     # every key is re-tested (models + chat) through one exit
 ```
 
-## 🤖 Modèles — les 39
+## 🤖 Modèles — les 39 au complet
 
-`GET https://api.intelligence.io.solutions/api/v1/models` répond **39 ids de modèles** pour toute clé valide, dont :
+`GET https://api.intelligence.io.solutions/api/v1/models` répond **39 identifiants de modèles** pour toute clé valide, notamment :
 
 `deepseek-ai/DeepSeek-V4.1-Flash` · `deepseek-ai/DeepSeek-V4-Pro` · `zai-org/GLM-5.3` · `zai-org/GLM-5.3-Flash` · `XiaomiMiMo/MiMo-V2.6-Flash` · `moonshotai/Kimi-K3` · `MiniMaxAI/MiniMax-M2.7` · `Qwen/Qwen3.8-27B` · `openai/gpt-oss-120b` · `deepseek-ai/DeepSeek-R1-0528` · `google/gemma-4-26b-a4b-it`
 
-Couverture mesurée en niveau gratuit :
+Couverture mesurée du niveau gratuit :
 
 |Modèle|✓|
 |---|---|
 |`google/gemma-4-26b-a4b-it`|✓|
 |`nvidia/nemotron-3.5-lightning`|✓|
 
-Re-vérification en direct du 2026-10-19 (5 clés × 4 sorties) : `nvidia/nemotron-3.5-lightning` a répondu `200` sur 20/20 sondes ; le reste du catalogue de 39 ids répond `402 requires a higher IO Intelligence tier`.
+Re-vérification en direct du 2026-10-19 (5 clés × 4 sorties) : `nvidia/nemotron-3.5-lightning` a répondu `200` sur 20/20 sondes ; le reste du catalogue de 39 identifiants répond `402 requires a higher IO Intelligence tier`.
 
-Les 39 ids complets sont dans [`models.json`](models.json). Sonde en direct d'une clé (exactement ce que fait le vérificateur) :
+Les 39 identifiants complets sont dans [`models.json`](models.json). Sonde en direct d'une clé (exactement ce que fait le vérificateur) :
 
 ```bash
 curl https://api.intelligence.io.solutions/api/v1/chat/completions \
@@ -113,14 +111,25 @@ curl https://api.intelligence.io.solutions/api/v1/chat/completions \
   -d '{"model":"google/gemma-4-26b-a4b-it","messages":[{"role":"user","content":"hi"}]}'
 ```
 
+## ⚡ Une seule commande
+
+```bash
+node src/cli.js --count N      # mint N keys — exit screen, browser, HTTP finish, one account at a time
+node src/cli.js --dry          # print the resolved plan: writes nothing, sends nothing
+```
+
+`--auto` est le mode par défaut : le chemin de création ne vous demande ni jeton, ni réponse de captcha, ni proxy. Un `proxies.txt` à côté du CLI est utilisé automatiquement (sinon l'outil passe en direct), et le menu interactif (`node src/launcher.js`) enveloppe les mêmes tâches.
+
+> ⚠️ **Conditions et risque de compte.** Automatiser un fournisseur peut violer ses Conditions d'utilisation et entraîner le bannissement de comptes ou d'IP. Vous exécutez ceci sur des comptes que vous possédez, depuis votre propre machine, à vos propres risques ; l'outil ne fait que piloter la propre page d'inscription du site et ne contourne jamais une barrière payante. Lisez les ToS du fournisseur avant une grande campagne.
+
 ## 🛠 Démarrage rapide
 
 ```bash
 git clone https://github.com/F0Rextasy/ionet-bulk-apikey.git
 cd ionet-bulk-apikey
 
-# 1) your proxy list, one exit per line (http://, socks5://, socks4:// or bare host:port)
-printf 'socks5://127.0.0.1:1080\n' > proxies.txt
+# 1) your proxy list, one exit per line (http://, socks5://, socks4:// or bare host:port) — optional, see below
+printf 'socks5://127.0.0.1:1080\n' > proxies.txt   # optional — without it the tool runs direct
 
 # 2) go — one run == one account attempt, end to end
 node src/cli.js mint --target 5 --pick    # driver: exit → browser → HTTP finish, per account
@@ -134,28 +143,33 @@ node src/run-account.js --tag L1-1 --port 9421 --proxy socks5://127.0.0.1:1080 -
 node src/http-finish.js --tag L1-1 --email <box@…> --box-token <id> --proxy socks5://127.0.0.1:1080
 ```
 
-**Le challenge est résolu de votre côté :** chaque manche est exportée sous `solve-<tag>/round-N.png` + `state.json`, et vous écrivez `solve-<tag>/clicks.json` en listant les tuiles à cliquer — l'outil les clique, relit le widget et passe à la suite.
+**Le défi est résolu de votre côté :** chaque manche est exportée sous `solve-<tag>/round-N.png` + `state.json`, et vous écrivez `solve-<tag>/clicks.json` en listant les tuiles à cliquer — l'outil clique dessus, relit le widget et passe à la suite.
 
 ### 🖱️ Le lanceur
 
-`src/launcher.js` est le menu interactif au-dessus de mint / verify / screen et de 9Router. Il reprend la même forme de bannière/menu que les autres dépôts et délègue aux tâches de `src/cli.js`. `node src/launcher.js --connect-9router` enregistre les clés dans un 9Router local.
+`src/launcher.js` est le menu interactif au-dessus de mint / verify / screen et 9Router. Il a la même forme de bannière/menu que les autres dépôts et délègue aux tâches de `src/cli.js`. `node src/launcher.js --connect-9router` enregistre les clés dans un 9Router local.
 
-## ✅ Vérifié — chaque clé est testée
+## ✅ Vérifié fonctionnel — chaque clé est testée
+
+> **Barrières de qualité.** Chaque clé ici a passé un `chat-200` en direct avant d'être écrite dans `keys.txt`
+> (les clés mortes ne sont jamais livrées). Les combos de routeur suivent la même règle au niveau du modèle : une entrée est
+> ajoutée **uniquement si le modèle répond `chat-200` et peut appeler des outils** — un modèle sans support des outils,
+> une clé morte ou un fournisseur mort est écarté au lieu d'être ajouté. Fonctionne avec **9Router et OmniRoute**.
 
 Une clé n'est écrite dans `keys.txt` qu'après que l'API en direct a répondu avec elle :
 
 | vérification | appel | attendu |
 | --- | --- | --- |
-| auth + liste des modèles | `GET https://api.intelligence.io.solutions/api/v1/models` | `200` + les ids de modèles du compte (39) |
+| auth + liste des modèles | `GET https://api.intelligence.io.solutions/api/v1/models` | `200` + les identifiants de modèles du compte (39) |
 | complétion réelle | `POST …/chat/completions` (`google/gemma-4-26b-a4b-it`) | `200` + un message d'assistant non vide |
 
 ```bash
 node src/cli.js verify --proxy socks5://127.0.0.1:1080    # re-runs both checks over every key and reports a per-key verdict
 ```
 
-Le pilote fait la même vérification sur chaque clé qu'il ajoute. `google/gemma-4-26b-a4b-it` est un modèle de raisonnement — le texte peut arriver dans `reasoning_content`.
+Le pilote effectue la même vérification sur chaque clé qu'il ajoute. `google/gemma-4-26b-a4b-it` est un modèle de raisonnement — le texte peut arriver dans `reasoning_content`.
 
-> ionet figure sur la liste des fournisseurs bloqués — la forme de la vérification est celle mesurée ; le découpage en niveaux côté fournisseur s'applique.
+> ionet figure sur la liste des fournisseurs bloqués — la forme de vérification est telle que mesurée ; la gestion par niveaux côté fournisseur s'applique.
 
 ## 🧭 Comment ça marche
 
@@ -170,44 +184,46 @@ inbox (one address per account)                                  a fresh address
 
 Par compte, un Chrome (phase navigateur) + une étape HTTP :
 
-1. **Phase navigateur** (`run-account.js --until start`) : navigation, saisie d'une adresse de boîte fraîche, résolution des manches de challenge depuis votre `clicks.json`, soumission. Dès que `POST /api/workos/magic-auth/start` répond, la boîte de réception et le jeton du compte sont écrits dans `handoff.json` et **Chrome se ferme immédiatement** — le travail du navigateur est terminé.
-2. **Étape HTTP** (`http-finish.js`) : lecture du code à usage unique depuis la boîte mail, appel de `magic-auth/verify` → `accessToken`, création de la clé (`POST /v1/api-keys/`), vérification en direct, ajout à `keys.txt` + `accounts.json`.
-3. **Pilote** (`lane.js`) : une boucle séquentielle sur les tentatives — choisit une sortie fraîche du pool, la pré-vérifie au moment de l'usage, exécute la phase navigateur, récupère automatiquement les tentatives interrompues avant la soumission, exécute l'étape HTTP pendant la durée de vie du jeton, met en liste noire les sorties qui ont échoué, puis en reprend une. `lane-<TAG>.jsonl` enregistre chaque tentative.
+1. **Phase navigateur** (`run-account.js --until start`) : navigation, saisie d'une adresse de boîte aux lettres fraîche, résolution des manches de défi à partir de votre `clicks.json`, soumission. Dès que `POST /api/workos/magic-auth/start` répond, la boîte de réception + le jeton du compte sont écrits dans `handoff.json` et **Chrome se ferme immédiatement** — le travail du navigateur est terminé.
+2. **Étape HTTP** (`http-finish.js`) : lecture du code à usage unique depuis la boîte aux lettres, appel de `magic-auth/verify` → `accessToken`, création de la clé (`POST /v1/api-keys/`), vérification en direct, ajout à `keys.txt` + `accounts.json`.
+3. **Pilote** (`lane.js`) : une boucle série sur les tentatives — choisit une sortie de pool fraîche, la pré-vérifie au moment de l'usage, exécute la phase navigateur, récupère automatiquement les tentatives interrompues avant la soumission, exécute l'étape HTTP dans la durée de vie du jeton, met en liste noire les sorties ayant échoué, et re-choisit. `lane-<TAG>.jsonl` enregistre chaque tentative.
 
-Deux réglages à connaître : la clé API doit être créée avec `project: "io-intelligence"` (l'outil le fait pour vous), et le jeton d'accès transmis par le navigateur ne vit que **5 minutes** — c'est précisément pourquoi la phase navigateur passe la main au HTTP au lieu de finir dans la page.
+Deux réglages à connaître : la clé API doit être créée avec `project: "io-intelligence"` (l'outil le fait pour vous), et le jeton d'accès transmis par le navigateur vit **5 minutes** — c'est exactement pourquoi la phase navigateur passe la main au HTTP au lieu de terminer dans la page.
 
-## ⚙️ Options CLI
+## ⚙️ Options du CLI
 
-| outil | drapeaux |
+| outil | options |
 | --- | --- |
-| `cli.js` | `mint` · `finish` · `verify` · `screen` — chaque tâche affiche ses propres drapeaux (`node src/lane.js --help`) |
-| `lane.js` | `--tag` (L) · `--port` (9411) · `--target N` (5) · `--preset turbo\|balanced\|safe` (intervalle de rythme) · `--gap S` · `--pick` (sortie fraîche du pool par tentative) ou `--proxy <line>` (sortie fixe) · `--max-attempts N` · `--union-file` / `--new-file` |
-| `run-account.js` | `--tag` · `--port` · `--until start\|email\|otp\|key` · `--proxy <line>` · `--broker <url>` · `--solve-dir` · `--solve-budget-ms` · `--round-wait-ms` · `--otp-timeout-ms` · `--email` / `--email-token` (reprendre une boîte) |
+| `cli.js` | `mint` · `finish` · `verify` · `screen` — chaque tâche affiche ses propres options (`node src/lane.js --help`) |
+| `lane.js` | `--tag` (L) · `--port` (9411) · `--target N` (5) · `--preset turbo\|balanced\|safe` (intervalle de rythme) · `--gap S` · `--pick` (sortie de pool fraîche par tentative) ou `--proxy <line>` (sortie fixe) · `--direct` (aucun proxy) · `--max-attempts N` · `--union-file` / `--new-file` |
+| `run-account.js` | `--tag` · `--port` · `--until start\|email\|otp\|key` · `--proxy <line>` · `--broker <url>` · `--solve-dir` · `--solve-budget-ms` · `--round-wait-ms` · `--otp-timeout-ms` · `--email` / `--email-token` (reprendre une boîte de réception) |
 | `http-finish.js` | `--email` + `--box-token`, ou `--token <accessToken>` / `--token-file`, ou `--from-log <net.jsonl>` · `--name` · `--model` · `--otp-timeout-ms` |
-| 9Router | `--connect-9router` sur n'importe quelle tâche — une fois celle-ci terminée, enregistre chaque clé de `keys.txt` dans un 9Router en cours d'exécution (`node src/connect-9router.js --help`) |
+| 9Router | `--connect-9router` sur n'importe quelle tâche — une fois terminée, enregistre chaque clé de `keys.txt` dans un 9Router en cours d'exécution (`node src/connect-9router.js --help`) |
 
-Turbo est recommandé (5) ; davantage présente un risque de charge/ban sur une machine faible.
+Turbo önerilir (5) ; daha fazlası zayıf bilgisayarda yük/ban riski.
 
 ## 🛰️ Derrière un proxy
 
-* Les sorties viennent d'un pool texte (une ligne par sortie, `scheme://host:port`) ; chaque tentative reçoit une sortie fraîche et une pré-vérification au moment de l'usage, et les sorties ayant produit une tentative échouée sont mises en liste noire par lane.
-* Chaque appel au fournisseur — le navigateur, la lecture du code, la création de la clé, la vérification — passe par le pool ; rien n'est envoyé depuis votre propre adresse.
-* Le script d'implémentation du reCAPTCHA est servi à la page depuis un cache local, donc une sortie n'a besoin d'atteindre `id.io.net` et `www.google.com` que pour la phase navigateur.
-* Le broker de boîte mail tourne sur la boucle locale (`127.0.0.1`) — il est à vous, pas au fournisseur, et il détient vos identifiants mail, jamais le dépôt.
+**Facultatif — recommandé à grande échelle (limites par IP, bannissements).** L'outil fonctionne aussi sans proxy.
+
+- **Avec un pool :** les sorties proviennent d'un pool texte (une ligne par sortie, `scheme://host:port`) ; chaque tentative reçoit une sortie fraîche et une pré-vérification au moment de l'usage, et les sorties ayant produit une tentative échouée sont mises en liste noire par voie.
+- **Sans pool :** rien à choisir — la voie bascule d'elle-même en mode DIRECT (ou forcez-le avec `--direct`) ; le contexte Chrome s'ouvre sans tunnel et chaque requête — navigateur, lecture de code, création de clé, vérification — quitte cette machine directement.
+- Le script d'implémentation du reCAPTCHA est servi à la page depuis un cache local, donc une sortie n'a besoin d'atteindre que `id.io.net` et `www.google.com` pour la phase navigateur.
+- Le broker de boîte aux lettres tourne sur loopback (`127.0.0.1`) — il est à vous, pas au fournisseur, et il détient vos identifiants de messagerie, jamais le dépôt.
 
 ## 📄 Fichiers
 
 | Chemin | Contenu |
 | --- | --- |
-| `keys.txt` | les clés, **une par ligne**, ajoutées au moment où une clé passe la vérification en direct — ignoré par git |
-| `accounts.json` | un enregistrement par compte : boîte mail, clé, la sortie qui l'a créée — ignoré par git |
-| [`models.json`](models.json) | `GET /v1/models` tel que répondu par une clé créée (39 ids) |
+| `keys.txt` | les clés, **une par ligne**, ajoutées dès qu'une clé passe la vérification en direct — ignoré par git |
+| `accounts.json` | un enregistrement par compte : boîte aux lettres, clé, la sortie qui l'a créé — ignoré par git |
+| [`models.json`](models.json) | `GET /v1/models` tel que répondu par une clé créée (39 identifiants) |
 | `out/` | exports par tentative (captures d'écran + journaux DOM/réseau), journal de lot, comptabilité des sorties — ignoré par git |
-| `proxies.txt` | votre pool de sorties, un proxy par ligne — ignoré par git |
+| `proxies.txt` | votre pool de sorties, un proxy par ligne (facultatif) — ignoré par git |
 
 ## 🔌 Connexion à 9Router
 
-[9Router](https://9router.com) est un routeur auto-hébergé, compatible OpenAI. io.net sert un point de terminaison compatible OpenAI (`https://api.intelligence.io.solutions/api/v1`), donc enregistrez-le une fois et chaque clé créée devient une connexion sous un même nœud de fournisseur — 9Router répartit la charge entre elles :
+[9Router](https://9router.com) est un routeur auto-hébergé compatible OpenAI. io.net sert un point de terminaison compatible OpenAI (`https://api.intelligence.io.solutions/api/v1`), donc enregistrez-le une fois et chaque clé que vous avez créée devient une connexion sous un nœud fournisseur — 9Router répartit la charge entre elles :
 
 ```bash
 node src/connect-9router.js \
@@ -215,9 +231,9 @@ node src/connect-9router.js \
   --api-key io-v2-xxxxxxxx
 ```
 
-Lancez-le sans `--api-key` pour enregistrer **toutes** les clés de `keys.txt`. Une ré-exécution est idempotente : le nœud est identifié par `--prefix ionet`, chaque connexion est identifiée par son nom (`ionet-001`, `ionet-002`, …), et une clé déjà enregistrée n'est pas modifiée. Valeurs par défaut : `--base http://localhost:20128`, `--password 123456`, `--name "IO Intelligence"`, `--prefix ionet`, `--base-url https://api.intelligence.io.solutions/api/v1`, `--model google/gemma-4-26b-a4b-it`.
+Exécutez-le sans `--api-key` pour enregistrer **toutes** les clés de `keys.txt`. La ré-exécution est idempotente : le nœud est mis en correspondance par `--prefix ionet`, chaque connexion est mise en correspondance par nom (`ionet-001`, `ionet-002`, …), et une clé déjà enregistrée est laissée telle quelle. Valeurs par défaut : `--base http://localhost:20128`, `--password 123456`, `--name "IO Intelligence"`, `--prefix ionet`, `--base-url https://api.intelligence.io.solutions/api/v1`, `--model google/gemma-4-26b-a4b-it`.
 
-Dans 9Router, le catalogue est servi ainsi :
+Dans 9Router, le catalogue est servi comme :
 
 ```
 ionet/google/gemma-4-26b-a4b-it
@@ -229,7 +245,7 @@ ionet/zai-org/GLM-5.3-Flash
 
 ## 🔌 Connexion à OmniRoute
 
-[OmniRoute](https://omniroute.online) est un routeur auto-hébergé, compatible OpenAI. io.net sert un point de terminaison compatible OpenAI (`https://api.intelligence.io.solutions/api/v1`), donc enregistrez-le une fois et chaque clé créée devient une connexion sous un même nœud de fournisseur — OmniRoute répartit la charge entre elles :
+[OmniRoute](https://omniroute.online) est un routeur auto-hébergé compatible OpenAI. io.net sert un point de terminaison compatible OpenAI (`https://api.intelligence.io.solutions/api/v1`), donc enregistrez-le une fois et chaque clé que vous avez créée devient une connexion sous un nœud fournisseur — OmniRoute répartit la charge entre elles :
 
 ```bash
 node src/connect-omniroute.js \
@@ -237,9 +253,9 @@ node src/connect-omniroute.js \
   --api-key io-v2-xxxxxxxx
 ```
 
-Lancez-le sans `--api-key` pour enregistrer **toutes** les clés de `keys.txt`. Une ré-exécution est idempotente : le nœud est identifié par `--prefix ionet`, chaque connexion est identifiée par son nom (`ionet-001`, `ionet-002`, …), et une clé déjà enregistrée n'est pas modifiée. Valeurs par défaut : `--base http://localhost:20128`, `--password 123456`, `--name "IO Intelligence"`, `--prefix ionet`, `--base-url https://api.intelligence.io.solutions/api/v1`, `--model google/gemma-4-26b-a4b-it`.
+Exécutez-le sans `--api-key` pour enregistrer **toutes** les clés de `keys.txt`. La ré-exécution est idempotente : le nœud est mis en correspondance par `--prefix ionet`, chaque connexion est mise en correspondance par nom (`ionet-001`, `ionet-002`, …), et une clé déjà enregistrée est laissée telle quelle. Valeurs par défaut : `--base http://localhost:20128`, `--password 123456`, `--name "IO Intelligence"`, `--prefix ionet`, `--base-url https://api.intelligence.io.solutions/api/v1`, `--model google/gemma-4-26b-a4b-it`.
 
-Dans OmniRoute, le catalogue est servi ainsi :
+Dans OmniRoute, le catalogue est servi comme :
 
 ```
 ionet/google/gemma-4-26b-a4b-it
@@ -248,19 +264,19 @@ ionet/zai-org/GLM-5.3-Flash
 ```
 
 `node src/cli.js mint --target 5 --pick --connect-omniroute` crée et enregistre en une seule passe, et `node src/launcher.js` pilote le même flux depuis son menu.
-## 🔑 Ce qu'une clé vous apporte
+## 🔑 Ce qu'une clé vous donne
 
 | | |
 | --- | --- |
 | 🏢 Fournisseur | **IO Intelligence** — [io.net](https://io.net) |
-| 🎁 Ce que le fournisseur offre | 39 modèles listés — le niveau gratuit limite la plupart des ids à 402 ; google/gemma-4-26b-a4b-it est le vérificateur du niveau gratuit |
-| 🔑 Ce qu'une clé vous apporte | une clé API rattachée à son propre compte : les 39 ids de modèles sur le point de terminaison ci-dessous, dans les limites de votre offre. Le quota vit sur le **compte**, ce qui explique précisément pourquoi cet outil crée un compte par clé |
-| 🌐 Forme de l'API | compatible OpenAI : `POST https://api.intelligence.io.solutions/api/v1/chat/completions` |
-| 🔒 Vos données | seuls io.net et le backend de boîte mail que vous configurez sont contactés ; les clés restent sur votre machine |
+| 🎁 Ce que le fournisseur donne | 39 modèles listés — le niveau gratuit limite la plupart des identifiants à 402 ; google/gemma-4-26b-a4b-it est le vérificateur du niveau gratuit |
+| 🔑 Ce qu'une clé vous donne | une clé API limitée à son propre compte : les 39 identifiants de modèles sur le point de terminaison ci-dessous, selon les limites de votre forfait. Le quota vit sur le **compte**, ce qui explique exactement pourquoi cet outil crée un compte par clé |
+| 🌐 Forme de l'API | Compatible OpenAI : `POST https://api.intelligence.io.solutions/api/v1/chat/completions` |
+| 🔒 Vos données | seuls io.net et le backend de boîte de réception que vous configurez sont contactés ; les clés restent sur votre machine |
 
 ## 🐞 Problèmes
 
-Ouvrez un ticket avec l'étape en échec, le tag/la tentative, la sortie utilisée et la fin de la trace (`lane-<TAG>-trace.log`) — les captures d'écran et les exports d'état sous `out/` rendent les échecs reproductibles sans divulguer de clé. **[Ouvrir un ticket](../../issues)** avec la commande lancée et la sortie exacte ; les PR sont les bienvenues. Si la barrière de niveau du fournisseur renvoie encore `402 requires a higher IO Intelligence tier`, l'outil s'arrête à ce modèle et le signale — le catalogue restreint est tel que mesuré.
+Ouvrez un ticket avec l'étape en échec, le tag/la tentative, la sortie utilisée et la fin de la trace (`lane-<TAG>-trace.log`) — les captures d'écran et les vidages d'état sous `out/` rendent les échecs reproductibles sans divulguer de clé. **[Ouvrir un ticket](../../issues)** avec la commande exécutée et la sortie exacte ; les PR sont bienvenues. Si la barrière de niveau du fournisseur renvoie encore `402 requires a higher IO Intelligence tier`, l'outil s'arrête à ce modèle et le signale — le catalogue restreint est tel que mesuré.
 
 ## 📄 Licence
 
